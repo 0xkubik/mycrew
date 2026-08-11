@@ -30,7 +30,7 @@
     },
     {
       "name": "mycrew-chief",
-      "description": "Layer 4/5 — the brain between the product plane and the repos. /chief owns the design (architecture-management for the one model.c4 tree at the product root, spec-management for the specs), decomposes an approved product feature into per-repo assignments, picks what to advance next (what-to-do), and sequences and dispatches workers as native subagents (worker-orchestration). It never invents features and never writes code. It conducts; the workers build. Built on mycrew-worker.",
+      "description": "Layer 4/5 — the brain between the product plane and the repos. /chief owns the design (architecture-management for the one model.c4 tree at the product root, spec-management for the specs), decomposes an approved product feature into per-repo assignments, picks what to advance next (what-to-do), proposes new ones for the human to approve (what-to-build), and sequences and dispatches workers as native subagents (worker-orchestration). It never decides what the product should do — only the human's approval files a feature — and it never writes code. It conducts; the workers build. Built on mycrew-worker.",
       "author": { "name": "kubik" },
       "category": "workflow",
       "source": "./plugins/mycrew-chief"

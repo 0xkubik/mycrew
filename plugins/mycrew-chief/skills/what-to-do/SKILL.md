@@ -26,8 +26,8 @@ Each explores the sub-projects **in its own lane** and returns candidates in the
 - **ADD** — an **unbuilt feature from the approved list**, ready to be carried now. _"Which unchecked
   `[ ]` is the right one to start, and why this one before the others?"_ You choose and argue among
   what the product plane already holds; **you never invent a capability that isn't on the list** —
-  inventing is the product layer's job, not yours. Nothing unbuilt left → say so, that's a real empty
-  lane, not a prompt to make something up.
+  inventing is `what-to-build`'s job, not this survey's. Nothing unbuilt left → say so, that's a real
+  empty lane, not a prompt to make something up.
 - **FINISH** — half-built things to carry to done. _"What did we start and not finish?"_ Stubs,
   dead-ends, partial flows, dangling TODOs.
 - **REBUILD** — working things with a clearly better redo. _"What works but we now know how to do
