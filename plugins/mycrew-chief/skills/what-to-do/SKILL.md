@@ -1,26 +1,32 @@
 ---
 name: what-to-do
-description: "Use when you want to find product direction — surface where a product could go next as a ranked menu of moves (new features, finishing half-built work, rebuilding rough parts, paying down tech debt). Fans out four subagents and aggregates their output."
+description: "Use when you need to pick what to advance next — surface a ranked menu of moves out of what the product plane already holds (carrying an approved feature, finishing half-built work, rebuilding rough parts, paying down tech debt). Fans out four subagents and aggregates their output. Chooses among possible moves; it never invents new capabilities."
 argument-hint: "[optional focus — or nothing to survey the whole product]"
 ---
 
 ## Gate — ground before you fan out
 
-- **The features** — `docs/features/features.md`. **Missing or empty → route to `/setup`**
-  first (it grounds the feature list). Present → read the **frontier** (first unchecked
-  `[ ]`) as the steer.
-- **The file list** — `git ls-files | xargs wc -l` (every tracked file with its line count). Shared
-  ground handed to every lens. Then fan out.
+- **The features** — `docs/features/features.md` at the **product root**, the one approved list.
+  **Missing or empty → route to `/setup`** first (it grounds the feature list). Present → read the
+  **frontier** (first unchecked `[ ]`) as the steer.
+- **The design** — `docs/architecture/model.c4` and `docs/specs/`, also at the product root: what the
+  system is shaped like and where a feature's detail already lives.
+- **The file list** — every sub-project's tracked files with line counts, run per repo:
+  `for d in */; do [ -e "$d/.git" ] && git -C "$d" ls-files | sed "s|^|$d|"; done | xargs wc -l`.
+  Shared ground handed to every lens. Then fan out.
 
 ## Step 1 — Fan out (four subagents, parallel)
 
 Dispatch four subagents in parallel, one per move, each on the **`sonnet` model**. Give each: its
-**move mandate**, the **North Star** (if any), the **frontier feature** as *orienting steer, not a
-gate*, and the **file list**. Each explores the repo **in its own lane** and returns candidates in the
-contract below.
+**move mandate**, the **North Star** (if any), the **approved feature list** (ADD picks from it; the
+others take the frontier as *orienting steer, not a gate*), the **design**, and the **file list**.
+Each explores the sub-projects **in its own lane** and returns candidates in the contract below.
 
-- **ADD** — new capability that advances the North Star. _"What's missing that moves us toward the
-  vision?"_ Includes bigger directional bets, not just small features.
+- **ADD** — an **unbuilt feature from the approved list**, ready to be carried now. _"Which unchecked
+  `[ ]` is the right one to start, and why this one before the others?"_ You choose and argue among
+  what the product plane already holds; **you never invent a capability that isn't on the list** —
+  inventing is the product layer's job, not yours. Nothing unbuilt left → say so, that's a real empty
+  lane, not a prompt to make something up.
 - **FINISH** — half-built things to carry to done. _"What did we start and not finish?"_ Stubs,
   dead-ends, partial flows, dangling TODOs.
 - **REBUILD** — working things with a clearly better redo. _"What works but we now know how to do

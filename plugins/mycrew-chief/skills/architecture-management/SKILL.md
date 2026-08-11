@@ -1,15 +1,20 @@
 ---
 name: architecture-management
-description: "Use for anything about the project's architecture model — shaping, growing, or correcting the structure. Not WHAT to build (that's feature-management / what-to-do) but HOW the system is shaped: one living LikeC4 tree in docs/architecture/model.c4, root overview down to the finest component that matters — never a mirror of the code. Rules and concepts, not a fixed procedure."
+description: "Use for anything about the product's architecture model — shaping, growing, or correcting the structure. Not WHAT to build (that's feature-management / what-to-do) but HOW the system is shaped: one living LikeC4 tree in docs/architecture/model.c4 at the product root, spanning every sub-project, down to the finest component that matters — never a mirror of the code. The chief owns it; workers build to it. Rules and concepts, not a fixed procedure."
 argument-hint: "<the architecture to shape, grow, or correct>"
 ---
 
 # architecture-management — the architecture, as a living tree
 
-You describe and keep true the project's **structure** — not *what* to build (feature-management / what-to-do),
+You describe and keep true the product's **structure** — not *what* to build (feature-management / what-to-do),
 but *how* it's shaped. The architecture lives as **one living tree** in
-`docs/architecture/model.c4`; your job is to grow and correct that tree by the rules below.
-LikeC4 syntax lives in **`mycrew-tools:likec4`** — load it before editing.
+`docs/architecture/model.c4` **at the product root**, spanning every sub-project; your job is to grow
+and correct that tree by the rules below. LikeC4 syntax lives in **`mycrew-tools:likec4`** — load it
+before editing.
+
+**You own it — a worker never reshapes it.** A worker building in a repo reads this tree and builds to
+it. When the work needs the shape to move, the worker says so in its report and you make the move here
+first, then re-dispatch.
 
 **Rules & concepts — non-negotiable:**
 - **The tree's one axis: runtime interaction.** The tree answers a single question — *what talks to,
@@ -18,14 +23,15 @@ LikeC4 syntax lives in **`mycrew-tools:likec4`** — load it before editing.
   edge is a runtime interaction (calls, reads, publishes, forwards). This axis is the whole discipline
   below: a node that doesn't interact at run time, or an edge that isn't a runtime interaction, does
   not belong.
-- **Always inside `model.c4`.** One unified model, in **your own project**, over that **one file**
-  only — never scatter `.c4` files or write architecture anywhere else.
-- **Isolate the project — ship a `likec4.config.json`.** Next to `model.c4` sits a `likec4.config.json`
-  with a unique `name` (e.g. `{ "name": "<product>-<repo>", "title": "…" }`), so this model stands as
-  its own LikeC4 project. Create it if it's missing. Without it, LikeC4 merges every config-less `.c4`
-  in the workspace into one default project — and a sibling product's model bleeds into your index.
+- **Always inside `model.c4`.** One unified model for the **whole product**, over that **one file**
+  only — never scatter `.c4` files across the sub-projects or write architecture anywhere else.
+- **Isolate the product — ship a `likec4.config.json`.** Next to `model.c4` sits a `likec4.config.json`
+  with a unique `name` (e.g. `{ "name": "<product>", "title": "…" }`), so this model stands as its own
+  LikeC4 project. Create it if it's missing. Without it, LikeC4 merges every config-less `.c4` in the
+  workspace into one default project — and a sibling product's model bleeds into your index.
 - **A tree, root → leaves — down one axis.** The root is a **high-level overview of the whole
-  project**. Each node nests the finer *interacting* parts inside it (LikeC4 component nesting), down
+  product**, and the **sub-projects are its first level** — one node per repo, each nesting its own
+  interacting parts. Each node nests the finer *interacting* parts inside it (LikeC4 component nesting), down
   to the **finest interacting unit that still matters for reasoning**. Deeper means a smaller
   interacting unit of the **same** runtime-interaction axis — never a jump to a different axis (code
   structure, type hierarchy, deployment topology). Structure, not a flat list.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "mycrew — a five-layer harness for Claude Code, each layer built on the one below. 1) mycrew-tools gives you the primitives and the house rules. 2) mycrew-pipeline is the build pipeline that carries a task from a decision to hardened code. 3) mycrew-setup prepares a repo: features, specs, architecture. 4) mycrew-worker is the second pilot that drives setup and pipeline on one project. 5) mycrew-chief is the top brain that orchestrates workers across a product's sub-projects. Install mycrew-tools first.",
+  "description": "mycrew — a five-layer harness for Claude Code, each layer built on the one below. 1) mycrew-tools gives you the primitives and the house rules. 2) mycrew-pipeline is the build pipeline that carries a task from a decision to hardened code. 3) mycrew-worker is the second pilot that drives the pipeline on one project. 4) mycrew-chief owns the design and orchestrates workers across a product's sub-projects. 5) mycrew-product is the product plane on top, where you set the direction and everything below builds to it. Install mycrew-tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
@@ -22,25 +22,25 @@
       "source": "./plugins/mycrew-pipeline"
     },
     {
-      "name": "mycrew-setup",
-      "description": "Layer 3/5 — repo preparation. The skills that ground a repo before any build: feature-management (the declarative features and notes in docs/features/), architecture-management (the model.c4 tree in docs/architecture/), spec-management (detailed specs in docs/specs/ — placeholder). Plus one interview that fills them all: /setup draws everything out of the human and files each piece where it lives. Built on mycrew-tools; driven by mycrew-worker.",
-      "author": { "name": "kubik" },
-      "category": "workflow",
-      "source": "./plugins/mycrew-setup"
-    },
-    {
       "name": "mycrew-worker",
-      "description": "Layer 4/5 — the second pilot. Hand /worker any piece of work (a fix, a change, a feature, a question) and it adapts: reads the goal (features) and design (architecture), then drives the right mycrew-setup, mycrew-pipeline, and mycrew-tools skills to finish it. Runs inline as /worker or as a native subagent you delegate a whole task to. Built on mycrew-setup + mycrew-pipeline + mycrew-tools.",
+      "description": "Layer 3/5 — the second pilot. Hand /worker any piece of work (a fix, a change, a feature, a question) and it adapts: reads the goal and design from the product plane, then drives the right mycrew-pipeline and mycrew-tools skills to finish it. It builds to the plane and never writes it — a design gap comes back as a report, not a repair. Runs inline as /worker or as a native subagent you delegate a whole task to. Built on mycrew-pipeline + mycrew-tools.",
       "author": { "name": "kubik" },
       "category": "workflow",
       "source": "./plugins/mycrew-worker"
     },
     {
       "name": "mycrew-chief",
-      "description": "Layer 5/5 — the top brain. /chief (backed by the chief-rules skill) orchestrates the workers across a product's sub-projects, each its own git repo under the current folder. It owns the product plane — the product-wide features of cross-cutting capabilities (features-management), direction finding (what-to-do), and the product CLAUDE.md (via /chief-init) — keeps each repo's features true, and sequences and dispatches workers (as native subagents) where cross-repo work needs them. It conducts; the workers build. Built on mycrew-worker.",
+      "description": "Layer 4/5 — the brain between the product plane and the repos. /chief owns the design (architecture-management for the one model.c4 tree at the product root, spec-management for the specs), decomposes an approved product feature into per-repo assignments, picks what to advance next (what-to-do), and sequences and dispatches workers as native subagents (worker-orchestration). It never invents features and never writes code. It conducts; the workers build. Built on mycrew-worker.",
       "author": { "name": "kubik" },
       "category": "workflow",
       "source": "./plugins/mycrew-chief"
+    },
+    {
+      "name": "mycrew-product",
+      "description": "Layer 5/5 — the product plane, and the only layer that talks to the human about direction. /product-init founds the product repository (the folder holding your sub-project repos becomes its own git repo, with a North Star drawn from you). /setup then runs an endless interview that draws the whole product out of you and files each affirmed piece where it lives: features, architecture, specs — one plane for every sub-project. Strictly extractive: your vision, never its own. Drives mycrew-chief.",
+      "author": { "name": "kubik" },
+      "category": "workflow",
+      "source": "./plugins/mycrew-product"
     }
   ]
 }
