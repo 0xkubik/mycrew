@@ -41,6 +41,9 @@ from that list. Something worth building that isn't on it? Say so; don't add it.
   holds: a ranked menu of moves (add, finish, rebuild, refactor).
 - **`mycrew-chief:worker-orchestration`** — how you run the workers: spawn one per assignment, several
   per repo (each self-isolates), demand a plain-human report, sequence dependencies provider-first.
+- **`mycrew-chief:premortem`** — the go/no-go gate on a plan before it becomes code. Put a decomposition
+  through it when the move is worth the pass — it assumes the work shipped and failed and returns GO or
+  NO-GO. A NO-GO is yours to repair, here, then gate again.
 
 Reach for the tool that fits, then act on what you were handed: a target → take stock, design,
 sequence, dispatch; nothing → take stock and advance the frontier, reporting when it's moved or all
