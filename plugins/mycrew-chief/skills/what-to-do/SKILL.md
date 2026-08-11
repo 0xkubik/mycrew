@@ -11,9 +11,10 @@ argument-hint: "[optional focus — or nothing to survey the whole product]"
   **frontier** (first unchecked `[ ]`) as the steer.
 - **The design** — `docs/architecture/model.c4` and `docs/specs/`, also at the product root: what the
   system is shaped like and where a feature's detail already lives.
-- **The file list** — every sub-project's tracked files with line counts, run per repo:
-  `for d in */; do [ -e "$d/.git" ] && git -C "$d" ls-files | sed "s|^|$d|"; done | xargs wc -l`.
-  Shared ground handed to every lens. Then fan out.
+- **The file list** — every sub-project's tracked files with line counts. Take the paths from the
+  Sub-projects list, never by scanning, and run per path:
+  `git -C <path> ls-files | sed "s|^|<path>/|" | xargs wc -l`. Shared ground handed to every lens.
+  Then fan out.
 
 ## Step 1 — Fan out (four subagents, parallel)
 

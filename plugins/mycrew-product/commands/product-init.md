@@ -10,16 +10,23 @@ everything true about the whole product. One-shot; run it once, then `/setup` fi
 
 ## What you do
 
-1. **Gather.** List the git-repo subfolders and **read each one's `CLAUDE.md`** — your raw material.
+1. **Gather.** Find the sub-projects and **read any `CLAUDE.md` they carry** — your raw material.
    ```bash
-   for d in */; do [ -e "$d/.git" ] && echo "$d"; done
+   find . -maxdepth 3 -name .git -not -path '*/.claude/*' | sed 's|/\.git$||'
    ```
-2. **Make the root a repository.** `git init` here, and write a `.gitignore` listing every
-   sub-project folder. This is **load-bearing, not tidiness**: git does not recurse into a nested
-   repo, but a single `git add -A` at the root turns one into an unpopulated gitlink — clones lose
-   its contents and every commit inside it dirties the root. Ignored first, that can't happen; added
-   after the fact, `.gitignore` no longer helps and it takes a `git rm --cached` to undo. The folders
-   stay visible in the editor and keep working as their own repos.
+2. **Make the root a repository, and settle how the sub-projects hang off it.** `git init` here, then
+   ask the human which of the two, and record the answer in the Sub-projects section:
+   - **Mounted** — each sub-project is added with `git submodule add <url> <path>`. `.gitmodules`
+     becomes the manifest, one recursive clone brings the product down whole, and each repo keeps its
+     own visibility, so some may be public and some private. The cost is a pointer-bump commit here
+     whenever a sub-project moves.
+   - **Loose** — the sub-projects merely sit here and the root ignores them. Then the `.gitignore`
+     **must list every one of them before the first `git add`**: git does not recurse into a nested
+     repo, but a single `git add -A` turns one into an unpopulated gitlink — clones lose its contents
+     and every commit inside it dirties the root. Added after the fact, `.gitignore` no longer helps
+     and it takes a `git rm --cached` to undo.
+
+   A sub-project that is simply a folder of this repository — no repo of its own — needs neither.
 3. **Ask.** Draw two things out of the human — never invent them: the product's single **North Star**
    (guiding intent), and its **current state** — is there a live production in use.
 4. **Write on approval.** Compose the root `CLAUDE.md`, write it only once they approve.
@@ -35,4 +42,7 @@ everything true about the whole product. One-shot; run it once, then `/setup` fi
   Every layer below weighs it in all work.
 - **Description** — a top-level synthesis of the product, assembled from the sub-projects' CLAUDE.mds
   (the whole, not the parts pasted).
-- **Sub-projects** — each with one crisp line: what it is and its role.
+- **Sub-projects** — the declared list every layer below reads instead of scanning. One entry per
+  sub-project: its **path**, one crisp line on what it is and its role, and — where it isn't obvious —
+  whether workers are dispatched into it at all. A repo that is a source rather than a build target (a
+  charter, a spec bundle, a vendored reference) must say so, or the chief will try to build in it.

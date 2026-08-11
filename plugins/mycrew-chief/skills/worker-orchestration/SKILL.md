@@ -13,9 +13,13 @@ rules for that.
 
 ## Rules & concepts — non-negotiable
 - **Spawn and hand off a complete assignment.** Every piece of work is a **worker** subagent (Agent
-  tool, `subagent_type: "worker"`, `--auto`). Hand it: the concrete goal, its sub-project path, **which
-  approved feature it serves**, the parts of the design it builds to (the `model.c4` branch and the
-  specs), and the cross-repo context it can't see itself — then let it build.
+  tool, `subagent_type: "worker"`, `--auto`). Hand it: the concrete goal, its sub-project **path**,
+  **which approved feature it serves**, the parts of the design it builds to (the `model.c4` branch and
+  the specs), and the cross-repo context it can't see itself — then let it build.
+- **Give the path, not a layout.** The path comes from the product `CLAUDE.md`'s Sub-projects list.
+  Whether it is a submodule, a repository of its own, or a folder of the product repo is git's business,
+  not the worker's brief — it isolates itself in whatever repository owns that path, and commits there.
+  A sub-project the list marks as **not a build target** never receives a worker at all.
 - **The worker builds; the plane is yours.** A worker never edits the features list, the architecture
   tree, or a spec. An assignment thin enough that the worker would have to invent design is an
   incomplete assignment — finish it here first.
