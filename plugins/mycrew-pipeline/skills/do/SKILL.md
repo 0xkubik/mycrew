@@ -1,6 +1,6 @@
 ---
 name: do
-description: "Use when you have ONE concrete, well-scoped coding task ready to build autonomously. Builds it by a tight set of writing rules — reuse-first, least code, modular bricks, SOLID, no comments, graded logs. Refuses vague or fork-laden tasks rather than guessing."
+description: "Use when ONE concrete, well-scoped coding task is ready to build autonomously — built to a tight set of writing rules: reuse-first, least code, modular bricks, SOLID, no comments, graded logs. Refuses vague or fork-laden tasks rather than guessing. Triggers: \"build this\", \"implement it\", \"just do it\"."
 argument-hint: "<one concrete, well-scoped task>"
 ---
 

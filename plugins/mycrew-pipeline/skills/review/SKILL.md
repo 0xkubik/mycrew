@@ -1,6 +1,6 @@
 ---
 name: review
-description: "Use to hunt a change for edge cases, vulnerabilities, and correctness bugs — fan out three hunters, verify each finding is real, then FIX it yourself. Never hands a findings list upward. Runs after refactor or standalone. Triggers: \"review this\", \"find bugs\", \"security check\", \"edge cases\"."
+description: "Use when a change needs hunting for edge cases, vulnerabilities, and correctness bugs before it ships — every confirmed finding is fixed in place, never handed up as a list. Runs after refactor or standalone. Triggers: \"review this\", \"find bugs\", \"security check\", \"edge cases\"."
 argument-hint: "[what to review — omit for the last change]"
 ---
 

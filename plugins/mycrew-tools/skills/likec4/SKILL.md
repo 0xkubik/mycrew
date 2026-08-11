@@ -1,6 +1,6 @@
 ---
 name: likec4
-description: "Reference for LikeC4 — a DSL and toolchain for describing software architecture as code (C4-style context / container / component / code), where one model renders many consistent, auto-laid-out views. Covers the language, view kinds, styling, deployment, the CLI, the MCP server, and where the exhaustive syntax lives. Viewed via the LikeC4 VS Code extension; can generate Mermaid."
+description: "Use when reading or writing LikeC4 — any .c4 file, including the product's docs/architecture/model.c4 — or when architecture must be described as code. Reference for the DSL and toolchain (C4-style context / container / component / code), where one model renders many consistent, auto-laid-out views: the language, view kinds, styling, deployment, the CLI, the MCP server, and where the exhaustive syntax lives. Viewed via the LikeC4 VS Code extension; can generate Mermaid."
 ---
 
 # likec4 — architecture-as-code reference

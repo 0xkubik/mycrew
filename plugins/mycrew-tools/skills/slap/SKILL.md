@@ -1,6 +1,6 @@
 ---
 name: slap
-description: Reset approach when stuck in a debugging rabbit hole. Forces a step back to rethink the problem from scratch.
+description: "Use when a fix has stopped working and more of the same is being tried — three failed attempts, the same error returning, the debugging going in circles. Forces a hard reset: the approach so far is abandoned and the problem re-stated from scratch. Not a debugging method (that's systematic-debugging) but the circuit breaker for one that failed. Triggers: \"slap\", \"you're going in circles\", \"stop, rethink this\"."
 argument-hint: "[optional context about the bug]"
 ---
 

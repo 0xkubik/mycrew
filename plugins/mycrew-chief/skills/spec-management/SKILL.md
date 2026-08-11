@@ -1,7 +1,7 @@
 ---
 name: spec-management
-description: "Use for the product's specs — detailed feature and contract descriptions in docs/specs/ at the product root, where a feature's one-liner is not enough. The chief owns them; workers build to them. Placeholder: the rules are not written yet."
-argument-hint: "<the spec to shape or grow>"
+description: "Use when a feature's one-liner is not enough and the detail belongs in docs/specs/ at the product root — the chief owns the specs, workers only read them. The shaping rules are not written yet; this holds the ownership boundary only."
+user-invocable: false
 ---
 
 # spec-management — the specs, as living documents

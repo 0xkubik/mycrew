@@ -1,6 +1,6 @@
 ---
 name: disease-or-symptom
-description: "Use when a request might be a symptom rather than the real problem, before you commit to solving it — strips the solution out of the ask, drills to the root goal or problem, cross-checks it from a few fitting vantage points, and returns one verdict: disease (the root) or symptom (the surface). Diagnosis only — never decides, never builds."
+description: "Use when a request might be a symptom rather than the real problem, before committing to solving it — returns ONE verdict, disease (the root) or symptom (the surface), with the root goal named. Diagnosis only: never decides, never builds. Triggers: \"is this the real problem\", \"why are we doing this\", a fix that keeps coming back."
 argument-hint: "[the request or problem to diagnose]"
 ---
 

@@ -1,6 +1,5 @@
 ---
-description: "Found the product: turn the folder holding your sub-project repos into the product repository — its own git repo, the root CLAUDE.md with a North Star drawn from the human, and the empty product plane (features, architecture, specs). One-shot init, run at the product root."
-argument-hint: "(no args — run at the product root)"
+description: "Use once to found the product — turn the folder holding the sub-project repos into the product repository: its own git repo, the root CLAUDE.md with a North Star drawn from the human, and the empty product plane (features, architecture, specs). One-shot init, run at the product root."
 ---
 
 # /product-init — found the product

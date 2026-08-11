@@ -1,7 +1,6 @@
 ---
 name: worker-rules
-description: "The worker's operating rules — how the project's second pilot grounds itself, its three invariants, the kit it reaches for, and the flags it obeys. Loaded by the /worker command and the worker agent; also invocable on its own as a reference."
-argument-hint: "(reference — the rules the /worker command and worker agent follow)"
+description: "Use when the worker's own rules are needed — how the project's second pilot grounds itself, its three invariants, the kit it reaches for, and the flags it obeys. The single source of truth behind the /worker command and the worker agent; also a standalone reference."
 ---
 
 # worker-rules — how the project's second pilot operates

@@ -1,7 +1,6 @@
 ---
 name: feature-management
-description: "The feature-management rules — the constraints any features interview obeys: draw the user's own features out (never your own ideas), a fresh angle each question, ≤200 chars per feature, the one product features list only. Loaded by the /setup command; also invocable on its own as a reference."
-argument-hint: "(reference — the rules /setup follows for features)"
+description: "Use when features are being drawn out of a human and filed — the constraints any features interview obeys: the user's own features only (never your own ideas), a fresh angle each question, ≤200 chars per feature, the one product features list. Loaded by /setup; also a standalone reference."
 ---
 
 # feature-management — the rules for drawing out features

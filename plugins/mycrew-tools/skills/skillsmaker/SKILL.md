@@ -30,8 +30,11 @@ obey them in the skill you write, so it reads like its siblings.
 - **Bold lead-in per rule.** Every bullet opens with a two-or-three-word imperative in **bold**, then the
   rule. Skimmable at a glance, memorable as a slogan.
 - **Frontmatter earns the load.** `name` is the invocation. `description` is the only line the router
-  reads — pack it: open with **"Use when…"**, then the mechanism and what it guarantees. `argument-hint`
-  shows what to pass (`<required>` vs `[optional]`). A pure reference drops `argument-hint`.
+  reads — pack it: open with **"Use when…"**, then the boundary and what it guarantees, and close with
+  the literal phrases a human types. **Never the mechanism** — no step order, no subagent counts, no
+  "then X": a description that summarises the *how* becomes a shortcut the model takes instead of
+  reading the skill. `argument-hint` shows what to pass (`<required>` vs `[optional]`); a pure reference
+  drops it, and it is never a note about the skill.
 - **Self-exemplifying.** The skill obeys its own rules. One preaching brevity in a wall of prose is wrong.
 - **English.** Identifiers, titles, prose — all English.
 
@@ -42,7 +45,7 @@ skills/<name>/SKILL.md         # optional sibling: a template or example beside 
 
 ---
 name: <one word>
-description: "Use when … — <mechanism + what it guarantees, one packed sentence>"
+description: "Use when … — <boundary + what it guarantees>. Triggers: \"…\", \"…\"."
 argument-hint: "<what to pass>"     # omit for a pure reference
 ---
 

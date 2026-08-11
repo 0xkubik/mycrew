@@ -1,6 +1,6 @@
 ---
 name: refactor
-description: "Use to reshape working code toward the do writing rules WITHOUT changing what it does — gate that it works, find where the rules are violated, fix them, gate that the logic is unchanged. Runs before/after /do or standalone. Triggers: \"refactor this\", \"clean up\", \"tidy the structure\"."
+description: "Use when working code needs reshaping toward the do writing rules with its behavior held exactly as it is — gated both sides, so what the code does is provably unchanged. Runs before/after /do or standalone. Triggers: \"refactor this\", \"clean up\", \"tidy the structure\"."
 argument-hint: "[what to refactor — omit for the last change]"
 ---
 

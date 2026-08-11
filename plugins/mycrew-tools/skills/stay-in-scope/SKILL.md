@@ -1,6 +1,6 @@
 ---
 name: stay-in-scope
-description: "Use when the request is small or its edges are fuzzy and the pull is to build around it — pins the ask's boundaries as the spec: do exactly what was asked, flag noticed-but-unasked work instead of folding it in, then stop."
+description: "Use when the request is small or its edges are fuzzy and the pull is to build around it — pins the ask's boundaries as the spec: do exactly what was asked, flag noticed-but-unasked work instead of folding it in, then stop. The on-demand form of the stay-in-scope rule, for a project that hasn't installed it."
 ---
 
 # stay-in-scope — do exactly what was asked, nothing extra

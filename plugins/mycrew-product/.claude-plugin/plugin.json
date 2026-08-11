@@ -1,6 +1,6 @@
 {
   "name": "mycrew-product",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Layer 5/5 of the mycrew harness — the product plane, and the only layer that talks to the human about direction. /product-init founds the product repository (the folder holding your sub-project repos becomes its own git repo, with a North Star drawn from you). /setup then runs an endless interview that draws the whole product out of you and files each affirmed piece where it lives: features (docs/features/), architecture, specs — one plane for every sub-project; strictly extractive, your vision and never its own. propose-idea is the one counterpart: it invents a feature, pitches it with the case for it, and files it only on your approval — logging every idea and your verdict in docs/features/ideas/. Drives mycrew-chief.",
   "author": {
     "name": "kubik",

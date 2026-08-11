@@ -1,6 +1,6 @@
 ---
 name: retract
-description: "Use when the human declares recorded information wrong or dead ('X is not true', 'there will be no X') — hunts every place that states it across the repo's docs, CLAUDE.mds, and persistent memory, then surgically deletes or corrects exactly that information and reports every touched spot. Removes only what was named, never rewrites around it."
+description: "Use when the human declares recorded information wrong or dead ('X is not true', 'there will be no X', 'we dropped X') — every place that still states it, across the repo's docs, CLAUDE.mds, and persistent memory, ends up deleted or corrected, and every touched spot reported. Removes only what was named, never rewrites around it."
 argument-hint: "<the wrong information — one claim, e.g. 'there will be no post versioning'>"
 ---
 

@@ -66,6 +66,9 @@ as a report, not a repair). Keep any new prompt on the right side of that line.
   (`bump-plugin-version.md` is repo-only.)
 - The flags `--auto`, `--plan`, `--res9ty`, `--worktree`, `--ultracode` are defined in `worker-rules` and
   restated in `commands/worker.md` and `commands/chief.md`. Change one wording, change all of them.
+- A plugin's `description` is the same sentence in its `plugin.json` and in `.claude-plugin/marketplace.json`
+  — the manifest's opens `Layer N/5 of the mycrew harness`, the marketplace's just `Layer N/5`. Change one,
+  change both.
 
 ## Checking a change
 

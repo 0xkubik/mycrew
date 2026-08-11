@@ -1,7 +1,6 @@
 ---
 name: worker-orchestration
-description: "Use when the chief dispatches workers — spawn a worker subagent per task, run several on one repo (each self-isolates in its own worktree), require a plain-human report from each, and sequence who depends on whom provider-first."
-argument-hint: "(reference — the rules for orchestrating workers)"
+description: "Use when the chief has work to hand out — the rules for dispatching worker subagents across the sub-projects: what a complete assignment contains, what a worker may never touch, and how dependent pieces are sequenced. Reference, loaded by /chief."
 user-invocable: false
 ---
 

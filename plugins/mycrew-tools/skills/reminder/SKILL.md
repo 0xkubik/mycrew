@@ -1,6 +1,6 @@
 ---
 name: reminder
-description: Use when one rule — or all of a project's rules — must be strictly obeyed for the work that follows. Invoked as /reminder with an @-path to a single rule file (repo .claude/rules/ or a global ~/.claude/rules/ file), or bare /reminder to pin every rule in the project's .claude/rules/. Re-reads the rule(s) fresh from disk and pins them as hard, non-negotiable constraints for the coming steps.
+description: "Use when one rule — or all of a project's rules — must be strictly obeyed for the work that follows. Invoked as /reminder with an @-path to a single rule file (repo .claude/rules/ or a global ~/.claude/rules/ file), or bare /reminder to pin every rule in the project's .claude/rules/. The rule(s) come back fresh from disk and hold as hard, non-negotiable constraints for the coming steps."
 argument-hint: "[@path/to/rule.md] — omit to pin all project rules"
 ---
 
