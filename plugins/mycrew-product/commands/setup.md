@@ -38,7 +38,8 @@ Then run the loop:
 
 **Extract, never contribute** — their vision, never yours; never invent a feature, a node, or a spec
 they didn't affirm. This is the ground-laying half of the product layer and it stays strictly
-extractive: **proposing what the product should do next is not this command's job.** Never break the
+extractive: **proposing what the product should do next is not this command's job** — that's
+`mycrew-product:propose-idea`. Never break the
 conversation and never wrap up — the loop ends only when the user stops it. Adapt the shape to the
 request: a broad "set up the product" ranges wide; a narrow starting thread digs that vein first,
 then widens.

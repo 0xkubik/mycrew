@@ -1,15 +1,16 @@
 ---
-name: what-to-build
-description: "Use when the product needs ideas it doesn't hold yet — invent candidate features and improvements, pitch each to the human with the case for it, and on their approval file it into features.md. Every idea, approved or rejected, is logged with their reason in docs/features/ideas/ and binds every later pitch. Sibling of what-to-do: that one picks among existing moves, this one invents new ones."
+name: propose-idea
+description: "Use when the product needs an idea it doesn't hold yet — invent a candidate feature or improvement, pitch it to the human with the case for it, and file it into features.md only on their approval. Every idea, approved or rejected, is logged with their own reason in docs/features/ideas/ and binds every later pitch. The counterpart to /setup: that one draws the human's vision out, this one puts an idea of its own in."
 argument-hint: "[an angle to invent along — or nothing to range across the whole product]"
 ---
 
-# what-to-build — invent the next capability, pitch it, keep the verdict
+# propose-idea — invent a feature, pitch it, keep the verdict
 
-The **one place the chief has product ideas of its own**. You invent — features and improvements the
-product plane doesn't hold yet — and put each to the human with the case for it. You **never decide**:
-only their approval puts a line in `features.md`, and every verdict, yes or no, is written down and
-binds what you pitch next. Everything you touch sits at the **product root**.
+The **one place mycrew contributes a product idea of its own**. Everywhere else the product plane is
+strictly extractive — `/setup` draws out the human's vision and never adds to it. Here you invent:
+features and improvements the plane doesn't hold yet, each put to the human with the case for it. You
+**never decide** — only their approval puts a line in `features.md`, and every verdict, yes or no, is
+written down and binds what you pitch next. Run at the **product root**.
 
 ## Rules & concepts — non-negotiable
 
@@ -24,14 +25,14 @@ binds what you pitch next. Everything you touch sits at the **product root**.
   and where it's going. Inventing to have something to say is the failure mode — a run that honestly
   finds nothing left worth pitching says so and stops.
 - **One idea at a time.** Pitch it, take the verdict, file it, then the next — never a menu of five.
-  (Ranking what the plane already holds is `what-to-do`; this is the other job.)
 - **Pitch in plain human language.** Say what it is and *why it's worth doing* — the gap it closes, who
   it helps, what it costs — before you ask. No jargon: the human decides on the case, not on your
   vocabulary. Put the question itself through `AskUserQuestion`.
 - **Approval is the only door into the feature list.** An approved idea becomes one `- [ ]` line of
-  **≤200 chars** in `docs/features/features.md`, in their intent, by the
-  `mycrew-product:feature-management` rules. Nothing else ever reaches that file — and `--auto` does
-  not approve on the human's behalf; without their word, this skill does not run.
+  **≤200 chars** in `docs/features/features.md`, in their intent, in the shape
+  `mycrew-product:feature-management` sets (that skill's *extract, never contribute* stance governs the
+  interview, not you — pitching is exactly your job). Nothing else ever reaches that file — never
+  approve on the human's behalf, whatever else the session was told.
 - **Every verdict, both halves, always.** A verdict lands in **two** places: one line in
   `docs/features/ideas/ideas.md` and a full dossier at `docs/features/ideas/history/<slug>.md`. A
   rejection is filed exactly as carefully as an approval. An idea pitched but not logged never happened.

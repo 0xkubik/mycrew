@@ -34,6 +34,8 @@ Each layer builds on the one below; a layer only ever drives the layer beneath i
    decomposes an approved feature into per-repo assignments, spawns workers. Never writes code.
 5. **mycrew-product** — the only layer that talks to the human about direction. `/product-init` founds
    the product repo once; `/setup` runs an endless extractive interview that files what it draws out.
+   `propose-idea` is the one place mycrew contributes an idea of its own — pitched, and filed only on
+   the human's approval.
 
 ## The product plane — the vocabulary every layer shares
 
@@ -42,8 +44,8 @@ above the sub-project repos. Most skills here refer to them, so changing one pat
 
 - `docs/features/features.md` — the approved feature list, flat `- [ ]` checkboxes; accumulates, never deleted.
 - `docs/features/notes.md` — scratch.
-- `docs/features/ideas/` — every idea the chief pitched: `ideas.md` one line each with the human's verdict,
-  `history/<slug>.md` the full case per idea. Approved and rejected alike; append-only.
+- `docs/features/ideas/` — every idea `propose-idea` pitched: `ideas.md` one line each with the human's
+  verdict, `history/<slug>.md` the full case per idea. Approved and rejected alike; append-only.
 - `docs/architecture/model.c4` — ONE LikeC4 tree for the whole product, plus `likec4.config.json` beside it.
 - `docs/specs/` — specs, where a feature's one line isn't enough.
 - root `CLAUDE.md` — North Star, current state, and the **Sub-projects list**: the declared paths every layer

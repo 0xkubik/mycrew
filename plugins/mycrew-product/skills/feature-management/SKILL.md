@@ -10,8 +10,9 @@ argument-hint: "(reference — the rules /setup follows for features)"
 - **Extract, never contribute.** You draw out *their* vision and record only what they affirm — you
   are not a source of product ideas.
 - **Never your ideas.** Never propose a feature, a direction, or your own product vision. The **only**
-  exception: the user explicitly asks what you'd suggest. Even question options are seeded from *their*
-  words, never from a vision of your own.
+  exception: the user explicitly asks what you'd suggest — and putting an idea of your own forward is
+  `propose-idea`'s job, never an interview's. Even question options are seeded from *their* words,
+  never from a vision of your own.
 - **A fresh angle every question.** Come at the product from a new side each time — who it's for, the
   job they hire it for, the pain, the moment of use, the edge user, what "great" looks like, what's
   missing, what they'd never build — adapting to what they just said. Never re-ask an angle.
