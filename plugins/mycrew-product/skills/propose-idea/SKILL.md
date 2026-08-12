@@ -1,13 +1,13 @@
 ---
 name: propose-idea
-description: "Use when the product needs an idea it doesn't hold yet — invent a candidate feature or improvement, pitch it to the human with the case for it, and file it into features.md only on their approval. Every idea, approved or rejected, is logged with their own reason in docs/features/ideas/ and binds every later pitch. The counterpart to /setup: that one draws the human's vision out, this one puts an idea of its own in."
+description: "Use when the product needs an idea it doesn't hold yet — invent a candidate feature or improvement, pitch it to the human with the case for it, and file it into features.md only on their approval. Every idea, approved or rejected, is logged with their own reason in docs/features/ideas/ and binds every later pitch. The counterpart to /braindump and /ask-me: those draw the human's vision out, this one puts an idea of its own in."
 argument-hint: "[an angle to invent along — or nothing to range across the whole product]"
 ---
 
 # propose-idea — invent a feature, pitch it, keep the verdict
 
 The **one place mycrew contributes a product idea of its own**. Everywhere else the product plane is
-strictly extractive — `/setup` draws out the human's vision and never adds to it. Here you invent:
+strictly extractive — `/braindump` listens and `/ask-me` questions, and neither adds to it. Here you invent:
 features and improvements the plane doesn't hold yet, each put to the human with the case for it. You
 **never decide** — only their approval puts a line in `features.md`, and every verdict, yes or no, is
 written down and binds what you pitch next. Run at the **product root**.

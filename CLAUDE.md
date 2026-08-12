@@ -15,7 +15,7 @@ Editing this repo means editing instructions that *other* Claude instances load 
 | --- | --- |
 | `.claude-plugin/marketplace.json` | the marketplace itself — lists all five plugins and their `source` paths |
 | `plugins/<name>/.claude-plugin/plugin.json` | per-plugin manifest; its `version` is what ships changes |
-| `plugins/<name>/commands/*.md` | slash commands — `/chief`, `/worker`, `/setup`, `/product-init` |
+| `plugins/<name>/commands/*.md` | slash commands — `/chief`, `/worker`, `/braindump`, `/ask-me`, `/product-init` |
 | `plugins/<name>/skills/<skill>/SKILL.md` | skills, invoked as `<plugin>:<skill>` (e.g. `mycrew-pipeline:do`) |
 | `plugins/mycrew-worker/agents/worker.md` | the `worker` subagent type the chief spawns |
 | `plugins/mycrew-tools/rules/*.md` | rule files shipped for copying into a consumer project's `.claude/rules/` |
@@ -33,7 +33,8 @@ Each layer builds on the one below; a layer only ever drives the layer beneath i
 4. **mycrew-chief** — the brain between the product plane and the repos. Owns architecture and specs,
    decomposes an approved feature into per-repo assignments, spawns workers. Never writes code.
 5. **mycrew-product** — the only layer that talks to the human about direction. `/product-init` founds
-   the product repo once; `/setup` runs an endless extractive interview that files what it draws out.
+   the product repo once; `/braindump` listens while the human unloads and `/ask-me` questions them one
+   angle at a time — both endless, both strictly extractive, both filing what they draw out.
    `propose-idea` is the one place mycrew contributes an idea of its own — pitched, and filed only on
    the human's approval.
 

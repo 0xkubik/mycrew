@@ -37,7 +37,7 @@
     },
     {
       "name": "mycrew-product",
-      "description": "Layer 5/5 — the product plane, and the only layer that talks to the human about direction. /product-init founds the product repository (the folder holding your sub-project repos becomes its own git repo, with a North Star drawn from you). /setup then runs an endless interview that draws the whole product out of you and files each affirmed piece where it lives: features (docs/features/), architecture, specs — one plane for every sub-project; strictly extractive, your vision and never its own. propose-idea is the one counterpart: it invents a feature, pitches it with the case for it, and files it only on your approval — logging every idea and your verdict in docs/features/ideas/. Drives mycrew-chief.",
+      "description": "Layer 5/5 — the product plane, and the only layer that talks to the human about direction. /product-init founds the product repository (the folder holding your sub-project repos becomes its own git repo, with a North Star drawn from you). Two endless modes then draw the whole product out of you and file each affirmed piece where it lives — features (docs/features/), architecture, specs, one plane for every sub-project: /braindump listens while you unload and never steers, /ask-me questions you one angle at a time until the product is thought through. Both are strictly extractive — your vision and never its own. propose-idea is the one counterpart: it invents a feature, pitches it with the case for it, and files it only on your approval — logging every idea and your verdict in docs/features/ideas/. Drives mycrew-chief.",
       "author": { "name": "kubik" },
       "category": "workflow",
       "source": "./plugins/mycrew-product"

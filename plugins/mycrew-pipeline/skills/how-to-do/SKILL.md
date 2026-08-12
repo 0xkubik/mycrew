@@ -9,7 +9,7 @@ argument-hint: "<the fork or question to work through>"
 how-to-do works out **HOW to build something in code**. Confirm the task is that before spending
 four poles:
 
-- **Product direction** (what to build / where to go — not how) → `/what-to-do` or `/setup`.
+- **Product direction** (what to build / where to go — not how) → `/what-to-do` or `/ask-me`.
 - **Trivial & clear how** (one obvious way to implement) → straight to `mycrew-pipeline:do`.
 - **A real implementation/architecture fork** — materially different ways to build it, no obvious
   winner → you're in the right place. Continue.

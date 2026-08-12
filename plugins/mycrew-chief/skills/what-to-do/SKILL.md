@@ -7,7 +7,7 @@ argument-hint: "[optional focus — or nothing to survey the whole product]"
 ## Gate — ground before you fan out
 
 - **The features** — `docs/features/features.md` at the **product root**, the one approved list.
-  **Missing or empty → route to `/setup`** first (it grounds the feature list). Present → read the
+  **Missing or empty → route to `/ask-me`** first (it grounds the feature list). Present → read the
   **frontier** (first unchecked `[ ]`) as the steer.
 - **The design** — `docs/architecture/model.c4` and `docs/specs/`, also at the product root: what the
   system is shaped like and where a feature's detail already lives.

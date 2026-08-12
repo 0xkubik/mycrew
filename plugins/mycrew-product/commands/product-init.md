@@ -5,7 +5,8 @@ description: "Use once to found the product — turn the folder holding the sub-
 # /product-init — found the product
 
 Turn the folder that holds the sub-project repos into the **product repository** — the home of
-everything true about the whole product. One-shot; run it once, then `/setup` fills it forever after.
+everything true about the whole product. One-shot; run it once, then `/braindump` and `/ask-me` fill it
+forever after.
 
 ## What you do
 
@@ -31,7 +32,7 @@ everything true about the whole product. One-shot; run it once, then `/setup` fi
 4. **Write on approval.** Compose the root `CLAUDE.md`, write it only once they approve.
 5. **Seed the empty product plane.** `docs/features/features.md` and `notes.md` from the
    `mycrew-chief:feature-management` templates, plus empty `docs/architecture/` and `docs/specs/`.
-   `/setup` fills them; leave them empty here.
+   `/braindump` and `/ask-me` fill them; leave them empty here.
 
 ## What the root CLAUDE.md holds
 

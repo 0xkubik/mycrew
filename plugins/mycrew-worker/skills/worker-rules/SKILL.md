@@ -79,5 +79,5 @@ Default (no `--auto`): at a genuine fork you MAY ask the human with `AskUserQues
 ## Gate
 
 Build work needs a grounded plane. If the product root has no `docs/features/features.md`, or it's
-empty, there is nothing to build toward — route to `/setup` at the product root to ground it, and say
+empty, there is nothing to build toward — route to `/ask-me` at the product root to ground it, and say
 so rather than guessing. Non-build help (a slap, a question, a diagram) is not gated.
