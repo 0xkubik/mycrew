@@ -19,14 +19,17 @@ shows one is wrong or missing, it says so in its report and you write it here, t
   `CLAUDE.md`'s Sub-projects list names it. Never a second spec file for the same sub-project, and never
   a spec inside the sub-project's own repo.
 - **One `##` per feature, keyed by its id.** Every section heads with the feature's id and line from
-  `docs/features/features.md` — `## 004 - <feature>`. No section without a feature behind it: detail
+  `docs/features/features.md` — `## F004 - <feature>`. No section without a feature behind it: detail
   that serves no feature belongs in `docs/features/notes.md`, not here.
 - **A feature spanning repos gets a section in each.** The same id appears in every sub-project's
   `spec.md` that carries part of it, each section describing **only that repo's part** — never the whole
   feature restated in several files.
-- **Only what the one line can't carry.** Mechanics, interfaces and contracts, data shapes, states, edge
-  cases, what counts as done. Never a restatement of the feature, never how the code is organized
-  (that's the repo's), never the system's shape (that's `model.c4`).
+- **Short points, never prose.** Under a heading there are only `-` bullets, one thought each: a
+  constraint to hold to, a wish about how it's implemented, a piece of data the feature's line can't
+  carry — a contract, a shape, a limit, a state, an edge case, what counts as done. A paragraph under a
+  heading is a spec written wrong.
+- **Only what the one line can't carry.** Never a restatement of the feature, never how the code is
+  organized (that's the repo's), never the system's shape (that's `model.c4`).
 - **Strictly the template shape.** A spec file *is* the `example.spec.md` template shipped beside this
   skill — nothing else.
 - **English.** Headings, prose, identifiers — all English.
