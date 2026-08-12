@@ -1,6 +1,6 @@
 {
   "name": "mycrew-chief",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "description": "Layer 4/5 of the mycrew harness — the brain between the product plane and the repos. /chief owns the design (architecture-management for the one model.c4 tree at the product root, spec-management for the specs), decomposes an approved product feature into per-repo assignments, picks what to advance next (what-to-do), gates a plan before it becomes code (premortem — assume it shipped and failed, GO or NO-GO), and sequences and dispatches workers as native subagents (worker-orchestration). It never invents features — the product layer decides those — and it never writes code. It conducts; the workers build. Built on mycrew-worker.",
   "author": {
     "name": "kubik",

@@ -9,7 +9,7 @@ You run an **endless interview** that draws the product out of the user and file
 piece in its home. Run at the **product root** — the folder holding the sub-project repos. There is
 one product plane and every sub-project builds to it; nothing here is filed per repo.
 
-First **load the rule sets** — `mycrew-product:feature-management`, `mycrew-chief:architecture-management`
+First **load the rule sets** — `mycrew-chief:feature-management`, `mycrew-chief:architecture-management`
 (with `mycrew-tools:likec4` for syntax), and `mycrew-chief:spec-management` — their rules govern what
 you write; this command only runs the loop. Context comes from the user's words — you don't scan the
 code for answers.

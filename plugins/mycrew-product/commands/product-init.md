@@ -30,7 +30,7 @@ everything true about the whole product. One-shot; run it once, then `/setup` fi
    (guiding intent), and its **current state** — is there a live production in use.
 4. **Write on approval.** Compose the root `CLAUDE.md`, write it only once they approve.
 5. **Seed the empty product plane.** `docs/features/features.md` and `notes.md` from the
-   `mycrew-product:feature-management` templates, plus empty `docs/architecture/` and `docs/specs/`.
+   `mycrew-chief:feature-management` templates, plus empty `docs/architecture/` and `docs/specs/`.
    `/setup` fills them; leave them empty here.
 
 ## What the root CLAUDE.md holds
