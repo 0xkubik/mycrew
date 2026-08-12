@@ -42,12 +42,14 @@ Each layer builds on the one below; a layer only ever drives the layer beneath i
 These paths sit at the **product root** (the nearest ancestor folder holding `docs/features/`), one level
 above the sub-project repos. Most skills here refer to them, so changing one path means changing several files.
 
-- `docs/features/features.md` — the approved feature list, flat `- [ ]` checkboxes; accumulates, never deleted.
+- `docs/features/features.md` — the approved feature list, flat `- [ ] 000 - …` checkboxes with a permanent
+  three-digit id per line; accumulates, never deleted.
 - `docs/features/notes.md` — scratch.
 - `docs/features/ideas/` — every idea `propose-idea` pitched: `ideas.md` one line each with the human's
   verdict, `history/<slug>.md` the full case per idea. Approved and rejected alike; append-only.
 - `docs/architecture/model.c4` — ONE LikeC4 tree for the whole product, plus `likec4.config.json` beside it.
-- `docs/specs/` — specs, where a feature's one line isn't enough.
+- `docs/specs/<sub-project>/spec.md` — one spec file per sub-project, a `##` section per feature keyed by
+  its id; where a feature's one line isn't enough.
 - root `CLAUDE.md` — North Star, current state, and the **Sub-projects list**: the declared paths every layer
   reads. Sub-projects are never discovered by scanning for `.git`.
 
