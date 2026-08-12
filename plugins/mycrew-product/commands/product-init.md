@@ -1,5 +1,5 @@
 ---
-description: "Use once to found the product — settle how the repository is laid out (monorepo or polyrepo with submodules), take the sub-projects from the human, write the root CLAUDE.md with a North Star drawn from them, outline the empty docs/ plane, and git init. Stops before the first commit so the human can look at everything. Run at the product root."
+description: "Use once to found the product — settle how the repository is laid out (singlerepo, monorepo, or polyrepo with submodules), take the sub-projects from the human, write the root CLAUDE.md with a North Star drawn from them, outline the empty docs/ plane, and git init. Stops before the first commit so the human can look at everything. Run at the product root."
 ---
 
 # /product-init — found the product
@@ -12,6 +12,8 @@ after. You **never commit**: the run ends with everything written and the human 
 
 1. **Ask the two questions first**, via `AskUserQuestion`, before writing anything.
    - **How the product repository is laid out:**
+     - **Singlerepo** — the product *is* one codebase, no sub-projects at all. The plane still lives at
+       the root; the Sub-projects list holds the single entry, this repository itself.
      - **Monorepo** — every sub-project is a plain folder of this one repository, one history for
        everything. A folder that already carries its own `.git` must have it removed first, or `git add`
        turns it into an empty gitlink: clones lose its contents.
@@ -19,8 +21,8 @@ after. You **never commit**: the run ends with everything written and the human 
        `git submodule add <url> <path>`. `.gitmodules` becomes the manifest, one recursive clone brings
        the product down whole, and each repo keeps its own visibility — some public, some private. The
        cost is a pointer-bump commit here every time a sub-project moves.
-   - **Which sub-projects the product contains** — the path of each and one line on what it is. Seed the
-     options from what's on disk, but their list is the answer:
+   - **Which sub-projects the product contains** — the path of each and one line on what it is (a
+     singlerepo skips this one). Seed the options from what's on disk, but their list is the answer:
      ```bash
      find . -maxdepth 3 -name .git -not -path '*/.claude/*' | sed 's|/\.git$||'
      ```
@@ -57,7 +59,7 @@ after. You **never commit**: the run ends with everything written and the human 
 
 ## Sub-projects
 <!-- The declared list every mycrew layer reads instead of scanning for .git. -->
-- **Layout:** <monorepo | polyrepo with submodules>
+- **Layout:** <singlerepo | monorepo | polyrepo with submodules>
 - `<path>` — <what it is and its role, one line>
 - `<path>` — <…> <!-- add "not a build target" if no worker is ever dispatched into it: a charter, a
      spec bundle, a vendored reference. Without it the chief will try to build there. -->
