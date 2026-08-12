@@ -1,48 +1,64 @@
 ---
-description: "Use once to found the product — turn the folder holding the sub-project repos into the product repository: its own git repo, the root CLAUDE.md with a North Star drawn from the human, and the empty product plane (features, architecture, specs). One-shot init, run at the product root."
+description: "Use once to found the product — settle how the repository is laid out (monorepo or polyrepo with submodules), take the sub-projects from the human, write the root CLAUDE.md with a North Star drawn from them, outline the empty docs/ plane, and git init. Stops before the first commit so the human can look at everything. Run at the product root."
 ---
 
 # /product-init — found the product
 
-Turn the folder that holds the sub-project repos into the **product repository** — the home of
-everything true about the whole product. One-shot; run it once, then `/braindump` and `/ask-me` fill it
-forever after.
+Turn the folder that holds the sub-projects into the **product repository** — the home of everything
+true about the whole product. One-shot; run it once, then `/braindump` and `/ask-me` fill it forever
+after. You **never commit**: the run ends with everything written and the human free to look.
 
 ## What you do
 
-1. **Gather.** Find the sub-projects and **read any `CLAUDE.md` they carry** — your raw material.
-   ```bash
-   find . -maxdepth 3 -name .git -not -path '*/.claude/*' | sed 's|/\.git$||'
-   ```
-2. **Make the root a repository, and settle how the sub-projects hang off it.** `git init` here, then
-   ask the human which of the two, and record the answer in the Sub-projects section:
-   - **Mounted** — each sub-project is added with `git submodule add <url> <path>`. `.gitmodules`
-     becomes the manifest, one recursive clone brings the product down whole, and each repo keeps its
-     own visibility, so some may be public and some private. The cost is a pointer-bump commit here
-     whenever a sub-project moves.
-   - **Loose** — the sub-projects merely sit here and the root ignores them. Then the `.gitignore`
-     **must list every one of them before the first `git add`**: git does not recurse into a nested
-     repo, but a single `git add -A` turns one into an unpopulated gitlink — clones lose its contents
-     and every commit inside it dirties the root. Added after the fact, `.gitignore` no longer helps
-     and it takes a `git rm --cached` to undo.
+1. **Ask the two questions first**, via `AskUserQuestion`, before writing anything.
+   - **How the product repository is laid out:**
+     - **Monorepo** — every sub-project is a plain folder of this one repository, one history for
+       everything. A folder that already carries its own `.git` must have it removed first, or `git add`
+       turns it into an empty gitlink: clones lose its contents.
+     - **Polyrepo with submodules** — each sub-project keeps its own repository and is mounted here with
+       `git submodule add <url> <path>`. `.gitmodules` becomes the manifest, one recursive clone brings
+       the product down whole, and each repo keeps its own visibility — some public, some private. The
+       cost is a pointer-bump commit here every time a sub-project moves.
+   - **Which sub-projects the product contains** — the path of each and one line on what it is. Seed the
+     options from what's on disk, but their list is the answer:
+     ```bash
+     find . -maxdepth 3 -name .git -not -path '*/.claude/*' | sed 's|/\.git$||'
+     ```
+2. **Draw out the North Star and the status** — the product's single guiding intent in their own words,
+   and whether anything is **live in production**. Never invent either. Read any `CLAUDE.md` the
+   sub-projects carry: that's raw material for the description, not for these two.
+3. **Write the root `CLAUDE.md`** to the template below.
+4. **Outline the `docs/` plane — files in place, nothing filled in.**
+   - `docs/features/features.md` and `docs/features/notes.md` — the `mycrew-chief:feature-management`
+     templates, no entries.
+   - `docs/architecture/model.c4` — the product root and one empty node per sub-project, nothing below
+     it — plus `likec4.config.json` beside it, named for the product
+     (`mycrew-chief:architecture-management`).
+   - `docs/specs/<sub-project>/spec.md` per sub-project — the `mycrew-chief:spec-management` template,
+     no sections yet.
+5. **`git init`, mount the sub-projects if the layout says so — then stop.** No `git add`, no commit:
+   say what you created and leave it for the human to read.
 
-   A sub-project that is simply a folder of this repository — no repo of its own — needs neither.
-3. **Ask.** Draw two things out of the human — never invent them: the product's single **North Star**
-   (guiding intent), and its **current state** — is there a live production in use.
-4. **Write on approval.** Compose the root `CLAUDE.md`, write it only once they approve.
-5. **Seed the empty product plane.** `docs/features/features.md` and `notes.md` from the
-   `mycrew-chief:feature-management` templates, plus empty `docs/architecture/` and `docs/specs/`.
-   `/braindump` and `/ask-me` fill them; leave them empty here.
+## The root CLAUDE.md — the template
 
-## What the root CLAUDE.md holds
+```markdown
+# <product name>
 
-- **North Star** — from the human.
-- **Current state** — is there a live production, what stage the product sits at, and what that
-  demands of every change (a live prod means safe, backward-compatible moves; greenfield means speed).
-  Every layer below weighs it in all work.
-- **Description** — a top-level synthesis of the product, assembled from the sub-projects' CLAUDE.mds
-  (the whole, not the parts pasted).
-- **Sub-projects** — the declared list every layer below reads instead of scanning. One entry per
-  sub-project: its **path**, one crisp line on what it is and its role, and — where it isn't obvious —
-  whether workers are dispatched into it at all. A repo that is a source rather than a build target (a
-  charter, a spec bundle, a vendored reference) must say so, or the chief will try to build in it.
+## North Star
+<the one guiding intent, in the human's own words — what this product exists for>
+
+## Status
+- **In production:** <yes | no>
+<!-- yes = something is live and in use: every change must be safe and backward-compatible.
+     no = greenfield: speed over caution. Every layer below weighs this in all work. -->
+
+## Description
+<what the product is as a whole — a synthesis, never the sub-projects' descriptions pasted together>
+
+## Sub-projects
+<!-- The declared list every mycrew layer reads instead of scanning for .git. -->
+- **Layout:** <monorepo | polyrepo with submodules>
+- `<path>` — <what it is and its role, one line>
+- `<path>` — <…> <!-- add "not a build target" if no worker is ever dispatched into it: a charter, a
+     spec bundle, a vendored reference. Without it the chief will try to build there. -->
+```

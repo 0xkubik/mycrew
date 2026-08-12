@@ -20,7 +20,7 @@ user's words — you don't scan the code for answers.
 ## The loop
 
 1. **Ask one question**, via `AskUserQuestion`. Options seeded from *their* own words; the free `Other`
-   field is the real target. Never two questions in one turn.
+   field is the real target. 
 2. **Dig or pivot.** Deeper while a thread is live, a fresh angle once it's spent. Range across both
    planes — the product (who it's for, the job, the pain, what's missing, what they'd never build) and
    the system (the sub-projects and how they connect, top-down from the highest scale). Prefer the
