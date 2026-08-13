@@ -36,5 +36,7 @@ rules for that.
 - **Sequence the dependencies.** Work out who depends on whom and build it into the plan. Independent
   pieces run in parallel; a dependent one waits — **provider first**: the provider worker commits the
   interface (that committed code IS the contract) before the consumer builds against it.
-- **Collect and advance.** A finished provider unblocks its consumers; keep dispatching until the
+- **Nothing comes back unaccepted.** Every returning worker goes through `mycrew-chief:accept-work` —
+  the brief you sent against the report that came back, ACCEPTED or BACK. Finished is not accepted.
+- **Collect and advance.** An **accepted** provider unblocks its consumers; keep dispatching until the
   frontier moves or all that's left is blocked, then report up.

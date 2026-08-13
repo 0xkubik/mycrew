@@ -16,7 +16,7 @@
     },
     {
       "name": "mycrew-pipeline",
-      "description": "Layer 2/5 — the build pipeline. Five stage skills that carry one task from a decision to hardened code: /how-to-do (decide a fork), /do (build it by a tight set of writing rules), then /refactor, /review, /test to harden and ship it. Skills only. Built on mycrew-tools; driven by mycrew-worker.",
+      "description": "Layer 2/5 — the build pipeline. Six stage skills that carry one task from a decision to hardened code: /how-to-do (decide a fork), /do (build it by a tight set of writing rules), then /refactor (clean it and reuse what exists), /review (edge cases and bugs), /secure (the holes) and /test to harden and ship it. In /review and /secure the eyes that hunt and the eyes that rule are never the author's — only the fixes are. Skills only. Built on mycrew-tools; driven by mycrew-worker.",
       "author": { "name": "kubik" },
       "category": "workflow",
       "source": "./plugins/mycrew-pipeline"
@@ -37,7 +37,7 @@
     },
     {
       "name": "mycrew-chief",
-      "description": "Layer 5/5 — the top layer, the human's deputy over the whole product. /chief reads the plane the product layer holds — what the product must do and how it is built — shapes it as the human's deputy, decomposes an approved feature into per-repo assignments, picks what to advance next (what-to-do), gates anything doubtful before it becomes code (the product layer's why-do-it — the real problem, the alternatives, assume it failed, GO or NO-GO), and sequences and dispatches workers as native subagents (worker-orchestration). It never decides what the product should do — that stays the human's — and it never writes code. It conducts; the workers build. Built on mycrew-product + mycrew-worker.",
+      "description": "Layer 5/5 — the top layer, the human's deputy over the whole product. /chief reads the plane the product layer holds — what the product must do and how it is built — shapes it as the human's deputy, decomposes an approved feature into per-repo assignments, picks what to advance next (what-to-do), gates anything doubtful before it becomes code (the product layer's why-do-it — the real problem, the alternatives, assume it failed, GO or NO-GO), sequences and dispatches workers as native subagents (worker-orchestration), and takes or sends back what comes home (accept-work — the brief it sent against the report that came back, ACCEPTED or BACK; only accepted work moves the plane). It never decides what the product should do — that stays the human's — and it never writes code. It conducts; the workers build. Built on mycrew-product + mycrew-worker.",
       "author": { "name": "kubik" },
       "category": "workflow",
       "source": "./plugins/mycrew-chief"

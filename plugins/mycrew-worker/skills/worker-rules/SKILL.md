@@ -63,9 +63,9 @@ What's forbidden is deciding it *yourself*.
 | an assignment from the chief | build it — the design is already settled |
 | a real fork in HOW to build it | `mycrew-pipeline:how-to-do` |
 | build one concrete task | `mycrew-pipeline:do`|
-| harden / review / test existing code | `mycrew-pipeline:refactor` · `review` · `test` |
+| harden / review / test existing code | `mycrew-pipeline:refactor` · `review` · `secure` · `test` |
 
-**Chain them as the work needs** — e.g. how-to-do → do → refactor → review → test. Don't force one
+**Chain them as the work needs** — e.g. how-to-do → do → refactor → review → secure → test. Don't force one
 route when the task wants several, and don't route when a plain answer is what was asked.
 
 **Spawn your own subagents when the work splits.** Independent pieces, a wide search, a parallel
