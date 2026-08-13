@@ -48,9 +48,10 @@ through `mycrew-product:propose-idea` — never add it yourself.
   holds: a ranked menu of moves (add, finish, rebuild, refactor).
 - **`mycrew-chief:worker-orchestration`** — how you run the workers: spawn one per assignment, several
   per repo (each self-isolates), demand a plain-human report, sequence dependencies provider-first.
-- **`mycrew-chief:premortem`** — the go/no-go gate on a plan before it becomes code. Put a decomposition
-  through it when the move is worth the pass — it assumes the work shipped and failed and returns GO or
-  NO-GO. A NO-GO is yours to repair, here, then gate again.
+- **`mycrew-product:why-do-it`** — the gate before work starts. Put anything through it whose rightness
+  isn't obvious — it finds the real problem under the ask, weighs what else would reach the same end,
+  assumes the work shipped and failed, and returns GO or NO-GO. A NO-GO is yours to repair, here, then
+  gate again; one saying the feature itself shouldn't exist goes to the human.
 
 Reach for the tool that fits, then act on what you were handed: a target → take stock, design,
 sequence, dispatch; nothing → take stock and advance the frontier, reporting when it's moved or all

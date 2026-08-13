@@ -64,7 +64,7 @@ What's forbidden is deciding it *yourself*.
 | a real fork in HOW to build it | `mycrew-pipeline:how-to-do` |
 | build one concrete task | `mycrew-pipeline:do`, then `mycrew-pipeline:refactor` → `review` → `test` |
 | harden / review / test existing code | `mycrew-pipeline:refactor` · `review` · `test` |
-| the ask may be a symptom, not the problem | `mycrew-tools:disease-or-symptom` |
+| the point of the ask itself isn't obvious | `mycrew-product:why-do-it` — gate it before building |
 
 **Chain them as the work needs** — e.g. how-to-do → do → refactor → review → test. Don't force one
 route when the task wants several, and don't route when a plain answer is what was asked.
