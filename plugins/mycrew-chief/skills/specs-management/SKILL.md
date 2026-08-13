@@ -64,7 +64,8 @@ repo. The North Star lives in the root `CLAUDE.md`, and the system's shape in
   marks don't count; a feature's heading alone stays within its own ≤200. What will not fit is **two
   entries**, never one written longer: a feature too big to state is two features, a decision carrying
   two choices is two decisions. This is the cap that keeps the plane readable at a glance — an entry
-  over it is not detailed, it is unfinished thinking. `F`, `N` or `D` and a zero-padded three-digit number, running in order from
+  over it is not detailed, it is unfinished thinking.
+- **Ids are permanent.** `F`, `N` or `D` and a zero-padded three-digit number, running in order from
   the highest that letter has already taken. **Never reused and never renumbered** once given —
   everything else points at an entry by its id.
 - **Strictly the template shape.** Each file *is* the `example.features.md`, `example.notes.md` or
