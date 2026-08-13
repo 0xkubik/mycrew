@@ -16,14 +16,7 @@
      heading that names a topic instead of a choice is a decision not yet made. Under it short `-`
      points only: why it won, what it was weighed against and what that would have cost, the known
      limit where it stops working, what would overturn it. Never prose. Heading and points together
-     stay within 300 chars; what will not fit is two decisions.
-
-     THE ID: `P` and three padded digits, running from the highest already taken. Permanent — never
-     reused, never renumbered.
-
-     NEVER DELETED: a decision that no longer holds stays, its heading marked `— superseded by P0NN`,
-     and the choice replacing it is a new entry. The record of a wrong turn is worth more than a
-     clean file. -->
+     stay within 300 chars; what will not fit is two decisions. -->
 
 ## P001 — <what was chosen, and over what where there was a real alternative>
 

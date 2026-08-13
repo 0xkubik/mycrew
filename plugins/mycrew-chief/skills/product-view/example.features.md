@@ -12,13 +12,7 @@
      built. Under it short `-` points only, one thought each — the detail that line can't carry: a
      constraint, a contract, a bound, a state, an edge case, what counts as done. Never prose, and
      never why a choice was made. Heading and points together stay within 300 chars; what will not
-     fit is two features.
-
-     THE ID: `F` and three padded digits, running from the highest already taken. Permanent — never
-     reused, never renumbered, because everything else points at features by it.
-
-     NEVER DELETED: the list is the product's desired state. A built feature is checked, never
-     removed; the list only accumulates. -->
+     fit is two features. -->
 
 ## [ ] F001 — <feature the user affirmed — one line, ≤200 chars>
 

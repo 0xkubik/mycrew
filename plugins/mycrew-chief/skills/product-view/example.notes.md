@@ -10,12 +10,6 @@
      product goes to decisions.md. And a conclusion nobody has to act on — a yes, a no, a "not now",
      a question parked for later — is filed nowhere at all.
 
-     SHAPE: `- [ ] N001 — <what to do or what breaks, and where>`, one line each.
-
-     THE ID: `N` and three padded digits, running from the highest already taken. It is how a note is
-     pointed at, and it is never reused.
-
-     SCRATCH, UNLIKE FEATURES: a settled note either graduates into a feature or is cleaned out. A
-     done note does not stay. -->
+     SHAPE: `- [ ] N001 — <what to do or what breaks, and where>`, one line each. -->
 
 - [ ] N001 — <what to do or what breaks, and where>
