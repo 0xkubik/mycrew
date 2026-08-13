@@ -37,6 +37,17 @@ repo. The North Star lives in the root `CLAUDE.md`.
 - **Anything nobody has to obey or act on** → nowhere. A conversation is not a transcript to be minuted.
 
 ## Features — `docs/product/features.md`
+- **A feature is what you'd name telling someone what the product does.** Someone can do something,
+  or the product offers something. How that capability *behaves* — its states, limits, rules, the
+  smaller actions inside it — is **detail**, and detail belongs in that feature's file, never in a
+  line of its own.
+- **Two tests, both quick.** Would you mention it when *telling* someone what the product does, or
+  only while *explaining* something you already mentioned? And does it exist at all without another
+  feature? Named only in the explanation **and** dead without its parent → it is that parent's
+  detail. **No parent at all → it is a feature, however small.**
+- **The list is not a backlog.** Cutting a capability into the steps it takes to build turns the
+  plane into a task board and kills the one thing it is for — being read at a glance. Breaking a
+  feature into work is the chief's job at dispatch, not this file's.
 - **One line, one feature, and nothing beneath it.** `- [ ] F001 — <feature>`: one crisp line of ≤200
   chars in the user's intent, not your embellishment, with `[ ]` not built yet and `[x]` built. A
   point, a sub-bullet or a paragraph under a line is exactly what this shape exists to stop — the

@@ -1,6 +1,6 @@
 {
   "name": "mycrew-product",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "description": "Layer 4/5 of the mycrew harness — the product plane: everything true about the whole product, in one repository above the sub-projects. /product-init founds it (the folder holding your sub-project repos becomes its own git repo, with a North Star drawn from you). Two endless modes then draw the product out of you and file each affirmed piece where it lives: /braindump listens while you unload and never steers, /ask-me questions you one angle at a time until the product is thought through. Both are strictly extractive — your vision and never its own; propose-idea is the one counterpart, inventing a feature, pitching it with the case for it, and filing it only on your approval. The plane's two views and the rules they obey live here: product-view for docs/product/ (what the product must do — one line per feature and nothing beneath it, with the full picture of any feature that needs one in its own file beside the list, in your words; plus the work no feature covers and what was settled and why) and design-view for docs/design/ (the one model.c4 tree and the technical choices beside it). why-do-it is the gate before work starts: anything whose rightness isn't obvious goes through it and comes back GO or NO-GO with the real problem named and the better route, if there is one. Built on mycrew-tools; driven by mycrew-chief.",
   "author": {
     "name": "kubik",
