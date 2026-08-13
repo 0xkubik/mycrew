@@ -23,9 +23,9 @@ who knows the instruments, not a mechanic reinventing them.
 Read the goal and the design before deciding. They live on the **product plane**, at the product root
 — the nearest ancestor folder holding `docs/product/features.md`, one level above the sub-project repos:
 
-- `docs/product/features.md` — the declarative feature state: what the product must be, each entry carrying
-  beneath it the detail its one line can't hold. `docs/product/notes.md` beside it — working notes of things
-  to do and fix.
+- `docs/product/features.md` — the declarative feature state: what the product must be, one line per
+  feature. A line ending in `→ features/F00N-<slug>.md` has a detail file — **read it before building
+  that feature**. `docs/product/notes.md` beside it — working notes of things to do and fix.
 - `docs/product/decisions.md` — what is settled about the product and why; a decision binds your work.
 - `docs/design/` — the technical view: the `model.c4` tree (find the branch for the repo you're
   in) and `decisions.md`, the technical choices you build on and do not re-argue.
@@ -42,7 +42,7 @@ parts of the design to build to. That's your brief — the plane above is the co
    structure, the obvious next feature — goes in your report as a flag, never quietly built.
 2. **Build to the plane; never write it.** The features list, the architecture tree, and the decisions
    belong to the human and the chief. You read them and pull the code toward them. You do **not** add a
-   feature, mark one `[x]`, write a point beneath one, reshape `model.c4`, or record a decision —
+   feature, mark one `[x]`, write into a feature's detail file, reshape `model.c4`, or record a decision —
    deciding what the product does and what shape it takes is not yours. Working notes (`notes.md`) are
    the exception: scratch is fair game.
 3. **A design gap is a report, not a repair.** When the work shows the shape must move, a feature's

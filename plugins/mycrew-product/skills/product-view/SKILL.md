@@ -1,6 +1,6 @@
 ---
 name: product-view
-description: "Use whenever the product view is written to or changed — the one rule set behind the three files in docs/product/: features.md (what the product must do), notes.md (work no feature covers), decisions.md (what was settled about the product and why). Holds the line against the technical view in docs/design/, the routing that says where a thing goes, the rules each file obeys, and the templates each file is. Rules only: what an entry must be, never how one is gathered or by whom."
+description: "Use whenever the product view is written to or changed — the one rule set behind docs/product/: features.md (what the product must do, one line each and nothing beneath), features/F00N-<slug>.md (the full picture of a feature whose line can't carry it, in the human's own words), notes.md (work no feature covers), decisions.md (what was settled about the product and why). Holds the line against the technical view in docs/design/, the routing that says where a thing goes, the rules each file obeys, and the templates each file is. Rules only: what an entry must be, never how one is gathered or by whom."
 user-invocable: false
 ---
 
@@ -11,7 +11,8 @@ the code in every sub-project. Three files, no more, each with its own permanent
 
 | File | Holds | Ids |
 | --- | --- | --- |
-| `docs/product/features.md` | what the product must do | `F001` |
+| `docs/product/features.md` | what the product must do — one line each, nothing more | `F001` |
+| `docs/product/features/F00N-<slug>.md` | the full picture of one feature, when its line can't carry it | its feature's |
 | `docs/product/notes.md` | work to do that no feature covers | `N001` |
 | `docs/product/decisions.md` | what was settled about the product, and why | `P001` |
 
@@ -26,8 +27,8 @@ repo. The North Star lives in the root `CLAUDE.md`.
 
 ## Routing — where a thing goes
 - **A capability the product must have** → a feature.
-- **Detail that capability's one line can't carry** — a contract, a bound, a state, an edge case → a
-  point *under that feature*, never a file of its own.
+- **Detail that capability's one line can't carry** — mechanics, a contract, a bound, a state, an
+  edge case → **that feature's own file**, never nested under its line in the list.
 - **A closed choice about the product, with a reason** — a rule, a constraint, a way of existing that
   belongs to no single feature and will still bind in a year → a decision.
 - **A closed choice about the machinery** — a language, a store, a library, a thing deliberately not
@@ -36,15 +37,33 @@ repo. The North Star lives in the root `CLAUDE.md`.
 - **Anything nobody has to obey or act on** → nowhere. A conversation is not a transcript to be minuted.
 
 ## Features — `docs/product/features.md`
-- **The heading is the feature, in ≤200 chars.** `## [ ] F001 — <feature>`: one crisp line in the
-  user's intent, not your embellishment, with `[ ]` not built yet and `[x]` built.
-- **Beneath it, only what the line can't carry.** Short `-` points, one thought each: a constraint to
-  hold to, a wish about how it's implemented, a contract, a shape, a limit, a state, an edge case,
-  what counts as done. Never a restatement of the heading, never how the code is organized (that's
-  the repo's), never the system's shape, never why a choice was made (that's a decision).
-- **A paragraph under a heading is a feature written wrong.** One thought a point, one line a point.
+- **One line, one feature, and nothing beneath it.** `- [ ] F001 — <feature>`: one crisp line of ≤200
+  chars in the user's intent, not your embellishment, with `[ ]` not built yet and `[x]` built. A
+  point, a sub-bullet or a paragraph under a line is exactly what this shape exists to stop — the
+  list stays one screen you can read at a glance, however big the product gets.
+- **More than the line holds → the feature's own file.** Never a longer line and never a nested
+  point: open `docs/product/features/F00N-<slug>.md` and end the line with ` → features/F00N-<slug>.md`
+  so a reader knows it exists. One file per feature, never one file covering two.
 - **Accumulate or edit, never delete.** The list is declarative — the product's desired state. A built
   feature is marked `[x]`, never removed; the list only grows.
+
+## A feature's detail — `docs/product/features/F00N-<slug>.md`
+- **Only when the line genuinely can't carry it.** Most features never earn a file. One is opened
+  because there is a real picture to hold — mechanics, states, edge cases, what it must never do —
+  not to have somewhere to write.
+- **Their words, not your prose.** You record and order what the human said; you never rewrite it
+  into your own register, and nothing they didn't affirm goes in.
+- **It binds.** The chief decomposes against it, a worker builds to it, and a worker never writes to
+  it. A file nobody has to obey is a file nobody should have written.
+- **One feature per file, and only that feature.** Detail that belongs to a second capability is a
+  second feature with its own line.
+- **What binds wider leaves.** A rule holding beyond this feature → `decisions.md`; a technical
+  choice → `docs/design/decisions.md`; work someone must do → `notes.md`; the system's shape →
+  `model.c4`. The file holds the picture, never orders hidden in prose.
+- **Contradiction is named, never swallowed.** What it says conflicts with the feature's line, a
+  decision, or the shape → say so plainly and have it settled; never keep two truths in the plane.
+- **A couple of screens is the ceiling.** Past it, this is two features, or half of it belongs in one
+  of the files above.
 
 ## Notes — `docs/product/notes.md`
 - **One line, one note.** `- [ ] N001 — <what to do or what breaks, and where>`.
@@ -69,12 +88,12 @@ repo. The North Star lives in the root `CLAUDE.md`.
 - **Superseded, never deleted.** A decision that no longer holds stays, its heading marked
   `— superseded by P0NN`, and the choice replacing it is a new entry with a new id.
 
-## All three
-- **An entry is ≤300 chars — the heading and every point under it together.** Ids, boxes and bullet
-  marks don't count; a feature's heading alone stays within its own ≤200. What will not fit is **two
-  entries**, never one written longer: a feature too big to state is two features, a decision carrying
-  two choices is two decisions. This is the cap that keeps the plane readable at a glance — an entry
-  over it is not detailed, it is unfinished thinking.
+## All of them
+- **An entry is capped: a feature is one line of ≤200 chars, a note or a decision ≤300 — heading and
+  points together.** Ids, boxes and bullet marks don't count. What will not fit is **two entries**,
+  never one written longer: a feature too big to state in a line is two features, a decision carrying
+  two choices is two decisions. Detail is not what the cap forbids — it has its own file; sprawl in
+  the list is. An entry over the cap is not detailed, it is unfinished thinking.
 - **Ids are permanent.** `F`, `N` or `P` and a zero-padded three-digit number, running in order from
   the highest that letter has already taken. **Never reused and never renumbered** once given —
   everything else points at an entry by its id.
@@ -83,6 +102,7 @@ repo. The North Star lives in the root `CLAUDE.md`.
   about to write against it *first*: if the entry doesn't answer what the file is for, it belongs in
   another file, and writing it here is the mistake that block exists to stop.
 - **Strictly the template shape, header included.** Each file *is* the `example.features.md`,
-  `example.notes.md` or `example.decisions.md` template shipped beside this skill — nothing else. A
-  file missing its header block is seeded from the template before anything is written to it.
+  `example.feature.md`, `example.notes.md` or `example.decisions.md` template shipped beside this
+  skill — nothing else. A file missing its header block is seeded from the template before anything
+  is written to it.
 - **English.** Headings, prose, identifiers — all English.

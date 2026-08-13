@@ -6,9 +6,10 @@ argument-hint: "[optional focus — or nothing to survey the whole product]"
 
 ## Gate — ground before you fan out
 
-- **The features** — `docs/product/features.md` at the **product root**, the one approved list, each entry
-  carrying its own detail. **Missing or empty → route to `/ask-me`** first (it grounds the feature
-  list). Present → read the **frontier** (first unchecked `[ ]`) as the steer.
+- **The features** — `docs/product/features.md` at the **product root**, the one approved list, one line
+  per feature, the detail of any that earned it in its own file beside it. **Missing or empty → route
+  to `/ask-me`** first (it grounds the feature list). Present → read the **frontier** (first unchecked
+  `[ ]`) as the steer.
 - **What is settled** — `docs/product/decisions.md` for the product, and `docs/design/` for the
   technical view: the `model.c4` shape and the choices the system is built on.
 - **The file list** — every sub-project's tracked files with line counts. Take the paths from the

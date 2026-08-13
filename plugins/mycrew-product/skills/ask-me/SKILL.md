@@ -30,9 +30,10 @@ user's words — you don't scan the code for answers.
 3. **File only what changes the product.** Most answers change nothing and are filed nowhere — a
    conversation is not a transcript to be minuted. When an answer does add or alter what gets built,
    route it by nature — one answer may land in several homes:
-   - a capability, what the product must do → a `## [ ]` entry in `features.md`
+   - a capability, what the product must do → a `- [ ]` line in `features.md`, ≤200 chars, nothing beneath it
    - structure, what talks to what at run time → the `model.c4` tree
-   - detail too big for the one line — mechanics, a contract, a schema → a `-` point under that feature
+   - detail too big for that line — mechanics, a contract, a schema, how they see it working → that
+     feature's own file, `docs/product/features/F00N-<slug>.md`, in their words
    - a rule or constraint about the product as a whole, belonging to no one feature → `decisions.md`
    - a settled choice about the machinery — a language, a store, a library → `docs/design/decisions.md`
    - work that must actually be done — a fix, a rework, something the answer just contradicted → `notes.md`

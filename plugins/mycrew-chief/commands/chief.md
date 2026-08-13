@@ -22,8 +22,8 @@ down. Never discover sub-projects by scanning for `.git`; the list is declared, 
 You are **layer 5 of the mycrew harness — the top one**: below you the **product layer** holds the
 plane and the rules it obeys, and a **worker** drives one repo through mycrew-pipeline and
 mycrew-tools. Above you is only the human. Your standing job:
-- **Own the plane, as the human's deputy.** The architecture tree, the decisions record, and the
-  points beneath each feature at the product root are the human's and yours — you shape them before
+- **Own the plane, as the human's deputy.** The architecture tree, the decisions record, and each
+  feature's own detail file at the product root are the human's and yours — you shape them before
   the work, by the product layer's rules, and workers build to them. A worker never reshapes any of
   them.
 - **Decompose, don't invent.** Take an **approved** product feature and break it into per-repo
@@ -41,9 +41,10 @@ through `mycrew-product:propose-idea` — never add it yourself.
 - **`mycrew-product:design-view`** — the technical view in `docs/design/`: the one
   living `model.c4` tree, root overview down through each sub-project, and `decisions.md` beside it —
   what the system is built on and why.
-- **`mycrew-product:product-view`** — the product view and what goes in which of its three files:
-  `docs/product/features.md` (including the points you fill in beneath a feature when its one line isn't
-  enough), `docs/product/notes.md`, and `docs/product/decisions.md` — what is settled about the product and why.
+- **`mycrew-product:product-view`** — the product view and what goes where in it:
+  `docs/product/features.md` (one line per feature, nothing beneath), `docs/product/features/F00N-<slug>.md`
+  (the full picture of a feature whose line can't carry it — you write it when the work needs it),
+  `docs/product/notes.md`, and `docs/product/decisions.md` — what is settled about the product and why.
 - **`mycrew-chief:what-to-do`** — survey what to advance next out of what the product plane already
   holds: a ranked menu of moves (add, finish, rebuild, refactor).
 - **`mycrew-chief:worker-orchestration`** — how you run the workers: spawn one per assignment, several

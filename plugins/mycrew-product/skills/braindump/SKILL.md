@@ -38,9 +38,10 @@ Speak up only in these three cases, briefly, and then hand the floor straight ba
 
 Route each affirmed thing by its nature; one utterance may land in several homes:
 
-- a capability, what the product must do → a `## [ ]` entry in `features.md`
+- a capability, what the product must do → a `- [ ]` line in `features.md`, ≤200 chars, nothing beneath it
 - structure, what talks to what at run time → the `model.c4` tree (confirm the shape back before you draw)
-- detail too big for the one line — mechanics, a contract, a schema → a `-` point under that feature
+- detail too big for that line — mechanics, a contract, a schema, how they see it working → that
+  feature's own file, `docs/product/features/F00N-<slug>.md`, in their words and never your rewrite
 - a choice settled with a reason, belonging to no single feature → `decisions.md` if a person outside
   could notice it, `docs/design/decisions.md` if it is about the machinery
 - anything raw, unsettled, or still to be thought through → `notes.md`

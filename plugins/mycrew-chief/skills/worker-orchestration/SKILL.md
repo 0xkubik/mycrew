@@ -15,7 +15,7 @@ rules for that.
   tool, `subagent_type: "worker"`). It takes no flags — yours stay with you. Hand it: the concrete
   goal, its sub-project **path**,
   **which approved feature it serves**, the parts of the design it builds to (the `model.c4` branch,
-  the points beneath that feature, and the decisions that bind it), and the cross-repo context it
+  that feature's detail file if it has one, and the decisions that bind it), and the cross-repo context it
   can't see itself — then let it build.
 - **Give the path, not a layout.** The path comes from the product `CLAUDE.md`'s Sub-projects list.
   Whether it is a submodule, a repository of its own, or a folder of the product repo is git's business,

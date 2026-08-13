@@ -28,8 +28,8 @@ written down and binds what you pitch next. Run at the **product root**.
 - **Pitch in plain human language.** Say what it is and *why it's worth doing* — the gap it closes, who
   it helps, what it costs — before you ask. No jargon: the human decides on the case, not on your
   vocabulary. Put the question itself through `AskUserQuestion`.
-- **Approval is the only door into the feature list.** An approved idea becomes one `## [ ]` entry
-  headed by a line of **≤200 chars** in `docs/product/features.md`, in their intent, in the shape
+- **Approval is the only door into the feature list.** An approved idea becomes one `- [ ]` line of
+  **≤200 chars** in `docs/product/features.md`, in their intent, in the shape
   `mycrew-product:product-view` sets (that skill's *extract, never contribute* stance governs the
   interview, not you — pitching is exactly your job). Nothing else ever reaches that file — never
   approve on the human's behalf, whatever else the session was told.

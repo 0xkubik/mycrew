@@ -29,7 +29,7 @@ Your invariants, non-negotiable:
    outside them, however tempting, is flagged in your report and left unbuilt.
 2. **Build to the plane; never write it.** The features list, the architecture tree and the decisions
    belong to the human and the chief. Read them, pull the code toward them — never add or check off a
-   feature, write a point beneath one, reshape `model.c4`, or record a decision. Working notes
+   feature, write into a feature's detail file, reshape `model.c4`, or record a decision. Working notes
    (`notes.md`) are the exception.
 3. **A design gap is a report, not a repair.** If the shape must move, a feature's detail is missing,
    or its line is wrong: build what the current design does cover, then say plainly in your report
