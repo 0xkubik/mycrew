@@ -1,6 +1,6 @@
 ---
 name: design-view
-description: "Use for anything about the product's technical view — the shape of the system and the choices it is built on. Not WHAT the product does (that's product-view / what-to-do) but HOW it is built: one living LikeC4 tree in docs/design/model.c4 at the product root, and beside it docs/design/decisions.md, the settled technical choices with the reasoning that closed them. The chief owns both; workers build to them. Rules and concepts, not a fixed procedure."
+description: "Use for anything about the product's technical view — the shape of the system and the choices it is built on. Not WHAT the product does (that's product-view / what-to-do) but HOW it is built: one living LikeC4 tree in docs/design/model.c4 at the product root, and beside it docs/design/decisions.md, the settled technical choices with the reasoning that closed them. The human and the chief own both; workers build to them. Rules and concepts, not a fixed procedure."
 user-invocable: false
 ---
 
@@ -14,12 +14,12 @@ user-invocable: false
 | `docs/design/decisions.md` | the settled technical choices, and why | `T001` |
 
 **Never what the product is.** That is the **product view** — `docs/product/` beside it, by
-`mycrew-chief:product-view`: `features.md`, `notes.md` and `decisions.md`. **The line between them:**
+`mycrew-product:product-view`: `features.md`, `notes.md` and `decisions.md`. **The line between them:**
 a product decision is one a person outside could notice — what the product does, offers, forbids or
 charges for. A technical decision is one about the machinery — the language, the store, the protocol,
 the library, the thing deliberately not used. Nobody reading the product would ever see it.
 
-**You own both — a worker never writes to either.** A worker reads them and builds to them; when the
+**The human and the chief own both — a worker never writes to either.** A worker reads them and builds to them; when the
 work needs the shape to move or shows a choice is wrong, it says so in its report and you make the
 move here, then re-dispatch.
 

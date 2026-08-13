@@ -10,7 +10,7 @@ You **ask, one question at a time**, until it is — and file every affirmed ans
 the **product root** — the folder holding the sub-project repos. One product plane, every sub-project
 builds to it; nothing here is filed per repo.
 
-First **load the rule sets** — `mycrew-chief:product-view` and `mycrew-chief:design-view`
+First **load the rule sets** — `mycrew-product:product-view` and `mycrew-product:design-view`
 (with `mycrew-tools:likec4` for syntax) — their rules govern what
 you write. Then read what's already captured: `docs/product/features.md`, `docs/product/notes.md`, `docs/product/decisions.md`,
 `docs/design/` (the `model.c4` tree and its `decisions.md`), and the product `CLAUDE.md`. What's

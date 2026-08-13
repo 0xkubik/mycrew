@@ -16,7 +16,7 @@ the code in every sub-project. Three files, no more, each with its own permanent
 | `docs/product/decisions.md` | what was settled about the product, and why | `P001` |
 
 **Never what it is built on.** That is the **design view** — `docs/design/` by
-`mycrew-chief:design-view`: the shape in `model.c4` and the technical choices in `decisions.md`.
+`mycrew-product:design-view`: the shape in `model.c4` and the technical choices in `decisions.md`.
 **The line between them:** a product decision is one a person outside could notice — what the product
 does, offers, forbids or charges for. A technical decision is about the machinery — the language, the
 store, the protocol, the library — and nobody reading the product would ever see it.

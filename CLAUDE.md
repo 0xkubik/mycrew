@@ -13,10 +13,10 @@ enough to run 24/7 without attention.
 A Claude Code plugin marketplace, built almost entirely out of prompts — skills, commands, agents and
 rule files plus JSON manifests, with no build and no runtime. It ships one harness in five layers,
 each driving the one beneath it: primitives and house rules, a build pipeline that carries a task from
-a decision to hardened code, a worker that drives that pipeline on one repository, a chief that owns
-the design and dispatches workers across a product, and a product plane on top where a human sets the
-direction. Installed into other projects, it is the thing that does the work there rather than the
-thing being worked on.
+a decision to hardened code, a worker that drives that pipeline on one repository, a product plane
+holding what the product must do and how it is built, and a chief on top — the human's deputy — that
+shapes that plane and dispatches workers across the sub-projects. Installed into other projects, it
+is the thing that does the work there rather than the thing being worked on.
 
 ## Sub-projects
 <!-- The declared list every mycrew layer reads instead of scanning for .git. -->
