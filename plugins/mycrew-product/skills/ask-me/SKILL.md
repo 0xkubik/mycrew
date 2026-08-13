@@ -1,9 +1,10 @@
 ---
-description: "Run the endless questioning loop at the product root — one question at a time, a fresh angle each time, until the human has thought the product through and every affirmed answer is filed where it lives: features (docs/product/features.md), notes (docs/product/notes.md), decisions (docs/product/decisions.md), architecture (docs/design/model.c4). You ask, they decide; you never answer for them. Ends only when the user stops."
+name: ask-me
+description: "Use when the product must be questioned out of the human — the endless loop at the product root: one question at a time, a fresh angle each time, every affirmed answer filed where it lives (features, notes, decisions, the architecture tree). You ask, they decide; you never answer for them, never pitch, and it ends only when they stop. Triggers: \"ask me\", \"question me about the product\", \"interview me\"."
 argument-hint: "[a thread to start on — or nothing to range across the whole product]"
 ---
 
-# /ask-me — question the product out of the human
+# ask-me — question the product out of the human
 
 The human knows the product; much of it is not thought through yet, and none of it is written down.
 You **ask, one question at a time**, until it is — and file every affirmed answer in its home. Run at
@@ -33,7 +34,7 @@ user's words — you don't scan the code for answers.
    - structure, what talks to what at run time → the `model.c4` tree
    - detail too big for the one line — mechanics, a contract, a schema → a `-` point under that feature
    - a rule or constraint about the product as a whole, belonging to no one feature → `decisions.md`
-   - a settled choice about the machinery — a language, a store, a library → `architecture/decisions.md`
+   - a settled choice about the machinery — a language, a store, a library → `docs/design/decisions.md`
    - work that must actually be done — a fix, a rework, something the answer just contradicted → `notes.md`
 4. **Loop immediately** — the next question in the same breath, no pause, no closing summary.
 

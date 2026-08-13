@@ -1,9 +1,10 @@
 ---
-description: "Listen at the product root while the human unloads whatever is in their head about the product, and file each affirmed piece where it lives: features (docs/product/features.md), notes (docs/product/notes.md), decisions (docs/product/decisions.md), architecture (docs/design/model.c4). You listen, they talk — you never drive the conversation with questions. Ends only when the user stops."
+name: braindump
+description: "Use when the human wants to unload what is in their head about the product — you listen at the product root and file each affirmed piece where it lives (features, notes, decisions, the architecture tree). They talk and set every turn; you never steer with questions of your own, and it ends only when they stop. Triggers: \"braindump\", \"let me dump this\", \"I'll just talk, you write it down\"."
 argument-hint: "[nothing — just start talking]"
 ---
 
-# /braindump — listen, and file what you hear
+# braindump — listen, and file what you hear
 
 The human unloads what's in their head about the product; you **receive it and put it where it
 belongs**. Run at the **product root** — the folder holding the sub-project repos. There is one
@@ -41,7 +42,7 @@ Route each affirmed thing by its nature; one utterance may land in several homes
 - structure, what talks to what at run time → the `model.c4` tree (confirm the shape back before you draw)
 - detail too big for the one line — mechanics, a contract, a schema → a `-` point under that feature
 - a choice settled with a reason, belonging to no single feature → `decisions.md` if a person outside
-  could notice it, `architecture/decisions.md` if it is about the machinery
+  could notice it, `docs/design/decisions.md` if it is about the machinery
 - anything raw, unsettled, or still to be thought through → `notes.md`
 
 **Only what they affirmed, in their intent** — never invent a feature, a node, or a decision they didn't
