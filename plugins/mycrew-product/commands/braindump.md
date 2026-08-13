@@ -1,5 +1,5 @@
 ---
-description: "Listen at the product root while the human unloads whatever is in their head about the product, and file each affirmed piece where it lives: features (docs/features/), architecture (docs/architecture/model.c4), specs (docs/specs/). You listen, they talk — you never drive the conversation with questions. Ends only when the user stops."
+description: "Listen at the product root while the human unloads whatever is in their head about the product, and file each affirmed piece where it lives: features (docs/features.md), notes (docs/notes.md), decisions (docs/decisions.md), architecture (docs/architecture/model.c4). You listen, they talk — you never drive the conversation with questions. Ends only when the user stops."
 argument-hint: "[nothing — just start talking]"
 ---
 
@@ -10,8 +10,8 @@ belongs**. Run at the **product root** — the folder holding the sub-project re
 product plane and every sub-project builds to it; nothing here is filed per repo.
 
 First **load the rule sets** — `mycrew-chief:feature-management`, `mycrew-chief:architecture-management` 
-and `mycrew-chief:spec-management` — their rules govern what you write. Then read what's already captured: 
-`docs/features/features.md`  (+ `notes.md`), `docs/architecture/model.c4`, `docs/specs/`, and the product 
+and `mycrew-chief:decision-management` — their rules govern what you write. Then read what's already captured: 
+`docs/features.md`, `docs/notes.md`, `docs/decisions.md`, `docs/architecture/model.c4`, and the product 
 `CLAUDE.md`. Missing files → seed them from the skills' templates. Context comes from the user's words — 
 you don't scan the code for answers.
 
@@ -37,11 +37,12 @@ Speak up only in these three cases, briefly, and then hand the floor straight ba
 
 Route each affirmed thing by its nature; one utterance may land in several homes:
 
-- a capability, what the product must do → a `- [ ]` line in `features.md`
+- a capability, what the product must do → a `## [ ]` entry in `features.md`
 - structure, what talks to what at run time → the `model.c4` tree (confirm the shape back before you draw)
-- detail too big for a one-liner — mechanics, a contract, a schema → the feature's section in `spec.md`
+- detail too big for the one line — mechanics, a contract, a schema → a `-` point under that feature
+- a choice settled with a reason, belonging to no single feature → `decisions.md`
 - anything raw, unsettled, or still to be thought through → `notes.md`
 
-**Only what they affirmed, in their intent** — never invent a feature, a node, or a spec they didn't
+**Only what they affirmed, in their intent** — never invent a feature, a node, or a decision they didn't
 say. Something said in passing and clearly not settled goes to `notes.md`, not into the plane. File as
 you go, not in a batch at the end, and never wrap the session up: it ends when they stop.

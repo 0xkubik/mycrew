@@ -6,11 +6,11 @@ argument-hint: "[optional focus — or nothing to survey the whole product]"
 
 ## Gate — ground before you fan out
 
-- **The features** — `docs/features/features.md` at the **product root**, the one approved list.
-  **Missing or empty → route to `/ask-me`** first (it grounds the feature list). Present → read the
-  **frontier** (first unchecked `[ ]`) as the steer.
-- **The design** — `docs/architecture/model.c4` and `docs/specs/`, also at the product root: what the
-  system is shaped like and where a feature's detail already lives.
+- **The features** — `docs/features.md` at the **product root**, the one approved list, each entry
+  carrying its own detail. **Missing or empty → route to `/ask-me`** first (it grounds the feature
+  list). Present → read the **frontier** (first unchecked `[ ]`) as the steer.
+- **The design** — `docs/architecture/model.c4` and `docs/decisions.md`, also at the product root:
+  what the system is shaped like and what has already been settled and why.
 - **The file list** — every sub-project's tracked files with line counts. Take the paths from the
   Sub-projects list, never by scanning, and run per path:
   `git -C <path> ls-files | sed "s|^|<path>/|" | xargs wc -l`. Shared ground handed to every lens.

@@ -1,6 +1,6 @@
 {
   "name": "mycrew-worker",
-  "version": "0.34.2",
+  "version": "0.35.0",
   "description": "Layer 3/5 of the mycrew harness — the second pilot. Hand /worker any piece of work (a fix, a change, a feature, a question) and it adapts: reads the goal and design from the product plane, then drives the right mycrew-pipeline and mycrew-tools skills to finish it. It builds to the plane and never writes it — a design gap comes back as a report, not a repair. Runs inline as /worker or as a native subagent you delegate a whole task to. Built on mycrew-pipeline + mycrew-tools.",
   "author": {
     "name": "kubik",

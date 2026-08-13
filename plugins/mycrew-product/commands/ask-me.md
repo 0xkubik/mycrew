@@ -1,5 +1,5 @@
 ---
-description: "Run the endless questioning loop at the product root — one question at a time, a fresh angle each time, until the human has thought the product through and every affirmed answer is filed where it lives: features (docs/features/), architecture (docs/architecture/model.c4), specs (docs/specs/). You ask, they decide; you never answer for them. Ends only when the user stops."
+description: "Run the endless questioning loop at the product root — one question at a time, a fresh angle each time, until the human has thought the product through and every affirmed answer is filed where it lives: features (docs/features.md), notes (docs/notes.md), decisions (docs/decisions.md), architecture (docs/architecture/model.c4). You ask, they decide; you never answer for them. Ends only when the user stops."
 argument-hint: "[a thread to start on — or nothing to range across the whole product]"
 ---
 
@@ -11,9 +11,9 @@ the **product root** — the folder holding the sub-project repos. One product p
 builds to it; nothing here is filed per repo.
 
 First **load the rule sets** — `mycrew-chief:feature-management`, `mycrew-chief:architecture-management`
-(with `mycrew-tools:likec4` for syntax), and `mycrew-chief:spec-management` — their rules govern what
-you write. Then read what's already captured: `docs/features/features.md` (+ `notes.md`),
-`docs/architecture/model.c4`, `docs/specs/`, and the product `CLAUDE.md`. What's captured tells you
+(with `mycrew-tools:likec4` for syntax), and `mycrew-chief:decision-management` — their rules govern what
+you write. Then read what's already captured: `docs/features.md`, `docs/notes.md`, `docs/decisions.md`,
+`docs/architecture/model.c4`, and the product `CLAUDE.md`. What's captured tells you
 what **not** to re-ask; missing files → seed them from the skills' templates. Context comes from the
 user's words — you don't scan the code for answers.
 
@@ -25,17 +25,25 @@ user's words — you don't scan the code for answers.
    planes — the product (who it's for, the job, the pain, what's missing, what they'd never build) and
    the system (the sub-projects and how they connect, top-down from the highest scale). Prefer the
    angle they haven't been made to think about yet.
-3. **File on affirmation**, routing by nature — one answer may land in several homes:
-   - a capability, what the product must do → a `- [ ]` line in `features.md`
+3. **File only what changes the product.** Most answers change nothing and are filed nowhere — a
+   conversation is not a transcript to be minuted. When an answer does add or alter what gets built,
+   route it by nature — one answer may land in several homes:
+   - a capability, what the product must do → a `## [ ]` entry in `features.md`
    - structure, what talks to what at run time → the `model.c4` tree
-   - detail too big for a one-liner — mechanics, a contract, a schema → the feature's section in `spec.md`
-   - a settled-on-nothing answer, or a loose "don't forget" → `notes.md`
+   - detail too big for the one line — mechanics, a contract, a schema → a `-` point under that feature
+   - a rule or constraint about the product as a whole, belonging to no one feature → `decisions.md`
+   - work that must actually be done — a fix, a rework, something the answer just contradicted → `notes.md`
 4. **Loop immediately** — the next question in the same breath, no pause, no closing summary.
 
 ## Rules
 
 - **The question is the tool, their answer is the content.** You may sharpen a vague answer by asking
   again, never by finishing the thought for them. Nothing they didn't affirm is ever filed.
+- **A cold head, not a stenographer.** A yes, a no, a "not now", a question parked for later — none of
+  it is filed anywhere, and `notes.md` is not the place to put it. Writing something after every
+  answer is the failure mode. But a decision that will still bind the product in a year is never lost
+  either — that is what `decisions.md` is for. Between the two, the test is whether anyone would have
+  to obey it.
 - **Push on what's undecided.** A hole, a contradiction, an "I'll figure it out later" — that's the
   next question, not something to route around. Name the contradiction and make them settle it.
 - **Never pitch.** Proposing what the product should do is `mycrew-product:propose-idea`'s job; here
