@@ -78,6 +78,11 @@ repo. The North Star lives in the root `CLAUDE.md`.
 - **Ids are permanent.** `F`, `N` or `P` and a zero-padded three-digit number, running in order from
   the highest that letter has already taken. **Never reused and never renumbered** once given —
   everything else points at an entry by its id.
-- **Strictly the template shape.** Each file *is* the `example.features.md`, `example.notes.md` or
-  `example.decisions.md` template shipped beside this skill — nothing else.
+- **Read the file's own header before you write to it.** Each file opens with a block saying what it
+  is for, what belongs in it, what does not and where that goes instead. Check the entry you are
+  about to write against it *first*: if the entry doesn't answer what the file is for, it belongs in
+  another file, and writing it here is the mistake that block exists to stop.
+- **Strictly the template shape, header included.** Each file *is* the `example.features.md`,
+  `example.notes.md` or `example.decisions.md` template shipped beside this skill — nothing else. A
+  file missing its header block is seeded from the template before anything is written to it.
 - **English.** Headings, prose, identifiers — all English.

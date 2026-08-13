@@ -96,7 +96,14 @@ can tell a decision from an accident. It is the counterpart of the tree: the tre
   (that's `model.c4` — point at a node instead of redrawing it).
 - **Name the feature only when the decision serves one.** Its heading then ends `(F004)`. Most serve
   the whole system and name none.
+- **An entry is ≤300 chars — the heading and every point under it together.** Ids and bullet marks
+  don't count. What will not fit is **two decisions**, never one written longer.
 - **Superseded, never deleted.** A decision that no longer holds stays, its heading marked
   `— superseded by T0NN`, and the choice replacing it is a new entry with a new id.
-- **Strictly the template shape.** The whole file *is* the `example.decisions.md` template shipped
-  beside this skill — nothing else.
+- **Read the file's own header before you write to it.** It opens with a block saying what the file
+  is for, what belongs in it, what does not and where that goes instead. Check the entry you are
+  about to write against it *first*: a choice a person outside could notice is a **product** decision
+  and does not belong here.
+- **Strictly the template shape, header included.** The whole file *is* the `example.decisions.md`
+  template shipped beside this skill — nothing else. A file missing its header block is seeded from
+  the template before anything is written to it.
