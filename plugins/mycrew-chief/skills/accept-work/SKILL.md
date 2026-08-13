@@ -29,6 +29,9 @@ bugs, the holes and the mess.
   someone now has to read and maintain — name it and decide: keep it or have it removed.
 - **A design gap in "Left outside" is yours, not a rejection.** The worker did the right thing by
   stopping at that edge. Move the plane, then re-dispatch — the gap never counts against the delivery.
+- **A skipped stage needs a reason that holds.** The report names which instruments ran and which
+  skipped themselves. Security skipped on a change that touches input, tests skipped on new logic, a
+  hunt skipped on live code — that is not a fast worker, it is an unreviewed change. **BACK.**
 - **When a claim that matters can't be settled from the report, send eyes — not yourself.** Dispatch a
   fresh subagent to check that **one** claim against the result, and rule on what it brings back. You
   still never read the code, and this is never a second review: one question, not a sweep.

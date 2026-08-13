@@ -21,6 +21,15 @@ that didn't write it**, and **fix it yourself**. Security holes are a separate p
 
 ---
 
+## Gate — does the change earn a hunt
+
+Judge **what actually changed**, never what the task was called. Nothing that executes — documentation,
+comments, copy, a value in a config file → say so in **one line** and skip. Anything that runs — logic,
+control flow, data handling, error paths, a build or deploy script → never skipped, however few the
+lines. Unsure → hunt: a bug that ships costs more than a wasted pass.
+
+---
+
 ## Step 1 — Fan out the hunts (parallel subagents)
 
 Dispatch a subagent per axis in parallel, each on the **`sonnet` model**, scoped to the

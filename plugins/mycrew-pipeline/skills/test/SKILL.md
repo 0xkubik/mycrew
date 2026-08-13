@@ -13,8 +13,17 @@ count is not.
 **Invariants — non-negotiable:**
 - **Coverage, not count.** Confidence per test is what matters; padding the number is a bug.
 - **Bounded + scaled to the change.** Cover what the change introduced and the bugs just fixed, not
-  the whole repo. Trivial / docs / config change → little or none; say what you skipped and why.
+  the whole repo.
 - **3 strikes on one problem → `mycrew-tools:slap`, then pick the fresh approach yourself.**
+
+---
+
+## Gate — does the change earn tests
+
+Judge **what actually changed**. Nothing that executes — documentation, comments, copy, a config
+value → say so in **one line** and skip. New or corrected behavior — logic, a contract, an error path,
+a bug just fixed → always covered, never skipped. Between the two, scale to the risk and name what you
+deliberately left uncovered.
 
 ---
 

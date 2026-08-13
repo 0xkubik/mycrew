@@ -28,6 +28,8 @@ green / a smoke check. Evidence, not assumption.
 - **It works** → proceed.
 - **It's broken** (won't build, tests red, doesn't run) → **not a refactor job.** A refactor has
   nothing to preserve yet. Fixing broken behavior is `review` (bugs) or `do` (unbuilt) — route there.
+- **Nothing to reshape** — you walk the change against the `do` rules and cannot name a single
+  violation → say so in **one line** and skip. Laying a safety net to change nothing is pure cost.
 
 ---
 

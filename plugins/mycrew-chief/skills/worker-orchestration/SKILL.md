@@ -36,7 +36,14 @@ rules for that.
 - **Sequence the dependencies.** Work out who depends on whom and build it into the plan. Independent
   pieces run in parallel; a dependent one waits — **provider first**: the provider worker commits the
   interface (that committed code IS the contract) before the consumer builds against it.
+- **Never wait on what could have started alongside.** Everything with no dependency between it goes
+  out in **one** dispatch, not one-then-wait-then-the-next. Waiting is only ever for a provider a
+  consumer genuinely needs; idle serial dispatching is the failure mode that makes the whole product
+  move at one worker's pace.
 - **Nothing comes back unaccepted.** Every returning worker goes through `mycrew-chief:accept-work` —
   the brief you sent against the report that came back, ACCEPTED or BACK. Finished is not accepted.
+- **Accept as they land, never in a batch.** Take each report the moment it arrives: an accepted piece
+  unblocks its consumers immediately, and a BACK goes out again while the others are still running.
+  Holding everything for one review at the end wastes exactly the parallelism you just bought.
 - **Collect and advance.** An **accepted** provider unblocks its consumers; keep dispatching until the
   frontier moves or all that's left is blocked, then report up.

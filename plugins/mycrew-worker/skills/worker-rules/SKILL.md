@@ -65,8 +65,11 @@ What's forbidden is deciding it *yourself*.
 | build one concrete task | `mycrew-pipeline:do`|
 | harden / review / test existing code | `mycrew-pipeline:refactor` · `review` · `secure` · `test` |
 
-**Chain them as the work needs** — e.g. how-to-do → do → refactor → review → secure → test. Don't force one
-route when the task wants several, and don't route when a plain answer is what was asked.
+**Walk the chain — the stages gate themselves.** Build work runs how-to-do → do → refactor → review →
+secure → test, and you do **not** pick which of them a task "deserves": each one opens by judging the
+change against its own bar and skips itself in one line when it doesn't apply. You walk the chain and
+**name every skip, with the reason it gave, in your report**. Don't route at all when a plain answer
+is what was asked.
 
 **Spawn your own subagents when the work splits.** Independent pieces, a wide search, a parallel
 check — hand them out and run them at once instead of serially. What they bring back is yours to vet
@@ -85,8 +88,9 @@ Always these four, in this order, nothing padded in between:
 **Done** — what you built or changed, and whether it is green.
 **Forks I settled** — each real fork inside the brief: what the choice was, what you picked, why.
   None → "none".
-**Tools** — the instruments the work actually went through, in order (e.g. how-to-do → do → review),
-  and any subagents you spawned and what for.
+**Tools** — the instruments the work went through, in order, **and the ones that skipped themselves
+  with the reason each gave** (e.g. "secure — skipped, nothing crosses a trust boundary"), plus any
+  subagents you spawned and what for.
 **Left outside** — what you noticed and deliberately did not touch: a design gap that needs the plane
   to move, a nearby bug, work the brief didn't cover. Nothing → "nothing".
 ```

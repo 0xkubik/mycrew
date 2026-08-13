@@ -16,7 +16,7 @@
     },
     {
       "name": "mycrew-pipeline",
-      "description": "Layer 2/5 — the build pipeline. Six stage skills that carry one task from a decision to hardened code: /how-to-do (decide a fork), /do (build it by a tight set of writing rules), then /refactor (clean it and reuse what exists), /review (edge cases and bugs), /secure (the holes) and /test to harden and ship it. In /review and /secure the eyes that hunt and the eyes that rule are never the author's — only the fixes are. Skills only. Built on mycrew-tools; driven by mycrew-worker.",
+      "description": "Layer 2/5 — the build pipeline. Six stage skills that carry one task from a decision to hardened code: /how-to-do (decide a fork), /do (build it by a tight set of writing rules), then /refactor (clean it and reuse what exists), /review (edge cases and bugs), /secure (the holes) and /test to harden and ship it. In /review and /secure the eyes that hunt and the eyes that rule are never the author's — only the fixes are. Every stage gates itself: it judges what actually changed against its own bar and skips in one honest line when the change doesn't earn it, so nothing is picked by guesswork and every skip is named. Skills only. Built on mycrew-tools; driven by mycrew-worker.",
       "author": { "name": "kubik" },
       "category": "workflow",
       "source": "./plugins/mycrew-pipeline"
