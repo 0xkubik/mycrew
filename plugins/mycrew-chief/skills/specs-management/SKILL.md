@@ -15,16 +15,24 @@ code in every sub-project. It is three files, no more, each with its own permane
 | `docs/notes.md` | work to do that no feature covers | `N001` |
 | `docs/decisions.md` | what was settled, and why | `D001` |
 
-Sub-projects keep no plane of their own — never a second list, and never one inside a sub-project's
-repo. The North Star lives in the root `CLAUDE.md`, and the system's shape in
-`docs/architecture/model.c4` by `mycrew-chief:architecture-management` — not here.
+**These three are the product view — what the product is, never what it is built on.** The technical
+view lives one level down, in `docs/architecture/` by `mycrew-chief:architecture-management`: the
+shape in `model.c4` and the technical choices in `decisions.md`. **The line between them:** a product
+decision is one a person outside could notice — what the product does, offers, forbids or charges
+for. A technical decision is about the machinery — the language, the store, the protocol, the library
+— and nobody reading the product would ever see it.
 
-## Routing — which of the three
+Sub-projects keep no plane of their own — never a second list, and never one inside a sub-project's
+repo. The North Star lives in the root `CLAUDE.md`.
+
+## Routing — where a thing goes
 - **A capability the product must have** → a feature.
 - **Detail that capability's one line can't carry** — a contract, a bound, a state, an edge case → a
   point *under that feature*, never a file of its own.
-- **A choice that is closed, with a reason** — a rule, a constraint, a stack, a way of existing that
+- **A closed choice about the product, with a reason** — a rule, a constraint, a way of existing that
   belongs to no single feature and will still bind in a year → a decision.
+- **A closed choice about the machinery** — a language, a store, a library, a thing deliberately not
+  used → **out of here**, into `docs/architecture/decisions.md`.
 - **Work someone has to do** — a fix, a rework, something still to be thought through → a note.
 - **Anything nobody has to obey or act on** → nowhere. A conversation is not a transcript to be minuted.
 
@@ -54,6 +62,9 @@ repo. The North Star lives in the root `CLAUDE.md`, and the system's shape in
   weighed against and what that would have cost, the known limit where it stops working, what would
   overturn it. Cut the retelling first — the reasoning is the point, not the story around it. A
   paragraph under a heading is a decision written wrong.
+- **The product only, never the machinery.** A stack, a store, a protocol, a library, a way of running
+  it — that is a **technical** decision and belongs in `docs/architecture/decisions.md`. If nobody
+  outside could ever notice the choice, it does not go here.
 - **Name the feature only when the decision serves one.** Its heading then ends `(F004)`. Most
   decisions serve the whole product and name none.
 - **Superseded, never deleted.** A decision that no longer holds stays, its heading marked

@@ -11,8 +11,8 @@ product plane and every sub-project builds to it; nothing here is filed per repo
 
 First **load the rule sets** — `mycrew-chief:specs-management` and 
 `mycrew-chief:architecture-management` — their rules govern what you write. Then read what's already captured: 
-`docs/features.md`, `docs/notes.md`, `docs/decisions.md`, `docs/architecture/model.c4`, and the product 
-`CLAUDE.md`. Missing files → seed them from the skills' templates. Context comes from the user's words — 
+`docs/features.md`, `docs/notes.md`, `docs/decisions.md`, `docs/architecture/` (the `model.c4` tree and 
+its `decisions.md`), and the product `CLAUDE.md`. Missing files → seed them from the skills' templates. Context comes from the user's words — 
 you don't scan the code for answers.
 
 ## How you listen
@@ -40,7 +40,8 @@ Route each affirmed thing by its nature; one utterance may land in several homes
 - a capability, what the product must do → a `## [ ]` entry in `features.md`
 - structure, what talks to what at run time → the `model.c4` tree (confirm the shape back before you draw)
 - detail too big for the one line — mechanics, a contract, a schema → a `-` point under that feature
-- a choice settled with a reason, belonging to no single feature → `decisions.md`
+- a choice settled with a reason, belonging to no single feature → `decisions.md` if a person outside
+  could notice it, `architecture/decisions.md` if it is about the machinery
 - anything raw, unsettled, or still to be thought through → `notes.md`
 
 **Only what they affirmed, in their intent** — never invent a feature, a node, or a decision they didn't

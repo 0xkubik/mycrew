@@ -13,7 +13,8 @@ builds to it; nothing here is filed per repo.
 First **load the rule sets** — `mycrew-chief:specs-management` and `mycrew-chief:architecture-management`
 (with `mycrew-tools:likec4` for syntax) — their rules govern what
 you write. Then read what's already captured: `docs/features.md`, `docs/notes.md`, `docs/decisions.md`,
-`docs/architecture/model.c4`, and the product `CLAUDE.md`. What's captured tells you
+`docs/architecture/` (the `model.c4` tree and its `decisions.md`), and the product `CLAUDE.md`. What's
+captured tells you
 what **not** to re-ask; missing files → seed them from the skills' templates. Context comes from the
 user's words — you don't scan the code for answers.
 
@@ -32,6 +33,7 @@ user's words — you don't scan the code for answers.
    - structure, what talks to what at run time → the `model.c4` tree
    - detail too big for the one line — mechanics, a contract, a schema → a `-` point under that feature
    - a rule or constraint about the product as a whole, belonging to no one feature → `decisions.md`
+   - a settled choice about the machinery — a language, a store, a library → `architecture/decisions.md`
    - work that must actually be done — a fix, a rework, something the answer just contradicted → `notes.md`
 4. **Loop immediately** — the next question in the same breath, no pause, no closing summary.
 

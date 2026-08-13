@@ -22,7 +22,8 @@ Read the goal and the design before deciding. They live on the **product plane**
   beneath it the detail its one line can't hold. `docs/notes.md` beside it — working notes of things
   to do and fix.
 - `docs/decisions.md` — what is settled about the product and why; a decision binds your work.
-- `docs/architecture/model.c4` — the architecture tree; find the branch for the repo you're in.
+- `docs/architecture/` — the technical view: the `model.c4` tree (find the branch for the repo you're
+  in) and `decisions.md`, the technical choices you build on and do not re-argue.
 - The **file list** — `git ls-files | xargs wc -l` in your own repo, every tracked file with its line
   count, to see the project at a glance.
 

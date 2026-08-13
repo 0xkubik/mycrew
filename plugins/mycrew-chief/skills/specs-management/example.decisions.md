@@ -1,11 +1,12 @@
 # Decisions — <product name>
 
-<!-- Template for docs/decisions.md at the product root — every settled choice and the reasoning that
-     closed it, one file for the whole product, newest last. The `D`-id is permanent. The heading is
-     the decision; under it short `-` points only — why it won, what it was weighed against, where it
-     stops working, what would overturn it. Heading and points together stay within 300 chars — what
-     will not fit is two decisions. Never prose. A decision that no longer holds is marked
-     superseded, never deleted. -->
+<!-- Template for docs/decisions.md at the product root — every settled choice about the PRODUCT and
+     the reasoning that closed it, one file for the whole product, newest last. Product only: a
+     choice about the machinery — a language, a store, a library — is a technical decision and lives
+     in docs/architecture/decisions.md. The `D`-id is permanent. The heading is the decision; under it
+     short `-` points only — why it won, what it was weighed against, where it stops working, what
+     would overturn it. Heading and points together stay within 300 chars — what will not fit is two
+     decisions. Never prose. A decision that no longer holds is marked superseded, never deleted. -->
 
 ## D001 — <what was chosen, and over what where there was a real alternative>
 

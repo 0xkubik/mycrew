@@ -1,17 +1,33 @@
 ---
 name: architecture-management
-description: "Use for anything about the product's architecture model — shaping, growing, or correcting the structure. Not WHAT to build (that's specs-management / what-to-do) but HOW the system is shaped: one living LikeC4 tree in docs/architecture/model.c4 at the product root, spanning every sub-project, down to the finest component that matters — never a mirror of the code. The chief owns it; workers build to it. Rules and concepts, not a fixed procedure."
+description: "Use for anything about the product's technical view — the shape of the system and the choices it is built on. Not WHAT the product does (that's specs-management / what-to-do) but HOW it is built: one living LikeC4 tree in docs/architecture/model.c4 at the product root, and beside it docs/architecture/decisions.md, the settled technical choices with the reasoning that closed them. The chief owns both; workers build to them. Rules and concepts, not a fixed procedure."
 user-invocable: false
 ---
 
-# architecture-management — the architecture, as a living tree
+# architecture-management — the technical view
 
-You describe the product's **structure** — not *what* to build (specs-management / what-to-do), but
-*how* it's shaped. It lives as **one living tree** in `docs/architecture/model.c4` **at the product
-root**, spanning every sub-project. LikeC4 syntax is in **`mycrew-tools:likec4`** — load it before editing.
+`docs/architecture/` holds the **technical view of the product** — how it is built. Two files, and
+nothing else belongs in either:
 
-**You own it — a worker never reshapes it.** A worker reads this tree and builds to it; when the work
-needs the shape to move, it says so in its report and you make the move here, then re-dispatch.
+| File | Holds | Ids |
+| --- | --- | --- |
+| `model.c4` | the shape — what talks to what at run time | — |
+| `decisions.md` | the settled technical choices, and why | `T001` |
+
+The **product view** lives one level up, in `docs/features.md`, `docs/notes.md` and
+`docs/decisions.md` by `mycrew-chief:specs-management`. **The line between them:** a product decision
+is one a person outside could notice — what the product does, offers, forbids or charges for. A
+technical decision is one about the machinery — the language, the store, the protocol, the library,
+the thing deliberately not used. Nobody reading the product would ever see it.
+
+**You own both — a worker never writes to either.** A worker reads them and builds to them; when the
+work needs the shape to move or shows a choice is wrong, it says so in its report and you make the
+move here, then re-dispatch.
+
+# The tree — `docs/architecture/model.c4`
+
+**One living tree** at the product root, spanning every sub-project. LikeC4 syntax is in
+**`mycrew-tools:likec4`** — load it before editing.
 
 ## Rules & concepts — non-negotiable
 - **One axis: runtime interaction.** The tree answers a single question — *what talks to, calls, or
@@ -55,3 +71,33 @@ needs the shape to move, it says so in its report and you make the move here, th
   title and a minimal description: meaning comes from the tree's **structure**, not prose stuffed in the
   nodes.
 - **English.** Identifiers, titles, descriptions — all English.
+
+# The technical decisions — `docs/architecture/decisions.md`
+
+A technical decision records a choice about the machinery that is closed — a language, a framework, a
+store, a protocol, a library, a way of running it, something deliberately not used — together with the
+reasoning that closed it. Written down, it stops being re-argued every few months, and a later reader
+can tell a decision from an accident. It is the counterpart of the tree: the tree says what the shape
+**is**, a decision says **why it is that and not the other thing**.
+
+## Rules & concepts — non-negotiable
+- **One file, beside the tree.** Every technical choice for the whole product lives in
+  `docs/architecture/decisions.md`. Never one per sub-project, and never one inside a sub-project's own
+  repo — a repo's own `CLAUDE.md` says how its code is written, not what the product is built on.
+- **Every decision carries a permanent id.** `T` and a zero-padded three-digit number, running in order
+  from the highest already taken. **Never reused and never renumbered**.
+- **The heading is the decision itself.** One line naming what was chosen and — where there was a real
+  alternative — what it was chosen over: `## T004 — The job queue is a Postgres table, not Redis`. A
+  heading that names a topic instead of a choice is a decision not yet made.
+- **Beneath it, only the reasoning and its ceiling.** Short `-` points: why this won, what it was
+  weighed against and what that would have cost, the known limit where it stops working, what would
+  overturn it. A paragraph under a heading is a decision written wrong.
+- **Never the product's content.** Not what the product does or offers (that's `docs/features.md`), not
+  a rule of the product a person could notice (that's `docs/decisions.md`), not the shape itself
+  (that's `model.c4` — point at a node instead of redrawing it).
+- **Name the feature only when the decision serves one.** Its heading then ends `(F004)`. Most serve
+  the whole system and name none.
+- **Superseded, never deleted.** A decision that no longer holds stays, its heading marked
+  `— superseded by T0NN`, and the choice replacing it is a new entry with a new id.
+- **Strictly the template shape.** The whole file *is* the `example.decisions.md` template shipped
+  beside this skill — nothing else.

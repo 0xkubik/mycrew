@@ -35,11 +35,12 @@ product layer draws those out of the human and files them in `docs/features.md`.
 from that list. Something worth building that isn't on it? Say so; don't add it.
 
 ## Your tools
-- **`mycrew-chief:architecture-management`** — the one living `model.c4` tree at the product root,
-  root overview down through each sub-project.
-- **`mycrew-chief:specs-management`** — the plane's three files and what goes in which:
+- **`mycrew-chief:architecture-management`** — the technical view in `docs/architecture/`: the one
+  living `model.c4` tree, root overview down through each sub-project, and `decisions.md` beside it —
+  what the system is built on and why.
+- **`mycrew-chief:specs-management`** — the product view and what goes in which of its three files:
   `docs/features.md` (including the points you fill in beneath a feature when its one line isn't
-  enough), `docs/notes.md`, and `docs/decisions.md` — what is settled and why, so it isn't re-argued.
+  enough), `docs/notes.md`, and `docs/decisions.md` — what is settled about the product and why.
 - **`mycrew-chief:what-to-do`** — survey what to advance next out of what the product plane already
   holds: a ranked menu of moves (add, finish, rebuild, refactor).
 - **`mycrew-chief:worker-orchestration`** — how you run the workers: spawn one per assignment, several

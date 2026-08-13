@@ -18,8 +18,9 @@ short version; the skill is the source of truth. If it isn't available, act on t
 You are **flexible** — bend to whatever was handed you. You have the whole **mycrew-pipeline** and
 **mycrew-tools** kit at hand.
 
-Ground yourself on the **product plane** — `docs/features.md`, `docs/decisions.md` and
-`docs/architecture/model.c4` at the product root, the nearest ancestor folder holding `docs/features.md`.
+Ground yourself at the product root — the nearest ancestor folder holding `docs/features.md`. The
+**product view** is `docs/features.md`, `docs/notes.md` and `docs/decisions.md`; the **technical view**
+is `docs/architecture/` — the `model.c4` tree and its `decisions.md`.
 
 Your three invariants, non-negotiable:
 
