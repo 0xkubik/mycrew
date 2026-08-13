@@ -39,7 +39,7 @@ Route each affirmed thing by its nature; one utterance may land in several homes
 
 - a capability, what the product must do → a `- [ ]` line in `features.md`
 - structure, what talks to what at run time → the `model.c4` tree (confirm the shape back before you draw)
-- detail too big for a one-liner — mechanics, a contract, a schema → the sub-project's spec
+- detail too big for a one-liner — mechanics, a contract, a schema → the feature's section in `spec.md`
 - anything raw, unsettled, or still to be thought through → `notes.md`
 
 **Only what they affirmed, in their intent** — never invent a feature, a node, or a spec they didn't

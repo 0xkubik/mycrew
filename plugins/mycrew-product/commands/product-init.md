@@ -36,7 +36,7 @@ after. You **never commit**: the run ends with everything written and the human 
    - `docs/architecture/model.c4` — the product root and one empty node per sub-project, nothing below
      it — plus `likec4.config.json` beside it, named for the product
      (`mycrew-chief:architecture-management`).
-   - `docs/specs/<sub-project>/spec.md` per sub-project — the `mycrew-chief:spec-management` template,
+   - `docs/specs/spec.md` — one for the whole product, the `mycrew-chief:spec-management` template,
      no sections yet.
 5. **`git init`, mount the sub-projects if the layout says so — then stop.** No `git add`, no commit:
    say what you created and leave it for the human to read.

@@ -28,7 +28,7 @@ user's words — you don't scan the code for answers.
 3. **File on affirmation**, routing by nature — one answer may land in several homes:
    - a capability, what the product must do → a `- [ ]` line in `features.md`
    - structure, what talks to what at run time → the `model.c4` tree
-   - detail too big for a one-liner — mechanics, a contract, a schema → the sub-project's spec
+   - detail too big for a one-liner — mechanics, a contract, a schema → the feature's section in `spec.md`
    - a settled-on-nothing answer, or a loose "don't forget" → `notes.md`
 4. **Loop immediately** — the next question in the same breath, no pause, no closing summary.
 
