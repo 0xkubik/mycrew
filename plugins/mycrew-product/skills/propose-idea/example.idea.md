@@ -1,9 +1,5 @@
 # <Idea title>
 
-<!-- Template for docs/product/ideas/history/<slug>.md at the product root — one file per pitched
-     idea, named after the kebab-case title, written when the verdict lands. Never deleted. If the
-     human later overturns the verdict, append a second Verdict block; never touch the first. -->
-
 **Pitched:** <YYYY-MM-DD> · **Verdict:** approved | rejected
 
 ## The idea

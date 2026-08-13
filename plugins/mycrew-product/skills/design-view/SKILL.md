@@ -100,10 +100,9 @@ can tell a decision from an accident. It is the counterpart of the tree: the tre
   don't count. What will not fit is **two decisions**, never one written longer.
 - **Superseded, never deleted.** A decision that no longer holds stays, its heading marked
   `— superseded by T0NN`, and the choice replacing it is a new entry with a new id.
-- **Read the file's own header before you write to it.** It opens with a block saying what the file
-  is for, what belongs in it, what does not and where that goes instead. Check the entry you are
-  about to write against it *first*: a choice a person outside could notice is a **product** decision
+- **The file carries its entries and nothing else.** No header block explaining what it is for, no
+  restatement of these rules inside it — that is written **here**, once. Check what you are about to
+  write against these rules *first*: a choice a person outside could notice is a **product** decision
   and does not belong here.
-- **Strictly the template shape, header included.** The whole file *is* the `example.decisions.md`
-  template shipped beside this skill — nothing else. A file missing its header block is seeded from
-  the template before anything is written to it.
+- **Strictly the template shape.** The file is the `example.decisions.md` shape shipped beside this
+  skill — a title and its entries, nothing else.

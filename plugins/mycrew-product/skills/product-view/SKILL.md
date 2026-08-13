@@ -107,13 +107,18 @@ repo. The North Star lives in the root `CLAUDE.md`.
   the list is. An entry over the cap is not detailed, it is unfinished thinking.
 - **Ids are permanent.** `F`, `N` or `P` and a zero-padded three-digit number, running in order from
   the highest that letter has already taken. **Never reused and never renumbered** once given —
-  everything else points at an entry by its id.
-- **Read the file's own header before you write to it.** Each file opens with a block saying what it
-  is for, what belongs in it, what does not and where that goes instead. Check the entry you are
-  about to write against it *first*: if the entry doesn't answer what the file is for, it belongs in
-  another file, and writing it here is the mistake that block exists to stop.
-- **Strictly the template shape, header included.** Each file *is* the `example.features.md`,
-  `example.feature.md`, `example.notes.md` or `example.decisions.md` template shipped beside this
-  skill — nothing else. A file missing its header block is seeded from the template before anything
-  is written to it.
+  everything else points at an entry by its id. A gap in the numbering is a retired entry, never a
+  free number.
+- **A plane file carries its entries and nothing else.** No header block, no note explaining what
+  the file is for, no restatement of these rules inside it. That is written **here**, once — copied
+  into every file it becomes pages of duplicated prose nobody reads and everybody has to scroll
+  past. Check what you are about to write against these rules *before* writing it: an entry that
+  doesn't answer what the file holds belongs in another file.
+- **Strictly the template shape.** Each file is the `example.features.md`, `example.feature.md`,
+  `example.notes.md` or `example.decisions.md` shape shipped beside this skill — a title and its
+  entries, nothing else.
+- **Reference data goes to `docs/product/appendix/`.** A catalogue that would swamp a feature file —
+  a list of categories, a table of values, anything that keeps growing — stands there as its own
+  file, and the feature points at it. It is data the plane refers to, not a plane file: no ids, no
+  entries, no rules of its own.
 - **English.** Headings, prose, identifiers — all English.
