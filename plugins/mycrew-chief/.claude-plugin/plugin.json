@@ -1,6 +1,6 @@
 {
   "name": "mycrew-chief",
-  "version": "0.33.0",
+  "version": "0.33.1",
   "description": "Layer 5/5 of the mycrew harness — the top layer, the human's deputy over the whole product. /chief reads the plane the product layer holds — what the product must do and how it is built — shapes it as the human's deputy, decomposes an approved feature into per-repo assignments, picks what to advance next (what-to-do), gates a plan before it becomes code (premortem — assume it shipped and failed, GO or NO-GO), and sequences and dispatches workers as native subagents (worker-orchestration). It never decides what the product should do — that stays the human's — and it never writes code. It conducts; the workers build. Built on mycrew-product + mycrew-worker.",
   "author": {
     "name": "kubik",

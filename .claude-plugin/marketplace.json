@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "mycrew — a five-layer harness for Claude Code, each layer built on the one below. 1) mycrew-tools gives you the primitives and the house rules. 2) mycrew-pipeline is the build pipeline that carries a task from a decision to hardened code. 3) mycrew-worker is the second pilot that drives the pipeline on one project. 4) mycrew-product is the product plane — what the product must do and how it is built, drawn out of you and written down in one place. 5) mycrew-chief sits on top as your deputy: it shapes that plane and orchestrates workers across the sub-projects. Install mycrew-tools first.",
+  "description": "mycrew — a five-layer harness for Claude Code, each layer built on the one below. 1) mycrew-tools gives you the primitives and the house rules. 2) mycrew-pipeline is the build pipeline that carries a task from a decision to hardened code. 3) mycrew-worker is the executor that drives the pipeline on one project. 4) mycrew-product is the product plane — what the product must do and how it is built, drawn out of you and written down in one place. 5) mycrew-chief sits on top as your deputy: it shapes that plane and orchestrates workers across the sub-projects. Install mycrew-tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
@@ -23,7 +23,7 @@
     },
     {
       "name": "mycrew-worker",
-      "description": "Layer 3/5 — the second pilot. Hand /worker any piece of work (a fix, a change, a feature, a question) and it adapts: reads the goal and design from the product plane, then drives the right mycrew-pipeline and mycrew-tools skills to finish it. It builds to the plane and never writes it — a design gap comes back as a report, not a repair. Runs inline as /worker or as a native subagent you delegate a whole task to. Built on mycrew-pipeline + mycrew-tools.",
+      "description": "Layer 3/5 — the executor. Hand /worker one piece of work (a fix, a change, a feature, a question) and it carries it to the end: every fork inside that work it settles itself, splitting the job across its own subagents when that pays — and it never widens the brief. Anything outside comes back as a flag in its report, in plain human language, and so does anything the design got wrong: it builds to the plane and never writes it. Runs inline as /worker or as a native subagent the chief dispatches. Built on mycrew-pipeline + mycrew-tools.",
       "author": { "name": "kubik" },
       "category": "workflow",
       "source": "./plugins/mycrew-worker"
