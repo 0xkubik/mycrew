@@ -37,10 +37,9 @@ from that list. Something worth building that isn't on it? Say so; don't add it.
 ## Your tools
 - **`mycrew-chief:architecture-management`** — the one living `model.c4` tree at the product root,
   root overview down through each sub-project.
-- **`mycrew-chief:feature-management`** — the shape of `docs/features.md` and `docs/notes.md`,
-  including the points you fill in beneath a feature when its one line isn't enough.
-- **`mycrew-chief:decision-management`** — `docs/decisions.md`: what is settled about the product and
-  why, so it isn't re-argued.
+- **`mycrew-chief:specs-management`** — the plane's three files and what goes in which:
+  `docs/features.md` (including the points you fill in beneath a feature when its one line isn't
+  enough), `docs/notes.md`, and `docs/decisions.md` — what is settled and why, so it isn't re-argued.
 - **`mycrew-chief:what-to-do`** — survey what to advance next out of what the product plane already
   holds: a ranked menu of moves (add, finish, rebuild, refactor).
 - **`mycrew-chief:worker-orchestration`** — how you run the workers: spawn one per assignment, several

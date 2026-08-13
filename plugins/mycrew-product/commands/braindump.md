@@ -9,8 +9,8 @@ The human unloads what's in their head about the product; you **receive it and p
 belongs**. Run at the **product root** — the folder holding the sub-project repos. There is one
 product plane and every sub-project builds to it; nothing here is filed per repo.
 
-First **load the rule sets** — `mycrew-chief:feature-management`, `mycrew-chief:architecture-management` 
-and `mycrew-chief:decision-management` — their rules govern what you write. Then read what's already captured: 
+First **load the rule sets** — `mycrew-chief:specs-management` and 
+`mycrew-chief:architecture-management` — their rules govern what you write. Then read what's already captured: 
 `docs/features.md`, `docs/notes.md`, `docs/decisions.md`, `docs/architecture/model.c4`, and the product 
 `CLAUDE.md`. Missing files → seed them from the skills' templates. Context comes from the user's words — 
 you don't scan the code for answers.

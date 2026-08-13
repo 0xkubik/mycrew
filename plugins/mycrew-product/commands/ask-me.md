@@ -10,8 +10,8 @@ You **ask, one question at a time**, until it is — and file every affirmed ans
 the **product root** — the folder holding the sub-project repos. One product plane, every sub-project
 builds to it; nothing here is filed per repo.
 
-First **load the rule sets** — `mycrew-chief:feature-management`, `mycrew-chief:architecture-management`
-(with `mycrew-tools:likec4` for syntax), and `mycrew-chief:decision-management` — their rules govern what
+First **load the rule sets** — `mycrew-chief:specs-management` and `mycrew-chief:architecture-management`
+(with `mycrew-tools:likec4` for syntax) — their rules govern what
 you write. Then read what's already captured: `docs/features.md`, `docs/notes.md`, `docs/decisions.md`,
 `docs/architecture/model.c4`, and the product `CLAUDE.md`. What's captured tells you
 what **not** to re-ask; missing files → seed them from the skills' templates. Context comes from the

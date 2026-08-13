@@ -1,12 +1,12 @@
 ---
 name: architecture-management
-description: "Use for anything about the product's architecture model — shaping, growing, or correcting the structure. Not WHAT to build (that's feature-management / what-to-do) but HOW the system is shaped: one living LikeC4 tree in docs/architecture/model.c4 at the product root, spanning every sub-project, down to the finest component that matters — never a mirror of the code. The chief owns it; workers build to it. Rules and concepts, not a fixed procedure."
+description: "Use for anything about the product's architecture model — shaping, growing, or correcting the structure. Not WHAT to build (that's specs-management / what-to-do) but HOW the system is shaped: one living LikeC4 tree in docs/architecture/model.c4 at the product root, spanning every sub-project, down to the finest component that matters — never a mirror of the code. The chief owns it; workers build to it. Rules and concepts, not a fixed procedure."
 user-invocable: false
 ---
 
 # architecture-management — the architecture, as a living tree
 
-You describe the product's **structure** — not *what* to build (feature-management / what-to-do), but
+You describe the product's **structure** — not *what* to build (specs-management / what-to-do), but
 *how* it's shaped. It lives as **one living tree** in `docs/architecture/model.c4` **at the product
 root**, spanning every sub-project. LikeC4 syntax is in **`mycrew-tools:likec4`** — load it before editing.
 

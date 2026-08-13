@@ -4,4 +4,4 @@
      covers, one line each. The `N`-id is how a note is pointed at and is never reused. Unlike
      features.md this is scratch: a settled note either graduates into a feature or is cleaned out. -->
 
-- [ ] N000 — <what to do or what breaks, and where>
+- [ ] N001 — <what to do or what breaks, and where>

@@ -30,7 +30,7 @@ written down and binds what you pitch next. Run at the **product root**.
   vocabulary. Put the question itself through `AskUserQuestion`.
 - **Approval is the only door into the feature list.** An approved idea becomes one `## [ ]` entry
   headed by a line of **≤200 chars** in `docs/features.md`, in their intent, in the shape
-  `mycrew-chief:feature-management` sets (that skill's *extract, never contribute* stance governs the
+  `mycrew-chief:specs-management` sets (that skill's *extract, never contribute* stance governs the
   interview, not you — pitching is exactly your job). Nothing else ever reaches that file — never
   approve on the human's behalf, whatever else the session was told.
 - **Every verdict, both halves, always.** A verdict lands in **two** places: one line in

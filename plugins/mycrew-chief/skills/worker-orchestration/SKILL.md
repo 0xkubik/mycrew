@@ -30,8 +30,7 @@ rules for that.
   needs to move, a feature's detail that's missing or false. You steer by that report, never by
   reading its code.
 - **Act on the design gaps yourself.** A worker that reports the shape must move has done the right
-  thing. Make the move here — `architecture-management`, `feature-management` or
-  `decision-management` — then re-dispatch. Never
+  thing. Make the move here — `architecture-management` or `specs-management` — then re-dispatch. Never
   tell a worker to fix the plane itself.
 - **Sequence the dependencies.** Work out who depends on whom and build it into the plan. Independent
   pieces run in parallel; a dependent one waits — **provider first**: the provider worker commits the
