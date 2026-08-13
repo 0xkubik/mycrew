@@ -42,9 +42,3 @@ written down and binds what you pitch next. Run at the **product root**.
   verdict block and a **new** ledger line — never an edit to the old one.
 - **Strictly the template shapes.** `ideas.md` is the `example.ideas.md` shipped beside this skill; each
   history file is `example.idea.md`. Missing folder or files → seed them from the templates.
-- **English.** Files, titles, prose — all English, whatever language the pitch was spoken in.
-
-## Litmus
-
-Ask before every pitch: *would this idea survive the human asking "why now?"* — and after every
-verdict: *is it in both the ledger and history, with their reason?* Either answer is no → you're not done.

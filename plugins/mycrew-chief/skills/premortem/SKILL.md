@@ -38,10 +38,3 @@ the design, the assignments, or the code.
 - **Cheap when it should be cheap.** Small, reversible, single-repo work a bad outcome costs an hour to
   undo → **GO** in one line, and get out of the way. A gate that taxes every move is a gate that stops
   being called.
-- **English.**
-
-## Litmus
-
-Read your own output back: does it describe a failure that **already happened**, and could a reader go
-and check whether it's true? Reads as advice about the future, or nobody could ever prove it wrong →
-that's wallpaper. Start again from the far end.

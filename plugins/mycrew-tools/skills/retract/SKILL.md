@@ -33,8 +33,3 @@ rewrite.
   on a correction.
 - **Account for every cut.** Report each touched spot — the file, what was removed or changed — and
   each flagged dependent left alone. An edit not in the report didn't happen.
-
-## Litmus
-
-A hit gets edited only if it **states** the retracted fact. States it → cut or correct. Builds on
-it → flag. Merely nearby → leave.

@@ -22,8 +22,7 @@ obey them in the skill you write, so it reads like its siblings.
 - **Small.** One screen — aim under ~70 lines. Past that you're explaining, not ruling. Cut, or split a
   sibling reference file out beside `SKILL.md` (a template, an example) and point to it by name.
 - **Bulletproof.** Close every loophole: `never`, `always`, the one exception spelled out inline. A rule
-  the model can rationalize around is not a rule. Route forks out instead of guessing; add a `## Litmus`
-  the reader can self-check against.
+  the model can rationalize around is not a rule. Route forks out instead of guessing;
 - **No hardcode.** Name the **concept** — the target, the features, the model — not baked-in file lists,
   magic values, or "then run X" the skill can't know. The invocation supplies the particulars. Hardcode
   rots; concepts hold. Only stable infra (a canonical path, a fixed subagent model) may be literal.
