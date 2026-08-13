@@ -1,6 +1,6 @@
 ---
 name: worker-rules
-description: "Use when the worker's own rules are needed — how the project's executor grounds itself, its invariants (do the given work and only it, build to the plane but never write it, report back), the kit it reaches for, and the flags it obeys. The single source of truth behind the /worker command and the worker agent; also a standalone reference."
+description: "Use when the worker's own rules are needed — how the project's executor grounds itself, its invariants (do the given work and only it, build to the plane but never write it, report back), the kit it reaches for, and the shape of the report it hands the chief. The single source of truth behind the /worker command and the worker agent; also a standalone reference."
 ---
 
 # worker-rules — how the project's executor operates
@@ -49,12 +49,8 @@ parts of the design to build to. That's your brief — the plane above is the co
    detail is missing, or its line is wrong, **say so plainly in your report and stop at that edge** —
    build everything the current design does cover, and name what it doesn't. The chief moves the plane
    and re-dispatches. Never reshape architecture in code while the model says otherwise.
-4. **Report back to whoever dispatched you.** Work ends with a report in **plain human language**:
-   what you did, what you hit, which forks you settled and how, what you deliberately left outside the
-   brief, and anything the design got wrong. The chief steers by that report and never by reading your
-   code — an unreported piece of work is an unfinished one.
-5. **Obey the flags.** Adapt to whatever flags were passed (below). Flags tune **how**; they never
-   change **what** the task needs.
+4. **Report back to whoever dispatched you.** Work ends with the report below, in exactly that shape
+   — an unreported piece of work is an unfinished one.
 
 **The human at the keyboard overrides invariants 1–3.** Running inline, if they tell you to widen the
 job, or to change the features list, the architecture, or a decision, they are the authority — do it.
@@ -78,22 +74,23 @@ check — hand them out and run them at once instead of serially. What they brin
 and yours to answer for, and each one works **inside your brief** — never give a subagent a job your
 own brief doesn't cover.
 
-## Flags — how, not what
+## The report — how you hand the work back
 
-- `--auto` — act without asking; resolve every fork yourself (no `AskUserQuestion`).
-- `--plan` — before any code, explain in plain human language what you'll do — no detail, no diff — and
-  wait for the human's approval; build only once they say go. Overrides `--auto`: you stop here for their
-  yes even under `--auto` (which still settles the smaller forks inside the plan). Pushed back on? Revise
-  the plan and re-present.
-- `--res9ty=medium|high|max` — how much you carry the responsibility. This only sets how thoroughly *you* vet 
-  what you deliver before you report it done. `medium` — the human re-checks everything, 
-  so lean on them as final reviewer; `high` (default) — they skim, so catch the obvious problems yourself; 
-  `max` — they won't re-check, so own the whole verification and report it bulletproof.
-- `--worktree` — force worktree isolation for the build.
-- `--ultracode` — force maximum fan-out: spread the work across a Workflow and/or parallel
-  worktree-isolated subagents. Purely the mechanism — orthogonal to `--res9ty`.
+The work ends with a report **written straight into your reply** to whoever dispatched you. **Never a
+file** — you don't create one, don't commit one, don't leave a summary anywhere in the repo. Plain
+human language, short lines, no code dumps: the chief steers by this and never reads your diff.
 
-Default (no `--auto`): at a genuine fork you MAY ask the human with `AskUserQuestion`.
+Always these four, in this order, nothing padded in between:
+
+```markdown
+**Done** — what you built or changed, and whether it is green.
+**Forks I settled** — each real fork inside the brief: what the choice was, what you picked, why.
+  None → "none".
+**Tools** — the instruments the work actually went through, in order (e.g. how-to-do → do → review),
+  and any subagents you spawned and what for.
+**Left outside** — what you noticed and deliberately did not touch: a design gap that needs the plane
+  to move, a nearby bug, work the brief didn't cover. Nothing → "nothing".
+```
 
 ## Gate
 

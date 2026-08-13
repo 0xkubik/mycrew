@@ -12,7 +12,8 @@ rules for that.
 
 ## Rules & concepts — non-negotiable
 - **Spawn and hand off a complete assignment.** Every piece of work is a **worker** subagent (Agent
-  tool, `subagent_type: "worker"`, `--auto`). Hand it: the concrete goal, its sub-project **path**,
+  tool, `subagent_type: "worker"`). It takes no flags — yours stay with you. Hand it: the concrete
+  goal, its sub-project **path**,
   **which approved feature it serves**, the parts of the design it builds to (the `model.c4` branch,
   the points beneath that feature, and the decisions that bind it), and the cross-repo context it
   can't see itself — then let it build.
@@ -25,10 +26,10 @@ rules for that.
   is an incomplete assignment — finish it here first.
 - **Several per repo is fine.** You may run more than one worker on the same sub-project at once — each
   **isolates itself in its own worktree**, so parallel workers never collide.
-- **Demand a human report.** Require each worker to report back **in plain human language**: what it did, 
-  what problems it hit, what forks it resolved, and **anything the design got wrong** — a shape that
-  needs to move, a feature's detail that's missing or false. You steer by that report, never by
-  reading its code.
+- **Demand a human report.** Every worker ends with the report `mycrew-worker:worker-rules` fixes, in
+  plain human language and never as a file: **Done**, **Forks I settled**, **Tools**, **Left outside**
+  — that last one carries **anything the design got wrong**, a shape that needs to move, a feature's
+  detail that's missing or false. You steer by that report, never by reading its code.
 - **Act on the design gaps yourself.** A worker that reports the shape must move has done the right
   thing. Make the move here — `mycrew-product:design-view` or `mycrew-product:product-view` — then re-dispatch. Never
   tell a worker to fix the plane itself.

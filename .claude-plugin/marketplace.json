@@ -23,7 +23,7 @@
     },
     {
       "name": "mycrew-worker",
-      "description": "Layer 3/5 — the executor. Hand /worker one piece of work (a fix, a change, a feature, a question) and it carries it to the end: every fork inside that work it settles itself, splitting the job across its own subagents when that pays — and it never widens the brief. Anything outside comes back as a flag in its report, in plain human language, and so does anything the design got wrong: it builds to the plane and never writes it. Runs inline as /worker or as a native subagent the chief dispatches. Built on mycrew-pipeline + mycrew-tools.",
+      "description": "Layer 3/5 — the executor. Hand /worker one piece of work (a fix, a change, a feature, a question) and it carries it to the end: every fork inside that work it settles itself, splitting the job across its own subagents when that pays — and it never widens the brief. Anything outside comes back as a flag in its report, in plain human language, and so does anything the design got wrong: it builds to the plane and never writes it. It takes no flags and creates no report file: the work ends with a fixed four-part answer to whoever dispatched it — what got done, which forks it settled and how, which instruments it used, what it left outside the brief. Runs inline as /worker or as a native subagent the chief dispatches. Built on mycrew-pipeline + mycrew-tools.",
       "author": { "name": "kubik" },
       "category": "workflow",
       "source": "./plugins/mycrew-worker"
