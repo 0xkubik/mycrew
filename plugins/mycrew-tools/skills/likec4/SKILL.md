@@ -1,6 +1,6 @@
 ---
 name: likec4
-description: "Use when reading or writing LikeC4 — any .c4 file, including the product's docs/architecture/model.c4 — or when architecture must be described as code. Reference for the DSL and toolchain (C4-style context / container / component / code), where one model renders many consistent, auto-laid-out views: the language, view kinds, styling, deployment, the CLI, the MCP server, and where the exhaustive syntax lives. Viewed via the LikeC4 VS Code extension; can generate Mermaid."
+description: "Use when reading or writing LikeC4 — any .c4 file, including the product's docs/design/model.c4 — or when architecture must be described as code. Reference for the DSL and toolchain (C4-style context / container / component / code), where one model renders many consistent, auto-laid-out views: the language, view kinds, styling, deployment, the CLI, the MCP server, and where the exhaustive syntax lives. Viewed via the LikeC4 VS Code extension; can generate Mermaid."
 ---
 
 # likec4 — architecture-as-code reference
@@ -113,7 +113,7 @@ GitHub-viewable image target from the model.
 ## File placement
 
 `.c4` files. When the architect skill is driving the work, they live under
-`docs/architecture/`, kept together so the model stays a single source of truth.
+`docs/design/`, kept together so the model stays a single source of truth.
 
 ## Where the full syntax lives
 

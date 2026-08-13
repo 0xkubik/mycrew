@@ -1,5 +1,5 @@
 ---
-description: "Listen at the product root while the human unloads whatever is in their head about the product, and file each affirmed piece where it lives: features (docs/features.md), notes (docs/notes.md), decisions (docs/decisions.md), architecture (docs/architecture/model.c4). You listen, they talk — you never drive the conversation with questions. Ends only when the user stops."
+description: "Listen at the product root while the human unloads whatever is in their head about the product, and file each affirmed piece where it lives: features (docs/product/features.md), notes (docs/product/notes.md), decisions (docs/product/decisions.md), architecture (docs/design/model.c4). You listen, they talk — you never drive the conversation with questions. Ends only when the user stops."
 argument-hint: "[nothing — just start talking]"
 ---
 
@@ -9,9 +9,9 @@ The human unloads what's in their head about the product; you **receive it and p
 belongs**. Run at the **product root** — the folder holding the sub-project repos. There is one
 product plane and every sub-project builds to it; nothing here is filed per repo.
 
-First **load the rule sets** — `mycrew-chief:specs-management` and 
-`mycrew-chief:architecture-management` — their rules govern what you write. Then read what's already captured: 
-`docs/features.md`, `docs/notes.md`, `docs/decisions.md`, `docs/architecture/` (the `model.c4` tree and 
+First **load the rule sets** — `mycrew-chief:product-view` and 
+`mycrew-chief:design-view` — their rules govern what you write. Then read what's already captured: 
+`docs/product/features.md`, `docs/product/notes.md`, `docs/product/decisions.md`, `docs/design/` (the `model.c4` tree and 
 its `decisions.md`), and the product `CLAUDE.md`. Missing files → seed them from the skills' templates. Context comes from the user's words — 
 you don't scan the code for answers.
 

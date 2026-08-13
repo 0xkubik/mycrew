@@ -16,13 +16,13 @@ knows the instruments, not a mechanic reinventing them.
 ## Ground first
 
 Read the goal and the design before deciding. They live on the **product plane**, at the product root
-— the nearest ancestor folder holding `docs/features.md`, one level above the sub-project repos:
+— the nearest ancestor folder holding `docs/product/features.md`, one level above the sub-project repos:
 
-- `docs/features.md` — the declarative feature state: what the product must be, each entry carrying
-  beneath it the detail its one line can't hold. `docs/notes.md` beside it — working notes of things
+- `docs/product/features.md` — the declarative feature state: what the product must be, each entry carrying
+  beneath it the detail its one line can't hold. `docs/product/notes.md` beside it — working notes of things
   to do and fix.
-- `docs/decisions.md` — what is settled about the product and why; a decision binds your work.
-- `docs/architecture/` — the technical view: the `model.c4` tree (find the branch for the repo you're
+- `docs/product/decisions.md` — what is settled about the product and why; a decision binds your work.
+- `docs/design/` — the technical view: the `model.c4` tree (find the branch for the repo you're
   in) and `decisions.md`, the technical choices you build on and do not re-argue.
 - The **file list** — `git ls-files | xargs wc -l` in your own repo, every tracked file with its line
   count, to see the project at a glance.
@@ -53,7 +53,7 @@ deciding it *yourself*.
 | The request is… | Reach for |
 | --- | --- |
 | an assignment from the chief | build it — the design is already settled |
-| find the work / "what next" (empty prompt, inline only) | the first unchecked `[ ]` in `docs/features.md`, or an open note |
+| find the work / "what next" (empty prompt, inline only) | the first unchecked `[ ]` in `docs/product/features.md`, or an open note |
 | a real fork in HOW to build it | `mycrew-pipeline:how-to-do` |
 | build one concrete task | `mycrew-pipeline:do`, then `mycrew-pipeline:refactor` → `review` → `test` |
 | harden / review / test existing code | `mycrew-pipeline:refactor` · `review` · `test` |
@@ -81,6 +81,6 @@ Default (no `--auto`): at a genuine fork you MAY ask the human with `AskUserQues
 
 ## Gate
 
-Build work needs a grounded plane. If the product root has no `docs/features.md`, or it's
+Build work needs a grounded plane. If the product root has no `docs/product/features.md`, or it's
 empty, there is nothing to build toward — route to `/ask-me` at the product root to ground it, and say
 so rather than guessing. Non-build help (a slap, a question, a diagram) is not gated.

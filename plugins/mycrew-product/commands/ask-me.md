@@ -1,5 +1,5 @@
 ---
-description: "Run the endless questioning loop at the product root — one question at a time, a fresh angle each time, until the human has thought the product through and every affirmed answer is filed where it lives: features (docs/features.md), notes (docs/notes.md), decisions (docs/decisions.md), architecture (docs/architecture/model.c4). You ask, they decide; you never answer for them. Ends only when the user stops."
+description: "Run the endless questioning loop at the product root — one question at a time, a fresh angle each time, until the human has thought the product through and every affirmed answer is filed where it lives: features (docs/product/features.md), notes (docs/product/notes.md), decisions (docs/product/decisions.md), architecture (docs/design/model.c4). You ask, they decide; you never answer for them. Ends only when the user stops."
 argument-hint: "[a thread to start on — or nothing to range across the whole product]"
 ---
 
@@ -10,10 +10,10 @@ You **ask, one question at a time**, until it is — and file every affirmed ans
 the **product root** — the folder holding the sub-project repos. One product plane, every sub-project
 builds to it; nothing here is filed per repo.
 
-First **load the rule sets** — `mycrew-chief:specs-management` and `mycrew-chief:architecture-management`
+First **load the rule sets** — `mycrew-chief:product-view` and `mycrew-chief:design-view`
 (with `mycrew-tools:likec4` for syntax) — their rules govern what
-you write. Then read what's already captured: `docs/features.md`, `docs/notes.md`, `docs/decisions.md`,
-`docs/architecture/` (the `model.c4` tree and its `decisions.md`), and the product `CLAUDE.md`. What's
+you write. Then read what's already captured: `docs/product/features.md`, `docs/product/notes.md`, `docs/product/decisions.md`,
+`docs/design/` (the `model.c4` tree and its `decisions.md`), and the product `CLAUDE.md`. What's
 captured tells you
 what **not** to re-ask; missing files → seed them from the skills' templates. Context comes from the
 user's words — you don't scan the code for answers.

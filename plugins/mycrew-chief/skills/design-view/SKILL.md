@@ -1,30 +1,29 @@
 ---
-name: architecture-management
-description: "Use for anything about the product's technical view — the shape of the system and the choices it is built on. Not WHAT the product does (that's specs-management / what-to-do) but HOW it is built: one living LikeC4 tree in docs/architecture/model.c4 at the product root, and beside it docs/architecture/decisions.md, the settled technical choices with the reasoning that closed them. The chief owns both; workers build to them. Rules and concepts, not a fixed procedure."
+name: design-view
+description: "Use for anything about the product's technical view — the shape of the system and the choices it is built on. Not WHAT the product does (that's product-view / what-to-do) but HOW it is built: one living LikeC4 tree in docs/design/model.c4 at the product root, and beside it docs/design/decisions.md, the settled technical choices with the reasoning that closed them. The chief owns both; workers build to them. Rules and concepts, not a fixed procedure."
 user-invocable: false
 ---
 
-# architecture-management — the technical view
+# design-view — how the product is built
 
-`docs/architecture/` holds the **technical view of the product** — how it is built. Two files, and
-nothing else belongs in either:
+`docs/design/` holds **how the product is built**. Two files, and nothing else belongs in either:
 
 | File | Holds | Ids |
 | --- | --- | --- |
-| `model.c4` | the shape — what talks to what at run time | — |
-| `decisions.md` | the settled technical choices, and why | `T001` |
+| `docs/design/model.c4` | the shape — what talks to what at run time | — |
+| `docs/design/decisions.md` | the settled technical choices, and why | `T001` |
 
-The **product view** lives one level up, in `docs/features.md`, `docs/notes.md` and
-`docs/decisions.md` by `mycrew-chief:specs-management`. **The line between them:** a product decision
-is one a person outside could notice — what the product does, offers, forbids or charges for. A
-technical decision is one about the machinery — the language, the store, the protocol, the library,
-the thing deliberately not used. Nobody reading the product would ever see it.
+**Never what the product is.** That is the **product view** — `docs/product/` beside it, by
+`mycrew-chief:product-view`: `features.md`, `notes.md` and `decisions.md`. **The line between them:**
+a product decision is one a person outside could notice — what the product does, offers, forbids or
+charges for. A technical decision is one about the machinery — the language, the store, the protocol,
+the library, the thing deliberately not used. Nobody reading the product would ever see it.
 
 **You own both — a worker never writes to either.** A worker reads them and builds to them; when the
 work needs the shape to move or shows a choice is wrong, it says so in its report and you make the
 move here, then re-dispatch.
 
-# The tree — `docs/architecture/model.c4`
+# The tree — `docs/design/model.c4`
 
 **One living tree** at the product root, spanning every sub-project. LikeC4 syntax is in
 **`mycrew-tools:likec4`** — load it before editing.
@@ -72,7 +71,7 @@ move here, then re-dispatch.
   nodes.
 - **English.** Identifiers, titles, descriptions — all English.
 
-# The technical decisions — `docs/architecture/decisions.md`
+# The technical decisions — `docs/design/decisions.md`
 
 A technical decision records a choice about the machinery that is closed — a language, a framework, a
 store, a protocol, a library, a way of running it, something deliberately not used — together with the
@@ -82,7 +81,7 @@ can tell a decision from an accident. It is the counterpart of the tree: the tre
 
 ## Rules & concepts — non-negotiable
 - **One file, beside the tree.** Every technical choice for the whole product lives in
-  `docs/architecture/decisions.md`. Never one per sub-project, and never one inside a sub-project's own
+  `docs/design/decisions.md`. Never one per sub-project, and never one inside a sub-project's own
   repo — a repo's own `CLAUDE.md` says how its code is written, not what the product is built on.
 - **Every decision carries a permanent id.** `T` and a zero-padded three-digit number, running in order
   from the highest already taken. **Never reused and never renumbered**.
@@ -92,8 +91,8 @@ can tell a decision from an accident. It is the counterpart of the tree: the tre
 - **Beneath it, only the reasoning and its ceiling.** Short `-` points: why this won, what it was
   weighed against and what that would have cost, the known limit where it stops working, what would
   overturn it. A paragraph under a heading is a decision written wrong.
-- **Never the product's content.** Not what the product does or offers (that's `docs/features.md`), not
-  a rule of the product a person could notice (that's `docs/decisions.md`), not the shape itself
+- **Never the product's content.** Not what the product does or offers (that's `docs/product/features.md`), not
+  a rule of the product a person could notice (that's `docs/product/decisions.md`), not the shape itself
   (that's `model.c4` — point at a node instead of redrawing it).
 - **Name the feature only when the decision serves one.** Its heading then ends `(F004)`. Most serve
   the whole system and name none.

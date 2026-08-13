@@ -31,11 +31,11 @@ after. You **never commit**: the run ends with everything written and the human 
    sub-projects carry: that's raw material for the description, not for these two.
 3. **Write the root `CLAUDE.md`** to the template below.
 4. **Outline the `docs/` plane — files in place, nothing filled in.**
-   - `docs/features.md`, `docs/notes.md` and `docs/decisions.md` — the `mycrew-chief:specs-management`
+   - `docs/product/features.md`, `docs/product/notes.md` and `docs/product/decisions.md` — the `mycrew-chief:product-view`
      templates, no entries.
-   - `docs/architecture/model.c4` — the product root and one empty node per sub-project, nothing below
+   - `docs/design/model.c4` — the product root and one empty node per sub-project, nothing below
      it — plus `likec4.config.json` beside it, named for the product, and `decisions.md` for the
-     technical choices, no entries (`mycrew-chief:architecture-management`).
+     technical choices, no entries (`mycrew-chief:design-view`).
 5. **`git init`, mount the sub-projects if the layout says so — then stop.** No `git add`, no commit:
    say what you created and leave it for the human to read.
 
