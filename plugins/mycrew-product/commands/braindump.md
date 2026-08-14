@@ -1,19 +1,17 @@
 ---
-name: braindump
-description: "Use when the human wants to unload what is in their head about the product — you listen at the product root and file each affirmed piece where it lives (features, notes, decisions, the architecture tree). They talk and set every turn; you never steer with questions of your own, and it ends only when they stop. Triggers: \"braindump\", \"let me dump this\", \"I'll just talk, you write it down\"."
+description: "Use when the human wants to unload what is in their head about the product — you listen at the product root and file each affirmed piece where it lives (features and notes). They talk and set every turn; you never steer with questions of your own, and it ends only when they stop. Triggers: \"braindump\", \"let me dump this\", \"I'll just talk, you write it down\"."
 argument-hint: "[nothing — just start talking]"
 ---
 
-# braindump — listen, and file what you hear
+# /braindump — listen, and file what you hear
 
 The human unloads what's in their head about the product; you **receive it and put it where it
 belongs**. Run at the **product root** — the folder holding the sub-project repos. There is one
 product plane and every sub-project builds to it; nothing here is filed per repo.
 
-First **load the rule sets** — `mycrew-product:product-view` and 
-`mycrew-product:design-view` — their rules govern what you write. Then read what's already captured: 
-`docs/product/features.md`, `docs/product/notes.md`, `docs/product/decisions.md`, `docs/design/` (the `model.c4` tree and 
-its `decisions.md`), and the product `CLAUDE.md`. Missing files → seed them from the skills' templates. Context comes from the user's words — 
+First **load the rule set** — `mycrew-product:formalize-ideas` — its rules govern what you write and
+where; anything they affirm during the session is formalized by it, in that turn. Then read what's already captured: 
+`docs/product/features.md`, `docs/product/notes.md`, and the product `CLAUDE.md`. Missing files → seed them from the skills' templates. Context comes from the user's words — 
 you don't scan the code for answers.
 
 ## How you listen
@@ -32,20 +30,17 @@ Speak up only in these three cases, briefly, and then hand the floor straight ba
   silently overwrite, and never pick the version you find better.
 - **A thought of your own, modestly.** An observation or a small idea, offered once, in one or two
   sentences, and dropped the moment it isn't picked up. Never argue for it twice. A real feature pitch —
-  the case for it, the verdict logged — is `mycrew-product:propose-idea`'s job, not yours.
+  the case for it, the verdict logged — is `/propose-idea`'s job, not yours.
 
 ## What you file
 
 Route each affirmed thing by its nature; one utterance may land in several homes:
 
-- a capability, what the product must do → a `- [ ]` line in `features.md`, ≤200 chars, nothing beneath it
-- structure, what talks to what at run time → the `model.c4` tree (confirm the shape back before you draw)
-- detail too big for that line — mechanics, a contract, a schema, how they see it working → that
+- a capability, what the product must do → a named entry in `features.md`
+- what that capability concretely is — mechanics, a contract, a schema, how they see it working → that
   feature's own file, `docs/product/features/F00N-<slug>.md`, in their words and never your rewrite
-- a choice settled with a reason, belonging to no single feature → `decisions.md` if a person outside
-  could notice it, `docs/design/decisions.md` if it is about the machinery
 - anything raw, unsettled, or still to be thought through → `notes.md`
 
-**Only what they affirmed, in their intent** — never invent a feature, a node, or a decision they didn't
+**Only what they affirmed, in their intent** — never invent a feature or a detail they didn't
 say. Something said in passing and clearly not settled goes to `notes.md`, not into the plane. File as
 you go, not in a batch at the end, and never wrap the session up: it ends when they stop.

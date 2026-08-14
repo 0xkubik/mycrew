@@ -15,7 +15,7 @@ rewrite.
 - **One claim per call.** The argument names one wrong fact. Handed something vague ("the docs are
   stale") → ask what exactly is wrong; never sweep-and-guess.
 - **Hunt everywhere, by meaning.** Search every knowledge surface the project has: the docs tree
-  (features and notes, specs, the architecture model), every CLAUDE.md up to the product root,
+  (features and notes, specs), every CLAUDE.md up to the product root,
   sibling doc repos of the product, and persistent memory. Search by meaning, not one literal
   string — the fact hides under synonyms, translations, and derived phrasing (versioning → versions,
   immutable, a new version beside the old). Stop only when new searches stop finding new places.

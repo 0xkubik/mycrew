@@ -10,8 +10,6 @@ argument-hint: "[optional focus — or nothing to survey the whole product]"
   per feature, the detail of any that earned it in its own file beside it. **Missing or empty → route
   to `/ask-me`** first (it grounds the feature list). Present → read the **frontier** (first unchecked
   `[ ]`) as the steer.
-- **What is settled** — `docs/product/decisions.md` for the product, and `docs/design/` for the
-  technical view: the `model.c4` shape and the choices the system is built on.
 - **The file list** — every sub-project's tracked files with line counts. Take the paths from the
   Sub-projects list, never by scanning, and run per path:
   `git -C <path> ls-files | sed "s|^|<path>/|" | xargs wc -l`. Shared ground handed to every lens.
@@ -21,7 +19,7 @@ argument-hint: "[optional focus — or nothing to survey the whole product]"
 
 Dispatch four subagents in parallel, one per move, each on the **`sonnet` model**. Give each: its
 **move mandate**, the **North Star** (if any), the **approved feature list** (ADD picks from it; the
-others take the frontier as *orienting steer, not a gate*), the **design**, and the **file list**.
+others take the frontier as *orienting steer, not a gate*) and the **file list**.
 Each explores the sub-projects **in its own lane** and returns candidates in the contract below.
 
 - **ADD** — an **unbuilt feature from the approved list**, ready to be carried now. _"Which unchecked

@@ -1,6 +1,6 @@
 {
   "name": "mycrew-tools",
-  "version": "0.40.1",
+  "version": "0.41.0",
   "description": "Layer 1/5 — the primitives. Small, project-agnostic skills you reach for mid-work: /slap resets a fix that has stopped working, /likec4 draws architecture as code, /reminder pins a rule as a hard constraint, /retract hunts down information declared wrong and cuts it out. Ships the house rule files too. Everything above builds on this.",
   "author": {
     "name": "kubik",

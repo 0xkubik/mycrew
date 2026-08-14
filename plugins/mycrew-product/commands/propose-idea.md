@@ -1,10 +1,9 @@
 ---
-name: propose-idea
 description: "Use when the product needs an idea it doesn't hold yet — invent a candidate feature or improvement, pitch it to the human with the case for it, and file it into features.md only on their approval. Every idea, approved or rejected, is logged with their own reason in docs/product/ideas/ and binds every later pitch. The counterpart to /braindump and /ask-me: those draw the human's vision out, this one puts an idea of its own in."
 argument-hint: "[an angle to invent along — or nothing to range across the whole product]"
 ---
 
-# propose-idea — invent a feature, pitch it, keep the verdict
+# /propose-idea — invent a feature, pitch it, keep the verdict
 
 The **one place mycrew contributes a product idea of its own**. Everywhere else the product plane is
 strictly extractive — `/braindump` listens and `/ask-me` questions, and neither adds to it. Here you invent:
@@ -14,8 +13,10 @@ written down and binds what you pitch next. Run at the **product root**.
 
 ## Rules & concepts — non-negotiable
 
+- **Load the rule set first** — `mycrew-product:formalize-ideas`. It governs where an approved idea
+  lands and in what shape, and it is what you obey the moment the human affirms anything at all here.
 - **Ground before you invent.** Read the North Star in the root `CLAUDE.md`, `docs/product/features.md`,
-  the architecture and the decisions, the whole ideas ledger — then look at what the sub-projects actually
+  the whole ideas ledger — then look at what the sub-projects actually
   are. An idea that restates something already listed, already built, or already pitched is not an idea;
   find a real gap.
 - **The ledger binds you.** A rejected idea is **never** re-pitched. The one exception: something
@@ -28,10 +29,10 @@ written down and binds what you pitch next. Run at the **product root**.
 - **Pitch in plain human language.** Say what it is and *why it's worth doing* — the gap it closes, who
   it helps, what it costs — before you ask. No jargon: the human decides on the case, not on your
   vocabulary. Put the question itself through `AskUserQuestion`.
-- **Approval is the only door into the feature list.** An approved idea becomes one `- [ ]` line of
-  **≤200 chars** in `docs/product/features.md`, in their intent, in the shape
-  `mycrew-product:product-view` sets (that skill's *extract, never contribute* stance governs the
-  interview, not you — pitching is exactly your job). Nothing else ever reaches that file — never
+- **Approval is the only door into the feature list.** An approved idea becomes one named entry in
+  `docs/product/features.md` plus its own file saying what it concretely is, in their intent, in the shape
+  `mycrew-product:formalize-ideas` sets (that skill's *only what they affirmed* rule governs what may be
+  filed, not what may be pitched — inventing is exactly your job). Nothing else ever reaches that file — never
   approve on the human's behalf, whatever else the session was told.
 - **Every verdict, both halves, always.** A verdict lands in **two** places: one line in
   `docs/product/ideas/ideas.md` and a full dossier at `docs/product/ideas/history/<slug>.md`. A
@@ -40,5 +41,35 @@ written down and binds what you pitch next. Run at the **product root**.
   your reconstruction of it. Answered with no reason → ask for the reason before you file.
 - **Append, never rewrite.** Ledger lines and dossiers are permanent. An overturned verdict is a **new**
   verdict block and a **new** ledger line — never an edit to the old one.
-- **Strictly the template shapes.** `ideas.md` is the `example.ideas.md` shipped beside this skill; each
-  history file is `example.idea.md`. Missing folder or files → seed them from the templates.
+- **Strictly the template shapes below.** Missing folder or files → seed them from the templates.
+
+## The templates
+
+`docs/product/ideas/ideas.md` — the ledger:
+
+```markdown
+# Ideas — <product name>
+
+- **<idea title>** — <the idea in one line> — **approved** <YYYY-MM-DD>: <their reason, their words> · [full](history/<slug>.md)
+- **<idea title>** — <the idea in one line> — **rejected** <YYYY-MM-DD>: <their reason, their words> · [full](history/<slug>.md)
+```
+
+`docs/product/ideas/history/<slug>.md` — one dossier per idea:
+
+```markdown
+# <Idea title>
+
+**Pitched:** <YYYY-MM-DD> · **Verdict:** approved | rejected
+
+## The idea
+
+<what it is, in full — what the product would do that it does not do today>
+
+## Why it was pitched
+
+<the case as it was put: the gap it closes, who it helps, how it serves the North Star, what it costs>
+
+## Verdict — <approved | rejected>, <YYYY-MM-DD>
+
+<the human's answer and their reason, in their words>
+```

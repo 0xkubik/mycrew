@@ -1,7 +1,7 @@
 {
   "name": "mycrew-product",
-  "version": "0.23.1",
-  "description": "Layer 4/5 — the product plane: everything true about the whole product, above the sub-projects. /product-init founds it. /braindump and /ask-me draw the product out of you and file each piece where it belongs; /propose-idea is the one that puts an idea in, and only on your approval. /council seats a technical council over the whole plane and argues to consensus, settling the architecture before the code. /why-do-it gates doubtful work; /pitch reads the plane back to you.",
+  "version": "0.29.0",
+  "description": "Layer 4/5 — the product plane: everything true about the whole product, above the sub-projects. /product-init founds it. /braindump and /ask-me draw the product out of you and file each piece where it belongs; /propose-idea is the one that puts an idea in, and only on your approval. Whatever you affirm, wherever you affirm it, formalize-ideas is the one rule set that decides where it lands and in what shape.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
