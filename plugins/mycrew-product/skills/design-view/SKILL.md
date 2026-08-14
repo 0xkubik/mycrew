@@ -13,6 +13,9 @@ user-invocable: false
 | `docs/design/model.c4` | the shape — what talks to what at run time | — |
 | `docs/design/decisions.md` | the settled technical choices, and why | `T001` |
 
+`docs/design/councils/` may sit beside them, holding the minutes of a `mycrew-product:council` sitting —
+a record of how a decision was reached. It commits nothing and no decision lives there.
+
 **Never what the product is.** That is the **product view** — `docs/product/` beside it, by
 `mycrew-product:product-view`: `features.md`, `notes.md` and `decisions.md`. **The line between them:**
 a product decision is one a person outside could notice — what the product does, offers, forbids or
