@@ -1,7 +1,7 @@
 {
   "name": "mycrew-tools",
-  "version": "0.40.0",
-  "description": "Layer 1/5 of the mycrew harness — primitives. Small, project-agnostic skills you or the model reach for while working: /slap resets a stuck fix, /likec4 draws C4 architecture-as-code, /reminder pins one rule file as a hard constraint, /retract hunts down information declared wrong and surgically removes it. Also ships the harness's rule files (rules/) to copy into a project's .claude/rules/. The primitives every layer above builds on.",
+  "version": "0.40.1",
+  "description": "Layer 1/5 — the primitives. Small, project-agnostic skills you reach for mid-work: /slap resets a fix that has stopped working, /likec4 draws architecture as code, /reminder pins a rule as a hard constraint, /retract hunts down information declared wrong and cuts it out. Ships the house rule files too. Everything above builds on this.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
