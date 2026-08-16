@@ -52,7 +52,7 @@ repo. The North Star lives in the root `CLAUDE.md`.
   into prose.
 - **What it actually is lives in its file, always.** Every feature opens
   `docs/product/features/F00N-<slug>.md` the moment its line does — the line is an index entry, and
-  an index entry nobody can look up is useless. The path falls out of the id, so the line never
+  an index entry nobody can look up is useless. File creates only if feature carry unprredictable behavior or human sad something about it. The path falls out of the id, so the line never
   carries a link to it. One file per feature, never one file covering two.
 - **Nothing beneath a line, ever.** A point, a sub-bullet or a paragraph under an entry is exactly
   what this shape exists to stop — the list stays one screen you can read at a glance, however big
