@@ -5,35 +5,34 @@ description: "Use when the next move is unclear and one must be picked — retur
 argument-hint: "[optional focus — or nothing to survey the whole product]"
 ---
 
+# what-to-do — pick the next move out of what the plane already holds
+
+The run ends with **one ranked menu** of moves and nothing else: no code written, no line added to the
+plane, no capability invented that the human never approved.
+
 ## Gate — ground before you fan out
 
-- **The features** — `docs/product/features.md` at the **product root**, the one approved list, one line
-  per feature, the detail of any that earned it in its own file beside it. **Missing or empty → route
-  to `/ask-me`** first (it grounds the feature list). Present → read the **frontier** (first unchecked
-  `[ ]`) as the steer.
-- **The file list** — every sub-project's tracked files with line counts. Take the paths from the
-  Sub-projects list, never by scanning, and run per path:
-  `git -C <path> ls-files | sed "s|^|<path>/|" | xargs wc -l`. Shared ground handed to every lens.
-  Then fan out.
+- **The approved list is the ground.** `docs/product/features.md` at the **product root**, read by
+  `mycrew-product:product-rules`. Missing or empty → tell the human to run `/ask-me` there first; it
+  grounds the list. Present → the **frontier**, the first unchecked `[ ]`, is your steer.
+- **Every sub-project's files, with line counts.** Take the paths from the Sub-projects list, never by
+  scanning, and run per path: `git -C <path> ls-files | sed "s|^|<path>/|" | xargs wc -l`. That list is
+  shared ground handed to every lens.
 
-## Step 1 — Fan out (four subagents, parallel)
+## The fan-out — four lenses, in parallel
 
-Dispatch four subagents in parallel, one per move, each on the **`sonnet` model**. Give each: its
-**move mandate**, the **North Star** (if any), the **approved feature list** (ADD picks from it; the
-others take the frontier as *orienting steer, not a gate*) and the **file list**.
-Each explores the sub-projects **in its own lane** and returns candidates in the contract below.
+One subagent per move, each on the **`sonnet` model**, handed its mandate, the **North Star** if there
+is one, the approved list and the file list. ADD picks from the list; the others take the frontier as a
+steer, not a gate. Each explores its own lane and returns candidates in the contract below.
 
-- **ADD** — an **unbuilt feature from the approved list**, ready to be carried now. _"Which unchecked
-  `[ ]` is the right one to start, and why this one before the others?"_ You choose and argue among
-  what the product plane already holds; **you never invent a capability that isn't on the list** —
-  inventing is the product layer's job, not yours. Nothing unbuilt left → say so, that's a real empty
-  lane, not a prompt to make something up.
-- **FINISH** — half-built things to carry to done. _"What did we start and not finish?"_ Stubs,
-  dead-ends, partial flows, dangling TODOs.
-- **REBUILD** — working things with a clearly better redo. _"What works but we now know how to do
-  properly?"_ Must name the better way, not just "it's ugly."
-- **REFACTOR** — structural debt slowing everything else. _"Where is the mess expensive?"_ Real
-  drag only, not cosmetic nits.
+- **ADD takes an unbuilt feature off the approved list and argues why this one before the others.**
+  Never a capability that isn't on the list — inventing is the product layer's job, not yours. Nothing
+  unbuilt left is a real empty lane, not a prompt to make something up.
+- **FINISH takes what was started and never carried to done.** Stubs, dead ends, partial flows,
+  dangling TODOs.
+- **REBUILD takes something that works and has a clearly better redo.** It must name the better way,
+  not just call the current one ugly.
+- **REFACTOR takes structural debt that is slowing everything else.** Real drag, never cosmetic nits.
 
 **Each lens returns** (0–N candidates):
 
@@ -51,13 +50,15 @@ candidates:    [ {
 empty_reason:  <if candidates == [] : why this lane has nothing real here>
 ```
 
-## Step 2 — Aggregate → the menu
+## The menu — one pass, main thread
 
-One pass, main thread. Collect all candidates, then **dedupe/merge** overlaps (a FINISH and a
-REBUILD on the same thing collapse to one) → **score** on goal-fit × effort, weighing reversibility
-more if the product is **live** (pre-production → carte blanche) → **rank** into one ordered menu.
-Features-fit is a bias: advancing the frontier boosts, **off-list is never dropped.** Drop nothing
-silently — if a strong candidate ranks low from production-caution or features-fit, keep it and say why.
+- **Merge before you rank.** A FINISH and a REBUILD on the same thing are one candidate, not two.
+- **Score on goal-fit against effort**, weighing reversibility more once the product is **live**;
+  pre-production is carte blanche.
+- **The frontier biases, it never filters.** Advancing it boosts a candidate; off-list is never dropped
+  for being off-list.
+- **Nothing disappears quietly.** A strong candidate ranked low by production-caution or features-fit
+  stays on the menu with the reason it ranked there.
 
 ```
 rank:      <n>

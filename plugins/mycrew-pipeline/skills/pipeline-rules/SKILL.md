@@ -22,6 +22,9 @@ one of them. Whatever is true of only one stage is written in that stage and nev
 - **Hand back one line about yourself.** What ran, or what skipped and the reason it gave. The worker's
   report is built out of those lines and the chief checks every skip against them; a stage that says
   nothing cannot be shown to have happened.
+- **Fan out on `sonnet`, send mechanical legwork to `haiku`.** Hunting, weighing and arguing earn the
+  stronger model; listing files and mapping a tree do not. Your own pass stays on the model you were
+  invoked with.
 
 ## What every stage refuses
 

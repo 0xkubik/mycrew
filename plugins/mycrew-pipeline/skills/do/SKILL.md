@@ -5,7 +5,12 @@ description: "Use when ONE concrete, well-scoped coding task is ready to build a
 argument-hint: "<one concrete, well-scoped task>"
 ---
 
+# do — build the one task, in the shape the project already has
+
 **Load and follow `mycrew-pipeline:pipeline-rules` first — what follows holds on top of it.**
+
+The run ends with the task built and working, written the way this project writes code. Nothing else
+is touched, and nothing is invented that the task did not ask for.
 
 ## Gate — clear how to build
 

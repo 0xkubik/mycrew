@@ -5,11 +5,14 @@ description: "Use when a task carries a real fork — a technical or implementat
 argument-hint: "<the fork or question to work through>"
 ---
 
+# how-to-do — settle the fork, hand back one buildable approach
+
 **Load and follow `mycrew-pipeline:pipeline-rules` first — what follows holds on top of it.**
 
-## Gate — this is an implementation fork
+The run ends with one buildable approach and the named alternatives it beat — never a menu, and
+never a line of code.
 
-how-to-do works out **HOW to build something in code**. Confirm that before spending four poles:
+## Gate — this is an implementation fork
 
 - **Product direction** (what to build or where to go, not how) → `/what-to-do` or `/ask-me`.
 - **Trivial & clear how** (one obvious way to implement) → straight to `mycrew-pipeline:do`.
@@ -25,18 +28,17 @@ Two **orthogonal** axes, Speed⟷Quality and Reuse⟷BuildOwn. Keep each pole on
 - **Reuse** — existing libraries and code, proven patterns, the codebase's own way. Sacrifices fit.
 - **Build own** — bespoke, fit-to-purpose. Sacrifices predictability and speed.
 
-## Step 1 — Frame the idea to build
+## Frame the fork
 
-State in one sentence **what is to be built** and the **decision that forks** it. Then the **criteria** —
-what "best" means *for this decision* ("lowest time-to-first-working" vs "lowest 12-month maintenance"),
-derived from the task, because Step 4 scores against exactly these. Also **list the project's files with
-line counts** — `git ls-files | xargs wc -l` — as shared ground handed to every pole.
+State in one sentence **what is to be built** and the **decision that forks** it. Then the **criteria**
+— what "best" means here ("lowest time-to-first-working" vs "lowest 12-month maintenance"), derived from
+the task, because the synthesis scores against exactly these. Also **list the project's files with line
+counts** — `git ls-files | xargs wc -l` — as shared ground handed to every pole.
 
-## Step 2 — Fan out (four partisan subagents, parallel)
+## The partisan round — four poles, in parallel
 
-One per pole, each on the **`sonnet` model**, handed the framed decision, its pole mandate and the file
-list. **Each runs internally before answering:** strongest plan under its locked stance → self-attack
-(where does *this* plan break?) → repair → emit:
+One per pole, handed the framed decision, its pole mandate and the file list. **Each runs internally
+before answering:** strongest plan under its stance → self-attack → repair → emit:
 
 ```
 pole/conviction: Speed | Quality | Reuse | BuildOwn — high | medium | low
@@ -48,7 +50,7 @@ weakest_point:   <where it's most vulnerable — honest; synthesis reuses it>
 cost:            <rough effort / complexity>
 ```
 
-## Step 3 — Cross-evaluate the opposite
+## The opposite round
 
 Four subagents again, each handed **its own proposal plus its axis-opposite's** (Speed⟷Quality,
 Reuse⟷BuildOwn). Partisanship drops here — each returns its **real** read, opposite against opposite:
@@ -61,11 +63,11 @@ hold:          [ where your stance still wins — grounded reason, not partisan 
 real_position: <your honest verdict now that you've weighed the opposite>
 ```
 
-## Step 4 — Synthesize
+## The synthesis
 
 One neutral pass, main thread, on your stronger model, over **all** outputs. Do **not** pick the nicest
 proposal, **construct** the decision: what the poles agree on is the **robust core** and goes in; where
-they genuinely disagree are the **live axes**, the real choices; score the survivors against the Step-1
+they genuinely disagree are the **live axes**, the real choices; score the survivors against those
 criteria, weighting out any axis where conviction was uniformly low; then decide and say what it beat.
 
 ```
@@ -74,6 +76,6 @@ robust_core:         [ <points that held across poles> ]
 beaten_alternatives: [ { alternative, why_not } ]
 assumptions:         [ { claim, confidence, kill_signal } ]  # kill_signal = FALSIFIABLE trip-condition
                      # ("the library buffers instead of streams"), never a vibe ("if it gets too big")
-framing:             ok | reframe(<the *how* was mis-framed — redo Step 1>)
+framing:             ok | reframe(<the *how* was mis-framed — frame it again>)
                      | flag_to_human(<the picked direction itself looks wrong — stop, do NOT build>)
 ```

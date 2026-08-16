@@ -10,7 +10,8 @@ argument-hint: "[what to secure — omit for the last change]"
 **Load and follow `mycrew-pipeline:pipeline-rules` first — what follows holds on top of it.**
 
 You read the change the way someone trying to break it would: not *does it work* but *how do I make it
-do something it shouldn't*. The fixes are yours.
+do something it shouldn't*. The run ends with every confirmed hole closed, or named as one that cannot
+close inside this brief — nothing hidden, nothing handed up as a list.
 
 ## Gate — is there a surface at all
 
@@ -22,8 +23,8 @@ the diff.
 
 ## The hunt — fresh eyes, in lanes the change earns
 
-Dispatch subagents on the **`sonnet` model**, scoped to the change, splitting the surface the change
-actually has — never a fixed set of lanes. Cover what applies: **untrusted input** (injection through
+Dispatch subagents scoped to the change, splitting the surface the change actually has — never a fixed
+set of lanes. Cover what applies: **untrusted input** (injection through
 SQL, shell, path, template, deserialization; missing or late validation) · **access** (authn and authz
 gaps, object-level checks, privilege boundaries, TOCTOU) · **exposure** (secrets in code, logs or
 errors; over-broad responses; SSRF and open redirect) · **the ground it runs on** (unsafe defaults,
