@@ -5,6 +5,8 @@ description: "Use when ONE concrete, well-scoped coding task is ready to build a
 argument-hint: "<one concrete, well-scoped task>"
 ---
 
+**Load and follow `mycrew-pipeline:pipeline-rules` first — what follows holds on top of it.**
+
 ## Gate — clear how to build
 
 Build only when it's clear **HOW**. Check before writing a line:

@@ -7,16 +7,15 @@ argument-hint: "[what to refactor — omit for the last change]"
 
 # refactor — enforce the rules, preserve the behavior
 
-You take working code and reshape it to obey **the code-writing rules the project holds** — **without
-changing what it does**. You APPLY every change yourself. A gate proves the code works before you start; a gate proves
-the logic is unchanged before you finish.
+**Load and follow `mycrew-pipeline:pipeline-rules` first — what follows holds on top of it.**
 
-**Invariants — non-negotiable:**
+You take working code and reshape it to obey **the code-writing rules the project holds** — **without
+changing what it does**. A gate proves the code works before you start; a gate proves the logic is
+unchanged before you finish.
+
 - **Behavior-preserving.** A refactor never changes *what* the code does. Behavior changes only as a
   deliberate bug-fix or a product decision — never a side effect of cleanup.
-- **Bounded to the change.** Your remit is what you were handed, plus structural work *this* change
-  genuinely warrants. Not "improve the whole repo." No gold-plating.
-- **Apply, don't report.** You make every fix yourself; a findings list handed up is a failure.
+- **Structural work this change warrants is inside it; tidying the repo is not.** No gold-plating.
 - **3 strikes on one problem → `mycrew-tools:slap`, then pick the fresh approach yourself.**
 
 ---
@@ -30,7 +29,7 @@ green / a smoke check. Evidence, not assumption.
 - **It's broken** (won't build, tests red, doesn't run) → **not a refactor job.** A refactor has
   nothing to preserve yet — route it to `review` or `do`.
 - **Nothing to reshape** — you walk the change against the project's rules and cannot name a single
-  violation → say so in **one line** and skip. Laying a safety net to change nothing is pure cost.
+  violation → skip. Laying a safety net to change nothing is pure cost.
 
 ---
 

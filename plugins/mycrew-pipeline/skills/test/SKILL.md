@@ -7,23 +7,23 @@ argument-hint: "[what to test — omit for the last change]"
 
 # test — high-value coverage, not test count
 
+**Load and follow `mycrew-pipeline:pipeline-rules` first — what follows holds on top of it.**
+
 You cover the change with **the fewest tests that buy the most confidence**, written against its
 **final, settled** shape so you write them once. Quality is the goal — a big test count is not.
 
-**Invariants — non-negotiable:**
 - **Coverage, not count.** Confidence per test is what matters; padding the number is a bug.
-- **Bounded + scaled to the change.** Cover what the change introduced and the bugs just fixed, not
-  the whole repo.
+- **Scaled to the change.** Cover what it introduced and the bugs just fixed, at the depth the risk
+  earns.
 - **3 strikes on one problem → `mycrew-tools:slap`, then pick the fresh approach yourself.**
 
 ---
 
 ## Gate — does the change earn tests
 
-Judge **what actually changed**. Nothing that executes — documentation, comments, copy, a config
-value → say so in **one line** and skip. New or corrected behavior — logic, a contract, an error path,
-a bug just fixed → always covered, never skipped. Between the two, scale to the risk and name what you
-deliberately left uncovered.
+Nothing that executes — documentation, comments, copy, a config value → skip. New or corrected
+behavior — logic, a contract, an error path, a bug just fixed → always covered, never skipped. Between
+the two, scale to the risk and name what you deliberately left uncovered.
 
 ---
 

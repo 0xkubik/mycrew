@@ -5,6 +5,8 @@ description: "Use when a task carries a real fork — a technical or implementat
 argument-hint: "<the fork or question to work through>"
 ---
 
+**Load and follow `mycrew-pipeline:pipeline-rules` first — what follows holds on top of it.**
+
 ## Gate — this is an implementation fork
 
 how-to-do works out **HOW to build something in code**. Confirm that before spending four poles:
@@ -12,7 +14,7 @@ how-to-do works out **HOW to build something in code**. Confirm that before spen
 - **Product direction** (what to build or where to go, not how) → `/what-to-do` or `/ask-me`.
 - **Trivial & clear how** (one obvious way to implement) → straight to `mycrew-pipeline:do`.
 - **A real implementation or architecture fork** — materially different ways to build it, no obvious
-  winner → you're in the right place. Continue.
+  winner → continue.
 
 ## The four poles
 
@@ -50,8 +52,8 @@ cost:            <rough effort / complexity>
 ## Step 3 — Cross-evaluate the opposite
 
 Four subagents again, each handed **its own proposal plus its axis-opposite's** (Speed⟷Quality,
-Reuse⟷BuildOwn). Pure partisanship drops here — this is where the debate actually happens, opposite
-against opposite, and each returns its **real** read:
+Reuse⟷BuildOwn). Partisanship drops here — this is where the debate happens, opposite against
+opposite — and each returns its **real** read:
 
 ```
 pole/opposite: <your pole> against <the opposing pole>
