@@ -43,6 +43,9 @@ changes that interface.
 - **Experience before looks.** A direction is judged first on how it feels to use — the person always
   knows where they are, what just happened, and what to do next. One that looks right and reads wrong
   has failed, however good the screenshot is.
+- **Every state, not the good one.** A direction is not decided until it is decided empty, loading,
+  broken and overflowing — nothing there yet, something on its way, the thing failed, ten thousand rows,
+  a name that runs off the edge. The surface with perfect content is the one case that designs itself.
 - **Motion carries every change.** Things move, arrive and leave; nothing snaps into place. Animation is
   quick, smooth, and says what happened — motion that only decorates, or that makes the person wait, is
   cut.
