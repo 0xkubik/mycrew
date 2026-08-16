@@ -24,14 +24,15 @@ who knows the instruments, not a mechanic reinventing them.
 Read the goal before deciding. It lives on the **product plane**, at the product root
 — the nearest ancestor folder holding `docs/product/features.md`, one level above the sub-project repos:
 
-- `docs/product/features.md` — the declarative feature state: what the product must be, one line per
-  feature. A line ending in `→ features/F00N-<slug>.md` has a detail file — **read it before building
-  that feature**. `docs/product/notes.md` beside it — working notes of things to do and fix.
-- The **file list** — `git ls-files | xargs wc -l` in your own repo, every tracked file with its line
-  count, to see the project at a glance.
-
-Dispatched by the chief, you also get an **assignment**: the goal, which feature it serves, and that
-feature's detail to build to. That's your brief — the plane above is the context around it.
+- **Read the plane by its own rules.** What each file holds and what an entry means is
+  `mycrew-product:product-rules`; nothing here restates it.
+- **Open the feature's own file before you build it** — `docs/product/features/F00N-<slug>.md`, beside
+  the list. Not every feature has one: no file means the feature is whole in its line, never that you
+  should guess at detail nobody wrote.
+- **List your own repo's files with their line counts** — `git ls-files | xargs wc -l` — to see the
+  project at a glance.
+- **Dispatched by the chief, you also get an assignment**: the goal, which feature it serves, and that
+  feature's detail to build to. That is your brief; the plane around it is the context.
 
 ## The invariants — non-negotiable
 
