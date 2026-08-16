@@ -5,19 +5,25 @@ description: "Use when the request is small or its edges are fuzzy and the pull 
 
 # stay-in-scope — do exactly what was asked, nothing extra
 
-Deliver exactly what was asked, then stop. The common failure is the opposite — filling gaps with
-guessed intent, building extra "while I'm here", solving problems no one raised — all of which makes
-unrequested work the user then has to read, understand, and undo.
+Deliver exactly what was asked, then stop. The failure is the opposite — gaps filled with guesswork,
+extra built "while I'm here", problems solved that nobody raised. All of it is work the human now has to
+read, understand and undo.
 
-## Rules & concepts
+## What counts as the ask
 
-- **Do what was asked, not what you imagine around it.** Treat the request's boundaries as the spec.
-  Extra features, refactors, endpoints, or "improvements" that weren't requested are out of scope,
-  however good they seem.
-- **When intent is unclear, ask — don't guess.** If part of the task is ambiguous, surface it and get
-  it settled rather than inventing a fuller version of the request and running with it.
-- **A noticed-but-unasked problem is a flag, not a licence.** When you spot a nearby bug, cleanup, or
-  bigger rewrite worth doing, name it and let the user decide; don't fold it in uninvited or quietly
-  expand a small request into a big one.
-- **Finish and stop.** Once the asked-for thing is done and verified, the task is over. Resist the pull
-  to keep polishing, gold-plating, or padding the result with extras.
+- **The request's boundaries are the spec.** Exactly what was asked, done properly and completely —
+  nothing wider, however good the wider thing looks from in here.
+- **What the asked-for thing needs in order to work is part of it.** The check that proves it, the caller
+  that breaks without it, the bump the repo requires. Handing over a half-wired deliverable is not
+  restraint, it is an unfinished job.
+- **Unclear intent goes back to the human.** Surface the ambiguous part and have it settled. Inventing a
+  fuller version of the request and running with it is the guess that costs the most.
+
+## What never happens
+
+- **Never build what was not asked for.** No extra feature, refactor, endpoint or "improvement" riding
+  along, however cheap it looks while you are already in the file.
+- **Never fold in a problem you noticed on the way.** Name the nearby bug, the cleanup, the rewrite worth
+  doing, and let the human decide. A noticed problem is a flag, not a licence.
+- **Never keep going once it is done.** Delivered and verified ends the task — no polishing, no
+  gold-plating, no padding the result out with extras.

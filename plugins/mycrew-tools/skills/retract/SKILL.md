@@ -6,30 +6,34 @@ argument-hint: "<the wrong information — one claim, e.g. 'there will be no pos
 
 # retract — hunt wrong information down and take it out
 
-The human tells you a recorded fact is no longer true. Your one job: find **every** place that
-states it, remove or correct **exactly** that, and account for each cut. You are a scalpel, not a
-rewrite.
+The human says a recorded fact is no longer true. Find every place that still states it, remove or
+correct exactly that, and account for each cut. You are a scalpel, not a rewrite.
 
-## Rules & concepts
+## Finding every place it is stated
 
-- **One claim per call.** The argument names one wrong fact. Handed something vague ("the docs are
-  stale") → ask what exactly is wrong; never sweep-and-guess.
-- **Hunt everywhere, by meaning.** Search every knowledge surface the project has: the docs tree
-  (features and notes, specs), every CLAUDE.md up to the product root,
-  sibling doc repos of the product, and persistent memory. Search by meaning, not one literal
-  string — the fact hides under synonyms, translations, and derived phrasing (versioning → versions,
-  immutable, a new version beside the old). Stop only when new searches stop finding new places.
-- **Surgical edits.** Take out the sentence, bullet, node, or line that states the retracted fact —
-  nothing around it. Correct instead of delete when the human gave the replacement truth ("no
-  versioning — posts are edited in place"). A file that exists only for that fact is deleted whole.
-- **The features exception.** `features.md` lines are normally never deleted — an explicit human
-  retraction is the ONE exception: the retracted feature line goes.
-- **Dependents are flagged, not rewritten.** Content that doesn't state the fact but builds on it (a
-  flow that assumes versions exist) — flag it in the report for the human to decide; touching it is
-  a new task, not this one.
-- **Memory too.** Matching persistent memories are corrected or deleted the same way, and their
-  MEMORY.md index lines with them.
-- **Never invent.** The replacement text is only what the human said. No new product ideas ride in
-  on a correction.
-- **Account for every cut.** Report each touched spot — the file, what was removed or changed — and
-  each flagged dependent left alone. An edit not in the report didn't happen.
+- **One call retracts one claim.** The argument names a single wrong fact. Handed something vague —
+  "the docs are stale" — ask what exactly is wrong before touching anything.
+- **Search by meaning, never by one literal string.** The fact hides under synonyms, translations and
+  derived phrasing: versioning turns up as versions, as immutable, as "a new copy beside the old".
+- **Every surface the project records things on gets searched.** The docs tree, every `CLAUDE.md` up to
+  the product root, sibling doc repos of the product, persistent memory. Stop only when new searches
+  stop finding new places.
+
+## Cutting it out
+
+- **Take out the sentence, bullet or line that states it and nothing else.** Correct instead of delete
+  when the human gave the replacement truth ("no versioning — posts are edited in place"). A file that
+  exists only for that fact goes whole.
+- **A memory is cut like any other file.** The matching persistent memory is corrected or deleted the
+  same way, and its `MEMORY.md` index line with it.
+- **A retraction is the one thing that may delete a `features.md` line.** Entries there are otherwise
+  permanent; an explicit human retraction takes the line out.
+- **Every cut and every flag is reported.** The file, what was removed or changed, and each dependent
+  left alone. An edit missing from the report did not happen.
+
+## What never happens
+
+- **Never touch what merely builds on the fact.** A flow that assumes versions exist does not state the
+  retracted fact — flag it for the human to decide; reworking it is a new task, not this one.
+- **Never invent the replacement.** Only what the human said goes in. No new product idea rides in on a
+  correction.
