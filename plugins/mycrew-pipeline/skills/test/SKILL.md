@@ -1,15 +1,14 @@
 ---
 name: test
 kind: intent
-description: "Use to cover a change with high-value tests on the final, settled code — quality over quantity, tested from the outside, fast, with shared fixtures. Prunes stale tests too. Runs after review or standalone. Triggers: \"add tests\", \"cover this\", \"write the tests\"."
+description: "Use to cover a change with high-value tests on the final, settled code — quality over quantity, tested from the outside, fast, with shared fixtures. Prunes stale tests too. Triggers: \"add tests\", \"cover this\", \"write the tests\"."
 argument-hint: "[what to test — omit for the last change]"
 ---
 
 # test — high-value coverage, not test count
 
-You cover the change with **the fewest tests that buy the most confidence**, written against the
-**final** shape (after `refactor`/`review`, so you write them once). Quality is the goal — a big test
-count is not.
+You cover the change with **the fewest tests that buy the most confidence**, written against its
+**final, settled** shape so you write them once. Quality is the goal — a big test count is not.
 
 **Invariants — non-negotiable:**
 - **Coverage, not count.** Confidence per test is what matters; padding the number is a bug.
@@ -33,7 +32,7 @@ deliberately left uncovered.
 - **Fewer tests, more coverage.** Choose the tests that each buy the most confidence — one good
   behavioral test beats ten redundant ones. Cover the space, don't tile it.
 - **Test the most important functionality.** Critical paths, the behaviors that hurt most if they
-  break, and the bugs `review` just fixed — first and hardest. Not every trivial getter.
+  break, and the bugs just fixed — first and hardest. Not every trivial getter.
 - **Test from the outside.** Assert on **public behavior** — inputs → outputs and observable effects
   through the public interface — never on internal variables or private structure. Renaming a
   variable inside a function must **not** break a test. Black-box tests survive refactors *because*

@@ -23,9 +23,8 @@ first. Then judge how the new code lands in the **existing** project:
 
 - **Fits as-is** → build.
 - **Needs a seat first** — it only lands cleanly if existing code is reshaped to receive it (a seam
-  to open, an interface to extract, a module boundary to move, a tangle in the way) → hand to
-  **`mycrew-pipeline:refactor`** first (**behavior-preserving**, scoped to *making room for this code,
-  not tidying the repo*), then build on the prepared ground.
+  to open, an interface to extract, a module boundary to move, a tangle in the way) → hand it to
+  **`mycrew-pipeline:refactor`**, then build on the prepared ground.
 
 ## How the code is written
 

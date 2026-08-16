@@ -1,7 +1,7 @@
 ---
 name: refactor
 kind: intent
-description: "Use when working code needs reshaping toward the project's own code-writing rules with its behavior held exactly as it is — gated both sides, so what the code does is provably unchanged. Runs before/after /do or standalone. Triggers: \"refactor this\", \"clean up\", \"tidy the structure\"."
+description: "Use when working code needs reshaping toward the project's own code-writing rules with its behavior held exactly as it is — gated both sides, so what the code does is provably unchanged. Triggers: \"refactor this\", \"clean up\", \"tidy the structure\"."
 argument-hint: "[what to refactor — omit for the last change]"
 ---
 
@@ -13,7 +13,7 @@ the logic is unchanged before you finish.
 
 **Invariants — non-negotiable:**
 - **Behavior-preserving.** A refactor never changes *what* the code does. Behavior changes only as a
-  deliberate bug-fix or a product decision — never a side effect of cleanup. (Bug-finding is `review`.)
+  deliberate bug-fix or a product decision — never a side effect of cleanup.
 - **Bounded to the change.** Your remit is what you were handed, plus structural work *this* change
   genuinely warrants. Not "improve the whole repo." No gold-plating.
 - **Apply, don't report.** You make every fix yourself; a findings list handed up is a failure.
@@ -28,7 +28,7 @@ green / a smoke check. Evidence, not assumption.
 
 - **It works** → proceed.
 - **It's broken** (won't build, tests red, doesn't run) → **not a refactor job.** A refactor has
-  nothing to preserve yet. Fixing broken behavior is `review` (bugs) or `do` (unbuilt) — route there.
+  nothing to preserve yet — route it to `review` or `do`.
 - **Nothing to reshape** — you walk the change against the project's rules and cannot name a single
   violation → say so in **one line** and skip. Laying a safety net to change nothing is pure cost.
 
@@ -51,31 +51,22 @@ place it. Mechanical, so **dispatch it to a subagent on the `haiku` model** and 
 - **Get existing tests green** (whatever's there). A red baseline is fixed *now*, before touching anything.
 - **Write characterization tests on the core logic** to pin its *current* behavior. This net is what
   lets you reshape without silently moving behavior — it is the before-half of the exit gate.
-- Not full coverage — just the net. Comprehensive coverage is the `test` stage.
+- Not full coverage — just the net.
 
 ---
 
 ## Refactor to the project's rules
 
-Collect the project's code-writing rules the way `mycrew-pipeline:do` collects them — where the code
-sits, then each folder up to the product root — and walk the code against every one, fixing each
-violation in place. The shapes that turn up most often:
-
-- **Reuse** — duplicated logic, or a hand-rolled thing a library/existing module already does →
-  collapse to the reuse.
-- **Least code** — dead code, redundant paths, abstraction built for needs nobody has → cut.
-- **Modular bricks** — a blob doing many jobs → split into single-purpose units with clear
-  interfaces, then aggregate.
-- **SOLID** — mixed responsibilities, fat interfaces, concretion-coupling → separate, narrow, invert.
-- **No comments** — comments restating *what* the code does → delete; let the name and structure
-  carry it (keep only genuine *why*).
-- **Graded logs** — missing, one-level, or past-tense logging → put graded present-tense logs on each
-  action (`"doing X…"`, not `"did X"`).
-
-Use **`/simplify`** and the **`code-simplifier`** agent as your eyes for clarity, dead code, naming,
-nesting. Structural moves (split/move functions, move files) are fine **when this change warrants
-them** — reason rooted in the work, not "tidy the repo." **The net stays green after every step** —
-that green is your running proof behavior didn't move.
+- **Find the rules before you reshape anything.** They are the project's own, collected the way
+  `CLAUDE.md` is: where the code sits, then each folder up to the product root, and the ones installed
+  for every project. Nothing is listed here — a fixed list would be a second, staler copy of them.
+- **Walk the code against every rule you found and fix each violation in place.** A rule you cannot
+  point at a violation of is one this code already satisfies; move on rather than inventing work.
+- **Use `/simplify` and the `code-simplifier` agent as your eyes** for clarity, dead code, naming and
+  nesting.
+- **Structural moves are fine when this change warrants them** — split or move a function, move a file
+  — with the reason rooted in the work, never in "tidy the repo".
+- **The net stays green after every step.** That green is your running proof the behavior didn't move.
 
 ---
 

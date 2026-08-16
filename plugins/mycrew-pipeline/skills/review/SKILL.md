@@ -1,7 +1,7 @@
 ---
 name: review
 kind: intent
-description: "Use when a change needs hunting for edge cases and correctness bugs before it ships — eyes that didn't write the code hunt AND rule; every confirmed finding is fixed in place, never handed up as a list. Security is its own pass (secure). Runs after refactor or standalone. Triggers: \"review this\", \"find bugs\", \"edge cases\"."
+description: "Use when a change needs hunting for edge cases and correctness bugs before it ships — eyes that didn't write the code hunt AND rule; every confirmed finding is fixed in place, never handed up as a list. Security is its own pass (secure). Triggers: \"review this\", \"find bugs\", \"edge cases\"."
 argument-hint: "[what to review — omit for the last change]"
 ---
 
@@ -69,8 +69,8 @@ the author's memory of the intent.**
 
 ## Step 3 — Fix (apply, never report)
 
-Fix each confirmed finding yourself. A bug-fix deliberately changes wrong→right behavior; if a safety
-net exists (from `refactor`), update the affected test to the corrected expectation.
+Fix each confirmed finding yourself. A bug-fix deliberately changes wrong→right behavior; where a
+safety net already pins the old expectation, update it to the corrected one.
 
 - **Behavior/product fork** — the code's *intended* behavior is genuinely ambiguous ("what *should*
   this do?"), materially different options, no clear answer → **not yours to guess.** Never a human,
