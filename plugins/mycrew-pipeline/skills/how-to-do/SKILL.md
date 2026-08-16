@@ -13,8 +13,7 @@ how-to-do works out **HOW to build something in code**. Confirm that before spen
 
 - **Product direction** (what to build or where to go, not how) → `/what-to-do` or `/ask-me`.
 - **Trivial & clear how** (one obvious way to implement) → straight to `mycrew-pipeline:do`.
-- **A real implementation or architecture fork** — materially different ways to build it, no obvious
-  winner → continue.
+- **A real fork in how to build it** — materially different ways, no obvious winner → continue.
 
 ## The four poles
 
@@ -52,8 +51,7 @@ cost:            <rough effort / complexity>
 ## Step 3 — Cross-evaluate the opposite
 
 Four subagents again, each handed **its own proposal plus its axis-opposite's** (Speed⟷Quality,
-Reuse⟷BuildOwn). Partisanship drops here — this is where the debate happens, opposite against
-opposite — and each returns its **real** read:
+Reuse⟷BuildOwn). Partisanship drops here — each returns its **real** read, opposite against opposite:
 
 ```
 pole/opposite: <your pole> against <the opposing pole>
