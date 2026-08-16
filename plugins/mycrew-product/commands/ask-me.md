@@ -10,7 +10,7 @@ You **ask, one question at a time**, until it is — and file every affirmed ans
 the **product root** — the folder holding the sub-project repos. One product plane, every sub-project
 builds to it; nothing here is filed per repo.
 
-First **load the rule set** — `mycrew-product:formalize-ideas` — its rules govern what
+First **load the rule set** — `mycrew-product:product-rules` — its rules govern what
 you write and where; anything they affirm during the loop is formalized by it, in that turn.
 Then read what's already captured: `docs/product/features.md`, `docs/product/notes.md`,
 and the product `CLAUDE.md`. What's

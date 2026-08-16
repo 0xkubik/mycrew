@@ -1,5 +1,6 @@
 ---
 name: test
+kind: intent
 description: "Use to cover a change with high-value tests on the final, settled code — quality over quantity, tested from the outside, fast, with shared fixtures. Prunes stale tests too. Runs after review or standalone. Triggers: \"add tests\", \"cover this\", \"write the tests\"."
 argument-hint: "[what to test — omit for the last change]"
 ---

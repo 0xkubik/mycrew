@@ -1,5 +1,6 @@
 ---
 name: how-to-do
+kind: intent
 description: "Use when a task carries a real fork — a technical or implementation decision with materially different options and no obvious winner — or when picked directions need working out into something buildable. Returns ONE buildable approach, never a menu. The rigorous replacement for open-ended brainstorming. Triggers: \"how should we build this\", \"which approach\", \"weigh the options\"."
 argument-hint: "<the fork or question to work through>"
 ---

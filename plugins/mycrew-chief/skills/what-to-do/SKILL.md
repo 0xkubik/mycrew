@@ -1,5 +1,6 @@
 ---
 name: what-to-do
+kind: intent
 description: "Use when the next move is unclear and one must be picked — returns ONE ranked menu of moves drawn only from what the product plane already holds: an approved feature to carry, half-built work to finish, rough parts to rebuild, debt to pay down. Chooses among possible moves; it never invents a new capability. Triggers: \"what next\", \"what should we do\", \"where do we go from here\"."
 argument-hint: "[optional focus — or nothing to survey the whole product]"
 ---

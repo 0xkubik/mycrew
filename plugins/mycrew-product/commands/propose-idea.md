@@ -13,7 +13,7 @@ written down and binds what you pitch next. Run at the **product root**.
 
 ## Rules & concepts — non-negotiable
 
-- **Load the rule set first** — `mycrew-product:formalize-ideas`. It governs where an approved idea
+- **Load the rule set first** — `mycrew-product:product-rules`. It governs where an approved idea
   lands and in what shape, and it is what you obey the moment the human affirms anything at all here.
 - **Ground before you invent.** Read the North Star in the root `CLAUDE.md`, `docs/product/features.md`,
   the whole ideas ledger — then look at what the sub-projects actually
@@ -30,7 +30,7 @@ written down and binds what you pitch next. Run at the **product root**.
   it helps, what it costs — before you ask. No jargon: the human decides on the case, not on your
   vocabulary. Put the question itself through `AskUserQuestion`.
 - **Approval is the only door into the plane.** An approved idea is filed in their intent, in the shape
-  `mycrew-product:formalize-ideas` sets — and that skill decides whether it opens an entry at all or is
+  `mycrew-product:product-rules` sets — and that skill decides whether it opens an entry at all or is
   detail written into a feature the plane already holds (its *only what they affirmed* rule governs what
   may be filed, not what may be pitched — inventing is exactly your job). An idea that varies, completes
   or serves a feature already listed never takes a line of its own. Nothing reaches the plane unapproved

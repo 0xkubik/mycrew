@@ -9,7 +9,7 @@ The human unloads what's in their head about the product; you **receive it and p
 belongs**. Run at the **product root** — the folder holding the sub-project repos. There is one
 product plane and every sub-project builds to it; nothing here is filed per repo.
 
-First **load the rule set** — `mycrew-product:formalize-ideas` — its rules govern what you write and
+First **load the rule set** — `mycrew-product:product-rules` — its rules govern what you write and
 where; anything they affirm during the session is formalized by it, in that turn. Then read what's already captured: 
 `docs/product/features.md`, `docs/product/notes.md`, and the product `CLAUDE.md`. Missing files → seed them from the skills' templates. Context comes from the user's words — 
 you don't scan the code for answers.

@@ -1,5 +1,6 @@
 ---
 name: design-rules
+kind: rule
 description: "Use whenever the product's interface is being decided — what a surface is, how a flow runs, what something looks like and how it behaves. The house stance: the built UI is the only design there is, so a direction is settled by building it and never by writing it down or mocking it up. Rules only: what must hold when the interface is chosen, never who chooses it or how a proposal is worked out."
 user-invocable: false
 ---

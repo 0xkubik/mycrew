@@ -1,5 +1,6 @@
 ---
 name: architecture-rules
+kind: rule
 description: "Use whenever the product's technical shape is being decided — how it splits into services and sub-projects, what owns what, where a boundary runs, what talks to what. The house stance: the running code is the only architecture there is, so a shape is settled by building it and never by writing it down. Rules only: what must hold when the shape is chosen, never who chooses it or how a proposal is worked out."
 user-invocable: false
 ---

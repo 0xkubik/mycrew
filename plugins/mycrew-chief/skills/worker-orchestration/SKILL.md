@@ -1,5 +1,6 @@
 ---
 name: worker-orchestration
+kind: rule
 description: "Use when the chief has work to hand out or a worker has come back — the rules for dispatching worker subagents across the sub-projects and for the gate they return through: what a complete assignment contains, what a worker may never touch, how dependent pieces are sequenced, and the one verdict every report earns, ACCEPTED or BACK. Reference, loaded by /chief."
 user-invocable: false
 ---
@@ -64,7 +65,7 @@ the holes and the mess.
   skipped themselves. Security skipped on a change that touches input, tests skipped on new logic, a
   hunt skipped on live code — that is not a fast worker, it is an unreviewed change. **BACK.**
 - **A plane gap in "Left outside" is yours, not a rejection.** The worker did the right thing by
-  stopping at that edge. Make the move here — `mycrew-product:formalize-ideas` — then re-dispatch.
+  stopping at that edge. Make the move here — `mycrew-product:product-rules` — then re-dispatch.
   Never tell a worker to fix the plane itself, and never count the gap against the delivery.
 - **Send eyes when a claim won't settle from the report — never yourself.** Dispatch a fresh subagent
   to check that **one** claim against the result, and rule on what it brings back. You still never

@@ -1,5 +1,6 @@
 ---
 name: worker-rules
+kind: rule
 description: "Use when the worker's own rules are needed — how the project's executor grounds itself, its invariants (do the given work and only it, build to the plane but never write it, report back), the kit it reaches for, and the shape of the report it hands the chief. The single source of truth behind the /worker command and the worker agent; also a standalone reference."
 ---
 

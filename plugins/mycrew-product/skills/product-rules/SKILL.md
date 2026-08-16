@@ -1,10 +1,11 @@
 ---
-name: formalize-ideas
-description: "Use whenever an idea the human affirmed must be written into the product plane — the one rule set for formalizing it, whatever conversation it came out of. Draws the cut between a feature and the detail that belongs to it, then routes each: features.md (the index — a name per feature and nothing else), features/F00N-<slug>.md (what that feature actually is, when it has something to say), notes.md (work no feature covers, in the same index shape). The routing, the rules each file obeys, and the templates, hardcoded here. Rules only: what an entry must be, never how one is gathered or by whom."
+name: product-rules
+kind: rule
+description: "Use whenever an idea the human affirmed must be written into the product plane — the one rule set for writing it down, whatever conversation it came out of. Draws the cut between a feature and the detail that belongs to it, then routes each: features.md (the index — a name per feature and nothing else), features/F00N-<slug>.md (what that feature actually is, when it has something to say), notes.md (work no feature covers, in the same index shape). The routing and the rules each file obeys, hardcoded here; the shapes to fill in sit in templates.md beside it. Rules only: what an entry must be, never how one is gathered or by whom."
 user-invocable: false
 ---
 
-# formalize-ideas — how an affirmed idea is written down
+# product-rules — what the product plane holds, and where each thing goes
 
 `docs/product/` holds **what the product is** — written down at the product root and pulled toward by
 the code in every sub-project. Two lists, each with its own permanent id space, and a file behind a
@@ -123,33 +124,5 @@ repo. The North Star lives in the root `CLAUDE.md`.
   into every file it becomes pages of duplicated prose nobody reads and everybody has to scroll
   past. Check what you are about to write against these rules *before* writing it: an entry that
   doesn't answer what the file holds belongs in another file.
-- **Strictly the template below.** Both list files are the one shape written here — a title and its
-  entries, nothing else. A feature's own file has no template at all.
-
-## The template — one shape, both lists
-
-`docs/product/features.md`:
-
-```markdown
-# Features — <product name>
-
-- [ ] F001 — <Name>
-- [x] F002 — <Name>
-```
-
-`docs/product/notes.md` — the same shape, its own id space:
-
-```markdown
-# Notes — <product name>
-
-- [ ] N001 — <Name>
-```
-
-`docs/product/features/F00N-<slug>.md` — **no template**. One fixed title, then whatever the feature
-needs to be understood:
-
-```markdown
-# F001 — <Name>
-
-<what this feature concretely is, in their words, however it needs to read>
-```
+- **Strictly the shapes in `templates.md`, beside this file.** Both list files are the one shape
+  written there — a title and its entries, nothing else. A feature's own file has no template at all.

@@ -34,7 +34,7 @@ mycrew-tools. Above you is only the human. Your standing job:
 **You do not decide what the product should do.** New capabilities, direction, priorities are the
 human's — the product layer draws them out and files them in `docs/product/features.md`. You work. from that list. 
 ## Your tools
-- **`mycrew-product:formalize-ideas`** — the product and what goes where in it:
+- **`mycrew-product:product-rules`** — the product and what goes where in it:
   `docs/product/features.md`,
   `docs/product/features/F00N-<slug>.md` (what that feature actually is — you shape it before the work),
   and `docs/product/notes.md`.

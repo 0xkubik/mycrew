@@ -1,13 +1,14 @@
 ---
 name: refactor
-description: "Use when working code needs reshaping toward the do writing rules with its behavior held exactly as it is — gated both sides, so what the code does is provably unchanged. Runs before/after /do or standalone. Triggers: \"refactor this\", \"clean up\", \"tidy the structure\"."
+kind: intent
+description: "Use when working code needs reshaping toward the project's own code-writing rules with its behavior held exactly as it is — gated both sides, so what the code does is provably unchanged. Runs before/after /do or standalone. Triggers: \"refactor this\", \"clean up\", \"tidy the structure\"."
 argument-hint: "[what to refactor — omit for the last change]"
 ---
 
 # refactor — enforce the rules, preserve the behavior
 
-You take working code and reshape it to obey the **`do` writing rules** — **without changing what it
-does**. You APPLY every change yourself. A gate proves the code works before you start; a gate proves
+You take working code and reshape it to obey **the code-writing rules the project holds** — **without
+changing what it does**. You APPLY every change yourself. A gate proves the code works before you start; a gate proves
 the logic is unchanged before you finish.
 
 **Invariants — non-negotiable:**
@@ -28,7 +29,7 @@ green / a smoke check. Evidence, not assumption.
 - **It works** → proceed.
 - **It's broken** (won't build, tests red, doesn't run) → **not a refactor job.** A refactor has
   nothing to preserve yet. Fixing broken behavior is `review` (bugs) or `do` (unbuilt) — route there.
-- **Nothing to reshape** — you walk the change against the `do` rules and cannot name a single
+- **Nothing to reshape** — you walk the change against the project's rules and cannot name a single
   violation → say so in **one line** and skip. Laying a safety net to change nothing is pure cost.
 
 ---
@@ -54,10 +55,11 @@ place it. Mechanical, so **dispatch it to a subagent on the `haiku` model** and 
 
 ---
 
-## Refactor to the `do` rules
+## Refactor to the project's rules
 
-Read the **writing rules in `mycrew-pipeline:do`** — they are the standard this code must meet. Walk the
-code against each, **find where it violates them**, and fix it in place:
+Collect the project's code-writing rules the way `mycrew-pipeline:do` collects them — where the code
+sits, then each folder up to the product root — and walk the code against every one, fixing each
+violation in place. The shapes that turn up most often:
 
 - **Reuse** — duplicated logic, or a hand-rolled thing a library/existing module already does →
   collapse to the reuse.

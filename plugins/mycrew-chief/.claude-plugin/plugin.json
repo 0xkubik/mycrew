@@ -1,6 +1,6 @@
 {
   "name": "mycrew-chief",
-  "version": "0.39.0",
+  "version": "0.40.0",
   "description": "Layer 5/5 — your deputy over the whole product. /chief reads the plane, breaks an approved feature into per-repo assignments, sequences them provider-first, dispatches workers as subagents, and takes or sends back what comes home. It never decides what the product should do, and never writes code. It conducts; the workers build.",
   "author": {
     "name": "kubik",

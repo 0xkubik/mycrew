@@ -1,5 +1,6 @@
 ---
 name: secure
+kind: intent
 description: "Use when a change must be hunted for security holes before it ships — injection, broken access control, leaked secrets, unsafe defaults, risky dependencies. Eyes that didn't write the code hunt AND rule; you close every confirmed hole in place, never hand up a list. Skips in one honest line when the change touches no trust boundary. Runs after review or standalone. Triggers: \"security review\", \"is this safe\", \"check for vulns\"."
 argument-hint: "[what to secure — omit for the last change]"
 ---

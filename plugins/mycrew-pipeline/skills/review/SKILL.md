@@ -1,5 +1,6 @@
 ---
 name: review
+kind: intent
 description: "Use when a change needs hunting for edge cases and correctness bugs before it ships — eyes that didn't write the code hunt AND rule; every confirmed finding is fixed in place, never handed up as a list. Security is its own pass (secure). Runs after refactor or standalone. Triggers: \"review this\", \"find bugs\", \"edge cases\"."
 argument-hint: "[what to review — omit for the last change]"
 ---
