@@ -37,3 +37,25 @@ changes that interface.
 - **The human owns the look.** You work a direction out and put it to them with the case; they decide.
   One they have not approved is never built, and their reason for turning one down binds what you
   propose next.
+
+## What the interface must be
+
+- **Experience before looks.** A direction is judged first on how it feels to use — the person always
+  knows where they are, what just happened, and what to do next. One that looks right and reads wrong
+  has failed, however good the screenshot is.
+- **Motion carries every change.** Things move, arrive and leave; nothing snaps into place. Animation is
+  quick, smooth, and says what happened — motion that only decorates, or that makes the person wait, is
+  cut.
+- **Nothing invented.** Elements sit where a person expects them and behave the way they look like they
+  behave. A novel interaction is a thing to be learned, and nobody came here to learn an interface: the
+  ordinary control on the ordinary gesture wins every time.
+- **One visual system.** One palette, one readable typeface, one spacing rhythm, across every surface —
+  and a current one, not a decade old. Surfaces that do not match each other read as unfinished.
+- **Dense, never cramped.** Elements sit close together and the screen stays compact. Space is spent
+  where it separates things that are genuinely separate, never by default.
+- **Show it, don't caption it.** Images, icons and media carry the meaning — mocked placeholders early
+  on are expected, not a shortcut. Blocks of explanatory text on a surface are a failure of the design;
+  text that is genuinely needed lives in an element that appears on demand and is gone otherwise.
+- **Fit the product and its audience.** The register comes from who this is for — what is right for a
+  trading terminal is wrong for a children's app. The North Star and the audience settle it, never taste
+  in the abstract.
