@@ -1,6 +1,6 @@
 {
   "name": "mycrew-product",
-  "version": "0.35.0",
+  "version": "0.36.0",
   "description": "Layer 4/5 — the product plane: everything true about the whole product, above the sub-projects. /product-init founds it. /braindump and /ask-me draw the product out of you and file each piece where it belongs; /propose-idea is the one that puts an idea in, and only on your approval. Whatever you affirm, wherever you affirm it, product-rules is the one rule set that decides where it lands and in what shape. /propose-design and /propose-architecture settle how the product looks and how it is built — argued out against every alternative they beat, then handed straight to work and never written down, because the built UI and the running code are the only truth about either.",
   "author": {
     "name": "kubik",

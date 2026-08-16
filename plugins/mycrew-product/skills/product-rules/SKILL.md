@@ -54,8 +54,9 @@ of their own, and the North Star lives in the root `CLAUDE.md`.
   edge, a promise, anything the human settled. Never one that only restates the name above it.
 - **This is where the feature is said.** How it works, what it promises, its states, its edges, what it
   must never do. A reader who knows nothing comes out of it knowing the feature.
-- **No template — write to the feature.** Prose, a list, a table, a walk through one path, whatever it
-  needs. Only the title is fixed.
+- **Opening, facts, then parts.** A short opening saying what the feature is, the bullets saying what
+  is true about it, a section for each part carrying a body of its own — the shape is `templates.md`.
+  Never a wall of prose, and never bullets a reader meets before knowing what the feature is.
 - **Their words, not your prose.** You record and order what the human said; nothing they didn't affirm
   goes in.
 - **It binds.** The chief decomposes against it and a worker builds to it; a worker never writes to it.
