@@ -1,14 +1,16 @@
 ---
 name: skillsmaker
-description: "Use when writing or rewriting a SKILL.md in this repo. The house standard every skill here obeys: what a skill must say, what never goes in one, and the shape of a line — a bold sentence carrying the whole demand, optional detail behind it. Not what a skill does (its own job) but how it is written."
+kind: rule
+description: "Use when writing or rewriting a SKILL.md in this repo. The house standard every skill here obeys: the two kinds a skill can be — a rule that constrains how work is done, an intent that is the work — what each must say, what never goes in either, and the shape of a line. Not what a skill does (its own job) but how it is written."
 argument-hint: "<the skill to write or rewrite>"
 ---
 
 # skillsmaker — how a skill is written here
 
-A skill is a **standing constraint** on one kind of work, not a script for doing it. It hands over what
-must hold and then trusts the work to be done. Write the one you were asked for by the rules below, and
-obey them in it — a skill that breaks the house shape is rewritten, not shipped.
+A skill is one of two things, and `kind:` in its frontmatter says which. A **rule** constrains how a kind
+of work is done: loaded beside the work, obeyed throughout, never finished. An **intent** is the work:
+invoked to be carried out, and it ends somewhere. Settle the kind before writing a line — everything below
+follows from it. The skill you write obeys these rules too, in English.
 
 ## Every line: a bold demand, then optional detail
 
@@ -21,50 +23,43 @@ obey them in it — a skill that breaks the house shape is rewritten, not shippe
   is the failure this shape exists to stop: nothing skims, and the rule reaches only whoever reads it all.
 - **Sections are named by what they settle.** `What the interface must be`, `Where a thing goes` — a
   heading a reader can act on, never `Step 1`, never a word they have to decode.
-- **The skill obeys its own rules, in English.** One preaching brevity in a wall of prose is wrong.
 
-## What a skill must say
+## Both kinds
 
-- **The invariants, first.** Open the body with what must be true when the work is done; the rest serves it.
-- **What the work must come out as, not only how it is decided.** A skill that settles who decides and
-  by what process, but never what the result has to be, leaves the outcome to taste.
-- **Its boundary — what it covers and where it hands off.** In the body, and in the description too.
+- **The body opens with whatever everything else serves.** A rule's invariants, an intent's end state.
 - **The exception is written in the rule, or there is none.** A rule that can be rationalized around is
   not a rule — say `never`, say `always`, and say where it stops. Left unsaid, the reader invents it.
-- **The description is the only line the router reads.** Open with `Use when…`, give the boundary and
-  what the skill guarantees, close with the literal phrases a human types.
-
-## What never goes in
-
-- **Never a numbered procedure.** `1 → 2 → 3` ossifies and goes stale; invariants hold. A skill that
-  scripts the order is a checklist, not a skill.
+- **The description is the only line the router reads.** Open with `Use when…`, then the boundary and what
+  the skill guarantees. Never the mechanism: a description that summarises the how becomes the shortcut
+  taken instead of reading the skill.
 - **Never a hardcoded particular.** No baked-in file list, no magic value, no "then run X" the skill
   cannot know — name the concept, let the invocation supply the rest. Only stable infra may be literal.
-- **Never the mechanism in the description.** Step order, subagent counts, "then X" — a description that
-  summarises the how becomes the shortcut taken instead of reading the skill.
 - **Never what the model already knows.** No tutorial, no background, no paragraph defending a rule.
   Every line binds the work or it is cut.
 - **Never a rule that already lives in a sibling.** Point at it by name. The same rule in two files is
   two truths, and one of them starts rotting immediately.
-- **Never past one screen — about 70 lines.** Past that you are explaining, not ruling. Cut it, or split
-  a template or an example out beside `SKILL.md` and point at it by name.
+- **Never past one screen — about 70 lines.** Cut it, or split an example out beside `SKILL.md`. The two
+  shapes to fill in are `shape.md`, beside this file.
 
-## Shape
+## kind: rule — a standing constraint on how work is done
 
-```
-skills/<name>/SKILL.md         # optional sibling beside it: a template or an example
+- **Say what must be true, never what happens next.** A rule is loaded while other work runs, so it can
+  never assume a stage. `1 → 2 → 3` belongs to an intent; here it ossifies and goes stale.
+- **Say what the work must come out as, not only how it is decided.** A rule that settles the process but
+  never the result leaves the outcome to taste.
+- **A rule never finishes and never reports.** There is no run to end and nothing to hand back — it binds
+  for as long as the work it constrains lasts.
+- **`argument-hint` only if the constraint has a target.** Most rules take nothing.
 
----
-name: <one word>
-description: "Use when … — <boundary + what it guarantees>. Triggers: \"…\", \"…\"."
-argument-hint: "<what to pass>"     # omit for a pure reference
----
+## kind: intent — one act, carried out and finished
 
-# <name> — <tagline>
-
-<2–4 lines: what this constrains, and the one job it settles.>
-
-## <What this section settles>
-- **<The demand, in one short sentence.>** <optional: the edge, the anti-pattern, the exception.>
-- **<The next demand, standing alone.>**
-```
+- **Open with what the run must end with.** Define done before anything else, or the model settles it
+  alone and settles it early.
+- **Order the moves when the order is the point.** An intent owns its whole run, so a sequence is honest
+  here — the one place in this repo it is. Order that carries nothing is still cut.
+- **Say what it may touch and what it may not.** Name the target; everything outside it is out. An intent
+  that widens on its own does more damage than one that does nothing.
+- **Say what comes back to the human.** The report, the handoff, the thing that now exists. A run nobody
+  hears the end of did not happen.
+- **`argument-hint` names the target.** `<required>` when the run is meaningless without one, `[optional]`
+  when it can take stock on its own.

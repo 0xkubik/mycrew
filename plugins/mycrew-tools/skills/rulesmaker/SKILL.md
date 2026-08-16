@@ -1,5 +1,6 @@
 ---
 name: rulesmaker
+kind: rule
 description: "Use when writing or rewriting a rule file in .claude/rules/. The house standard every rule here obeys: what a rule must say, what never goes in one, and the shape of a line — a bold sentence carrying the whole demand, optional detail behind it. Not what a rule demands (its own job) but how it is written."
 argument-hint: "<the rule to write or rewrite>"
 ---

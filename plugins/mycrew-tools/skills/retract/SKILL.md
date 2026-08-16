@@ -1,5 +1,6 @@
 ---
 name: retract
+kind: intent
 description: "Use when the human declares recorded information wrong or dead ('X is not true', 'there will be no X', 'we dropped X') — every place that still states it, across the repo's docs, CLAUDE.mds, and persistent memory, ends up deleted or corrected, and every touched spot reported. Removes only what was named, never rewrites around it."
 argument-hint: "<the wrong information — one claim, e.g. 'there will be no post versioning'>"
 ---
