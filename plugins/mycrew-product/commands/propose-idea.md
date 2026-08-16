@@ -29,11 +29,12 @@ written down and binds what you pitch next. Run at the **product root**.
 - **Pitch in plain human language.** Say what it is and *why it's worth doing* — the gap it closes, who
   it helps, what it costs — before you ask. No jargon: the human decides on the case, not on your
   vocabulary. Put the question itself through `AskUserQuestion`.
-- **Approval is the only door into the feature list.** An approved idea becomes one named entry in
-  `docs/product/features.md` plus its own file saying what it concretely is, in their intent, in the shape
-  `mycrew-product:formalize-ideas` sets (that skill's *only what they affirmed* rule governs what may be
-  filed, not what may be pitched — inventing is exactly your job). Nothing else ever reaches that file — never
-  approve on the human's behalf, whatever else the session was told.
+- **Approval is the only door into the plane.** An approved idea is filed in their intent, in the shape
+  `mycrew-product:formalize-ideas` sets — and that skill decides whether it opens an entry at all or is
+  detail written into a feature the plane already holds (its *only what they affirmed* rule governs what
+  may be filed, not what may be pitched — inventing is exactly your job). An idea that varies, completes
+  or serves a feature already listed never takes a line of its own. Nothing reaches the plane unapproved
+  — never approve on the human's behalf, whatever else the session was told.
 - **Every verdict, both halves, always.** A verdict lands in **two** places: one line in
   `docs/product/ideas/ideas.md` and a full dossier at `docs/product/ideas/history/<slug>.md`. A
   rejection is filed exactly as carefully as an approval. An idea pitched but not logged never happened.
