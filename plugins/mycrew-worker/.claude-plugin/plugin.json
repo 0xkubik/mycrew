@@ -1,6 +1,6 @@
 {
   "name": "mycrew-worker",
-  "version": "0.43.0",
+  "version": "0.44.0",
   "description": "Layer 3/5 — the executor. Hand /worker one piece of work and it carries it to the end, settling every fork inside the brief and never widening it. Anything outside — including a plane that turned out wrong — comes back as a flag in a short plain-language report. Runs inline, or as a subagent the chief dispatches.",
   "author": {
     "name": "kubik",
