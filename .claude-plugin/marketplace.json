@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "A four-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, and a chief on top that shapes the plane and dispatches its workers. Install mycrew-tools first.",
+  "description": "A four-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, and a chief on top that shapes the plane and dispatches its workers. Beside the layers, characters you start a session as. Install mycrew-tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
@@ -42,6 +42,15 @@
       },
       "category": "workflow",
       "source": "./plugins/mycrew-chief"
+    },
+    {
+      "name": "agents",
+      "description": "Not a layer — who you are talking to. Characters you start a session as: name one when you dispatch the session (`@mentor …`) and it runs as that character, with its own stance and its own limits. One so far — mentor, the one you think a question through with, who never solves it for you.",
+      "author": {
+        "name": "kubik"
+      },
+      "category": "workflow",
+      "source": "./plugins/agents"
     }
   ]
 }
