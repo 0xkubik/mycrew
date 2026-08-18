@@ -1,5 +1,5 @@
 {
-  "name": "agents",
+  "name": "mycrew-agents",
   "version": "0.1.0",
   "description": "Not a layer — who you are talking to. Characters you start a session as: name one when you dispatch the session (`@mentor …`) and it runs as that character, with its own stance and its own limits. One so far — mentor, the one you think a question through with, who never solves it for you.",
   "author": {
