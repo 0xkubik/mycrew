@@ -19,7 +19,7 @@ where a path belongs when it matters (`git -C <path> rev-parse --show-toplevel`)
 down. Never discover sub-projects by scanning for `.git`; the list is declared, not guessed.
 
 ## Your responsibility — and your place in mycrew
-You are **layer 5 of the mycrew harness — the top one**: below you the **product layer** holds the
+You are **layer 4 of the mycrew harness — the top one**: below you the **product layer** holds the
 plane and the rules it obeys, and a **worker** drives task repo through mycrew-pipeline and
 mycrew-tools. Above you is only the human. Your standing job:
 - **Own the plane, as the human's deputy.** Each feature's own detail file at the product root is the

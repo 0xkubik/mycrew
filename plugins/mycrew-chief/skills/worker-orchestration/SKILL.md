@@ -14,7 +14,7 @@ said the wrong thing, which is why both ends are one job.
 
 ## The assignment
 
-- **Spawn a worker and hand it a complete assignment.** Agent tool, `subagent_type: "worker"`: the
+- **Spawn a worker and hand it a complete assignment.** Agent tool, `subagent_type: "mycrew-chief:worker"`: the
   concrete goal, its sub-project **path**, which approved feature it serves, that feature's file if it
   has one, and the cross-repo context it cannot see for itself. Your flags stay with you.
 - **An assignment the worker would have to invent its way out of is unfinished.** Finish it here — a
@@ -45,7 +45,7 @@ Nothing comes home unaccepted, and every report earns exactly one word.
 - **Judge against three things only: the goal you set, the feature it serves, that feature's detail.**
   How it is written, which route it took, what you would have done is not this gate — the pipeline
   already hunted the bugs, the holes and the mess.
-- **Steer by the report `mycrew-worker:worker-rules` fixes, never by reading the code.** One that misses
+- **Steer by the four-field report the worker hands back, never by reading the code.** One that misses
   that shape is not a report: send it back for the report and say so, rather than guessing what
   happened.
 - **A fork settled inside the brief was the worker's to settle.** You check it stayed inside, not that
