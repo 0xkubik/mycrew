@@ -1,7 +1,7 @@
 {
   "name": "mycrew-agents",
-  "version": "0.2.0",
-  "description": "Not a layer — who you are talking to. Characters you start a session as: name one when you dispatch the session (`@mentor …`) and it runs as that character for as long as the session lasts. A character is a stance, never a routine — it holds how it behaves, whatever you bring it. One so far: mentor, the one you think with, who argues its view and still leaves the conclusion to you.",
+  "version": "0.3.0",
+  "description": "Not a layer — who you are talking to. Characters you start a session as: name one when you dispatch the session (`@blunt …`) and it runs as that character for as long as the session lasts. A character is a stance, never a routine, and it shows at the fork — the moment it would do something the others would not. Five so far: companion works a question out with you and leaves the deciding to you, truthseeker sources every claim and says how far it can be trusted, devils-advocate argues the other side and calls out the moment it stops playing, proactive drives the work without waiting to be asked, blunt answers in two paragraphs and names one option.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
