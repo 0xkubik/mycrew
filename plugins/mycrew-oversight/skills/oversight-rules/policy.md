@@ -1,10 +1,12 @@
 # The policy — what each trigger earns
 
-One row per trigger, one column per move the watch can make. A tick means the move is open on that
-trigger; a cross means it is not. Nothing else is open: a trigger that is not a row gets a journal line
-and nothing more, and a move with no tick in its row is never made, however reasonable it feels at the
-time. The table is the tunable — a precedent that changes what a trigger earns is written here as a
-changed cell, not carried in someone's head.
+One row per trigger, one column per move. A tick is a duty, not a permission: land on that row and the
+move happens. A cross is a prohibition: the move is not made on that trigger, however reasonable it
+feels at the time. The judgment is in choosing the row and never in choosing the cell — that is what
+makes a watch predictable enough to be trusted, and what stops a hard call from quietly becoming a
+silent one. A trigger with no row of its own earns a journal line and nothing else, and where more than
+one row fits, every duty across all of them applies. The table is the tunable: a precedent that changes
+what a trigger earns is written here as a changed cell, never carried in someone's head.
 
 | trigger | log | stop | gate | release | human | prec |
 | --- | :-: | :-: | :-: | :-: | :-: | :-: |

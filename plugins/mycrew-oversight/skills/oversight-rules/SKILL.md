@@ -33,8 +33,8 @@ in are `templates.md`, both beside this file.
   whole message; anything past them is advice, and advice is not what a flag is for.
 - **A flag stops one piece of work, never a session.** Everything that does not depend on the flagged
   work goes on running while it is settled.
-- **A move with no tick in `policy.md` is not available on that trigger.** The table is what the watch
-  may do, not a summary of what it usually does.
+- **A tick in `policy.md` is a duty and a cross is a prohibition.** The table settles what follows a
+  trigger; all that is ever weighed is which row the trigger belongs to.
 - **An unanswerable flag is not a flag.** If you cannot say which goal is being missed, you have a
   feeling, and a feeling is not worth a human's attention.
 
