@@ -1,7 +1,7 @@
 {
   "name": "mycrew-pipeline",
-  "version": "0.35.1",
-  "description": "Layer 2/4 — the build pipeline. Six stages carry one task from a decision to shipped code: /how-to-do settles the fork, /do builds it, then /refactor, /review, /secure and /test harden it. In review and secure, the eyes that hunt are never the author's. Every stage weighs what actually changed and skips in one honest line when the change doesn't earn it.",
+  "version": "0.35.2",
+  "description": "Layer 2/5 \u2014 the build pipeline. Six stages carry one task from a decision to shipped code: /how-to-do settles the fork, /do builds it, then /refactor, /review, /secure and /test harden it. In review and secure, the eyes that hunt are never the author's. Every stage weighs what actually changed and skips in one honest line when the change doesn't earn it.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"

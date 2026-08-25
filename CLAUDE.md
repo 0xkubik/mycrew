@@ -12,13 +12,13 @@ enough to run 24/7 without attention.
 ## Description
 A Claude Code plugin marketplace, built almost entirely out of prompts — skills, commands, agents and
 rule files plus JSON manifests, with no build and, but for one shell watcher, nothing to run. It ships
-one harness in four layers, each driving the one beneath it: primitives and house rules, a build
+one harness in five layers, each driving the one beneath it: primitives and house rules, a build
 pipeline that carries a task from a decision to hardened code, a product plane holding what the product
-must do, and a chief on top — the human's deputy — that shapes that plane and dispatches its worker
-across the sub-projects. Beside the layers sit the characters: agents a session is started as, for work
-that is a conversation. Across all of them sits the watch — a session that observes the other sessions
-in a project and judges whether the work still serves what was asked. Installed into other projects, it
-is the thing that does the work there rather than the thing being worked on.
+must do, a chief — the human's deputy — that shapes that plane and dispatches its worker across the
+sub-projects, and above it a watch that observes the working sessions, judges whether what they do
+still serves what was asked, and stops what wandered. Beside the layers sit the characters: agents a
+session is started as, for work that is a conversation. Installed into other projects, it is the thing
+that does the work there rather than the thing being worked on.
 
 ## Sub-projects
 <!-- The declared list every mycrew layer reads instead of scanning for .git. -->

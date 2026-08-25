@@ -8,7 +8,8 @@ description: "Use whenever a session is being watched — the one rule set for w
 
 A watch is worth having only while both of its thresholds hold: it must see nearly everything and stop
 almost nothing. Whatever survives in the log is the whole of what the watch knows about itself — after a
-compaction there is nothing else left. The shapes to fill in are `templates.md`, beside this file.
+compaction there is nothing else left. What each trigger earns is `policy.md` and the shapes to fill
+in are `templates.md`, both beside this file.
 
 ## The two thresholds move in opposite directions
 
@@ -32,6 +33,8 @@ compaction there is nothing else left. The shapes to fill in are `templates.md`,
   whole message; anything past them is advice, and advice is not what a flag is for.
 - **A flag stops one piece of work, never a session.** Everything that does not depend on the flagged
   work goes on running while it is settled.
+- **A move with no tick in `policy.md` is not available on that trigger.** The table is what the watch
+  may do, not a summary of what it usually does.
 - **An unanswerable flag is not a flag.** If you cannot say which goal is being missed, you have a
   feeling, and a feeling is not worth a human's attention.
 
