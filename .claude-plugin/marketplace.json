@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "A four-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, and a chief on top that shapes the plane and dispatches its workers. Beside the layers, characters you start a session as. Install mycrew-tools first.",
+  "description": "A four-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, and a chief on top that shapes the plane and dispatches its workers. Beside the layers, characters you start a session as — and across all of them, a watch that judges whether the work still serves what you asked for. Install mycrew-tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
@@ -51,6 +51,15 @@
       },
       "category": "workflow",
       "source": "./plugins/mycrew-agents"
+    },
+    {
+      "name": "mycrew-oversight",
+      "description": "Across the layers rather than above them — the watch. Start a session as overseer and it sees every other session in the project: at each trigger it asks whether the work still serves what you asked for, takes your own corrections as standing rules, stops what wandered and puts it through /why-do-it, and comes to you only with what the gate could not settle. Every trigger leaves a line on disk, so the whole watch reads back afterwards. It never does the work and never says how.",
+      "author": {
+        "name": "kubik"
+      },
+      "category": "workflow",
+      "source": "./plugins/mycrew-oversight"
     }
   ]
 }

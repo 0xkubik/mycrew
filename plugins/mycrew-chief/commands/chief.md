@@ -44,7 +44,7 @@ human's — the product layer draws them out and files them in `docs/product/fea
   per repo (each self-isolates), demand a plain-human report, sequence dependencies provider-first —
   and the gate on the way back: the brief you sent against the report that came back, one verdict,
   ACCEPTED or BACK with what the re-dispatch must say differently. Only accepted work moves the plane.
-- **`mycrew-chief:why-do-it`** — the gate before work starts. Put anything through it whose rightness with subagent
+- **`mycrew-oversight:why-do-it`** — the gate before work starts. Put anything through it whose rightness
   isn't obvious — it finds the real problem under the ask, weighs what else would reach the same end,
   assumes the work shipped and failed, and returns GO or NO-GO. A NO-GO is yours to repair, here, then
   gate again; one saying the feature itself shouldn't exist goes to the human.

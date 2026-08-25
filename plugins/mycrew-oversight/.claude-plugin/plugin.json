@@ -1,0 +1,9 @@
+{
+  "name": "mycrew-oversight",
+  "version": "0.1.0",
+  "description": "Across the layers, not above them — the overseer watches every session running in a project, judges at each trigger whether the work still serves what the human asked for, stops what wandered and puts it through why-do-it, and escalates only what it cannot settle. It never does the work and never says how.",
+  "author": {
+    "name": "kubik",
+    "email": "dev@noxlabs.xyz"
+  }
+}
