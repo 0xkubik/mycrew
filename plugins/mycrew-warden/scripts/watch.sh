@@ -5,6 +5,10 @@
 # usage: watch.sh <transcript-dir> <own-session-id> [poll-seconds]
 #   transcript-dir  ~/.claude/projects/<slug> for the project being watched
 #   own-session-id  the warden's own session, never watched
+#
+# WARDEN_ONLY narrows the watch: a session is taken up only once it is running
+# as, or has invoked, something matching that regex — e.g. mycrew-chief:chief.
+# Unset watches everything.
 set -u
 
 DIR=${1:?transcript dir}
@@ -14,6 +18,7 @@ CAP=6
 # ponytail: edit counts are cumulative and never decay, so a file touched slowly
 # over days eventually speaks; add a time window if the false wakes get annoying.
 CHURN=${WARDEN_CHURN:-8}
+ONLY=${WARDEN_ONLY:-}
 STATE=${WARDEN_STATE:-$PWD/.claude/warden/.cursors}
 mkdir -p "$STATE"
 
@@ -32,6 +37,14 @@ select(.isSidechain != true)
          | "DISPATCH \($s) — \(.input.description // .input.subagent_type // "?") :: \((.input.prompt // "") | gsub("\\s+"; " ") | .[0:400])" )
   else empty end'
 
+# What the session is running as, and what it has invoked. WARDEN_ONLY is matched
+# against this and never against the prose, so naming a thing cannot summon the watch.
+IDENT='
+if .type == "agent-setting" then .agentSetting
+elif .type == "user" and (.message.content | type == "string")
+then (.message.content | [scan("<command-name>([^<]*)</command-name>")] | flatten | .[]?)
+else empty end'
+
 # Files the plane keeps are not the work — a chief editing them is doing its job.
 EDITS='
 select(.isSidechain != true and .type == "assistant")
@@ -46,10 +59,11 @@ while :; do
     id=$(basename "$f" .jsonl)
     [ "$id" = "$SELF" ] && continue
     total=$(wc -l <"$f" | tr -d ' ')
+    fresh=0
     if [ ! -f "$STATE/$id" ]; then
       # At startup every session is already mid-flight: take its history as read.
       if [ "$first" = 1 ]; then echo "$total" >"$STATE/$id"; continue; fi
-      echo "NEW ${id:0:8} — a session appeared in this project"
+      fresh=1
       echo 0 >"$STATE/$id"
     fi
     cur=$(cat "$STATE/$id")
@@ -58,7 +72,18 @@ while :; do
     echo "$total" >"$STATE/$id"
     [ -z "$new" ] && continue
 
-    out=$(printf '%s\n' "$new" | jq -r --arg s "${id:0:8}" "$FILTER" 2>/dev/null)
+    out=""
+    if [ -n "$ONLY" ] && [ ! -f "$STATE/$id.on" ]; then
+      hit=$(printf '%s\n' "$new" | jq -r "$IDENT" 2>/dev/null | grep -E "$ONLY" | head -1)
+      # Nothing it is or has run matches: the delta is read and dropped, unwatched.
+      [ -z "$hit" ] && continue
+      : >"$STATE/$id.on"
+      out="ATTACH ${id:0:8} — taken up, running or invoking $hit"
+      fresh=0
+    fi
+    [ "$fresh" = 1 ] && out="NEW ${id:0:8} — a session appeared in this project"
+
+    out=$(printf '%s\n%s' "$out" "$(printf '%s\n' "$new" | jq -r --arg s "${id:0:8}" "$FILTER" 2>/dev/null)")
     printf '%s\n' "$out" | grep -q '^DISPATCH ' && : >"$STATE/$id.dispatched"
 
     paths=$(printf '%s\n' "$new" | jq -r "$EDITS" 2>/dev/null | grep -vE '/(docs|\.claude)/' || true)

@@ -32,6 +32,9 @@ What you judge by and what each verdict leaves behind is `mycrew-warden:warden-r
   plugin's `scripts/` (`find ~/.claude/plugins -path '*mycrew-warden/scripts/watch.sh' | head -1`),
   handed that transcript directory and your own session id. It polls in the shell, so waiting costs
   nothing and you wake only on an event.
+- **Watch every session here unless the human narrowed it.** `WARDEN_ONLY` is that knob — a regex on
+  what a session runs as or has invoked, `mycrew-chief:chief` being the one that keeps you to the
+  chief's own sessions. Set, you are handed each match as it is taken up and never see the rest.
 - **Learn the ground before the first event lands.** Who is alive (`ListAgents`), the goal each live
   session was given in its opening prompt, the plane if the product has one, and the precedents you
   already hold. A trigger judged against no goal is a trigger misjudged.

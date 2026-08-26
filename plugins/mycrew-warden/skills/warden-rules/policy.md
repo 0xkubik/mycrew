@@ -11,6 +11,7 @@ what a trigger earns is written here as a changed cell, never carried in someone
 | trigger | log | stop | gate | release | human | prec |
 | --- | :-: | :-: | :-: | :-: | :-: | :-: |
 | a session appeared | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
+| a session came under the watch | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
 | human set a new goal | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
 | human corrected the work | ✓ | ✗ | ✗ | ✗ | ✗ | ✓ |
 | human withdrew or changed the goal | ✓ | ✓ | ✗ | ✗ | ✗ | ✓ |
