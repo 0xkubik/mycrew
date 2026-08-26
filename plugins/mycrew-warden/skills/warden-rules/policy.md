@@ -20,6 +20,9 @@ what a trigger earns is written here as a changed cell, never carried in someone
 | dispatch beyond the goal, unasked | ✓ | ✓ | ✓ | ✗ | ✗ | ✗ |
 | dispatch against a standing precedent | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ |
 | dispatch irreversible or outside the project | ✓ | ✓ | ✗ | ✗ | ✓ | ✗ |
+| a dispatched worker returned | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
+| one file edited over and over, with no end in sight | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ |
+| a session that dispatches took the work into its own hands | ✓ | ✗ | ✗ | ✗ | ✓ | ✗ |
 | gate returned GO | ✓ | ✗ | ✗ | ✓ | ✗ | ✗ |
 | gate returned NO-GO | ✓ | ✗ | ✗ | ✓ | ✗ | ✗ |
 | gate returned no verdict | ✓ | ✗ | ✗ | ✗ | ✓ | ✗ |

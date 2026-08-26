@@ -11,19 +11,31 @@ DIR=${1:?transcript dir}
 SELF=${2:?own session id}
 POLL=${3:-5}
 CAP=6
+CHURN=${WARDEN_CHURN:-8}
 STATE=${WARDEN_STATE:-$PWD/.claude/warden/.cursors}
 mkdir -p "$STATE"
 
 FILTER='
 select(.isSidechain != true)
 | if .type == "user" and (.isMeta | not) and (.message.content | type == "string")
-     and (.message.content | test("^<(local-command|command-name|cross-session-message)") | not)
-  then "HUMAN \($s) — \(.message.content | gsub("\\s+"; " ") | .[0:400])"
+  then ( .message.content as $c
+       | if ($c | test("^<task-notification"))
+         then "RETURN \($s) — task \(($c | [scan("<task-id>([^<]*)</task-id>")] | flatten | first) // "?") \(($c | [scan("<status>([^<]*)</status>")] | flatten | first) // "")"
+         elif ($c | test("^<(local-command|command-name|cross-session-message|system-reminder)"))
+         then empty
+         else "HUMAN \($s) — \($c | gsub("\\s+"; " ") | .[0:400])" end )
   elif .type == "assistant"
   then ( .message.content[]?
          | select(.type == "tool_use" and (.name == "Task" or .name == "Agent"))
          | "DISPATCH \($s) — \(.input.description // .input.subagent_type // "?") :: \((.input.prompt // "") | gsub("\\s+"; " ") | .[0:400])" )
   else empty end'
+
+# Files the plane keeps are not the work — a chief editing them is doing its job.
+EDITS='
+select(.isSidechain != true and .type == "assistant")
+| .message.content[]?
+| select(.type == "tool_use" and (.name == "Edit" or .name == "Write" or .name == "MultiEdit"))
+| .input.file_path // empty'
 
 first=1
 while :; do
@@ -40,9 +52,30 @@ while :; do
     fi
     cur=$(cat "$STATE/$id")
     [ "$total" -le "$cur" ] && continue
-    out=$(head -n "$total" "$f" | tail -n "+$((cur+1))" \
-          | jq -r --arg s "${id:0:8}" "$FILTER" 2>/dev/null)
+    new=$(head -n "$total" "$f" | tail -n "+$((cur+1))")
     echo "$total" >"$STATE/$id"
+    [ -z "$new" ] && continue
+
+    out=$(printf '%s\n' "$new" | jq -r --arg s "${id:0:8}" "$FILTER" 2>/dev/null)
+    printf '%s\n' "$out" | grep -q '^DISPATCH ' && : >"$STATE/$id.dispatched"
+
+    paths=$(printf '%s\n' "$new" | jq -r "$EDITS" 2>/dev/null | grep -vE '/(docs|\.claude)/' || true)
+    if [ -n "$paths" ]; then
+      if [ -f "$STATE/$id.dispatched" ] && [ ! -f "$STATE/$id.handson" ]; then
+        : >"$STATE/$id.handson"
+        out="$out
+HANDSON ${id:0:8} — the session that dispatches workers is now editing files itself"
+      fi
+      churn=$(printf '%s\n' "$paths" | awk -v st="$STATE/$id.edits" -v n="$CHURN" -v s="${id:0:8}" '
+        BEGIN { while ((getline l < st) > 0) { i = index(l, "\t"); c[substr(l, i + 1)] = substr(l, 1, i - 1) } close(st) }
+        { was = c[$0] + 0; c[$0] = was + 1
+          if (int((was + 1) / n) > int(was / n)) print "CHURN " s " — " $0 " ×" (was + 1) }
+        END { printf "" > st; for (p in c) printf "%d\t%s\n", c[p], p > st }')
+      [ -n "$churn" ] && out="$out
+$churn"
+    fi
+
+    out=$(printf '%s\n' "$out" | grep -v '^$' || true)
     [ -z "$out" ] && continue
     n=$(printf '%s\n' "$out" | wc -l | tr -d ' ')
     printf '%s\n' "$out" | head -n "$CAP"
