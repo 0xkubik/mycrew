@@ -40,15 +40,19 @@ in are `templates.md`, both beside this file.
 
 ## Where each record goes
 
-- **Every trigger leaves one entry in the journal — silent verdicts included.** A trigger with no entry
-  is indistinguishable from a trigger nobody saw, which is the one thing that must never be ambiguous.
-- **A silent verdict still says why it was silent.** "Nothing to say" is not a reason and rots into
-  nothing the moment it needs to be trusted.
+- **Every wakeup is exactly one line in `journal.log`, skipped ones included.** One line, never two,
+  never a paragraph: a wakeup with no line is indistinguishable from one nobody saw, and a wakeup with
+  a page is a journal nobody reads back.
+- **The line carries what happened, what was done or why nothing was, and what came of it.** "Nothing
+  to say" is not a reason; the middle clause of a skip is where the watch proves it looked.
+- **The flags on a line are the duties that fired, named as `policy.md` names them.** A line claiming a
+  move with no tick in its row, or missing one that has it, is the watch drifting from its own policy.
+- **A precedent is one line: the decision as a thesis, in the human's own vocabulary.** Their words
+  compressed, never your summary of them — a paraphrase is the first thing to rot, and every later
+  verdict leans on this file.
 - **A flag that goes to a gate opens a case file, and the case closes with what actually happened.** The
   verdict alone is half a record: what the session did next is the half that can be checked.
-- **A precedent is the human's decision in the human's words.** Your paraphrase is what rots first, and
-  it is the file every later verdict leans on.
-- **Ids are permanent and never reused.** A case id points at one case forever, in the journal and in
-  the precedent that came out of it.
+- **Ids are permanent and never reused.** A case or precedent id points at one thing forever, in the
+  journal line that made it and everywhere it is leaned on afterwards.
 - **The cursor files belong to the watcher script.** Never write them by hand; they are what stops
   history from replaying as news.
