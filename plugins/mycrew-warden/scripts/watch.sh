@@ -11,6 +11,8 @@ DIR=${1:?transcript dir}
 SELF=${2:?own session id}
 POLL=${3:-5}
 CAP=6
+# ponytail: edit counts are cumulative and never decay, so a file touched slowly
+# over days eventually speaks; add a time window if the false wakes get annoying.
 CHURN=${WARDEN_CHURN:-8}
 STATE=${WARDEN_STATE:-$PWD/.claude/warden/.cursors}
 mkdir -p "$STATE"
