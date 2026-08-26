@@ -1,0 +1,9 @@
+{
+  "name": "mycrew-warden",
+  "version": "0.4.0",
+  "description": "Layer 5/5 \u2014 the watch, above the chief. Start a session as @warden and it sees every other session in the project: at each trigger it asks whether the work still serves what you asked for, takes your own corrections as standing rules, stops what wandered and puts it through /why-do-it, and comes to you only with what the gate could not settle. /warden-stop and /warden-start put the watch down and pick it up without losing the session. Every trigger leaves a line on disk, so the whole watch reads back afterwards. It judges and stops; it never does the work and never says how.",
+  "author": {
+    "name": "kubik",
+    "email": "dev@noxlabs.xyz"
+  }
+}

@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-# Eyes for the overseer. Polls in the shell so waking costs nothing; prints one
+# Eyes for the warden. Polls in the shell so waking costs nothing; prints one
 # line per event worth a verdict. Every line becomes one Monitor notification.
 #
 # usage: watch.sh <transcript-dir> <own-session-id> [poll-seconds]
 #   transcript-dir  ~/.claude/projects/<slug> for the project being watched
-#   own-session-id  the overseer's own session, never watched
+#   own-session-id  the warden's own session, never watched
 set -u
 
 DIR=${1:?transcript dir}
 SELF=${2:?own session id}
 POLL=${3:-5}
 CAP=6
-STATE=${OVERSIGHT_STATE:-$PWD/.claude/oversight/.cursors}
+STATE=${WARDEN_STATE:-$PWD/.claude/warden/.cursors}
 mkdir -p "$STATE"
 
 FILTER='

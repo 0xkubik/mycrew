@@ -1,4 +1,4 @@
-# The shapes — the three files a watch keeps, under `.claude/oversight/`
+# The shapes — the three files a watch keeps, under `.claude/warden/`
 
 `journal.md` — one entry per trigger, appended, newest at the bottom:
 

@@ -1,10 +1,10 @@
 ---
-name: oversight-rules
+name: warden-rules
 kind: rule
 description: "Use whenever a session is being watched — the one rule set for what earns a look, what earns a stop, and what every verdict leaves behind on disk. Fixes the two thresholds that keep a watch useful, what a flag must carry, and which file each kind of record belongs in. Rules only: never who watches or how a verdict is reached."
 ---
 
-# oversight-rules — what is watched, what is stopped, what is written down
+# warden-rules — what is watched, what is stopped, what is written down
 
 A watch is worth having only while both of its thresholds hold: it must see nearly everything and stop
 almost nothing. Whatever survives in the log is the whole of what the watch knows about itself — after a
