@@ -7,7 +7,7 @@
 #   own-session-id  the warden's own session, never watched
 #
 # WARDEN_ONLY narrows the watch: a session is taken up only once it is running
-# as, or has invoked, something matching that regex — e.g. mycrew-chief:chief.
+# as, or has invoked, something matching that regex — e.g. mycrew-developers:chief.
 # Unset watches everything.
 set -u
 

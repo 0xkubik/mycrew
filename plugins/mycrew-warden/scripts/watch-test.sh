@@ -48,11 +48,11 @@ deny "notes.md"                 # the plane is the chief's to edit
 
 ## WARDEN_ONLY narrows it
 mkdir -p "$T/b/tr" "$T/b/state"
-WARDEN_STATE="$T/b/state" WARDEN_ONLY='mycrew-chief:chief' bash "$here/watch.sh" "$T/b/tr" none 1 >"$T/b/out" 2>&1 & pid=$!
+WARDEN_STATE="$T/b/state" WARDEN_ONLY='mycrew-developers:chief' bash "$here/watch.sh" "$T/b/tr" none 1 >"$T/b/out" 2>&1 & pid=$!
 sleep 2
 human "plain work nobody watches" >"$T/b/tr/cccccccc-1111-2222-3333-444444444444.jsonl"
 { human "run the product"
-  echo '{"type":"agent-setting","agentSetting":"mycrew-chief:chief"}'
+  echo '{"type":"agent-setting","agentSetting":"mycrew-developers:chief"}'
   human "carry F004 next"
 } >"$T/b/tr/dddddddd-1111-2222-3333-444444444444.jsonl"
 sleep 3

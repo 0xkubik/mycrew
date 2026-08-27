@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "A five-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, and a chief on top that shapes the plane and dispatches its workers. On top, a watch that judges whether the work still serves what you asked for and stops what wandered. Install mycrew-tools first.",
+  "description": "A five-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, and above it the ones who build \u2014 a chief over the whole product, a lead to a feature, a worker to an assignment. On top, a watch that judges whether the work still serves what you asked for and stops what wandered. Install mycrew-tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
@@ -35,13 +35,13 @@
       "source": "./plugins/mycrew-product"
     },
     {
-      "name": "mycrew-chief",
-      "description": "Layer 4/5 \u2014 your deputy over the whole product, as a command for one move and as a character for a whole session. /chief reads the plane, breaks an approved feature into per-repo assignments, sequences them provider-first, dispatches the worker it ships as subagents, and takes or sends back what comes home. It never decides what the product should do, and never writes code. It conducts; the workers build.",
+      "name": "mycrew-developers",
+      "description": "Layer 4/5 \u2014 the ones who build it. Three characters, each handing down to the next: the chief is your deputy over the whole product, one to a product, owning the plane and delegating each approved feature whole; a lead holds one feature across every repo it touches, spawned as a background session of its own and reaching the other leads only where its feature depends on theirs; a worker carries one assignment end to end through the pipeline and hands back a four-field report. Only the worker writes code.",
       "author": {
         "name": "kubik"
       },
       "category": "workflow",
-      "source": "./plugins/mycrew-chief"
+      "source": "./plugins/mycrew-developers"
     },
     {
       "name": "mycrew-warden",
