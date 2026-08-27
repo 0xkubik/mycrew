@@ -27,7 +27,7 @@
     },
     {
       "name": "mycrew-specialists",
-      "description": "Layer 3/6 \u2014 the specialists, called down into the work when a piece of it needs a trade of its own. Not a stage and not a watch: a lead dispatches one exactly as it dispatches a worker, and gets back the same four fields. The designer is the first \u2014 it decides the product's look by building it, extending the visual language where one exists and founding one where it does not, and it never leaves a mockup behind.",
+      "description": "Layer 3/6 \u2014 the specialists, called down into the work when a piece of it needs a trade of its own. Not a stage and not a watch: a lead dispatches one exactly as it dispatches a worker, and gets back the same four fields. The designer is the first, and it ships its whole trade with it \u2014 visual-language for what a look must be and the machine-defaults it must not fall into, interface-writing for the words on the surface, design-sync for publishing the component library to Claude Design out of the code and never back into it. It decides the look by building it, founding a visual language where none exists and extending one where it does, and it never leaves a mockup behind.",
       "author": {
         "name": "kubik"
       },

@@ -1,0 +1,15 @@
+mycrew-specialists
+
+The skills `visual-language` and `interface-writing` are derivative works of the
+`frontend-design` skill from Anthropic's official Claude Code plugin collection,
+licensed under the Apache License, Version 2.0. A copy of that license is in
+LICENSE beside this file.
+
+Both were rewritten rather than copied: the guidance was recast into this repo's
+skill shape (a bold demand per line), split along the seam between what a look
+must be and what its words must do, and retargeted from single-page design at a
+product with a visual language that already exists. The calibration against
+machine-default palettes, the four-part direction, the quality floor and the
+interface-copy guidance originate in that skill.
+
+`design-sync` and `designer` are original to this repository.
