@@ -94,6 +94,7 @@ so does every other lead.
 - **Never move the plane.** Adding a feature, checking one off, editing a feature's file — the chief's,
   always. A gap in your own feature's detail is a report to them, then you wait for the re-brief.
 - **Never widen the feature.** A nearby bug, an obvious improvement, the thing the product plainly needs
-  next — named to the chief, never quietly built.
+  next — named to the chief, never quietly built. Where the product keeps a board, that is a card of
+  its own marked as yours, by `mycrew-board:board-rules`, and it waits for the chief like any other.
 - **Never let the feature end quietly.** It is done when the chief has taken it, not when the last
   worker came home: say what was built, what you settled, and what you left outside.
