@@ -42,6 +42,10 @@ so does every other lead.
   guess made downstream comes back as work you dispatch twice.
 - **Give the path, not a layout.** It comes from the product `CLAUDE.md`. Submodule, separate repository
   or plain folder is git's business, never the brief's.
+- **Significant design work goes to the designer, not to a worker.** A new surface, a new component, or
+  a change to how something looks and behaves is `agent-designer:designer`'s — dispatched exactly like a
+  worker, with the same brief. Anything that changes the product's visual language rather than adding to
+  it is the chief's to take to the human first.
 
 ## How the work is spread
 

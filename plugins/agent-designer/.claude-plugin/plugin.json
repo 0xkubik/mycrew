@@ -1,0 +1,9 @@
+{
+  "name": "agent-designer",
+  "version": "0.1.0",
+  "description": "A specialist, not a layer — the trade that decides how the product looks. A lead dispatches @designer exactly as it dispatches a worker and gets back the same four fields, but what comes back is a running interface: it founds a visual language where none exists and extends one where it does, and it never leaves a mockup behind. It carries the whole trade inside itself — what a good look is, what a machine-made one is and the defaults that mark it, what the words on a surface must do, and the floor nothing ships below.",
+  "author": {
+    "name": "kubik",
+    "email": "dev@noxlabs.xyz"
+  }
+}
