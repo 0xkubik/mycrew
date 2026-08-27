@@ -35,7 +35,7 @@ scanning for `.git`; the list is declared, not guessed.
 
 - **One feature, one lead, one session.** Spawn it as its own background session and name it for the
   feature it holds, so every lead and you can reach it:
-  `claude --bg --agent mycrew-developers:lead -n "LEAD F004" "<the brief>"`.
+  `claude --bg --agent mycrew-crew:lead -n "LEAD F004" "<the brief>"`.
 - **Never loosen a lead's permissions when you spawn it.** A permission mode passed on the command line
   overrides what the character forbids, and the one thing a lead must never have is a way to write code.
 - **A brief carries the feature, its detail file, the sub-projects it reaches, and the features it
@@ -85,9 +85,9 @@ scanning for `.git`; the list is declared, not guessed.
 
 - **`mycrew-product:product-rules`** — the plane and what goes where in it: `features.md`,
   `features/F00N-<slug>.md` (what that feature actually is — you shape it before the work), `notes.md`.
-- **`mycrew-developers:what-to-do`** — a ranked menu of what to advance next out of what the plane
+- **`mycrew-crew:what-to-do`** — a ranked menu of what to advance next out of what the plane
   already holds: add, finish, rebuild, refactor.
-- **`mycrew-warden:why-do-it`** — the gate before work starts. Put anything through it whose rightness
+- **`agent-warden:why-do-it`** — the gate before work starts. Put anything through it whose rightness
   is not obvious; a NO-GO is yours to repair here and gate again, and one saying the feature itself
   should not exist goes to the human.
 

@@ -8,7 +8,7 @@ argument-hint: "[nothing — the project is the one you are in]"
 The run ends with the eyes armed and one short account of what is now being watched: every live
 session and the goal each was given. Already armed → say so, change nothing, and stop.
 
-- **Open the watch the way the character opens it** — `mycrew-warden:warden`'s own opening, step for
+- **Open the watch the way the character opens it** — `agent-warden:warden`'s own opening, step for
   step. Nothing about arming is restated here.
 - **A restart is never silent.** Before the first new verdict, the journal takes the window the watch
   was down for. A gap nobody wrote down reads afterwards as a stretch where nothing happened.

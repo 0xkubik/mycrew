@@ -35,7 +35,7 @@ so does every other lead.
   moment you build, nobody is coordinating and the feature is a very large task with no owner.
 - **Split the feature into assignments, never into steps.** An assignment is one whole piece of work in
   one repo; steps in sequence are you building with extra ceremony.
-- **Spawn a worker with a complete assignment.** Agent tool, `subagent_type: "mycrew-developers:worker"`:
+- **Spawn a worker with a complete assignment.** Agent tool, `subagent_type: "mycrew-crew:worker"`:
   the concrete goal, its sub-project **path**, the feature it serves, that feature's detail, and the
   cross-repo context it cannot see for itself.
 - **An assignment the worker would have to invent its way out of is unfinished.** Finish it here — a
