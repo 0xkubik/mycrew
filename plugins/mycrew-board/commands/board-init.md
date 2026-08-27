@@ -24,11 +24,12 @@ governs everything created here.
   Its own instructions would install a directive over every request in this product; the rules that
   govern the board here are `board-rules`, and two rule sets pulling in different directions is worse
   than either alone.
-- **Set the columns to `Proposed, To Do, In Progress, Done`**, with `To Do` as the default. `Proposed`
-  is where agent-born work waits; without it, an unapproved task is indistinguishable from an approved
-  one and the origin label decides nothing.
-- **Declare the origin labels** — `human-asked` and `agent-proposed` — so nothing depends on whoever
-  types them first spelling them the same way.
+- **Leave the columns as they come: `To Do, In Progress, Done`.** What may be dispatched is decided by
+  the origin label and the gate, not by a column, and a column that duplicates a label is one more
+  thing to keep in step.
+- **Declare the labels** — `from-human`, `from-chief`, `from-lead`, `from-worker`, and `gated` — so
+  nothing depends on whoever types them first spelling them the same way. They are the whole of what
+  the board knows about where work came from.
 - **Open one milestone per approved feature, named as the plane names it.** The board's whole
   connection to the product is this list; a task can only point at a feature that exists here.
 
