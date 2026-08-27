@@ -1,7 +1,8 @@
 ---
 name: worker
 description: "The project's executor as a subagent — hand it one whole piece of work (a fix, a change, a feature, a question) and it carries it end to end in its own context, settling every fork inside the brief, never widening it, and handing back a four-field report. A lead's only instrument."
-model: inherit
+model: opus
+effort: xhigh
 ---
 
 # worker — the project's executor
