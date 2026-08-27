@@ -1,11 +1,11 @@
 ---
-name: design-sync
+name: designer-sync
 kind: intent
 description: "Use to publish this product's component library to its Claude Design project — one component at a time, out of the code and never back into it. Ends with the gallery matching what is built, or with nothing done and the reason why. Never pulls remote content into the repo and never treats the gallery as a source."
 argument-hint: "[the component or area to publish — or nothing to reconcile the whole library]"
 ---
 
-# design-sync — push what is built, never pull what is drawn
+# designer-sync — push what is built, never pull what is drawn
 
 The run ends with the design-system project holding preview files generated from components that exist
 in this repo, and with the repo unchanged. A gallery is worth having only while it is **derived**: the
