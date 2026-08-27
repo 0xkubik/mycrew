@@ -1,9 +1,0 @@
-{
-  "name": "mycrew-specialists",
-  "version": "0.3.0",
-  "description": "Layer 3/6 \u2014 the specialists, called down into the work when a piece of it needs a trade of its own. Not a stage and not a watch: a lead dispatches one exactly as it dispatches a worker, and gets back the same four fields. Each carries its whole trade inside itself, so nothing is shared between them and nothing has to be loaded. The designer is the first \u2014 it decides the look by building it, founding a visual language where none exists and extending one where it does, writes the words on the surface, publishes the component library to Claude Design out of the code and never back into it, and never leaves a mockup behind.",
-  "author": {
-    "name": "kubik",
-    "email": "dev@noxlabs.xyz"
-  }
-}

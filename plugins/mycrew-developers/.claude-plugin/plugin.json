@@ -1,7 +1,7 @@
 {
   "name": "mycrew-developers",
-  "version": "0.48.0",
-  "description": "Layer 5/6 \u2014 the ones who build it. Three characters, each handing down to the next: the chief is your deputy over the whole product, one to a product, owning the plane and delegating each approved feature whole; a lead holds one feature across every repo it touches, spawned as a background session of its own and reaching the other leads only where its feature depends on theirs; a worker carries one assignment end to end through the pipeline and hands back a four-field report. Each of them carries how it runs the rung below, so there is nothing to load and nothing to forget. Only the worker writes code.",
+  "version": "0.49.0",
+  "description": "Layer 4/5 \u2014 the ones who build it. Three characters, each handing down to the next: the chief is your deputy over the whole product, one to a product, owning the plane and delegating each approved feature whole; a lead holds one feature across every repo it touches, spawned as a background session of its own and reaching the other leads only where its feature depends on theirs; a worker carries one assignment end to end through the pipeline and hands back a four-field report. Each of them carries how it runs the rung below, so there is nothing to load and nothing to forget. Only the worker writes code.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"

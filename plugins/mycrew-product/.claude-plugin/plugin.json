@@ -1,7 +1,7 @@
 {
   "name": "mycrew-product",
-  "version": "0.37.1",
-  "description": "Layer 4/6 \u2014 the product plane: everything true about the whole product, above the sub-projects. /product-init founds it. /braindump and /ask-me draw the product out of you and file each piece where it belongs; /propose-idea is the one that puts an idea in, and only on your approval. Whatever you affirm, wherever you affirm it, product-rules is the one rule set that decides where it lands and in what shape.",
+  "version": "0.37.2",
+  "description": "Layer 3/5 \u2014 the product plane: everything true about the whole product, above the sub-projects. /product-init founds it. /braindump and /ask-me draw the product out of you and file each piece where it belongs; /propose-idea is the one that puts an idea in, and only on your approval. Whatever you affirm, wherever you affirm it, product-rules is the one rule set that decides where it lands and in what shape.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"

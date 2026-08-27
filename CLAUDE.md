@@ -12,11 +12,11 @@ enough to run 24/7 without attention.
 ## Description
 A Claude Code plugin marketplace, built almost entirely out of prompts — skills, commands, agents and
 rule files plus JSON manifests, with no build and, but for one shell watcher, nothing to run. It ships
-one harness in six layers, each driving the one beneath it: primitives and house rules, a build
-pipeline that carries a task from a decision to hardened code, specialists called down a trade at a
-time, a product plane holding what the product must do, then the ones who build it — a chief who is
-the human's deputy over the whole product, a lead who holds one feature as a session of its own, a
-worker who carries one assignment — and above them a watch that observes the working sessions, judges
+one harness in five layers, each driving the one beneath it: primitives and house rules, a build
+pipeline that carries a task from a decision to hardened code, a product plane holding what the
+product must do, then the ones who build it — a chief who is the human's deputy over the whole
+product, a lead who holds one feature as a session of its own, a worker who carries one assignment —
+and above them a watch that observes the working sessions, judges
 whether what they do still serves what was asked, and stops what wandered. Installed into other projects, it is the thing that does the work there rather
 than the thing being worked on.
 

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "A six-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, specialists a trade at a time, a product plane holding what the product must do, and above it the ones who build \u2014 a chief over the whole product, a lead to a feature, a worker to an assignment. On top, a watch that judges whether the work still serves what you asked for and stops what wandered. Install mycrew-tools first.",
+  "description": "A five-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, and above it the ones who build \u2014 a chief over the whole product, a lead to a feature, a worker to an assignment. On top, a watch that judges whether the work still serves what you asked for and stops what wandered. Install mycrew-tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "mycrew-tools",
-      "description": "Layer 1/6 \u2014 the primitives. Small, project-agnostic skills you reach for mid-work: /slap resets a fix that has stopped working, /likec4 draws architecture as code, /reminder pins a rule as a hard constraint, /retract hunts down information declared wrong and cuts it out. Ships the house rule files too. Everything above builds on this.",
+      "description": "Layer 1/5 \u2014 the primitives. Small, project-agnostic skills you reach for mid-work: /slap resets a fix that has stopped working, /likec4 draws architecture as code, /reminder pins a rule as a hard constraint, /retract hunts down information declared wrong and cuts it out. Ships the house rule files too. Everything above builds on this.",
       "author": {
         "name": "kubik"
       },
@@ -18,7 +18,7 @@
     },
     {
       "name": "mycrew-pipeline",
-      "description": "Layer 2/6 \u2014 the build pipeline. Six stages carry one task from a decision to shipped code: /how-to-do settles the fork, /do builds it, then /refactor, /review, /secure and /test harden it. In review and secure, the eyes that hunt are never the author's. Every stage weighs what actually changed and skips in one honest line when the change doesn't earn it.",
+      "description": "Layer 2/5 \u2014 the build pipeline. Six stages carry one task from a decision to shipped code: /how-to-do settles the fork, /do builds it, then /refactor, /review, /secure and /test harden it. In review and secure, the eyes that hunt are never the author's. Every stage weighs what actually changed and skips in one honest line when the change doesn't earn it.",
       "author": {
         "name": "kubik"
       },
@@ -26,17 +26,8 @@
       "source": "./plugins/mycrew-pipeline"
     },
     {
-      "name": "mycrew-specialists",
-      "description": "Layer 3/6 \u2014 the specialists, called down into the work when a piece of it needs a trade of its own. Not a stage and not a watch: a lead dispatches one exactly as it dispatches a worker, and gets back the same four fields. Each carries its whole trade inside itself, so nothing is shared between them and nothing has to be loaded. The designer is the first \u2014 it decides the look by building it, founding a visual language where none exists and extending one where it does, writes the words on the surface, publishes the component library to Claude Design out of the code and never back into it, and never leaves a mockup behind.",
-      "author": {
-        "name": "kubik"
-      },
-      "category": "workflow",
-      "source": "./plugins/mycrew-specialists"
-    },
-    {
       "name": "mycrew-product",
-      "description": "Layer 4/6 \u2014 the product plane: everything true about the whole product, above the sub-projects. /product-init founds it. /braindump and /ask-me draw the product out of you and file each piece where it belongs; /propose-idea is the one that puts an idea in, and only on your approval. Whatever you affirm, wherever you affirm it, product-rules is the one rule set that decides where it lands and in what shape.",
+      "description": "Layer 3/5 \u2014 the product plane: everything true about the whole product, above the sub-projects. /product-init founds it. /braindump and /ask-me draw the product out of you and file each piece where it belongs; /propose-idea is the one that puts an idea in, and only on your approval. Whatever you affirm, wherever you affirm it, product-rules is the one rule set that decides where it lands and in what shape.",
       "author": {
         "name": "kubik"
       },
@@ -45,7 +36,7 @@
     },
     {
       "name": "mycrew-developers",
-      "description": "Layer 5/6 \u2014 the ones who build it. Three characters, each handing down to the next: the chief is your deputy over the whole product, one to a product, owning the plane and delegating each approved feature whole; a lead holds one feature across every repo it touches, spawned as a background session of its own and reaching the other leads only where its feature depends on theirs; a worker carries one assignment end to end through the pipeline and hands back a four-field report. Each of them carries how it runs the rung below, so there is nothing to load and nothing to forget. Only the worker writes code.",
+      "description": "Layer 4/5 \u2014 the ones who build it. Three characters, each handing down to the next: the chief is your deputy over the whole product, one to a product, owning the plane and delegating each approved feature whole; a lead holds one feature across every repo it touches, spawned as a background session of its own and reaching the other leads only where its feature depends on theirs; a worker carries one assignment end to end through the pipeline and hands back a four-field report. Each of them carries how it runs the rung below, so there is nothing to load and nothing to forget. Only the worker writes code.",
       "author": {
         "name": "kubik"
       },
@@ -54,7 +45,7 @@
     },
     {
       "name": "mycrew-warden",
-      "description": "Layer 6/6 \u2014 the watch, above the chief. Start a session as @warden and it sees every other session in the project: at each trigger it asks whether the work still serves what you asked for, takes your own corrections as standing rules, stops what wandered and puts it through /why-do-it, and comes to you only with what the gate could not settle. /warden-stop and /warden-start put the watch down and pick it up without losing the session. Every trigger leaves a line on disk, so the whole watch reads back afterwards. It judges and stops; it never does the work and never says how.",
+      "description": "Layer 5/5 \u2014 the watch, above the chief. Start a session as @warden and it sees every other session in the project: at each trigger it asks whether the work still serves what you asked for, takes your own corrections as standing rules, stops what wandered and puts it through /why-do-it, and comes to you only with what the gate could not settle. /warden-stop and /warden-start put the watch down and pick it up without losing the session. Every trigger leaves a line on disk, so the whole watch reads back afterwards. It judges and stops; it never does the work and never says how.",
       "author": {
         "name": "kubik"
       },
