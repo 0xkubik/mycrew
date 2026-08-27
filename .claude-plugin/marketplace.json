@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "A five-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, a board holding what is being done about it right now, and the crew that builds it \u2014 a chief over the whole product, a lead to a feature, a worker to an assignment. Beside the layers stand the specialists, a plugin each and only where the trade is substantial enough to earn one: agent-warden is the first, watching the sessions and stopping what wandered. Install mycrew-tools first.",
+  "description": "A five-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, a board holding what is being done about it right now, and the crew that builds it \u2014 a chief over the whole product, a lead to a feature, a worker to an assignment. Beside the layers stand the specialists, a plugin each and only where the trade is substantial enough to earn one: agent-designer decides how the product looks and settles it by building it, agent-warden watches the sessions and stops what wandered. Install mycrew-tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
@@ -51,6 +51,15 @@
       },
       "category": "workflow",
       "source": "./plugins/mycrew-crew"
+    },
+    {
+      "name": "agent-designer",
+      "description": "A specialist, not a layer \u2014 the trade that decides how the product looks. A lead dispatches @designer exactly as it dispatches a worker and gets back the same four fields, but what comes back is a running interface: it founds a visual language where none exists and extends one where it does, and it never leaves a mockup behind. It carries the whole trade inside itself \u2014 what a good look is, what a machine-made one is and the defaults that mark it, what the words on a surface must do, and the floor nothing ships below.",
+      "author": {
+        "name": "kubik"
+      },
+      "category": "workflow",
+      "source": "./plugins/agent-designer"
     },
     {
       "name": "agent-warden",
