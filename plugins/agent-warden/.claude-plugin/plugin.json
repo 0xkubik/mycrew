@@ -1,7 +1,7 @@
 {
   "name": "agent-warden",
-  "version": "0.8.0",
-  "description": "A specialist, not a layer \u2014 the watch that stands over everything the layers do. Start a session as @warden and it sees every other session in the project: at each trigger it asks whether the work still serves what you asked for, takes your own corrections as standing rules, stops what wandered and puts it through /why-do-it, and comes to you only with what the gate could not settle. /warden-stop and /warden-start put the watch down and pick it up without losing the session. Every trigger leaves a line on disk, so the whole watch reads back afterwards. It judges and stops; it never does the work and never says how.",
+  "version": "0.9.0",
+  "description": "A specialist, not a layer \u2014 the keeper of the board. It wakes on every change a card makes and checks the one thing nothing else can: that the rules the crew works by actually held. Agent-born work in progress that never passed the gate, a card serving no feature, a card closed with its criteria still unchecked, one in progress that no live worker holds, one untouched for days \u2014 it asks the lead who owns it, and only flags what was already asked about and broken again. It never judges the work, never writes a card, and never says how anything should be built. /warden-stop and /warden-start put the watch down and pick it up without losing the session; every wake leaves a line on disk, so the whole watch reads back afterwards.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"

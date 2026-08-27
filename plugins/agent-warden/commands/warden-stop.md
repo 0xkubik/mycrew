@@ -11,7 +11,7 @@ The run ends with the eyes stopped, the session still there to talk to, and the 
   the point of the command is that the session survives it.
 - **A watch that is off says so in the journal, with the time and the reason it was given.** An
   unrecorded gap is the one thing the log must never produce: quiet that reads as nothing happening.
-- **Name what is now unwatched.** The live sessions no longer being judged, listed, so putting the
+- **Name what is now unwatched.** The cards no longer being checked, counted, so putting the
   watch down stays a decision the human made rather than something that drifted.
 - **An open case does not close because the watch stopped.** Say which cases are still unsettled and
   that nobody is now carrying them.

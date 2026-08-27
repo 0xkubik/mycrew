@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "A five-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, a board holding what is being done about it right now, and the crew that builds it \u2014 a chief over the whole product, a lead to a feature, a worker to an assignment. Beside the layers stand the specialists, a plugin each and only where the trade is substantial enough to earn one: agent-designer decides how the product looks and settles it by building it, agent-warden watches the sessions and stops what wandered. Install mycrew-tools first.",
+  "description": "A five-layer harness for Claude Code, each layer driving the one below: primitives and house rules, a pipeline that carries a task from decision to hardened code, a product plane holding what the product must do, a board holding what is being done about it right now, and the crew that builds it \u2014 a chief over the whole product, a lead to a feature, a worker to an assignment. Beside the layers stand the specialists, a plugin each and only where the trade is substantial enough to earn one: agent-designer decides how the product looks and settles it by building it, agent-warden keeps the board honest. Install mycrew-tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
@@ -63,7 +63,7 @@
     },
     {
       "name": "agent-warden",
-      "description": "A specialist, not a layer \u2014 the watch that stands over everything the layers do. Start a session as @warden and it sees every other session in the project: at each trigger it asks whether the work still serves what you asked for, takes your own corrections as standing rules, stops what wandered and puts it through /why-do-it, and comes to you only with what the gate could not settle. /warden-stop and /warden-start put the watch down and pick it up without losing the session. Every trigger leaves a line on disk, so the whole watch reads back afterwards. It judges and stops; it never does the work and never says how.",
+      "description": "A specialist, not a layer \u2014 the keeper of the board. It wakes on every change a card makes and checks the one thing nothing else can: that the rules the crew works by actually held. Agent-born work in progress that never passed the gate, a card serving no feature, a card closed with its criteria still unchecked, one in progress that no live worker holds, one untouched for days \u2014 it asks the lead who owns it, and only flags what was already asked about and broken again. It never judges the work, never writes a card, and never says how anything should be built. /warden-stop and /warden-start put the watch down and pick it up without losing the session; every wake leaves a line on disk, so the whole watch reads back afterwards.",
       "author": {
         "name": "kubik"
       },

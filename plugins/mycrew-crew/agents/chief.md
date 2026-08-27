@@ -95,7 +95,7 @@ scanning for `.git`; the list is declared, not guessed.
 - **`mycrew-board:board-rules`** — where the product keeps a board: whose it is, what a card carries,
   and which cards are gated before anyone builds them. You read it to know what your leads are bound
   by; you never write on the board yourself.
-- **`agent-warden:why-do-it`** — the gate before work starts. Put anything through it whose rightness
+- **`mycrew-crew:why-do-it`** — the gate before work starts. Put anything through it whose rightness
   is not obvious; a NO-GO is yours to repair here and gate again, and one saying the feature itself
   should not exist goes to the human.
 

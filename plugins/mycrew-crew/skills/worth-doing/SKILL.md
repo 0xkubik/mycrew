@@ -37,6 +37,6 @@ agent-born task, so a slow one gets skipped and then it protects nothing.
   it patches over something that has to be fixed properly. Name the real task if you found one.
 - **ASK — you cannot settle it here.** The work is large, the cause is unclear, or it argues with what
   the plane says. It goes up to the chief with the question stated in a line; deeper argument is
-  `agent-warden:why-do-it`'s and this gate never attempts it.
+  `mycrew-crew:why-do-it`'s and this gate never attempts it.
 - **Uncertain is DROP, not DO.** The cost of dropping a good task is that someone raises it again; the
   cost of passing a bad one is a week nobody planned.
