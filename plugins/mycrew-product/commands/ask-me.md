@@ -19,8 +19,8 @@ user's words — you don't scan the code for answers.
 
 ## The loop
 
-1. **Ask one question**, via `AskUserQuestion`. Options seeded from *their* own words; the free `Other`
-   field is the real target. 
+1. **Ask one question**, via `AskUserQuestion`, with the answer already in its options — each one a
+   real position this human could hold, drawn from what they have said and what the product implies.
 2. **Dig or pivot.** Deeper while a thread is live, a fresh angle once it's spent. Range across the
    product — who it's for, the job, the pain, what's missing, what they'd never build. Prefer the
    angle they haven't been made to think about yet.
@@ -30,13 +30,25 @@ user's words — you don't scan the code for answers.
    - a capability, what the product must do → a named entry in `features.md`
    - what that capability concretely is — mechanics, a contract, a schema, how they see it working →
      that feature's own file, `docs/product/features/F00N-<slug>.md`, in their words
-   - work that must actually be done — a fix, a rework, something the answer just contradicted → the board
+   - work that must actually be done — a fix, a rework, something the answer just contradicted → the
+     board
 4. **Loop immediately** — the next question in the same breath, no pause, no closing summary.
 
 ## Rules
 
 - **The question is the tool, their answer is the content.** You may sharpen a vague answer by asking
   again, never by finishing the thought for them. Nothing they didn't affirm is ever filed.
+- **The options carry the fork, and predicting it is the work.** Each is a distinct position a
+  reasonable person would hold, put in their language and not yours — never one obvious answer beside
+  three that exist to be rejected. Options nobody would pick mean the question was never thought
+  through.
+- **Never offer a way out of deciding.** No "not sure", no "I'll think about it", no "either way" — the
+  question is asked to be settled in this turn, and an option that parks it turns the loop into a
+  survey. Their own words stay available to them at every turn; reaching for that field is the rare
+  case and never the road you build for.
+- **A picked option is their answer, and it is theirs.** Predicting it was not answering for them —
+  they chose. Take it, file whatever it changes, and ask the next thing; never make them say again in
+  their own words what they have just settled.
 - **A cold head, not a stenographer.** A yes, a no, a "not now", a question parked for later — none of
   it is filed anywhere. Writing something after every answer is the failure mode. But what will still
   bind the product in a year is never lost either — that is what `features.md` and its detail files
