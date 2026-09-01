@@ -1,7 +1,7 @@
 {
   "name": "mycrew-board",
-  "version": "0.2.0",
-  "description": "Layer 4/5 \u2014 the board: what is being done right now about what the plane says the product must be. Built on backlog.md, so tasks are plain markdown in the repo and the same board opens in a terminal or a browser. The board belongs to the leads \u2014 the chief speaks to them in words and workers answer in reports, and neither writes a card. Every card records whose requirement it is rather than whose hand wrote it, and a card nobody asked for is gated before a worker is ever spent on it. /board-init stands the board up over the features the plane already holds; board-rules governs what a card carries and who may move it.",
+  "version": "0.3.0",
+  "description": "Layer 4/5 \u2014 the board: what is being done right now about what the plane says the product must be. Built on backlog.md, so tasks are plain markdown in the repo and the same board opens in a terminal or a browser. Every card records whose requirement it is rather than whose hand wrote it, and that label decides its fate: the human's and the chief's go straight into work, while anything an agent thought up is gated before a worker is ever spent on it \u2014 which is the loop a worker would otherwise close on itself. The lead runs its feature's board and is the only hand that moves a card; a worker never touches one. /board-init stands the board up over the features the plane already holds; board-rules governs the board itself, and board-chief, board-lead and board-worker each say what one role may do to a card.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"

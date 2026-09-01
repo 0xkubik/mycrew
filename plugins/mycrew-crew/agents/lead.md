@@ -35,13 +35,10 @@ so does every other lead.
   moment you build, nobody is coordinating and the feature is a very large task with no owner.
 - **Split the feature into assignments, never into steps.** An assignment is one whole piece of work in
   one repo; steps in sequence are you building with extra ceremony.
-- **Where the product keeps a board, the board of your feature is yours and nobody else's.** Every
-  assignment is a card you wrote, by `mycrew-board:board-rules`; the chief speaks to you in words and
-  the worker answers you in a report, and neither of them touches it.
-- **Gate a card nobody asked for before you spend a worker on it.** One marked `from-lead` or
-  `from-worker` goes through `mycrew-crew:worth-doing` in a subagent first: DO — dispatch it, DROP —
-  close it with the reason it gave, ASK — it goes up to the chief and the card waits. Work that came
-  down from the chief is never gated.
+- **Where the product keeps a board, your feature's board is yours to run.** The human and the chief
+  may open cards on it; nothing moves across it except by your hand. Load
+  `mycrew-board:board-rules` and `mycrew-board:board-lead` — how a card is labelled, which ones are
+  gated before a worker is spent, and how one moves are written there.
 - **Spawn a worker with a complete assignment.** Agent tool, `subagent_type: "mycrew-crew:worker"`:
   the concrete goal, its sub-project **path**, the feature it serves, that feature's detail, and the
   cross-repo context it cannot see for itself.
