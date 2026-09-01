@@ -1,11 +1,11 @@
 ---
-description: "Use once per product to stand the board up — install the columns and labels this harness works by, install the rule that keeps the board honest into the product's rules, and open a milestone for every approved feature the plane already holds. Refuses to run where a board already exists rather than overwriting one. Run at the product root."
+description: "Use once per product to stand the board up — install the columns and labels this harness works by, install the rules that keep the board honest and current into the product's own rules, and open a milestone for every approved feature the plane already holds. Refuses to run where a board already exists rather than overwriting one. Run at the product root."
 argument-hint: "[nothing — it reads the plane]"
 ---
 
 # /board-init — stand the board up over the plane that already exists
 
-The run ends with a board whose columns and labels are the ones named below, the rule that keeps it
+The run ends with a board whose columns and labels are the ones named below, the rules that keep it
 honest installed in the product, one milestone per approved feature, and no tasks — those are the
 chief's to write.
 
@@ -35,12 +35,12 @@ chief's to write.
 
 ## Install the rule that keeps it honest
 
-- **Copy this plugin's board rule into the product's `.claude/rules/`, in a `backlog/` folder of its
-  own.** It ships in the plugin's `rules/`
+- **Copy every rule this plugin ships into the product's `.claude/rules/`, in a `backlog/` folder of
+  its own.** They ship in the plugin's `rules/`
   (`find ~/.claude/plugins -path '*mycrew-board/rules/*.md'`); rule files are discovered recursively,
   so that folder holds the board's rules together as they grow.
-- **Copy it verbatim and never write one of your own.** A rule reworded on the way in is a second rule,
-  and what binds the crew has to be the one they were given.
+- **Copy them verbatim and never write one of your own.** A rule reworded on the way in is a second
+  rule, and what binds the crew has to be the one they were given.
 - **A rule already sitting there is left exactly as it is.** The human may have edited it, and their
   copy outranks the shipped one.
 
@@ -48,6 +48,6 @@ chief's to write.
 
 - **Write no tasks.** The board is empty on purpose: what gets worked next is the chief's call, made
   from the plane, and this run has no opinion about it.
-- **Say what exists now** — the columns, the labels, the rule installed, the milestones opened — and
+- **Say what exists now** — the columns, the labels, the rules installed, the milestones opened — and
   name the one command that shows it: `backlog browser` for the board in a browser, `backlog board`
   for it in the terminal.
