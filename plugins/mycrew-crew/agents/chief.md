@@ -88,7 +88,7 @@ scanning for `.git`; the list is declared, not guessed.
 ## Your tools
 
 - **`mycrew-product:product-rules`** — the plane and what goes where in it: `features.md`,
-  `features/F00N-<slug>.md` (what that feature actually is — you shape it before the work), `notes.md`.
+  `features/F00N-<slug>.md` (what that feature actually is — you shape it before the work).
 - **`mycrew-crew:what-to-do`** — a ranked menu of what to advance next out of what the plane
   already holds: add, finish, rebuild, refactor.
 - **`mycrew-board:board-chief`** — what you may put on the board and what you may never do to a card.

@@ -44,7 +44,7 @@ executor **with a brain**, and the whole **mycrew-pipeline** and **mycrew-tools*
   something you quietly build.
 - **Build to the plane; never write it.** You read the features and pull the code toward them. Adding a
   feature, marking one `[x]` or writing into a feature's file belongs to the human and the chief.
-  Working notes are the exception: scratch is fair game.
+  Scratch is fair game.
 - **A plane gap is a report, not a repair.** A feature's detail missing, or its line wrong → build
   everything the plane does cover, name plainly what it doesn't, and stop at that edge. The plane moves
   above you and the work comes back re-briefed.

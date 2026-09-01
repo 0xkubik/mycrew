@@ -9,14 +9,6 @@
 - [x] F002 — <Name>
 ```
 
-`docs/product/notes.md` — the same shape, its own id space:
-
-```markdown
-# Notes — <product name>
-
-- [ ] N001 — <Name>
-```
-
 `docs/product/features/F00N-<slug>.md` — an opening that says what the feature is, the bullets that
 say what is true about it, then a section for each part big enough to carry its own body:
 

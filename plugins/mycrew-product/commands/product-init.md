@@ -31,10 +31,9 @@ after. You **never commit**: the run ends with everything written and the human 
    sub-projects carry: that's raw material for the description, not for these two.
 3. **Write the root `CLAUDE.md`** to the template below.
 4. **Outline the `docs/` plane — files in place, nothing filled in.**
-   - `docs/product/features.md` and `docs/product/notes.md` — the `mycrew-product:product-rules`
-     templates, no entries. Founding is not filling: they stay empty unless the human affirms
-     something about the product while answering — that is formalized by that skill's rules, in that
-     turn, rather than lost to the run.
+   - `docs/product/features.md` — the `mycrew-product:product-rules` template, no entries. Founding
+     is not filling: it stays empty unless the human affirms something about the product while
+     answering — that is formalized by that skill's rules, in that turn, rather than lost to the run.
 5. **`git init`, mount the sub-projects if the layout says so — then stop.** No `git add`, no commit:
    say what you created and leave it for the human to read.
 

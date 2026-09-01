@@ -1,5 +1,5 @@
 ---
-description: "Use when the product must be questioned out of the human — the endless loop at the product root: one question at a time, a fresh angle each time, every affirmed answer filed where it lives (features and notes). You ask, they decide; you never answer for them, never pitch, and it ends only when they stop. Triggers: \"ask me\", \"question me about the product\", \"interview me\"."
+description: "Use when the product must be questioned out of the human — the endless loop at the product root: one question at a time, a fresh angle each time, every affirmed answer filed where it lives (features). You ask, they decide; you never answer for them, never pitch, and it ends only when they stop. Triggers: \"ask me\", \"question me about the product\", \"interview me\"."
 argument-hint: "[a thread to start on — or nothing to range across the whole product]"
 ---
 
@@ -12,8 +12,7 @@ builds to it; nothing here is filed per repo.
 
 First **load the rule set** — `mycrew-product:product-rules` — its rules govern what
 you write and where; anything they affirm during the loop is formalized by it, in that turn.
-Then read what's already captured: `docs/product/features.md`, `docs/product/notes.md`,
-and the product `CLAUDE.md`. What's
+Then read what's already captured: `docs/product/features.md` and the product `CLAUDE.md`. What's
 captured tells you
 what **not** to re-ask; missing files → seed them from the skills' templates. Context comes from the
 user's words — you don't scan the code for answers.
@@ -31,7 +30,7 @@ user's words — you don't scan the code for answers.
    - a capability, what the product must do → a named entry in `features.md`
    - what that capability concretely is — mechanics, a contract, a schema, how they see it working →
      that feature's own file, `docs/product/features/F00N-<slug>.md`, in their words
-   - work that must actually be done — a fix, a rework, something the answer just contradicted → `notes.md`
+   - work that must actually be done — a fix, a rework, something the answer just contradicted → the board
 4. **Loop immediately** — the next question in the same breath, no pause, no closing summary.
 
 ## Rules
@@ -39,10 +38,9 @@ user's words — you don't scan the code for answers.
 - **The question is the tool, their answer is the content.** You may sharpen a vague answer by asking
   again, never by finishing the thought for them. Nothing they didn't affirm is ever filed.
 - **A cold head, not a stenographer.** A yes, a no, a "not now", a question parked for later — none of
-  it is filed anywhere, and `notes.md` is not the place to put it. Writing something after every
-  answer is the failure mode. But what will still bind the product in a year is never lost either —
-  that is what `features.md` and its detail files are for. Between the two, the test is whether anyone
-  would have to obey it.
+  it is filed anywhere. Writing something after every answer is the failure mode. But what will still
+  bind the product in a year is never lost either — that is what `features.md` and its detail files
+  are for. Between the two, the test is whether anyone would have to obey it.
 - **Push on what's undecided.** A hole, a contradiction, an "I'll figure it out later" — that's the
   next question, not something to route around. Name the contradiction and make them settle it.
 - **Never pitch.** Proposing what the product should do is `/propose-idea`'s job; here
