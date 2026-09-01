@@ -24,13 +24,42 @@ chief's to write.
   Its own instructions would install a directive over every request in this product; the rule that
   governs the board here is the one this command installs, and two rule sets pulling in different
   directions is worse than either alone.
-- **Add a `Backlog` column ahead of the CLI's own three: `Backlog, To Do, In Progress, Done`.** The CLI
-  won't take `statuses` as a flag or a `config set` — edit the list directly in `backlog/config.yml`
-  after init. Past that, leave the columns alone: what may be dispatched is decided by the origin label
-  and the gate, not by a column, and a column beyond this four is one more thing to keep in step.
-- **Declare the labels** — `from-human`, `from-chief`, `from-lead`, `from-worker`, and `gated` — so
-  nothing depends on whoever types them first spelling them the same way. They are the whole of what
-  the board knows about where work came from.
+- **Right after init, bring `backlog/config.yml` to the shape below — every key the CLI ships is in it,
+  active or commented, so nothing about the board is a key someone has to go find in the CLI's own
+  docs.** Keep the `project_name` and `task_prefix` init already wrote; `statuses` and `labels` are the
+  two keys the CLI won't take as a flag or a `config set`, set here to what this board needs — a
+  `Backlog` column ahead of the CLI's own three, and the five origin/gate labels declared so nothing
+  depends on whoever types them first spelling them the same way. Every other key is left at the CLI's
+  own default and commented out, so it's there to uncomment rather than something to rediscover:
+
+  ```yaml
+  project_name: "<as init wrote it>"
+  default_status: "To Do"
+  statuses: ["Backlog", "To Do", "In Progress", "Done"]
+  labels: ["from-human", "from-chief", "from-lead", "from-worker", "gated"]
+  date_format: yyyy-mm-dd
+  max_column_width: 20
+  auto_open_browser: true
+  default_port: 6420
+  remote_operations: true
+  auto_commit: false
+  filesystem_only: false
+  bypass_git_hooks: false
+  check_active_branches: true
+  active_branch_days: 30
+  task_prefix: "<as init wrote it>"
+  # hide_empty_columns: false             # hide board columns with no cards
+  # types: [bug, feature, enhancement, task, chore, docs, spike]  # allowed --type values
+  # default_assignee: []                  # assignees applied to new tasks created without -a
+  # definition_of_done:                   # default Definition of Done items added to every new task
+  #   - Tests pass
+  # priorities: ["High", "Medium", "Low"] # ordered priority labels, first sorts highest
+  # projects: ["web", "api"]              # allowed --project values for a monorepo backlog
+  # include_datetime_in_dates: true       # add time-of-day to new dates
+  # default_editor: "code --wait"         # editor opened by the 'E' key
+  # zero_padded_ids: true                 # pad task/doc/decision IDs with leading zeros
+  # on_status_change: "..."               # shell command run on every status change
+  ```
 - **Open one milestone per approved feature, named as the plane names it.** The board's whole
   connection to the product is this list; a task can only point at a feature that exists here.
 
