@@ -24,9 +24,10 @@ chief's to write.
   Its own instructions would install a directive over every request in this product; the rule that
   governs the board here is the one this command installs, and two rule sets pulling in different
   directions is worse than either alone.
-- **Leave the columns as they come: `To Do, In Progress, Done`.** What may be dispatched is decided by
-  the origin label and the gate, not by a column, and a column that duplicates a label is one more
-  thing to keep in step.
+- **Add a `Backlog` column ahead of the CLI's own three: `Backlog, To Do, In Progress, Done`.** The CLI
+  won't take `statuses` as a flag or a `config set` — edit the list directly in `backlog/config.yml`
+  after init. Past that, leave the columns alone: what may be dispatched is decided by the origin label
+  and the gate, not by a column, and a column beyond this four is one more thing to keep in step.
 - **Declare the labels** — `from-human`, `from-chief`, `from-lead`, `from-worker`, and `gated` — so
   nothing depends on whoever types them first spelling them the same way. They are the whole of what
   the board knows about where work came from.
