@@ -1,15 +1,27 @@
 ---
-description: "Use when the product needs an idea it doesn't hold yet — invent a candidate feature or improvement, pitch it to the human with the case for it, and file it into features.md only on their approval. Every idea, approved or rejected, is logged with their own reason in docs/product/ideas/ and binds every later pitch. The counterpart to /braindump and /ask-me: those draw the human's vision out, this one puts an idea of its own in."
+description: "Use when the product needs ideas it doesn't hold yet — the endless loop at the product root: one invented idea at a time, pitched with the case for it, filed into features.md only on their approval, and the next one in the same breath. Every idea, approved or rejected, is logged with their own reason in docs/product/ideas/ and binds every later pitch, and it ends only when they stop. The counterpart to /braindump and /ask-me: those draw the human's vision out, this one puts an idea of its own in."
 argument-hint: "[an angle to invent along — or nothing to range across the whole product]"
 ---
 
-# /propose-idea — invent a feature, pitch it, keep the verdict
+# /propose-idea — invent an idea, pitch it, keep the verdict, pitch the next
 
 The **one place mycrew contributes a product idea of its own**. Everywhere else the product plane is
 strictly extractive — `/braindump` listens and `/ask-me` questions, and neither adds to it. Here you invent:
 features and improvements the plane doesn't hold yet, each put to the human with the case for it. You
 **never decide** — only their approval puts a line in `features.md`, and every verdict, yes or no, is
 written down and binds what you pitch next. Run at the **product root**.
+
+## The loop
+
+1. **Pitch one idea**, and put the verdict through `AskUserQuestion` with the answer already in its
+   options. What it is and why it is worth doing comes first, in plain language; the question comes
+   after the case, never in place of it.
+2. **File the verdict the moment it lands** — both halves, approved or rejected alike — and let the
+   ledger line you just wrote bind what you pitch next.
+3. **Widen or dig.** A fresh angle the moment a vein is spent: who the product fails today, what it
+   does badly, what the North Star implies and nobody has written down. Prefer the corner nothing has
+   been pitched into yet.
+4. **Pitch the next one immediately** — in the same breath, no pause, no closing summary.
 
 ## Rules & concepts — non-negotiable
 
@@ -23,8 +35,9 @@ written down and binds what you pitch next. Run at the **product root**.
   material changed since — the product moved, the reason no longer holds — and then the pitch opens by
   naming exactly what changed. Read `docs/product/ideas/ideas.md` every run, before the first pitch.
 - **Serve the North Star, not novelty.** Every idea must close a real gap between what the product is
-  and where it's going. Inventing to have something to say is the failure mode — a run that honestly
-  finds nothing left worth pitching says so and stops.
+  and where it's going. Inventing to have something to say is one failure mode; declaring the well dry
+  is the other, and it is the likelier one — the obvious gaps run out early, and what is left is the
+  angle you have not looked from yet.
 - **One idea at a time.** Pitch it, take the verdict, file it, then the next — never a menu of five.
 - **Pitch in plain human language.** Say what it is and *why it's worth doing* — the gap it closes, who
   it helps, what it costs — before you ask. No jargon: the human decides on the case, not on your
@@ -50,6 +63,9 @@ written down and binds what you pitch next. Run at the **product root**.
   their reason both — file it exactly as it stands and go to the next idea, never asking them to put
   in their own words what they have just chosen. Anything they typed themselves is recorded as they
   put it, never your reconstruction. Only a bare yes or no with nothing behind it earns a follow-up.
+- **Never wrap up.** No summary, no "that's all I have", no "anything else?", no closing. You pitch
+  until the human stops you, and running low on easy ideas is a reason to widen the angle rather than
+  to end the run.
 - **Append, never rewrite.** Ledger lines and dossiers are permanent. An overturned verdict is a **new**
   verdict block and a **new** ledger line — never an edit to the old one.
 - **Strictly the template shapes below.** Missing folder or files → seed them from the templates.
