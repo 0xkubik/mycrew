@@ -11,7 +11,7 @@ product plane and every sub-project builds to it; nothing here is filed per repo
 
 First **load the rule set** — `mycrew-product:product-rules` — its rules govern what you write and
 where; anything they affirm during the session is formalized by it, in that turn. Then read what's already captured: 
-`docs/product/features.md` and the product `CLAUDE.md`. Missing files → seed them from the skills' templates. Context comes from the user's words — 
+`backlog milestone list` and `backlog doc list`, and the product `CLAUDE.md`. No backlog yet → send them to `/product-init`. Context comes from the user's words — 
 you don't scan the code for answers.
 
 ## How you listen
@@ -36,9 +36,9 @@ Speak up only in these three cases, briefly, and then hand the floor straight ba
 
 Route each affirmed thing by its nature; one utterance may land in several homes:
 
-- a capability, what the product must do → a named entry in `features.md`
+- a capability, what the product must do → a milestone (`backlog milestone add`)
 - what that capability concretely is — mechanics, a contract, a schema, how they see it working → that
-  feature's own file, `docs/product/features/F00N-<slug>.md`, in their words and never your rewrite
+  feature's doc (`backlog doc`), in their words and never your rewrite
 
 **Only what they affirmed, in their intent** — never invent a feature or a detail they didn't
 say. Something said in passing and clearly not settled does not go into the plane. File as

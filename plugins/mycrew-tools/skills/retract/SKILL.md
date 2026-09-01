@@ -27,8 +27,8 @@ correct exactly that, and account for each cut. You are a scalpel, not a rewrite
   exists only for that fact goes whole.
 - **A memory is cut like any other file.** The matching persistent memory is corrected or deleted the
   same way, and its `MEMORY.md` index line with it.
-- **A retraction is the one thing that may delete a `features.md` line.** Entries there are otherwise
-  permanent; an explicit human retraction takes the line out.
+- **A retraction is the one thing that may remove a milestone from the plane.** Milestones are
+  otherwise permanent; an explicit human retraction is what runs `backlog milestone remove`.
 - **Every cut and every flag is reported.** The file, what was removed or changed, and each dependent
   left alone. An edit missing from the report did not happen.
 

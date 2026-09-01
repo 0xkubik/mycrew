@@ -12,9 +12,9 @@ plane, no capability invented that the human never approved.
 
 ## Gate — ground before you fan out
 
-- **The approved list is the ground.** `docs/product/features.md` at the **product root**, read by
+- **The approved list is the ground.** `backlog milestone list` at the **product root**, read by
   `mycrew-product:product-rules`. Missing or empty → tell the human to run `/ask-me` there first; it
-  grounds the list. Present → the **frontier**, the first unchecked `[ ]`, is your steer.
+  grounds the list. Present → the **frontier**, the first milestone with work still open, is your steer.
 - **Every sub-project's files, with line counts.** Take the paths from the Sub-projects list, never by
   scanning, and run per path: `git -C <path> ls-files | sed "s|^|<path>/|" | xargs wc -l`. That list is
   shared ground handed to every lens.
@@ -45,7 +45,7 @@ candidates:    [ {
   goal_fit:      high | med | low
   effort:        S | M | L
   reversibility: easy | hard
-  advances:      <frontier feature it advances | "off-list">   # only if a features file exists
+  advances:      <frontier feature it advances | "off-list">   # only if the milestone list is non-empty
 } ]
 empty_reason:  <if candidates == [] : why this lane has nothing real here>
 ```

@@ -1,19 +1,17 @@
-# The shapes — one for each file the plane holds
+# The shapes — the index and the feature's doc
 
-`docs/product/features.md`:
+The index is not a file — it is `backlog milestone list`. A unit of work enters it with:
 
-```markdown
-# Features — <product name>
-
-- [ ] F001 — <Name>
-- [x] F002 — <Name>
+```bash
+backlog milestone add "<Name>"          # ≤5 words, a feature or a cross-cutting job
 ```
 
-`docs/product/features/F00N-<slug>.md` — an opening that says what the feature is, the bullets that
-say what is true about it, then a section for each part big enough to carry its own body:
+The feature's doc — opened only when the feature has more to say than its name:
 
-```markdown
-# F001 — <Name>
+```bash
+backlog doc create "<Name>" -t specification -p features
+backlog doc update <id> --content "$(cat <<'EOF'
+# <Name>
 
 <Two or three sentences: what this feature is and what it gives a person. What is true about it
 belongs in the bullets, not here.>
@@ -26,6 +24,8 @@ belongs in the bullets, not here.>
 <A sentence or two: what this part is.>
 
 - <its own facts, the same way>
+EOF
+)"
 ```
 
 A part earns a section when it has a body of its own to state; a feature with none ends after its

@@ -12,9 +12,9 @@ builds to it; nothing here is filed per repo.
 
 First **load the rule set** — `mycrew-product:product-rules` — its rules govern what
 you write and where; anything they affirm during the loop is formalized by it, in that turn.
-Then read what's already captured: `docs/product/features.md` and the product `CLAUDE.md`. What's
-captured tells you
-what **not** to re-ask; missing files → seed them from the skills' templates. Context comes from the
+Then read what's already captured: `backlog milestone list` and `backlog doc list`, and the product
+`CLAUDE.md`. What's captured tells you
+what **not** to re-ask; no backlog yet → send them to `/product-init`. Context comes from the
 user's words — you don't scan the code for answers.
 
 ## The loop
@@ -27,11 +27,11 @@ user's words — you don't scan the code for answers.
 3. **File only what changes the product.** Most answers change nothing and are filed nowhere — a
    conversation is not a transcript to be minuted. When an answer does add or alter what gets built,
    route it by nature — one answer may land in several homes:
-   - a capability, what the product must do → a named entry in `features.md`
+   - a capability, what the product must do → a milestone (`backlog milestone add`)
    - what that capability concretely is — mechanics, a contract, a schema, how they see it working →
-     that feature's own file, `docs/product/features/F00N-<slug>.md`, in their words
+     that feature's doc (`backlog doc`), in their words
    - work that must actually be done — a fix, a rework, something the answer just contradicted → the
-     board
+     board, as a task
 4. **Loop immediately** — the next question in the same breath, no pause, no closing summary.
 
 ## Rules
@@ -51,7 +51,7 @@ user's words — you don't scan the code for answers.
   their own words what they have just settled.
 - **A cold head, not a stenographer.** A yes, a no, a "not now", a question parked for later — none of
   it is filed anywhere. Writing something after every answer is the failure mode. But what will still
-  bind the product in a year is never lost either — that is what `features.md` and its detail files
+  bind the product in a year is never lost either — that is what the milestone list and its docs
   are for. Between the two, the test is whether anyone would have to obey it.
 - **Push on what's undecided.** A hole, a contradiction, an "I'll figure it out later" — that's the
   next question, not something to route around. Name the contradiction and make them settle it.

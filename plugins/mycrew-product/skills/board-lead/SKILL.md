@@ -1,7 +1,7 @@
 ---
 name: board-lead
 kind: rule
-description: "Use whenever a lead works where the product keeps a board — the feature's board is the lead's to run: every card is labelled by whose requirement it is, the agent-born ones are gated before a worker is spent, and no card moves except by the lead's hand. The board's own rule, installed in the product, already says what every card must carry; this says how a lead runs one."
+description: "Use whenever a lead works where the product keeps a board — the feature's board is the lead's to run: every card is labelled by whose requirement it is, the agent-born ones are drafted and gated before a worker is spent, and no card moves except by the lead's hand. The board's own rule, installed in the product, already says what every card must carry; this says how a lead runs one."
 user-invocable: false
 ---
 
@@ -20,16 +20,17 @@ across it except by your hand, and nothing reaches a worker until it has earned 
 
 ## The gate before a worker is spent
 
-- **`from-lead` and `from-worker` cards are gated; `from-human` and `from-chief` are not.** Work an
-  agent thought up is the work most likely to be a symptom, a nicety, or the fourth lap of the same
-  problem — and a worker that could set its own task and go do it is the loop this whole label exists
-  to break.
-- **The gate runs when the card is about to be dispatched, not when it is written.** Writing a card
+- **Agent-born work is created with `--draft`; `from-human` and `from-chief` work is a task straight
+  away.** Work an agent thought up is the work most likely to be a symptom, a nicety, or the fourth lap
+  of the same problem — and a worker that could set its own task and go do it is the loop this whole
+  split exists to break.
+- **The gate runs when the draft is about to be dispatched, not when it is written.** Writing a draft
   costs nothing and keeps the thought; sending a worker is what spends the day.
-- **`mycrew-crew:worth-doing`, in a subagent, and it returns in one word.** DO — dispatch it. DROP —
-  close the card with the reason it gave. ASK — it goes to the chief, and the card waits.
-- **A gated card is labelled `gated` once it passes.** A card re-dispatched after a BACK is the same
-  work and is never gated twice.
+- **`mycrew-crew:worth-doing`, in a subagent, and it returns in one word.** DO — `backlog draft promote
+  <id>`, then dispatch it. DROP — `backlog draft archive <id>` with the reason it gave. ASK — it goes
+  to the chief, and the draft waits.
+- **The promote is the pass — there is no second gate.** A task sent back to a worker after a BACK is
+  the same work and is never re-examined.
 
 ## How a card moves
 
@@ -42,5 +43,5 @@ across it except by your hand, and nothing reaches a worker until it has earned 
 
 - **Never touch another lead's board.** What your feature needs from theirs is a message to them, never
   a card you wrote on their milestone.
-- **Never dispatch an agent-born card that has not passed the gate.** Not for a small one, not for an
+- **Never dispatch an agent-born draft that has not passed the gate.** Not for a small one, not for an
   obvious one — the ones that feel obvious are what the gate is for.
