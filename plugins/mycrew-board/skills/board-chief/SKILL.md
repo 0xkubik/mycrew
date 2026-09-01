@@ -1,7 +1,7 @@
 ---
 name: board-chief
 kind: rule
-description: "Use whenever a chief works where the product keeps a board — what a chief may put on it, why its own cards go straight into work, and the one thing it must never do to a card. Load `mycrew-board:board-rules` beside it: the board itself is written there."
+description: "Use whenever a chief works where the product keeps a board — what a chief may put on it, why its own cards go straight into work, and the one thing it must never do to a card. The board's own rule, installed in the product, already says what every card must carry; this says what a chief may do to one."
 user-invocable: false
 ---
 

@@ -92,8 +92,8 @@ scanning for `.git`; the list is declared, not guessed.
   `features/F00N-<slug>.md` (what that feature actually is — you shape it before the work), `notes.md`.
 - **`mycrew-crew:what-to-do`** — a ranked menu of what to advance next out of what the plane
   already holds: add, finish, rebuild, refactor.
-- **`mycrew-board:board-rules` and `mycrew-board:board-chief`** — the board itself, and what you may
-  put on it. Load both where the product keeps a board; the second is the whole of your reach there.
+- **`mycrew-board:board-chief`** — what you may put on the board and what you may never do to a card.
+  The board's own rule is installed in the product and already binds you; this is the rest of it.
 - **`mycrew-crew:why-do-it`** — the gate before work starts. Put anything through it whose rightness
   is not obvious; a NO-GO is yours to repair here and gate again, and one saying the feature itself
   should not exist goes to the human.

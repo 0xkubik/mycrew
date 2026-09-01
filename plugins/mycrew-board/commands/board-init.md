@@ -1,13 +1,13 @@
 ---
-description: "Use once per product to stand the board up — install the columns and labels this harness works by, and open a milestone for every approved feature the plane already holds. Refuses to run where a board already exists rather than overwriting one. Run at the product root."
+description: "Use once per product to stand the board up — install the columns and labels this harness works by, install the rule that keeps the board honest into the product's rules, and open a milestone for every approved feature the plane already holds. Refuses to run where a board already exists rather than overwriting one. Run at the product root."
 argument-hint: "[nothing — it reads the plane]"
 ---
 
 # /board-init — stand the board up over the plane that already exists
 
-The run ends with a board whose columns and labels match `mycrew-board:board-rules`, one milestone per
-approved feature, and no tasks — those are the chief's to write. **Load `board-rules` first**; it
-governs everything created here.
+The run ends with a board whose columns and labels are the ones named below, the rule that keeps it
+honest installed in the product, one milestone per approved feature, and no tasks — those are the
+chief's to write.
 
 ## Refuse rather than overwrite
 
@@ -21,9 +21,9 @@ governs everything created here.
 ## Stand it up
 
 - **Initialise with the agent integration off** — `backlog init "<product>" --integration-mode none`.
-  Its own instructions would install a directive over every request in this product; the rules that
-  govern the board here are `board-rules`, and two rule sets pulling in different directions is worse
-  than either alone.
+  Its own instructions would install a directive over every request in this product; the rule that
+  governs the board here is the one this command installs, and two rule sets pulling in different
+  directions is worse than either alone.
 - **Leave the columns as they come: `To Do, In Progress, Done`.** What may be dispatched is decided by
   the origin label and the gate, not by a column, and a column that duplicates a label is one more
   thing to keep in step.
@@ -33,9 +33,21 @@ governs everything created here.
 - **Open one milestone per approved feature, named as the plane names it.** The board's whole
   connection to the product is this list; a task can only point at a feature that exists here.
 
+## Install the rule that keeps it honest
+
+- **Copy this plugin's board rule into the product's `.claude/rules/`, in a `backlog/` folder of its
+  own.** It ships in the plugin's `rules/`
+  (`find ~/.claude/plugins -path '*mycrew-board/rules/*.md'`); rule files are discovered recursively,
+  so that folder holds the board's rules together as they grow.
+- **Copy it verbatim and never write one of your own.** A rule reworded on the way in is a second rule,
+  and what binds the crew has to be the one they were given.
+- **A rule already sitting there is left exactly as it is.** The human may have edited it, and their
+  copy outranks the shipped one.
+
 ## Then stop
 
 - **Write no tasks.** The board is empty on purpose: what gets worked next is the chief's call, made
   from the plane, and this run has no opinion about it.
-- **Say what exists now** — the columns, the labels, the milestones opened — and name the one command
-  that shows it: `backlog browser` for the board in a browser, `backlog board` for it in the terminal.
+- **Say what exists now** — the columns, the labels, the rule installed, the milestones opened — and
+  name the one command that shows it: `backlog browser` for the board in a browser, `backlog board`
+  for it in the terminal.

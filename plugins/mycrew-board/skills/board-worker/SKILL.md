@@ -1,7 +1,7 @@
 ---
 name: board-worker
 kind: rule
-description: "Use whenever a worker works where the product keeps a board — the board is never the worker's to touch: what it found goes back in its report and the lead decides whether that becomes a card at all. Load `mycrew-board:board-rules` beside it: the board itself is written there."
+description: "Use whenever a worker works where the product keeps a board — the board is never the worker's to touch: what it found goes back in its report and the lead decides whether that becomes a card at all. The board's own rule, installed in the product, already says what every card must carry; this says why none of it is the worker's to write."
 user-invocable: false
 ---
 

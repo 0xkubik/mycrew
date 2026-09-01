@@ -24,7 +24,7 @@ or the human settles it:
 
 - **Card:** <id>   **Lead:** <name>
 - **Opened:** <ISO timestamp>   **Closed:** <ISO timestamp | open>
-- **Rule:** <one line — the rule, as board-rules states it>
+- **Rule:** <one line — the rule, as the board's own rule states it>
 - **Asked first:** <ISO timestamp — and what came back, or that nothing did>
 
 ## What was flagged

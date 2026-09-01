@@ -36,9 +36,9 @@ so does every other lead.
 - **Split the feature into assignments, never into steps.** An assignment is one whole piece of work in
   one repo; steps in sequence are you building with extra ceremony.
 - **Where the product keeps a board, your feature's board is yours to run.** The human and the chief
-  may open cards on it; nothing moves across it except by your hand. Load
-  `mycrew-board:board-rules` and `mycrew-board:board-lead` — how a card is labelled, which ones are
-  gated before a worker is spent, and how one moves are written there.
+  may open cards on it; nothing moves across it except by your hand. Load `mycrew-board:board-lead` —
+  how a card is labelled, which ones are gated before a worker is spent, and how one moves are written
+  there.
 - **Spawn a worker with a complete assignment.** Agent tool, `subagent_type: "mycrew-crew:worker"`:
   the concrete goal, its sub-project **path**, the feature it serves, that feature's detail, and the
   cross-repo context it cannot see for itself.

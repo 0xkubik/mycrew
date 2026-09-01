@@ -1,7 +1,7 @@
 ---
 name: board-lead
 kind: rule
-description: "Use whenever a lead works where the product keeps a board — the feature's board is the lead's to run: every card is labelled by whose requirement it is, the agent-born ones are gated before a worker is spent, and no card moves except by the lead's hand. Load `mycrew-board:board-rules` beside it: the board itself is written there."
+description: "Use whenever a lead works where the product keeps a board — the feature's board is the lead's to run: every card is labelled by whose requirement it is, the agent-born ones are gated before a worker is spent, and no card moves except by the lead's hand. The board's own rule, installed in the product, already says what every card must carry; this says how a lead runs one."
 user-invocable: false
 ---
 
