@@ -1,7 +1,7 @@
 {
   "name": "mycrew-crew",
-  "version": "0.57.0",
-  "description": "Layer 4/4 \u2014 the crew: the ones who actually build the product. Three characters, each handing down to the next. The chief is your deputy over the whole product, one to a product, owning the plane and delegating each approved feature whole. A lead holds one feature across every repo it touches, spawned as a background session of its own and reaching the other leads only where its feature depends on theirs. A worker carries one assignment end to end through the pipeline and hands back a four-field report. Each carries how it runs the rung below, so there is nothing to load and nothing to forget. Only the worker writes code.",
+  "version": "0.57.1",
+  "description": "Layer 4/4 \u2014 the crew that builds the product: a chief who is the human's deputy over the whole product, a lead who holds one feature, a worker who carries one assignment. Each hands work to the next; only the worker writes code.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
