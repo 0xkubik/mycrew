@@ -16,7 +16,9 @@ version bump isn't bookkeeping here; it's the thing that actually ships the work
   `marketplace.json` → the git commit SHA. We pin it in `plugin.json`, so that's the one to move.
 - **The marketplace entry has no version of its own** — don't add one to `.claude-plugin/marketplace.json`
   just to bump it; move the plugin's `plugin.json` instead.
-- **Keep the `description` in that same `plugin.json` short** — a two-sentence pitch, not a feature tour;
-  the full rule is `keep-descriptions-short`.
+- **Keep every `description` to a two-sentence pitch, not a feature tour.** One or two plain sentences on
+  what the plugin does — no command-by-command tour, no design lore; longer copy goes in the plugin's
+  README. Covers `marketplace.json`'s own `description` too, and the plugin's entry there must match its
+  `plugin.json`.
 - **A pure-meta commit may not need a bump.** Changes to nothing under any `plugins/<name>/` (root
   README, this rule, repo tooling) ship no plugin code — skip the bump rather than inventing one.
