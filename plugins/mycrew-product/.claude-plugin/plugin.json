@@ -1,6 +1,6 @@
 {
   "name": "mycrew-product",
-  "version": "0.41.0",
+  "version": "0.41.1",
   "description": "Layer 3/4 — the product plane and the board, both on backlog.md: everything true about the whole product above the sub-projects, and what is being done about it right now. /product-init founds the repo and stands the backlog up. /braindump and /ask-me draw the product out of you and file each piece — a milestone for a capability, a doc for what it concretely is; /propose-idea puts an idea in on your approval and logs every verdict as a decision. product-rules is the one rule set for what lands where; keep-the-board-honest plus board-chief/lead/worker keep the task board trustworthy — every card labelled by whose requirement it is, agent-born work drafted and gated before a worker is spent.",
   "author": {
     "name": "kubik",

@@ -51,9 +51,9 @@ human free to look.
    - **Open no milestones.** The index starts empty; `/ask-me`, `/braindump` and `/propose-idea` fill
      it as the human affirms things.
    - **Install the rules this plugin ships.** Copy every file under the plugin's `rules/backlog/`
-     (`find ~/.claude/plugins -path '*mycrew-product/rules/backlog/*.md'`) into the product's
-     `.claude/rules/backlog/`, verbatim. A rule reworded on the way in is a second rule; a rule already
-     sitting there is left exactly as it is, because the human may have edited it.
+     (`find ~/.claude/plugins -path '*mycrew-product/rules/backlog/*.md'`) into `backlog/.claude/rules/`,
+     verbatim — beside the store they govern. A rule reworded on the way in is a second rule; a rule
+     already sitting there is left exactly as it is, because the human may have edited it.
 6. **Then stop.** No `git add`, no commit: say what you created — the root `CLAUDE.md`, the empty
    backlog, its columns and labels, the rules installed — and name the one command that shows it:
    `backlog browser` for the board in a browser, `backlog board` for it in the terminal.
