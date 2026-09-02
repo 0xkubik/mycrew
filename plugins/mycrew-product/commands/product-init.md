@@ -78,7 +78,7 @@ human free to look.
 <!-- The declared list every mycrew layer reads instead of scanning for .git. -->
 - **Layout:** <singlerepo | monorepo | polyrepo with submodules>
 - `<path>` — <what it is and its role, one line>
-- `<path>` — <…> <!-- add "not a build target" if no worker is ever dispatched into it: a charter, a
+- `<path>` — <…> <!-- add "not a build target" if no specialist is ever dispatched into it: a charter, a
      spec bundle, a vendored reference. Without it the chief will try to build there. -->
 ```
 
@@ -88,7 +88,7 @@ human free to look.
 project_name: "<as init wrote it>"
 default_status: "To Do"
 statuses: ["Backlog", "To Do", "In Progress", "Done"]
-labels: ["from-human", "from-chief", "from-lead", "from-worker"]
+labels: ["from-human", "from-chief", "from-lead", "from-specialist"]
 date_format: yyyy-mm-dd
 max_column_width: 20
 auto_open_browser: true

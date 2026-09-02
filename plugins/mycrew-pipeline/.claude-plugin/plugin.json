@@ -1,9 +1,0 @@
-{
-  "name": "mycrew-pipeline",
-  "version": "0.35.8",
-  "description": "Layer 2/4 \u2014 the build pipeline: six stages carry one task from a decision to hardened, reviewed, tested code, each skipping itself when the change doesn't earn it.",
-  "author": {
-    "name": "kubik",
-    "email": "dev@noxlabs.xyz"
-  }
-}

@@ -39,7 +39,7 @@ A card is opened in this shape and no other, `--dod` only where the work could s
 ```
 backlog task create "<the change, named as what is true once it is done>" \
   -d  "<a sentence or two: what the work is>" \
-  -l  <from-human|from-chief|from-lead|from-worker> \
+  -l  <from-human|from-chief|from-lead|from-specialist> \
   -m  "<m-N — the milestone it serves>" \
   --ac "<something a reader who did not do the work can check>" \
   --ac "<one flag per criterion>" \

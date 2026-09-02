@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "A four-layer harness for Claude Code: house rules and primitives, a build pipeline, a product plane with its task board, and the crew that drives them. Install mycrew-tools first.",
+  "description": "A harness for Claude Code: primitives and house rules, specialists who carry the work through the build pipeline, a product plane with its task board, and the leadership that steers them. Install mycrew-tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
@@ -17,13 +17,13 @@
       "source": "./plugins/mycrew-tools"
     },
     {
-      "name": "mycrew-pipeline",
-      "description": "Layer 2/4 \u2014 the build pipeline: six stages carry one task from a decision to hardened, reviewed, tested code, each skipping itself when the change doesn't earn it.",
+      "name": "mycrew-specialists",
+      "description": "Layer 2/4 \u2014 the specialists, the agents who carry the work: a coder who runs the build pipeline as coder-* skills and writes the code, and a designer with taste who reads the product's MOOD.md and works against the real CSS frontend. Each keeps its own domain data; the designer's catalog holds design systems to draw inspiration from, never to copy.",
       "author": {
         "name": "kubik"
       },
       "category": "workflow",
-      "source": "./plugins/mycrew-pipeline"
+      "source": "./plugins/mycrew-specialists"
     },
     {
       "name": "mycrew-product",
@@ -35,13 +35,13 @@
       "source": "./plugins/mycrew-product"
     },
     {
-      "name": "mycrew-crew",
-      "description": "Layer 4/4 \u2014 the crew that builds the product: a chief who is the human's deputy over the whole product, a lead who holds one feature, a worker who carries one assignment. Each hands work to the next; only the worker writes code.",
+      "name": "mycrew-management",
+      "description": "Layer 4/4 \u2014 the leadership of the product: a chief who is the human's deputy over the whole product, and a lead who holds one feature, each spawning specialists to carry the work. Management only: it never writes code.",
       "author": {
         "name": "kubik"
       },
       "category": "workflow",
-      "source": "./plugins/mycrew-crew"
+      "source": "./plugins/mycrew-management"
     }
   ]
 }

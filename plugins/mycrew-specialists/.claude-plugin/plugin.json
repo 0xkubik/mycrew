@@ -1,0 +1,9 @@
+{
+  "name": "mycrew-specialists",
+  "version": "0.3.0",
+  "description": "Layer 2/4 \u2014 the specialists, the agents who carry the work: a coder who runs the build pipeline as coder-* skills and writes the code, and a designer, a UI/UX agent with taste who reads the product's MOOD.md and works against the real CSS frontend. Each keeps its own domain data under data/; the designer's catalog holds design systems to draw inspiration from, never to copy.",
+  "author": {
+    "name": "kubik",
+    "email": "dev@noxlabs.xyz"
+  }
+}

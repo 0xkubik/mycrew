@@ -1,0 +1,9 @@
+{
+  "name": "mycrew-management",
+  "version": "0.60.0",
+  "description": "Layer 5/5 \u2014 the leadership of the product: a chief who is the human's deputy over the whole product, and a lead who holds one feature, each spawning specialists to carry the work. Management only: it never writes code.",
+  "author": {
+    "name": "kubik",
+    "email": "dev@noxlabs.xyz"
+  }
+}

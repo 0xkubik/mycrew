@@ -69,7 +69,7 @@ markers, written by `/propose-idea`.
   Never a wall of prose, and never bullets a reader meets before knowing what the feature is.
 - **Their words, not your prose.** You record and order what the human said; nothing they didn't affirm
   goes in.
-- **It binds.** The chief decomposes against it and a worker builds to it; a worker never writes to it.
+- **It binds.** The chief decomposes against it and a specialist builds to it; a specialist never writes to it.
 - **Work someone must do leaves for the board.** The doc holds the picture, never orders hidden in prose.
 - **Contradiction is named, never swallowed.** What it says conflicts with the milestone it sits under →
   say so and have it settled; the plane never carries two truths.
