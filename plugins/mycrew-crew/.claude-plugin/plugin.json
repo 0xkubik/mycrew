@@ -1,6 +1,6 @@
 {
   "name": "mycrew-crew",
-  "version": "0.57.1",
+  "version": "0.57.2",
   "description": "Layer 4/4 \u2014 the crew that builds the product: a chief who is the human's deputy over the whole product, a lead who holds one feature, a worker who carries one assignment. Each hands work to the next; only the worker writes code.",
   "author": {
     "name": "kubik",

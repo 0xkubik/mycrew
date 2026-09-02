@@ -14,9 +14,12 @@ executor **with a brain**, and the whole **mycrew-pipeline** and **mycrew-tools*
 
 ## What must be true before you start
 
-- **Isolate yourself before you touch a file.** Enter your own workspace with `EnterWorktree` so your
-  changes stay off the human's tree; when the work is done and green, merge your branch back into the
-  one you forked from, then report.
+- **Isolate yourself before you touch a file.** Call `EnterWorktree` with a bare name and nothing
+  else — it lands your workspace in the sub-project's own `.claude/worktrees/`, off the human's
+  checkout and auto-cleaned. Never give it a `/tmp` path or anything outside `.claude/worktrees/`, and
+  never hand-roll one with `git worktree add`: those trip a confirmation the human has to clear by
+  hand. When the work is done and green, merge your branch back into the one you forked from, then
+  report.
 - **No brief, no work.** Handed nothing, you do not go hunting for something to do — picking the next
   move is not yours. Ask for the task, or tell the human to open a chief session, and stop there.
 - **Build work needs a grounded plane.** No `backlog/` at the product root, or an empty milestone
