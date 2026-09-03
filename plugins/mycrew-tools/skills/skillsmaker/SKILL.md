@@ -1,65 +1,42 @@
 ---
 name: skillsmaker
-kind: rule
-description: "Use when writing or rewriting a SKILL.md in this repo. The house standard every skill here obeys: the two kinds a skill can be — a rule that constrains how work is done, an intent that is the work — what each must say, what never goes in either, and the shape of a line. Not what a skill does (its own job) but how it is written."
+description: "Use when writing or rewriting a SKILL.md. Asks what the skill should do, picks a template, fills it in."
 argument-hint: "<the skill to write or rewrite>"
 ---
 
-# skillsmaker — how a skill is written here
+# skillsmaker — build a skill by asking
 
-A skill is one of two things, and `kind:` in its frontmatter says which. A **rule** constrains how a kind
-of work is done: loaded beside the work, obeyed throughout, never finished. An **intent** is the work:
-invoked to be carried out, and it ends somewhere. Settle the kind before writing a line — everything below
-follows from it. The skill you write obeys these rules too, in English.
+You are building a skill. Ask the user what it should do, pick the right template, fill it in with
+their answers. Don't write anything until you have enough to fill the template.
 
-## Every line: a bold demand, then optional detail
+## Step 1: what does the skill do?
 
-- **The bold text is the whole rule, in one short sentence.** Someone reading only the bold lines knows
-  everything the skill demands. `**Ids are permanent.**`, `**Never write the design down.**` — obeyable
-  on its own, never a label like `**Bulletproof.**` that means nothing until the prose behind it.
-- **What comes after the bold is optional.** One to three lines, and only for what the sentence cannot
-  carry: the edge, the anti-pattern, the exception. Nothing to add → the bold stands alone.
-- **Never stretch one idea across both.** An abstract phrase in bold with the demand unfolding behind it
-  is the failure this shape exists to stop: nothing skims, and the rule reaches only whoever reads it all.
-- **Sections are named by what they settle.** `What the interface must be`, `Where a thing goes` — a
-  heading a reader can act on, never `Step 1`, never a word they have to decode.
+Ask:
 
-## Both kinds
+- What should this skill do? (one sentence)
+- When should it be loaded? (the trigger)
+- What does the caller pass in? (arguments, or nothing)
 
-- **The body opens with whatever everything else serves.** A rule's invariants, an intent's end state.
-- **The exception is written in the rule, or there is none.** A rule that can be rationalized around is
-  not a rule — say `never`, say `always`, and say where it stops. Left unsaid, the reader invents it.
-- **The description is the only line the router reads.** Open with `Use when…`, then the boundary and what
-  the skill guarantees. Never the mechanism: a description that summarises the how becomes the shortcut
-  taken instead of reading the skill.
-- **Never a hardcoded particular.** No baked-in file list, no magic value, no "then run X" the skill
-  cannot know — name the concept, let the invocation supply the rest. Only stable infra may be literal.
-- **Never what the model already knows.** No tutorial, no background, no paragraph defending a rule.
-  Every line binds the work or it is cut.
-- **Never a rule that already lives in a sibling.** Point at it by name. The same rule in two files is
-  two truths, and one of them starts rotting immediately.
-- **Never past one screen — about 70 lines.** Cut it, or split an example out beside `SKILL.md`. The two
-  shapes to fill in are `shape.md`, beside this file.
+## Step 2: pick a template
 
-## kind: rule — a standing constraint on how work is done
+Based on the answer, pick one:
 
-- **Say what must be true, never what happens next.** A rule is loaded while other work runs, so it can
-  never assume a stage. `1 → 2 → 3` belongs to an intent; here it ossifies and goes stale.
-- **Say what the work must come out as, not only how it is decided.** A rule that settles the process but
-  never the result leaves the outcome to taste.
-- **A rule never finishes and never reports.** There is no run to end and nothing to hand back — it binds
-  for as long as the work it constrains lasts.
-- **`argument-hint` only if the constraint has a target.** Most rules take nothing.
+- **One-liner** — simple constraint, no steps, no sections. Just a demand and where it stops.
+  → `template-oneliner.md`
+- **Guide** — standing instructions, bullets organized by topic. For "how to work" skills.
+  → `template-guide.md`
+- **Pipeline** — ordered steps to carry out. For "do this thing" skills with a clear sequence.
+  → `template-pipeline.md`
+- **Questionnaire** — asks the user questions before acting. For skills that need input to decide.
+  → `template-questionnaire.md`
 
-## kind: intent — one act, carried out and finished
+Ask the user which one fits if it is not obvious.
 
-- **Open with what the run must end with.** Define done before anything else, or the model settles it
-  alone and settles it early.
-- **Order the moves when the order is the point.** An intent owns its whole run, so a sequence is honest
-  here — the one place in this repo it is. Order that carries nothing is still cut.
-- **Say what it may touch and what it may not.** Name the target; everything outside it is out. An intent
-  that widens on its own does more damage than one that does nothing.
-- **Say what comes back to the human.** The report, the handoff, the thing that now exists. A run nobody
-  hears the end of did not happen.
-- **`argument-hint` names the target.** `<required>` when the run is meaningless without one, `[optional]`
-  when it can take stock on its own.
+## Step 3: fill the template
+
+Read the template file. Fill in each `<placeholder>` with the user's answers. Write dry, factual
+language — no "leverage", no "ensure", no "it is crucial to". Keep it under 40 lines.
+
+## Step 4: write it
+
+Write the filled skill to `skills/<name>/SKILL.md`. Show the user what you wrote and stop.

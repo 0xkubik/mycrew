@@ -1,40 +1,32 @@
 ---
 name: retract
-kind: intent
-description: "Use when the human declares recorded information wrong or dead ('X is not true', 'there will be no X', 'we dropped X') — every place that still states it, across the repo's docs, CLAUDE.mds, and persistent memory, ends up deleted or corrected, and every touched spot reported. Removes only what was named, never rewrites around it."
-argument-hint: "<the wrong information — one claim, e.g. 'there will be no post versioning'>"
+description: "Use when the human declares recorded information wrong or dead ('X is not true', 'there will be no X', 'we dropped X'). Every place stating it, across docs, CLAUDE.mds and persistent memory, is removed or corrected, and each touch reported."
+argument-hint: "<the claim + the action: cut entirely, or replace with the new fact>"
 ---
 
-# retract — hunt wrong information down and take it out
+# retract — remove or correct a wrong statement across the repo
 
-The human says a recorded fact is no longer true. Find every place that still states it, remove or
-correct exactly that, and account for each cut. You are a scalpel, not a rewrite.
+Carry out the human's ruling on a claim. How it runs depends on the ruling.
 
-## Finding every place it is stated
+## Steps
 
-- **One call retracts one claim.** The argument names a single wrong fact. Handed something vague —
-  "the docs are stale" — ask what exactly is wrong before touching anything.
-- **Search by meaning, never by one literal string.** The fact hides under synonyms, translations and
-  derived phrasing: versioning turns up as versions, as immutable, as "a new copy beside the old".
-- **Every surface the project records things on gets searched.** The docs tree, every `CLAUDE.md` up to
-  the product root, sibling doc repos of the product, persistent memory. Stop only when new searches
-  stop finding new places.
+1. **Right the claim and the action.** One call handles one claim. The action is either **cut** — the
+   fact is dead, remove every trace — or **replace** — correct it with the new truth the human stated.
+   Vague input ("the docs are stale") → ask what exactly is wrong and what to do before touching
+   anything.
+2. **Find every place it is stated.** Search by meaning, not one literal string — the fact hides under
+   synonyms, translations, derived phrasing. Search the docs tree, every `CLAUDE.md` up to the product
+   root, sibling doc repos, persistent memory. Stop when new searches stop finding new places.
+3. **Cut or correct each place.** For a **cut**: remove the sentence, bullet or line that states it and
+   nothing else; a file that exists only for that fact goes whole. For a **replace**: swap the fact for
+   the human's stated truth — no invented replacement, no new ideas riding in. A matching persistent
+   memory is edited the same way, and its `MEMORY.md` index line with it.
 
-## Cutting it out
+5. **Report every touch.** The file, what was removed or changed, and each dependent left alone. An edit
+   missing from the report did not happen.
 
-- **Take out the sentence, bullet or line that states it and nothing else.** Correct instead of delete
-  when the human gave the replacement truth ("no versioning — posts are edited in place"). A file that
-  exists only for that fact goes whole.
-- **A memory is cut like any other file.** The matching persistent memory is corrected or deleted the
-  same way, and its `MEMORY.md` index line with it.
-- **A retraction is the one thing that may remove a milestone from the plane.** Milestones are
-  otherwise permanent; an explicit human retraction is what runs `backlog milestone remove`.
-- **Every cut and every flag is reported.** The file, what was removed or changed, and each dependent
-  left alone. An edit missing from the report did not happen.
+## Done
 
-## What never happens
-
-- **Never touch what merely builds on the fact.** A flow that assumes versions exist does not state the
-  retracted fact — flag it for the human to decide; reworking it is a new task, not this one.
-- **Never invent the replacement.** Only what the human said goes in. No new product idea rides in on a
-  correction.
+- **Every stated trace is gone or corrected.** New searches for the claim turn up nothing.
+- **Nothing beyond the claim was touched.** Never rewrite what merely builds on the fact — a flow that
+  assumes the fact exists is flagged for the human to decide, not reworked here.
