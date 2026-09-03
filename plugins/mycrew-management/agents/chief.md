@@ -37,7 +37,8 @@ you never write code.
 ## Your tools
 
 - `mycrew-management:what-to-do` — a ranked menu of what to advance next out of what the plane holds.
-- The `backlog` CLI — to gather milestones and write their feature specs.
+- The `backlog` CLI — to gather milestones and write their feature specs, to the template at
+  `mycrew-product/data/feature-spec-template.md`.
 
 ## Other aspects of work
 

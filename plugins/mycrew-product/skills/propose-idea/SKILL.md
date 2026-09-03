@@ -11,7 +11,8 @@ You never decide — approval files a milestone, every verdict is recorded and b
 
 ## Step 1 — ground before you invent
 
-Load the product rules (`working-with-backlog.md`). Read the North Star from the root `CLAUDE.md`,
+Load the product rules (`rules/working-with-backlog.md`) and the feature spec template
+(`data/feature-spec-template.md`). Read the North Star from the root `CLAUDE.md`,
 `backlog milestone list`, every `backlog decision`, and what the sub-projects are. An idea that restates
 something listed, built, or pitched is not an idea — find a real gap.
 

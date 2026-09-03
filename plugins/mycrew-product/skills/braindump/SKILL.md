@@ -24,13 +24,20 @@ turn. Interrupt only briefly, then hand the floor back, in three cases:
 
 ## What you file
 
-Before filing, load the product rules (`rules/working-with-backlog.md`) and read what's captured —
-`backlog milestone list`, `backlog doc list`, the product `CLAUDE.md`. No backlog yet → send them to
-`/product-init`. Then route each affirmed thing by its nature:
+Before filing, load the product rules (`rules/working-with-backlog.md`), the feature spec template
+(`data/feature-spec-template.md`), and read what's captured — `backlog milestone list`,
+`backlog doc list`, the product `CLAUDE.md`. No backlog yet → send them to `/product-init`. Then
+route each affirmed thing by its nature:
 
-- **New feature** — functionality the product must have → a new milestone with its feature spec.
+- **New feature** — functionality the product must have → a new milestone with its feature spec,
+  written to the template.
+- **Component of an existing feature** — a piece that only makes sense inside a feature already held
+  → add it to that feature's Components section as a checkbox; don't open a new document.
 - **Correction to an existing feature** — a change, a detail, a limit → that feature's doc, in their
   words.
+
+**Classify before filing.** When it's unclear whether a thing is a standalone feature or a component
+of one already held, ask the one question that settles it — never guess.
 
 **Only what they affirmed, in their intent** — never invent a feature or a detail they didn't say, and
 never rewrite their words. File as you go, not batched at the end, and never wrap up: it ends when

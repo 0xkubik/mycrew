@@ -12,10 +12,10 @@ home. Run at the **product root**. Nothing here is filed per repo.
 
 ## Step 1 — load what governs the plane
 
-Load the product rules (`rules/working-with-backlog.md`) — they decide where an affirmed answer lands
-and in what shape. Then read what is already captured: `backlog milestone list`, `backlog doc list`, and
-the product `CLAUDE.md`. No backlog yet → send the human to `/product-init`. Context comes from the
-human's words, never from scanning the code.
+Load the product rules (`rules/working-with-backlog.md`), the feature spec template
+(`data/feature-spec-template.md`), and read what's already captured: `backlog milestone list`,
+`backlog doc list`, and the product `CLAUDE.md`. No backlog yet → send the human to `/product-init`.
+Context comes from the human's words, never from scanning the code.
 
 ## Step 2 — order the features
 
