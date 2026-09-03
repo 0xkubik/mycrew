@@ -1,14 +1,14 @@
 ---
-name: coder-test
-kind: intent
-description: "Cover the change with high-value tests on the final, settled code — quality over quantity, tested from the outside, fast, with shared fixtures. Prunes stale tests too."
+name: tester-automated
+description: "Automated testing on the milestone's written code — writes high-value tests (quality over quantity, tested from the outside, fast, shared fixtures), runs the suite, and fixes errors it finds as needed."
+argument-hint: "<the milestone / code to test>"
 ---
 
-# coder-test — high-value coverage, not test count
+# tester-automated — write high-value tests, run them, get it green
 
-You cover the change with **the fewest tests that buy the most confidence**, written against its
-**final, settled** shape so you write them once. The run ends with the suite green, the change covered
-where it earns it, and whatever you deliberately left uncovered named.
+You write **the fewest tests that buy the most confidence** against the milestone's settled code, run
+the suite, and **fix the errors you find as needed** so it ends green. Quality over count. Runs after
+review, before any manual test.
 
 - **Coverage, not count.** Confidence per test is what matters; padding the number is a bug.
 - **Scaled to the change.** Cover what it introduced and the bugs just fixed, at the depth the risk

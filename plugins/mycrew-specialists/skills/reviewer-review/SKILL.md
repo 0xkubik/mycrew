@@ -1,58 +1,60 @@
 ---
-name: coder-review
-kind: intent
-description: "Hunt edge cases and correctness bugs across the change — eyes that didn't write the code hunt AND rule; every confirmed finding is fixed in place, never handed up as a list. Security is a separate pass (coder-secure)."
+name: reviewer-review
+description: "Run three parallel review lenses over the milestone's written code (the commits the coders made) — bugs, code cleanliness, security — with eyes that didn't write it. Then evaluate each finding, fix what is real, name what is rejected or deferred. Runs after all implementation is committed, before testing."
+argument-hint: "<the milestone / commits to review>"
 ---
 
-# coder-review — hunt edge cases and bugs; fix them
+# reviewer-review — three lenses over the milestone's commits, then judge and fix
 
-You hunt the change across **two axes — edge cases and bugs**, have each finding ruled on by eyes that
-didn't write it, and fix it yourself. The run ends with every confirmed finding fixed in place and
-nothing left as a note for somebody else.
+Review the code the coders wrote across the milestone — scoped to their commits — with three subagents,
+one per lens, in parallel, then evaluate and fix. The run ends with every accepted finding fixed, the
+rejected and deferred ones named with reasons, and a report that accounts for all three lenses.
 
-## What earns a hunt
+## Step 1 — launch the three lenses
 
-Nothing that executes — documentation, comments, copy, a value in a config file → skip. Anything that
-runs — logic, control flow, data handling, error paths, a build or deploy script → never skipped,
-however few the lines.
+Dispatch three subagents in parallel, each scoped to the **commits the coders made for the milestone**,
+each with fresh eyes that didn't write it. Each returns findings in the same contract:
 
-## The hunt — one subagent per axis, in parallel
+- **Bugs** — correctness, edge cases, error paths, wrong logic, races, leaks.
+- **Cleanliness** — structure, naming, dead code, duplication, consistency with the codebase.
+- **Security** — injection, broken access, leaked secrets, unsafe defaults, dangerous dependencies.
 
-Dispatch a subagent per axis, scoped to the change. Each hunts hard in its own lane and returns
-findings in the contract below.
+Nothing that executes (docs, comments, copy, config values) earns a scan; but themes above are never
+skipped wherever actual code runs.
 
-- **EDGE** — boundaries and the unexpected: empty / null / zero / one, off-by-one, overflow &
-  truncation, unusual or malformed input, ordering & concurrency, partial failure & retries, resource
-  exhaustion, timezone / encoding / locale.
-- **BUG** — correctness: wrong logic, mishandled or swallowed errors, state / lifecycle mistakes, race
-  conditions, wrong API contract, leaks.
-
-**Each hunter returns** (0–N findings):
+**Each lens returns** (0–N findings):
 
 ```
-axis:      EDGE | BUG
-findings:  [ {
+lens:    bugs | cleanliness | security
+findings: [ {
   title:    <short name>
   where:    <file:line / function>
-  what:     <the defect: input/state → wrong outcome>
+  what:     <the defect or improvable point, concrete>
   severity: high | med | low
-  trigger:  <concrete input/condition that hits it>
-  fix:      <the correction>
+  fix:      <the proposed correction>
+  confidence: high | med | low   # how certain this is a real problem
 } ]
-empty_reason: <if findings == [] : why this lane is clean here>
+empty_reason: <if findings == [] : why this lens is clean here>
 ```
 
-## The verdict
+## Step 2 — judge each finding
 
-Each finding goes to a **fresh judge** told to **refute it**: does the trigger actually reach the
-defect, or is it guarded upstream? Confirmed means reproduced — a test, a trace, or a tight argument.
-Then, main thread, dedupe overlaps across the lanes and rank by severity.
+Evaluate every finding against the actual code — confirm it is real, not a false positive; weigh its
+severity against the fix's cost and risk. Classify into three buckets:
 
-## Fix what survived
+- **Fix** — the finding is real and worth fixing. Fix it in place.
+- **Reject** — false positive, or the "improvement" makes the code worse or invents unasked work.
+- **Defer** — real but out of scope: a behavior fork the change can't settle, a redesign this task
+  doesn't warrant. Name it, leave it, don't patch around it.
 
-Fix each confirmed finding yourself. A bug-fix deliberately changes wrong→right behavior; where a
-safety net already pins the old expectation, update it to the corrected one.
+Never fix what the task did not ask for under cover of a finding. A deliberate bug-fix may change
+wrong→right behavior; where a safety net pins the old expectation, update it.
 
-- **A behavior fork stops nothing.** The code's *intended* behavior genuinely ambiguous → flag it to
-  the chief in your closing report and carry on with the rest. Standalone, no chief → note it in
-  the report and close.
+## Step 3 — report
+
+Account for all three lenses in one closing report:
+
+- Per lens: what was found (the findings, with severity).
+- What was **fixed**, what was **rejected** (and why), what was **deferred** (and why).
+- Commit any fixes you made. Point the caller at the tester — automated testing is the next pass
+  (tester-automated), not run here.
