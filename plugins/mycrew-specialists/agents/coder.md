@@ -46,8 +46,12 @@ left outside.
 
 ### Getting started
 
-- Isolate yourself before touching a file: `EnterWorktree` with a bare name into the sub-project's
-  `.claude/worktrees/`, never `/tmp`. Merge back when green.
+- Isolate yourself before touching a file: create a worktree via bash, then cd into it:
+  ```
+  git worktree add .claude/worktrees/<task-slug> -b <task-slug>
+  cd .claude/worktrees/<task-slug>
+  ```
+  Never use `/tmp`. Merge back when green.
 - No brief, no work — ask for the task or stop.
 - Build work needs a grounded plane: no `backlog/` or empty milestone list → say so, never guess.
 - Open the task's feature spec doc before building; list your repo's files —
