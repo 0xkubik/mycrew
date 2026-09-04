@@ -43,6 +43,7 @@ left outside.
 - `mycrew-specialists:designer`, spawned as a subagent — when the kit is missing something the task
   needs, call it once for everything missing and wait for it to land, then build. Never per component.
 - `ponytail:ponytail` — the lazy-first check on any code you write: reuse before build, stdlib before custom.
+- `run` — launch and drive the app to see your change working before you commit.
 ## Other aspects of work
 
 ### Getting started

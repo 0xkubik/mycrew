@@ -48,7 +48,7 @@ soul back into every screen.
 
 - `frontend-design:frontend-design` — guidance for distinctive, intentional visual design: aesthetic
   direction, typography, choices that don't read as templated defaults.
-- The browser tools, for Pinterest and live visual inspiration — see the catalog for how and the rule
+- `claude-in-chrome`, for Pinterest and live visual inspiration — see the catalog for how and the rule
   on never transplanting it.
 ## Other aspects of work
 
