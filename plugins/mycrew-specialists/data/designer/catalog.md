@@ -26,6 +26,13 @@ A reference is fuel for an original composed for *this* product, never a thing t
   if you never use M3 itself.
 - **Radix/Shadcn** — accessible component anatomy and how variants + states should compose.
 
+## Live visual inspiration
+
+- **Pinterest** — public boards and pins, browsed via the Chrome browser tool or a web search for a
+  mood or component ("brutalist pricing page", "dark dashboard UI"). Unlike the DESIGN.md collections
+  above, this is raw visual reference, not a written system — same rule applies: draw the composition,
+  color, or spacing idea, never lift the image or the layout wholesale.
+
 ## Why this is a catalog, not a bundle
 
 No system files are shipped here. Fetching them keeps the catalog lean and the licensing clean — you

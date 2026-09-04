@@ -4,7 +4,7 @@
 - **Log with levels** — Grade every log message by severity (error, warn, info, debug), phrase actions in the present tense, include enough context to be useful on its own, and never log secrets.
 - **Modular bricks** — Build small single-purpose units with narrow interfaces that compose. If you can only describe a function with "and", it's two functions.
 - **Write less code** — Reuse before writing; fewer lines means fewer moving parts. Solve only today's task and delete dead code in the same breath.
-- **UI comes from the kit** — Before writing markup or styles, check `design/kit.html` at the product root: the designer's UI kit and single source of design truth. Reuse its components and tokens as-is; if what's needed isn't there, ask the designer to add it rather than inventing your own.
+- **UI comes from the kit** — Before writing markup or styles, check `design/kit.html` at the product root against everything the task needs. All there → build directly. Something missing → ask the designer once, for everything missing, and wait for the kit to be extended before writing any markup; never invent your own styles, never ask one component at a time.
 - **No noise in code** — Don't restate code in comments or narrate edits as "was X, now Y". Comment only the non-obvious why; let the code read as its final state.
 - **Follow SOLID** — One responsibility per unit, open to extension but closed to modification, depend on abstractions not concretions. Each principle is a boundary that keeps the change small.
 - **Refactor before you build** — Before making a change, judge whether the code it touches needs reshaping first. If a refactor would make the work land cleaner, do it first; never bolt new code onto a tangle that a reshape would fix.
