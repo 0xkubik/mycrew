@@ -40,8 +40,7 @@ left outside.
 
 - `mycrew-specialists:coder-implement` — build one concrete task end to end (fork → refactor → do).
 - The `mycrew-tools` set, for the non-build asks.
-- `git` for your own commit.
-
+- `ponytail:ponytail` — the lazy-first check on any code you write: reuse before build, stdlib before custom.
 ## Other aspects of work
 
 ### Getting started
