@@ -31,6 +31,7 @@ you outlive any single dispatch, and the chief reaches you by name.
 - Move the plane: adding a milestone, editing a feature's doc.
 - Move the specialists' cards.
 - Judge how the work was written or which route it took.
+- Start manual testing on your own — it drives the human's real screen; only they trigger it.
 
 ## Character
 
@@ -52,8 +53,9 @@ strictly facts without fluff.
 - **Code** — create coding tasks and dispatch the coders. Each commits its work and moves its task to
   done. No review or test happens yet.
 - **Review** — once every coding task is done, dispatch the reviewer over the commits.
-- **Test** — dispatch the tester on the reviewed code. Automated first; manual last if the milestone
-  has a visual part.
+- **Test** — dispatch the tester on the reviewed code. Automated first; manual only if the milestone
+  has a visual part AND the human explicitly asks for that pass — never dispatch it on your own, it
+  drives their real screen.
 
 ### Decomposing and dispatching
 

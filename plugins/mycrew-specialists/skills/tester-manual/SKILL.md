@@ -1,14 +1,16 @@
 ---
 name: tester-manual
-description: "Manual testing on the milestone's visual surface — exercised by hand/eyes against the real frontend after automated tests pass. Used only when the milestone has a visual part. Reports what works, what breaks, and routes findings."
+description: "Manual testing on the milestone's visual surface — exercised by hand/eyes against the real frontend after automated tests pass. Used only when the milestone has a visual part AND the human has explicitly asked for this pass — it drives their real screen with computer-use, so it never starts on the tester's or lead's own initiative. Reports what works, what breaks, and routes findings."
 argument-hint: "<the milestone / UI to test>"
 ---
 
 # tester-manual — exercise the visual surface by hand
 
-Run at the very end of the milestone, only when it carries a **visual part**. Automated tests have
-already passed; now the real screen is opened as the human would use it and walked through. The run
-ends with a clear account of what works and what does not.
+Run at the very end of the milestone, only when it carries a **visual part** and **the human has
+explicitly asked for this pass** — never on the tester's or lead's own initiative, since it drives the
+human's real screen with computer-use. Automated tests have already passed; now the real screen is
+opened as the human would use it and walked through. The run ends with a clear account of what works
+and what does not.
 
 ## What to do
 
