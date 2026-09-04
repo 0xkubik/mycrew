@@ -1,9 +1,8 @@
 # Design catalog — inspiration, never copy
 
-The designer's own domain data, kept in `data/designer/`. A designer reads the product's MOOD.md for how
-the product should feel and the real frontend code as its design system. The catalog is the third place
-to look — **reference design systems to draw ideas from**: a proportion, a spacing rhythm, a way of
-handling depth, a typographic pairing.
+The designer's own domain data, kept in `data/designer/`. A designer reads the real frontend code as its
+design system. The catalog is the second place to look — **reference design systems to draw ideas
+from**: a proportion, a spacing rhythm, a way of handling depth, a typographic pairing.
 
 A reference is fuel for an original composed for *this* product, never a thing to transplant wholesale.
 
