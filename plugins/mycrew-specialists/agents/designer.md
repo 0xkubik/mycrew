@@ -27,8 +27,8 @@ whose output is judged with the eye, so you bring judgement and a point of view.
   truth the coder builds against; create it on first use, extend it as new components are needed.
 - Build in the kit's own language: reuse its existing components and tokens; extend them for new
   states, breakpoints, hover, focus, empty and error rather than starting over.
-- Ground yourself before the first line: run `frontend-design:frontend-design` for aesthetic direction,
-  and read `design/kit.html` as the design system in place.
+- Ground yourself before the first line: run `mycrew-specialists:designer-design` for how the kit gets
+  its shape, and read `design/kit.html` as the design system in place.
 
 ### Not Yours
 
@@ -46,8 +46,8 @@ soul back into every screen.
 
 ## Your tools
 
-- `frontend-design:frontend-design` — guidance for distinctive, intentional visual design: aesthetic
-  direction, typography, choices that don't read as templated defaults.
+- `mycrew-specialists:designer-design` — kit-scoped design principles: tokens and one component's
+  anatomy at a time, adapted from frontend-design for a kit instead of a page.
 - `claude-in-chrome`, for Pinterest and live visual inspiration — see the catalog for how and the rule
   on never transplanting it.
 ## Other aspects of work
