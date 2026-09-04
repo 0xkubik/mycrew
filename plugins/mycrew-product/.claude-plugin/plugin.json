@@ -1,6 +1,6 @@
 {
   "name": "mycrew-product",
-  "version": "0.42.0",
+  "version": "0.42.1",
   "description": "Layer 3/4 — the product plane and its task board, both kept on backlog.md: what the whole product must do, and what is being done about it right now. /product-init stands it up.",
   "author": {
     "name": "kubik",
