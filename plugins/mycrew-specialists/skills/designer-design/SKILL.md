@@ -18,6 +18,9 @@ only tokens and one component's anatomy at a time. Read before the first line of
   ALL-CAPS labels, an eyebrow label added just to look structured.
 - **Structure encodes meaning, not decoration.** A divider, a number, a label says something about
   the content — number only when the content is actually a sequence.
+- **Icons come from one set, not invented per instance.** Pick a single coherent library (Lucide,
+  Phosphor, Heroicons, Radix Icons, Tabler) and stay in it — mismatched stroke width and grid is as
+  loud a tell as mismatched type. Placeholders are fine mid-design; the shipped kit isn't.
 
 ## Motion, CSS only
 
