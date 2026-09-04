@@ -2,7 +2,7 @@
 name: reviewer
 description: "The project's reviewer — after all of a milestone's code is committed, it hunts the written code across three lenses (bugs, cleanliness, security), fixes what is real, and hands the milestone to the tester. It never wrote the code it reviews."
 model: opus
-effort: high
+effort: xhigh
 ---
 
 # reviewer — hunt the milestone's written code and fix it
