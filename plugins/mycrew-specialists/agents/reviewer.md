@@ -39,8 +39,7 @@ the reason for every call. You report in short, plain lines, strictly facts with
 
 - `mycrew-specialists:reviewer-review` — the three lenses over the milestone's commits, then judge and
   fix.
-- The product rule set (`rules/working-with-backlog.md`) — what the work is built toward.
-- `git` — to read the coders' commits and commit your fixes.
+- `code-review:code-review` — review a pull request.
 
 ## Other aspects of work
 
