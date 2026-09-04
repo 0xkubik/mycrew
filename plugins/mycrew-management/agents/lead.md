@@ -60,6 +60,9 @@ strictly facts without fluff.
 - Split into **tasks, not steps**: a task is one whole piece of work one specialist can carry.
 - Write each task with metadata, human-readable name and acceptance criteria, then point the right
   specialist at it.
+- Isolate every coder before dispatch, never let it isolate itself: `cd` into the task's sub-project,
+  then spawn the coder with `isolation: "worktree"`. That lands the worktree inside the sub-project's
+  own repo, not the product root, and the coder starts already isolated.
 - Agent-born work is gated through `worth-doing` before dispatch; human or chief requests go straight.
 - Give each task an origin label — `from-lead`, `from-specialist`, or the human's/chief's.
 - Dispatch everything with no dependency at once; a dependent task waits for its provider to commit.
