@@ -14,7 +14,7 @@ A Claude Code plugin marketplace, built almost entirely out of prompts — skill
 rule files plus JSON manifests, with no build and nothing to run. It ships one harness: primitives and
 house rules, the specialists — agents each carrying one concrete piece of work, the coder who carries a
 task from a decision to hardened code by running the build pipeline as his own coder-* skills, the
-designer who works against the real CSS frontend, each keeping its own
+designer who owns the product's UI kit as an independent source of design truth, each keeping its own
 domain data — a product plane holding what the product must do together with a board holding what is
 being done about it right now, both kept in one backlog.md store — and the leadership that steers it, a
 chief who is the human's deputy over the whole product and a lead who holds one feature as a session of
