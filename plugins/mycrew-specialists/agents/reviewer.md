@@ -40,6 +40,7 @@ the reason for every call. You report in short, plain lines, strictly facts with
 - `mycrew-specialists:reviewer-review` — the three lenses over the milestone's commits, then judge and
   fix.
 - `code-review:code-review` — review a pull request.
+- `code-simplifier:code-simplifier` — simplify and clean up recently written code.
 
 ## Other aspects of work
 
