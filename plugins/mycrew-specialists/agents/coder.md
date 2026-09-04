@@ -39,7 +39,7 @@ left outside.
 ## Your tools
 
 - `mycrew-specialists:coder-implement` — build one concrete task end to end (fork → refactor → do).
-- The `mycrew-tools` set, for the non-build asks.
+
 - `mycrew-specialists:designer`, spawned as a subagent — when the kit is missing something the task
   needs, call it once for everything missing and wait for it to land, then build. Never per component.
 - `ponytail:ponytail` — the lazy-first check on any code you write: reuse before build, stdlib before custom.
