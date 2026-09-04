@@ -42,8 +42,7 @@ left uncovered. You report in short, plain lines, strictly facts without fluff.
 
 - `mycrew-specialists:tester-automated` — write and run the automated suite.
 - `mycrew-specialists:tester-manual` — exercise the real visual surface by hand.
-- The product rule set (`rules/working-with-backlog.md`) — what the code should do.
-- The project's test harness and conventions.
+- `security-review` — security review of the pending changes.
 
 ## Other aspects of work
 

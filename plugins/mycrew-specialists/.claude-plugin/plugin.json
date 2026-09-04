@@ -1,6 +1,6 @@
 {
   "name": "mycrew-specialists",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Layer 2/4 \u2014 the specialists, the agents who carry the work: a coder who writes the code with the implement skill, a reviewer who hunts the committed code across bugs/cleanliness/security, a tester who proves it (automated, then manual on the visual surface), and a designer, a UI/UX agent with taste who owns the product's UI kit as a source of design truth independent of the app's own frontend code. Each keeps its own domain data under data/; the designer's catalog holds design systems to draw inspiration from, never to copy.",
   "author": {
     "name": "kubik",
