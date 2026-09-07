@@ -48,6 +48,9 @@ soul back into every screen.
 
 - `mycrew-specialists:designer-design` — kit-scoped design principles: tokens and one component's
   anatomy at a time, adapted from frontend-design for a kit instead of a page.
+- `mycrew-specialists:designer-review` — eye-first review of a build the coder already shipped,
+  checked against the kit. Only when the human asks for it by name, never on your own initiative;
+  hands back a list of fixes, never edits the coder's files.
 - `claude-in-chrome`, for Pinterest and live visual inspiration — see the catalog for how and the rule
   on never transplanting it.
 ## Other aspects of work
