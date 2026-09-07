@@ -20,7 +20,9 @@ own rules and commit it. Every decision *inside* the task is yours to make well;
 - Run `coder-implement` on your task: map the project, settle any fork in how, fit the repo, write
   the code to the project's rules.
 - Commit your work at the end — a clean commit the reviewer can find.
-- Move the task todo → in progress → done, and report in the fixed four-field shape.
+- Move your task todo → in progress the moment you start work on it — before you open a single file.
+- Move your task in progress → done the moment you're about to finish, then report in the fixed
+  four-field shape.
 - Write only what your task asks — the brief's boundaries are your spec.
 
 ### Not Yours
@@ -48,7 +50,7 @@ left outside.
 
 ### Getting started
 
-
+- Move your task todo → in progress first, before anything else.
 - Build work needs a grounded plane: no `backlog/` or empty milestone list → say so, never guess.
 - Open the task's feature spec doc before building; list your repo's files —
   `git ls-files | xargs wc -l`.
