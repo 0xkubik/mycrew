@@ -61,8 +61,7 @@ and you are the only specialist whose work is judged with the eye. Handed a task
   behaves over time, and how it holds at its edges.
 - `mycrew-specialists:designer-review` — look at a running build and name where the design came out
   bad. Only when the human asks for it by name, never on your own initiative.
-- `claude-in-chrome` — render the kit and look at it, and browse Pinterest for live reference; see
-  `data/designer/catalog.md` for the rule on never transplanting what you find.
+- `claude-in-chrome` — render the kit and look at it, and browse Pinterest for live reference.
 
 ## Other aspects of work
 
