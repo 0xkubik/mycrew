@@ -37,6 +37,31 @@ what bad looks like. Screens are assembled elsewhere, with `designer-compose`.
 - **Keyboard focus is a state, not a browser default to delete.** It must be visible on every control.
 - **Build it against hostile content.** A long name, a wrapped label, an empty list, three hundred rows.
   Anything that only holds on the sample data is not built.
+- **Change its contract and you sweep the whole kit.** Rename a class, restructure a component's markup,
+  swap the device it is drawn with — then update every place in the kit that uses it, in the same run.
+  The kit is one file, so this is cheap; a half-swept kit is worse than the one you started with,
+  because now two versions of the same brick are both on screen and both look deliberate.
+
+## What you cannot draw yourself
+
+You have no illustrator and no motion tool, and you never will. Two kinds of thing therefore leave the
+kit as **a slot with a brief** rather than as a finished drawing — and a slot with a brief is delivered
+work, not a gap.
+
+- **An asset somebody has to draw.** An emblem, a medal, a mascot, an illustration, a mark, an icon no
+  set carries. Build the placeholder as a real slot: one variable owns its size so a single file will
+  serve every place it appears, and the component's own prose says what arrives, what it replaces and
+  what falls away when it does. Say plainly, in the kit, that it *is* a placeholder — otherwise the
+  coder ships it. Never draw a permanent approximation in CSS and leave it looking finished.
+- **A motion the base tools do not reach.** A transition, a hover, a press, a thing that slides or
+  settles — write it in CSS and it belongs in the kit, working. Anything past that — a drawn loop, a
+  character, a sequence somebody has to animate — is described in words beside the component it belongs
+  to: what moves, what sets it off, how long it takes, where it ends, and what stands in its place for a
+  reader who has asked for less motion.
+
+Reach for both rather than around them. A kit with no assets and no motion in it is a wireframe, and
+nobody asked for a wireframe. Describing one costs a paragraph; leaving it out costs the product its
+character.
 
 ## Words belong to the component
 
@@ -50,6 +75,10 @@ what bad looks like. Screens are assembled elsewhere, with `designer-compose`.
 - Contrast holds — 4.5:1 for text, 3:1 for interface edges. Targets big enough to hit. Text survives
   200% zoom. Motion respects the reduced-motion setting. Every control carries a name a screen reader
   can read.
+- **The palette carries its own check, and it is runnable.** Copy `data/designer/contrast.mjs` in beside
+  the kit on first use, list in it every pair the kit actually puts on screen, and run it after touching
+  a colour — it measures every theme in one pass. A kit is not handed over while one pair sits under its
+  floor. Without this, "both themes are correct" is a thing you believe rather than a thing you know.
 
 ## Bad practice — the tells
 
@@ -70,3 +99,11 @@ what bad looks like. Screens are assembled elsewhere, with `designer-compose`.
 
 - **Render it and look.** Open `design/kit.html`, screenshot it, name what is weak out loud, fix it.
   Reading your own CSS is not looking, and a first pass is not an answer.
+  - **Serve it, do not open the file.** The browser refuses `file://`, and a plain static server hands
+    you a cached stylesheet — you will screenshot yesterday's kit and believe it. Serve the design
+    folder over HTTP with `Cache-Control: no-store`.
+  - **Look at every theme, forced.** Set `[data-theme]` yourself rather than leaving it to the system: a
+    browser that darkens pages on its own will show you a dark screenshot of your light theme and tell
+    you nothing at all.
+  - **Prove nothing is dangling.** No class used in the kit's markup that its stylesheet does not
+    define. It is one pass over one file and it catches every brick you renamed and half-swept.
