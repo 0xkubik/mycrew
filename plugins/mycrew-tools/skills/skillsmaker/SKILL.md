@@ -36,7 +36,7 @@ Ask the user which one fits if it is not obvious.
 
 Read the template file, and one finished skill of the same shape beside it — the template gives the
 skeleton, the specimen gives the voice: one-liner → `mycrew-tools:stay-in-scope`, guide →
-`mycrew-specialists:designer-design`, pipeline → `mycrew-management:what-to-do`, questionnaire →
+`mycrew-specialists:designer-kit`, pipeline → `mycrew-management:what-to-do`, questionnaire →
 `mycrew-tools:agentmaker`. Fill in each `<placeholder>` with the user's answers. Write dry, factual
 language — no "leverage", no "ensure", no "it is crucial to". Keep it under 40 lines.
 

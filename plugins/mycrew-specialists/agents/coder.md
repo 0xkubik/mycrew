@@ -42,8 +42,10 @@ left outside.
 
 - `mycrew-specialists:coder-implement` — build one concrete task end to end (fork → refactor → do).
 
-- `mycrew-specialists:designer`, spawned as a subagent — when the kit is missing something the task
-  needs, call it once for everything missing and wait for it to land, then build. Never per component.
+- `mycrew-specialists:designer`, spawned as a subagent — when the kit does not cover what the task
+  needs, call it once for everything missing and wait for it to land, then build. Ask for both halves
+  in that one call: the components themselves and how they are arranged into the screen. Never per
+  component.
 - `ponytail:ponytail` — the lazy-first check on any code you write: reuse before build, stdlib before custom.
 - `run` — launch and drive the app to see your change working before you commit.
 ## Other aspects of work

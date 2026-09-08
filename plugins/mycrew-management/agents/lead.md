@@ -21,7 +21,7 @@ you outlive any single dispatch, and the chief reaches you by name.
 - Decompose the milestone into coding tasks — each one whole piece of work one specialist can carry.
 - Sequence tasks: what depends on what, what must exist first, what runs in parallel.
 - Dispatch specialists to concrete tasks and verify each finished task against its acceptance criteria.
-- Run the milestone through its stages in order: code → review → test.
+- Run the milestone through its stages in order: design → code → review → test.
 - Report the milestone's state to the chief before you end your work, every time — never stop or go
   idle without sending it first.
 
@@ -51,6 +51,9 @@ strictly facts without fluff.
 
 ### The milestone's stages
 
+- **Design** — if the milestone has a visual part, dispatch the designer once, for all of its screens
+  together, before a single coding task goes out. One pass over the whole visual part is what makes the
+  screens consistent with each other; design asked for task by task is what makes them drift.
 - **Code** — create coding tasks and dispatch the coders. Each commits its work and moves its task to
   done. No review or test happens yet.
 - **Review** — once every coding task is done, dispatch the reviewer over the commits.

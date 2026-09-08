@@ -1,33 +1,43 @@
 ---
 name: designer-review
-description: "Use when the human explicitly asks the designer to look at a build the coder has already shipped and judge it eye-first — never on the designer's, lead's, or coder's own initiative. Checks the rendered UI/UX against the kit and hands back a concrete list of fixes; never edits the coder's files and never touches the kit itself (that's designer-design)."
-argument-hint: "<the built screen or flow to review>"
+description: "Use when the human explicitly asks the designer to look at a build that already runs and judge the design that came out of it — never on the designer's, lead's or coder's own initiative, since it opens their real screen. Looks with the eye, names where the design came out bad, hands back concrete fixes, and edits nothing."
+argument-hint: "<the built screen or flow to look at>"
 ---
 
-# designer-review — judge the shipped build against the kit
+# designer-review — look at what came out, name what is bad
 
-Runs standalone, only when the human asks for it by name — not part of coder → reviewer → tester,
-and not something the designer starts on its own. The coder has already built the screen out of the
-kit's components; this pass looks at the real, rendered result and says where it falls short.
+Runs standalone, only when the human asks for it by name. The screen is already built and running; this
+pass opens it, uses it, and judges the design a person actually meets. It is not a check against the kit
+and not a read of the code. Nothing is edited.
 
-## What to do
+## How to look
 
-- **Open the real build**, not the code — browser or screenshot via computer-use or claude-in-chrome.
-  Judge what a user would see, not `kit.html` and not the markup.
-- **Compare against `design/kit.html`.** Drift from the kit's tokens, components, or states is a bug,
-  not an opinion — name it as one.
-- **Walk the actual flow like a user would**, at real breakpoints: layout, spacing, hierarchy,
-  readability, hover/focus/empty/error states, motion, pacing.
-- **Judge UX, not just look.** Is the flow clear, does an interaction do what a user expects, does
-  anything fight the kit's own logic.
+- **Open the real thing and use it.** Browser or screenshot, at a real width, with the content that is
+  actually there — not the sample data and not `kit.html`.
+- **Look before you reason.** First impression first: where did the eye go, and was that the right place.
+- **Judge the result, not the intent.** A screen that follows the kit exactly and still reads badly is
+  still bad, and saying so is the whole point of this pass.
 
-## Never
+## What bad is
 
-- Edit the coder's files — this is a review pass, not a fix pass; the coder integrates the fixes.
-- Touch the kit — a gap in the kit itself (missing state, wrong token) is a finding to run
-  `mycrew-specialists:designer-design` on separately, never patched inline here.
+- **No hierarchy** — nothing is clearly first, or everything shouts at once.
+- **Not readable** — contrast too low, text too small, lines too long, density crushing.
+- **Broken rhythm** — arbitrary spacing, nothing aligned, gaps that differ for no reason.
+- **Templated** — identical rounded cards under one shadow, ALL-CAPS eyebrows, an arrow after every
+  link, decoration that says nothing about the content.
+- **No answer to an action** — pressed, and nothing visibly happened; nothing shows that it is loading.
+- **A dead end** — empty with nowhere to go, an error with no way out.
+- **Lying about state** — a placeholder that reads as data, a disabled control that reads as live.
+- **Out of reach** — targets too small to hit, no visible focus when moving by keyboard.
+- **Falls apart at the edges** — narrow screen, long text, empty list, overfull list.
+- **Wrong words** — system language, a button and its result named differently, an error that
+  apologises instead of saying what to do.
+- **Noise** — motion for its own sake, decoration doing no work, one accessory too many.
 
 ## Report
 
-Back to the human directly, plain list: what's off, whether it's a kit-drift or a UX problem, and the
-concrete fix. Nothing gets edited by this pass — the coder applies what's accepted.
+- **One line per finding**: what is bad, which of the above it is, and the concrete fix.
+- **Ranked by what a person meets first.** A broken hierarchy outranks a two-pixel gap.
+- **One honest line on what is good**, so the list is not read as a verdict on everything.
+- **Edit nothing.** The coder applies what is accepted; a gap in the kit itself goes back through
+  `designer-kit` as its own piece of work.
