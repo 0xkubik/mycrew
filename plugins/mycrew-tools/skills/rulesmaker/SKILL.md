@@ -8,7 +8,8 @@ argument-hint: "<the rule to write or rewrite>"
 
 Writes rule files under `rules/`, one per domain. A rule is an always-on constraint: loaded with every
 task, obeyed without being invoked. Each rule is one bullet — compressed, factual, no padding. Finished
-when the rule file matches the format below.
+when the rule file matches the format below. Read `mycrew-tools/rules/working-with-code.md` first — the
+format gives the shape, a finished file gives the voice.
 
 ## Format
 

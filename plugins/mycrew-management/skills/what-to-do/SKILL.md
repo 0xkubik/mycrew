@@ -21,7 +21,8 @@ no capability invented that the human never approved.
    take the frontier as a steer, not a gate. Each returns candidates: ADD (unbuilt feature off the
    approved list; never one not on it), FINISH (started and never done — stubs, dead ends, partial
    flows), REBUILD (works but has a clearly better redo — must name the better way), REFACTOR (structural
-   drag slowing everything else — real, never cosmetic). Each `move`, `title`, `what`, `why_now`,
+   drag slowing everything else — real, never cosmetic). Each `move`, `title`, `what`, `where` (the
+   file or path that shows it — FINISH, REBUILD and REFACTOR only; ADD has nothing built yet), `why_now`,
    `goal_fit`, `effort`, `reversibility`, `advances` (or `off-list`); empty lane → `empty_reason`.
 3. **The menu — one pass, main thread.** **Merge before you rank** — a FINISH and a REBUILD on the same
    thing are one candidate. **Score goal-fit against effort**, weighing reversibility more once the
@@ -33,6 +34,7 @@ no capability invented that the human never approved.
 ## Done
 
 - **One ranked menu** of moves, greatest first, each with its score (`goal_fit / effort /
-  reversibility` and what moved the rank).
+  reversibility` and what moved the rank) and its anchor where it has one — a claim about existing code
+  the human cannot check without redoing the scan is not a candidate.
 - **Nothing invented.** Every candidate comes off the approved list or existing work; no new capability
   is proposed.

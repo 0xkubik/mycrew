@@ -35,6 +35,9 @@ Then close with the purpose. Ask this one on its own, always:
 
 ## Template
 
+Read `mycrew-specialists/agents/coder.md` beside this — the template gives the skeleton, a finished
+agent gives the voice.
+
 ```markdown
 ---
 name: <name>
