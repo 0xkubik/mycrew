@@ -7,8 +7,10 @@ argument-hint: "<the kit piece being made>"
 # designer-kit — the bricks, made well
 
 Everything the product is built out of lives in `design/kit.html`: the mood, the tokens, then each
-component with its markup, CSS and every state. This skill is the craft floor for that file — what good
-looks like and what bad looks like. Screens are assembled elsewhere, with `designer-compose`.
+component with its markup, CSS and every state. Its shape is fixed by `data/designer/kit-template.html` —
+start the kit from that skeleton on first use, and afterwards extend the section a piece belongs to
+instead of appending to the end. This skill is the craft floor for that file — what good looks like and
+what bad looks like. Screens are assembled elsewhere, with `designer-compose`.
 
 ## Ground the choice
 

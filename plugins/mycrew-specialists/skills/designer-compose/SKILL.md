@@ -28,8 +28,9 @@ report the coder builds from. Nothing here touches the application's code.
 7. **Connect it to what already exists.** Where a person arrives from, where they can go, how they get
    back, what stays on screen across the flow so the product reads as one place. Consistency with the
    screens already in the kit beats a better idea for this screen alone.
-8. **Write it into the kit, then report it.** Add the assembled screen to `design/kit.html` beside the
-   components it uses, so the next run inherits it instead of deciding again.
+8. **Write it into the kit, then report it.** Add the assembled screen to the Screens section of
+   `design/kit.html`, in the shape `data/designer/kit-template.html` lays out, so the next run inherits
+   it instead of deciding again.
 
 ## Done
 

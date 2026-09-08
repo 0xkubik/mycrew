@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UI kit</title>
+<style>
+  /* ── Tokens ────────────────────────────────────────────────────────────
+     Named by role, never by hue: surface, ink, muted, accent, border,
+     danger. Four to six base values and one accent; everything else
+     derives. The type scale, spacing scale, radius scale and motion
+     durations belong here too — a component that invents its own number
+     breaks the rhythm of every component beside it.
+     Every value is chosen for THIS product. Nothing is inherited from this
+     template.                                                              */
+  :root {
+  }
+
+  /* ── Base ──────────────────────────────────────────────────────────────
+     Element defaults only: page, body text, headings, links, the focus
+     ring. No component belongs here.                                       */
+
+  /* ── Components ────────────────────────────────────────────────────────
+     One block per component, in the same order as the sections below. Every
+     class carries one prefix. Tokens are referenced as variables, never
+     written out as literal values. No id selectors.                        */
+</style>
+</head>
+
+<body>
+
+<!-- How to read this file
+     ─────────────────────
+     The product's single source of design truth. Everything its interface is
+     built from lives here, and nothing here depends on the app's own frontend
+     code. The coder builds from this file and invents no markup, styles or
+     arrangement of its own — what is missing is asked for, never improvised.
+     The sections below stay in this order. New work extends the section it
+     belongs to; nothing is appended to the end of the file.                  -->
+
+
+<!-- ═══ 1. Mood ══════════════════════════════════════════════════════════
+     Who this product is for, what it should feel like, and what it never
+     does. Written in plain sentences before the first token is chosen; every
+     choice below answers to it. Where the product's CLAUDE.md carries a mood
+     section, this agrees with it.                                            -->
+
+
+<!-- ═══ 2. Tokens ════════════════════════════════════════════════════════
+     The values from the stylesheet above, shown so they can be seen: each
+     colour role, each step of the type scale, each spacing step, each radius.
+     A token nobody can point at is a token nobody will use.                  -->
+
+
+<!-- ═══ 3. Components ════════════════════════════════════════════════════
+     One entry per component, all in the same shape:
+       · its name
+       · what it is for, one line
+       · every state it can be in, side by side — rest, hover, focus, active,
+         disabled, loading, empty, error
+       · the same component against hostile content: a long label, a line that
+         wraps, nothing at all
+     A component showing only its rest state is not finished.                 -->
+
+
+<!-- ═══ 4. Screens ═══════════════════════════════════════════════════════
+     The components above, assembled. One entry per screen:
+       · its name
+       · its job in one sentence — who arrives, what they do, what they leave
+         with
+       · the real assembled markup, not a description of it
+       · what it shows while loading, when it holds nothing, when it fails
+       · what it does at a narrow width, on long text, at zero items and at
+         three hundred
+     A screen lands here the moment it is designed, so the next run inherits
+     it instead of deciding it again.                                         -->
+
+</body>
+</html>
