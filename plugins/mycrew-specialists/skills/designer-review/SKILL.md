@@ -26,6 +26,9 @@ and not a read of the code. Nothing is edited.
 - **Templated** — identical rounded cards under one shadow, ALL-CAPS eyebrows, an arrow after every
   link, decoration that says nothing about the content.
 - **No answer to an action** — pressed, and nothing visibly happened; nothing shows that it is loading.
+- **Layout jumps** — interacting with one element moves others that were not touched: content reflows
+  under a tooltip, a list shifts when one row expands, neighbours jump when something loads in.
+  Untouched elements hold their place.
 - **A dead end** — empty with nowhere to go, an error with no way out.
 - **Lying about state** — a placeholder that reads as data, a disabled control that reads as live.
 - **Out of reach** — targets too small to hit, no visible focus when moving by keyboard.
