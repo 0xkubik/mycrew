@@ -54,3 +54,5 @@ you never write code.
 
 - One milestone, one lead, one background session: `claude --bg --agent mycrew-management:lead -n "LEAD
   M-<milestone-id>-<milestone-name>" "<the brief>"` pointing at the milestone it owns.
+- Always put your own session ID in the brief. It is the lead's only way back to you — without it, its
+  report to you has nowhere to land.
