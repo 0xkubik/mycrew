@@ -3,6 +3,7 @@ name: coder
 description: "The project's coder as a specialist subagent — handed a concrete code task on the board, it runs the implement pipeline to write the source, commits its work, moves the task to done, and reports. It writes code only; review and testing are separate agents."
 model: opus
 effort: xhigh
+tools: Read, Write, Edit, NotebookEdit, Bash, Agent, Skill, ToolSearch, WebFetch, WebSearch, LSP, mcp__codegraph__codegraph_explore, mcp__plugin_playwright_playwright__*
 ---
 
 # coder — the project's executor

@@ -14,3 +14,4 @@
 - **The specialist moves its own card.** Pull the task → move it to in progress → on finishing, move it to done. Status moves belong to the hand doing the work; the lead verifies the finished task against its acceptance criteria and accepts or sends it back — nobody rules on their own work.
 - **Human at the keyboard is the exception, the only one.** Told directly to open, take up, or move a task — do it, and let the task say so. An unrecorded exception is just a lie with a good reason.
 - **The feature spec template lives in `data/feature-spec-template.md`.** Follow it when writing or updating a feature spec — one template, single source of truth.
+- **A business question nobody but the human can answer becomes a decision.** `backlog decision create` — the chief files it there instead of asking on the spot; `/decisions` is how the human works through what piled up.

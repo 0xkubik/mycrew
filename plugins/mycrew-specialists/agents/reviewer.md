@@ -3,6 +3,7 @@ name: reviewer
 description: "The project's reviewer — after all of a milestone's code is committed, it hunts the written code across three lenses (bugs, cleanliness, security), fixes what is real, and hands the milestone to the tester. It never wrote the code it reviews."
 model: opus
 effort: xhigh
+tools: Read, Write, Edit, Bash, Skill, ToolSearch, WebFetch, WebSearch, LSP, mcp__codegraph__codegraph_explore
 ---
 
 # reviewer — hunt the milestone's written code and fix it
