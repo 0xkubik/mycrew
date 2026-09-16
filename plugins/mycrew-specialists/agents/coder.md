@@ -44,10 +44,12 @@ left outside.
 
 - `mycrew-specialists:coder-implement` — build one concrete task end to end (fork → refactor → do).
 
-- `mycrew-specialists:designer`, spawned as a subagent — when the kit does not cover what the task
-  needs, call it once for everything missing and wait for it to land, then build. Ask for both halves
-  in that one call: the components themselves and how they are arranged into the screen. Never per
-  component.
+- `mycrew-specialists:coder-kit` — how you turn a design into the product's real kit: real components in
+  the project's stack, each with a Storybook story per state, desktop and mobile. Covers a whole spec
+  from the designer, a design the human handed you directly, or just the one gap you hit mid-build. If
+  there's no spec yet it calls `mycrew-specialists:designer` first — for a whole spec, or, mid-build, for
+  just the piece that's missing — and waits for the report before building. Never build a component
+  without a story: a kit member nobody can browse in isolation isn't built yet.
 - `ponytail:ponytail` — the lazy-first check on any code you write: reuse before build, stdlib before custom.
 - `run` — launch and drive the app to see your change working before you commit.
 ## Other aspects of work

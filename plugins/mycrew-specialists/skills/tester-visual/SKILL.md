@@ -29,7 +29,8 @@ finding here means the same thing it would from the designer.
 - **Fix small things in place** — a spacing slip, a missing state, a wrong word — the same way you
   would on any other pass, and note it.
 - **Flag what you can't** — a real design disagreement, or a gap that needs the kit itself extended —
-  goes back through `designer-import` as its own piece of work, never patched around here.
+  goes back through `coder-kit` (via the designer for a spec, if the gap needs one) as its own piece of
+  work, never patched around here.
 
 ## Report
 

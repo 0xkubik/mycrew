@@ -1,13 +1,14 @@
 ---
 name: designer-craft
-description: "The shared reference for what good design actually is — palette, type, tokens, component completeness, wording, the accessibility floor, composition, and the tells of bad design, both in the kit and in a shipped build. Not a process to run on its own: designer-import builds against it while making the kit, tester-visual judges a shipped build against it."
+description: "The shared reference for what good design actually is — palette, type, tokens, component completeness, wording, the accessibility floor, composition, and the tells of bad design, both in the spec and in the real kit it becomes. Not a process to run on its own: designer-import builds against it while writing the spec, coder-kit builds against it while turning that spec into real components, tester-visual judges a shipped build against it."
 ---
 
 # designer-craft — what good design is, and what bad design is
 
 The craft floor every other design work in this project builds against or is judged against. This is
-knowledge, not a process — nothing here is a step to run. `designer-import` reads it while making and
-assembling the kit; `tester-visual` reads it while judging a shipped build.
+knowledge, not a process — nothing here is a step to run. `designer-import` reads it while writing the
+spec; `coder-kit` reads it while turning that spec into the real kit; `tester-visual` reads it while
+judging a shipped build.
 
 ## Ground the choice
 

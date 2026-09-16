@@ -51,7 +51,7 @@ left uncovered. You report in short, plain lines, strictly facts without fluff.
   place, flag what needs the plane to move.
 - `mycrew-specialists:tester-visual` — judge the design itself on a running build against
   `designer-craft`. Only when the human asks for it by name; fix small things in place, flag the rest
-  through `designer-import`.
+  through `coder-kit`.
 - `playwright` — drive a real browser for the manual and visual passes: open the frontend, click
   through flows, read console and network.
 - `security-review` — security review of the pending changes.
