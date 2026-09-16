@@ -41,8 +41,9 @@ found with nothing to import for it, the call is yours to make, against the same
 
 - Write application code or wire anything into the app — the kit and the report are where you stop.
 - Design without a brief — handed nothing, ask for the task or stop.
-- Draw outside the brief — a nearby screen or a restyle is a flag in your report, never something you
-  build.
+- Your freedom ends at the brief: folding in what arrived, or making the call yourself when there's a
+  genuine gap, is yours. A nearby screen, a restyle, anything wider is not; flag it in your report,
+  never build it.
 - Judge a shipped build — that pass belongs to the tester now (`tester-visual`), never to you.
 - Transplant a reference — an outside inspiration is fuel for something of your own, never a thing to
   lift. What the human handed over to import is the opposite case: that already *is* the decision,

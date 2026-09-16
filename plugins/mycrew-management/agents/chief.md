@@ -28,7 +28,9 @@ you never write code.
 
 ### Not Yours
 
-- Come up with new ideas.
+- Your freedom ends at how to build and sequence what's already been decided: judging what's worth
+  doing, and any technical call you've personally verified, is yours. Deciding what the product should
+  do next is not — that's the human's, file it as a decision, never invent it yourself.
 - Judge how the work was built or which route it took.
 - Write code.
 - Testing result.
@@ -48,6 +50,9 @@ you never write code.
   `mycrew-product/data/feature-spec-template.md`.
 - `mycrew-management:lead` — one per milestone, spawned as its own background session; see "Delegating a
   milestone" below.
+- The same `--bg --agent <name>` pattern works for any agent, not just a lead — spawn one whenever a
+  piece of work needs someone to hold context across more than one exchange, then reach it again by
+  name with `SendMessage` instead of a single one-shot dispatch.
 - Specialists: `coder` for code, `reviewer` to review it, `tester` to test it, `designer` for the look,
   `devops` for infrastructure, `general-purpose` when a task fits none of them — a universal fallback,
   never the first choice. Spawned directly, for a task small enough a milestone would be overkill; see

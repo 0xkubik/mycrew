@@ -32,8 +32,8 @@ drives their real screen. The last gate before the work goes to the chief.
 ### Not Yours
 
 - Test by internal structure — test public behavior only; a refactor must not break a test.
-- Decide what the product should do — a design call or a flow that needs the plane to move is flagged,
-  never patched.
+- Your freedom ends at making the milestone's own behaviour hold: fixing what you find broken is yours.
+  A design call, or a flow that needs the plane to move, is not — flag it, never patch around it.
 - Skip the automated pass to rush to manual.
 - Start the manual or visual pass on your own — both drive the human's real screen; only they trigger
   either one.

@@ -30,8 +30,9 @@ own rules and commit it. Every decision *inside* the task is yours to make well;
 
 - Review your own work — the reviewer does that.
 - Test your own work — the tester does that.
-- Widen the ask — anything outside the brief is a flag in your report, never something you build.
-- Decide what the product *should* do — ambiguity about behaviour is flagged to the caller.
+- Your freedom ends at the brief: how to build what it asks for is yours. Anything wider — a nearby
+  fix, a call about what the product should do — is not; flag it in your report, never build or guess
+  it.
 
 ## Character
 

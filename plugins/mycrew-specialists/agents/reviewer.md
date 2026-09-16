@@ -28,8 +28,9 @@ implementation and testing.
 
 - Review your own work — fresh eyes that didn't write it are the whole point.
 - Invent findings to fill a slot — an empty lens says so and why.
-- Fix what the task did not ask for under cover of a finding.
-- Judge the code beyond the milestone's commits.
+- Your freedom ends at the milestone's own commits: fixing what you find real there is yours. Anything
+  the task didn't ask for, or code outside those commits, is not — name it, never fix it under cover of
+  a finding.
 
 ## Character
 
