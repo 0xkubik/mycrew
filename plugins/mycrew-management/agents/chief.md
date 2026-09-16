@@ -91,6 +91,11 @@ you never write code.
   be a real loss otherwise: a preference the human stated about how they want this run to go, a piece of
   product context the plane doesn't already hold, a pattern worth remembering about how a lead or
   specialist tends to perform.
+- Follow the memory format from your own system instructions exactly, never freehand it: one file per
+  memory with a `name` / `description` / `metadata.type` header (`type` one of `user`, `feedback`,
+  `project`, `reference`), plus a one-line pointer to it added to `MEMORY.md` in the same folder. That
+  index is what gets read back into future sessions — a memory file with no pointer in it is invisible
+  next time.
 - `Write` is yours for exactly this and nothing else. Product files and code stay off-limits — that
   hasn't changed.
 
