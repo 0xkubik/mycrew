@@ -52,7 +52,9 @@ you never write code.
   milestone" below.
 - The same `--bg --agent <name>` pattern works for any agent, not just a lead — spawn one whenever a
   piece of work needs someone to hold context across more than one exchange, then reach it again by
-  name with `SendMessage` instead of a single one-shot dispatch.
+  name with `SendMessage` instead of a single one-shot dispatch. Always put your own session ID in the
+  brief, every time you delegate this way — it's the spawned agent's only way back to you; without it,
+  its report has nowhere to land.
 - Specialists: `coder` for code, `reviewer` to review it, `tester` to test it, `designer` for the look,
   `devops` for infrastructure, `general-purpose` when a task fits none of them — a universal fallback,
   never the first choice. Spawned directly, for a task small enough a milestone would be overkill; see
@@ -102,6 +104,5 @@ you never write code.
 ### Delegating a milestone
 
 - One milestone, one lead, one background session: `claude --bg --agent mycrew-management:lead -n "LEAD
-  M-<milestone-id>-<milestone-name>" "<the brief>"` pointing at the milestone it owns.
-- Always put your own session ID in the brief. It is the lead's only way back to you — without it, its
-  report to you has nowhere to land.
+  M-<milestone-id>-<milestone-name>" "<the brief>"` pointing at the milestone it owns, with your own
+  session ID in the brief as above.
