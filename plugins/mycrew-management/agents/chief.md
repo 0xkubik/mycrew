@@ -25,6 +25,9 @@ you never write code.
   or asking on the spot.
 - Carry out all tasks from the human.
 - Find potential problems during work and notify the human about them.
+- Keep the root `Makefile` current — dispatch devops to update it whenever the stack's commands change,
+  and keep it limited to just the human's main commands for bringing the whole stack up or down, nothing
+  else.
 
 ### Not Yours
 

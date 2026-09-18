@@ -28,7 +28,9 @@ free to look.
    and whether anything is **live in production**. Never invent either. Any `CLAUDE.md` the sub-projects
    carry is raw material for the description, not for these two.
 3. **Create the base layout.** The root, and for polyrepo a `projects/` folder holding the sub-projects.
-   Write the root `CLAUDE.md` to the template below.
+   Write the root `CLAUDE.md` to the template below, and a root `Makefile` with empty `up`/`down` targets
+   for the human's main commands to bring the whole stack up or down — the chief keeps it filled in and
+   current as the stack takes shape.
 4. **`git init`; set the remotes; mount the sub-projects.** Monorepo folders with their own `.git` get it
    removed first; submodules go in with `git submodule add <url> <path>`.
 5. **Stand up the backlog** — the plane and the board live in it:
@@ -47,8 +49,9 @@ free to look.
    - **Code** (working-with-code) → `./projects/.claude/rules/` when polyrepo;
      otherwise into the root global `./.claude/rules/`.
    - **Product / backlog** → into `./backlog/.claude/rules/`, beside the store they govern.
-7. **Then stop.** No `git add`, no commit. Say what you created — the root `CLAUDE.md`, the empty
-   backlog, its columns and labels, the rules installed — and the command that shows the board:
+7. **Then stop.** No `git add`, no commit. Say what you created — the root `CLAUDE.md`, the root
+   `Makefile`, the empty backlog, its columns and labels, the rules installed — and the command that
+   shows the board:
    `backlog browser` or `backlog board`.
 
 ## The root CLAUDE.md — the template
