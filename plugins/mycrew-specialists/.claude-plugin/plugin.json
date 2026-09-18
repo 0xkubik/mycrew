@@ -1,6 +1,6 @@
 {
   "name": "mycrew-specialists",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "description": "Layer 2/4 \u2014 the specialists, the agents who carry the work: a coder who writes the code with the implement skill and turns the designer's spec into the product's real UI kit \u2014 components and their Storybook, together \u2014 a reviewer who hunts the committed code across bugs/cleanliness/security, a tester who proves it (automated, then manual and visual on the real surface), a designer, a UI/UX agent with taste who breaks what's already designed into that spec, an independent source of design truth, a devops agent who works the project's real infrastructure directly through its own command-line tools, and a philosopher who takes apart what is brought to it \u2014 digging until the real goal is in the open, then handing back a call. Each keeps its own domain data under data/.",
   "author": {
     "name": "kubik",

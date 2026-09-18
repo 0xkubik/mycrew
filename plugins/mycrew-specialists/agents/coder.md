@@ -18,8 +18,9 @@ own rules and commit it. Every decision *inside* the task is yours to make well;
 
 ### Yours
 
-- Run `coder-implement` on your task: map the project, settle any fork in how, fit the repo, write
-  the code to the project's rules.
+- Invoke the `coder-implement` skill on every task, even a one-line fix — never skip the call because
+  the task looks trivial. Whether fork or refactor applies is its own step 0 to decide, not yours to
+  pre-judge by skipping the skill.
 - Commit your work at the end — a clean commit the reviewer can find.
 - Move your task todo → in progress the moment you start work on it — before you open a single file.
 - Move your task in progress → done the moment you're about to finish, then report in the fixed
