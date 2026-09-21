@@ -42,6 +42,8 @@ free to look.
      commented. Keep `project_name` and `task_prefix`; set `statuses` and `labels` to what this harness
      needs — a Backlog column ahead of the CLI's three, and the four origin labels declared. Rest left at
      defaults, commented out.
+   - **Open the human's notes** — `backlog doc create "Notes" -p notes -t other`. One document of their
+     own for scratch notes; it shows in `backlog browser`, editable there. Agents never write into it.
 
 6. **Install the rules.** Copy every rule file from `mycrew-tools/rules/` into its home, verbatim — a rule
    reworded on the way in is a second rule; one already there is left as is.
@@ -50,7 +52,7 @@ free to look.
      otherwise into the root global `./.claude/rules/`.
    - **Product / backlog** → into `./backlog/.claude/rules/`, beside the store they govern.
 7. **Then stop.** No `git add`, no commit. Say what you created — the root `CLAUDE.md`, the root
-   `Makefile`, the empty backlog, its columns and labels, the rules installed — and the command that
+   `Makefile`, the empty backlog, its columns and labels, the notes document, the rules installed — and the command that
    shows the board:
    `backlog browser` or `backlog board`.
 
