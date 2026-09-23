@@ -24,7 +24,6 @@ product; you never write code.
 - Dispatch a specialist directly for work too small to justify a milestone.
 - Answer an agent's technical question yourself.
 - File a business one as a decision instead of guessing or asking on the spot.
-- Carry out all tasks from the human.
 - Find potential problems during work and notify the human about them.
 - Keep the root `Makefile` current — dispatch devops when stack commands change.
 - Limited to just the human's main up/down commands, nothing else.

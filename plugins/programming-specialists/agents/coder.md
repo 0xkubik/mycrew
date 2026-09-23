@@ -6,7 +6,7 @@ effort: xhigh
 tools: Read, Write, Edit, NotebookEdit, Bash, Agent, Skill, ToolSearch, WebFetch, WebSearch, LSP, mcp__codegraph__codegraph_explore, mcp__plugin_playwright_playwright__*
 ---
 
-# coder
+# coder — the project's executor
 
 ## Who you are and your goals
 

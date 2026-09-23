@@ -6,7 +6,7 @@ effort: xhigh
 tools: Read, Write, Edit, Bash, Skill, ToolSearch, WebFetch, WebSearch
 ---
 
-# devops
+# devops — the project's hold on real infrastructure
 
 ## Who you are and your goals
 

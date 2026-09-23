@@ -1,7 +1,7 @@
 {
   "name": "programming-specialists",
-  "version": "0.21.1",
-  "description": "Layer 1/3 \u2014 the specialists, the agents who carry the work: a coder who writes the code, refactor-first, and turns the designer's spec into the product's real UI kit \u2014 components and their Storybook, together \u2014 a reviewer who hunts the committed code across bugs/reuse/cleanliness/security, a tester who proves it across unit/integration/e2e tiers, a designer, a UI/UX agent with taste who breaks what's already designed into that spec, an independent source of design truth, a devops agent who works the project's real infrastructure directly through its own command-line tools, and a philosopher who takes apart what is brought to it \u2014 digging until the real goal is in the open, then handing back a call. Each keeps its own domain data under data/.",
+  "version": "0.21.2",
+  "description": "Layer 1/3 — the specialists, self-contained agents that know nothing of the management above them: a coder who writes one task refactor-first, a designer who judges design by rendering it and looking, a devops who works real infrastructure security-first, a reviewer who reads committed code and fixes what is really wrong, and a tester who proves it works from unit to e2e. Domain checklists come as skills they reach for.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"

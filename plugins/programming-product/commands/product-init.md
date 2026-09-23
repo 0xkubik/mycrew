@@ -47,7 +47,7 @@ free to look.
 
 6. **Install the rules.** Copy every rule file into its home, verbatim — a rule reworded on the way in is
    a second rule; one already there is left as is.
-   - **Common** (`tools/rules/`: working-with-humans, working-with-text, working-in-repo) → root
+   - **Common** (`tools/rules/`: working-with-humans, working-with-text, working-with-repo) → root
      `./.claude/rules/`.
    - **Code** (this plugin's own `rules/working-with-code.md`) → `./projects/.claude/rules/` when
      polyrepo; otherwise into the root global `./.claude/rules/`.

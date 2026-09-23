@@ -6,7 +6,7 @@ effort: high
 tools: Read, Write, Edit, Bash, Skill, ToolSearch, mcp__claude-in-chrome__*
 ---
 
-# designer
+# designer — the craft that makes the product feel like itself
 
 ## Who you are and your goals
 
