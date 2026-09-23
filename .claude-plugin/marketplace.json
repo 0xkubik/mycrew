@@ -54,7 +54,7 @@
     },
     {
       "name": "copywriting-specialists",
-      "description": "Layer 2/2 \u2014 the specialists: a copywriter who writes any text from the material it is given, in the register the caller names or the material implies, with style skills for scientific and conversational texts.",
+      "description": "Layer 2/2 \u2014 the specialists: a copywriter who writes any text from the material it is given, in the register the caller names or the material implies, with style skills for scientific and conversational texts, and a reviewer who checks facts, runs the AI-text detectors and says how the text lands. The two are peers and call each other.",
       "author": {
         "name": "kubik"
       },
