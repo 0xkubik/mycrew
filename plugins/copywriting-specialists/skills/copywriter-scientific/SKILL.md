@@ -12,25 +12,25 @@ The venue's template overrides it; popular texts (Habr and the like) are out of 
 
 ## Voice
 
-- **No «мы» or «я».** No questions, no exclamations; the work and the artefact are the subject.
-- **Passive perfects for the work.** «В работе формализована…, проведён…».
+- **No first person.** No "we" or "I", no questions, no exclamations; the work is the subject.
+- **Passive perfects for the work.** "In this work X is formalized, Y is described, Z is tested."
 - **One fact, one short sentence.** No rhetorical setup, no long multi-clause conclusion.
-- **A cause stays only as a mechanism.** «Потому что» must name one, or the sentence goes.
-- **Scope, not doubt.** «В среднем», «хотя и не абсолютный» — never «возможно», «вероятно».
+- **A cause stays only as a mechanism.** "Because" must name one, or the sentence goes.
+- **Scope, not doubt.** "On average", "strict though not absolute" — never "possibly", "probably".
 - **No lofty or evaluative words.** A dry verdict on a ruled-out option is fine.
-- **No essay pivots.** «Причина в том…», «надёжен ровно потому что», «иначе обстоит дело».
-- **No sweeping generalities.** «Широко используемый» gets a source or goes.
-- **Plain Russian for loud jargon.** «Гомеостаз» gets a plain word; product names stay Latin.
+- **No essay pivots.** "The reason is that…", "reliable precisely because…", "it stands otherwise".
+- **No sweeping generalities.** "Widely used" gets a source or goes.
+- **Plain Russian for loud jargon.** "Homeostasis" gets a plain word; product names stay Latin.
 
 ## Structure
 
-- **Open on the mechanism.** State the gap as a plain fact; no «актуальность» paragraph.
+- **Open on the mechanism.** State the gap as a plain fact; no "relevance" paragraph.
 - **Problem section:** each rival approach with its main flaw and a source; end on the goal.
 - **Turn the problem into requirements** and walk them one by one through to the conclusion.
 - **In an article, related work lives in the introduction** as labelled strands, not a section.
 - **Compare per criterion, own solution last.** Show where the work loses, in table and words.
 - **Criticise a rival by mechanism, date and source,** never by adjective.
-- **Scope every uniqueness claim** to the compared set: «в рассмотренном наборе».
+- **Scope every uniqueness claim** to the compared set: "in the reviewed set".
 - **Prose first, then the figure or formula,** placed right after the point it shows.
 - **Conclusion:** passive recap against the requirements, admitted trade-offs, then future work.
 - **Future work is the admitted limits,** as named techniques with sources.
@@ -46,8 +46,8 @@ The venue's template overrides it; popular texts (Habr and the like) are out of 
 
 ## Form
 
-- **Formula:** colon lead-in, number at the right, «где» glossing each symbol, later «формула (8)».
+- **Formula:** colon lead-in, number at right, "where" glosses each symbol, later "formula (8)".
 - **Table:** one lead-in sentence before, interpretation after, sources in the caption.
-- **Figure caption:** «Рис. N. Object: what the reader sees.» Figure text large enough to read.
+- **Figure caption:** number, object, then what the reader sees. Figure text large enough to read.
 - **No bullets or numbered lists in paper prose** — run-in labels or one semicolon sentence.
 - **Headings follow the venue** — numbered when its template numbers them.
