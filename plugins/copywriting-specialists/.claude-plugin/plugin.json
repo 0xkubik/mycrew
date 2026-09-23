@@ -1,0 +1,9 @@
+{
+  "name": "copywriting-specialists",
+  "version": "0.1.0",
+  "description": "Layer 2/2 — the specialists: agents for a specific writing domain.",
+  "author": {
+    "name": "kubik",
+    "email": "dev@noxlabs.xyz"
+  }
+}

@@ -8,12 +8,12 @@ argument-hint: "<input>"
 
 <2-3 sentences: what it does, what comes back, where it stops.>
 
-## <Section>
+## Steps
 
-- **<Demand.>** <Detail if needed.>
-- **<Demand.>**
+N. **<Step.>**
+    - <what should be done and how (<1000 letters per step)> 
 
-## <Section>
+## Done
 
-- **<Demand.>**
-- **<Where it stops.>**
+- **<How to verify it worked.>**
+- **<What comes back to the caller.>**

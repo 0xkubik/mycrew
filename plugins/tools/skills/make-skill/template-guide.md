@@ -8,13 +8,6 @@ argument-hint: "<input>"
 
 <2-3 sentences: what it does, what comes back, where it stops.>
 
-## Steps
+## <Sections>
 
-1. **<Step.>** <Detail if needed.>
-2. **<Step.>**
-3. **<Step.>**
-
-## Done
-
-- **<How to verify it worked.>**
-- **<What comes back to the caller.>**
+- **<Demands.>** - <<100 letters per bullet>

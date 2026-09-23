@@ -1,47 +1,65 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "mycrew",
-  "description": "A harness for Claude Code: primitives and house rules, specialists who carry the work through the build pipeline, a product plane with its task board, and the leadership that steers them. Install mycrew-tools first.",
+  "description": "A harness for Claude Code, grouped by domain: primitives and house rules shared by everything, specialists who carry the work through each domain's build pipeline, a product plane with its task board, and the leadership that steers them. Install tools first.",
   "owner": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
   },
   "plugins": [
     {
-      "name": "mycrew-tools",
-      "description": "Layer 1/4 \u2014 small, project-agnostic skills you reach for mid-work, plus the house rule files the rest of mycrew builds on.",
+      "name": "tools",
+      "description": "No domain of its own \u2014 small, project-agnostic skills you reach for mid-work, plus the house rule files every other plugin here builds on. Install this one first, whatever domain you're setting up.",
       "author": {
         "name": "kubik"
       },
       "category": "workflow",
-      "source": "./plugins/mycrew-tools"
+      "source": "./plugins/tools"
     },
     {
-      "name": "mycrew-specialists",
-      "description": "Layer 2/4 \u2014 the specialists, the agents who carry the work: a coder who runs the build pipeline as coder-* skills and writes the code, and a designer with taste who works against the real CSS frontend. Each keeps its own domain data.",
+      "name": "programming-specialists",
+      "description": "Layer 1/3 \u2014 the specialists, the agents who carry the work: a coder who runs the build pipeline as coder-* skills and writes the code, and a designer with taste who works against the real CSS frontend. Each keeps its own domain data.",
       "author": {
         "name": "kubik"
       },
       "category": "workflow",
-      "source": "./plugins/mycrew-specialists"
+      "source": "./plugins/programming-specialists"
     },
     {
-      "name": "mycrew-product",
-      "description": "Layer 3/4 \u2014 the product plane and its task board, both kept on backlog.md: what the whole product must do, and what is being done about it right now. /product-init stands it up.",
+      "name": "programming-product",
+      "description": "Layer 2/3 \u2014 the product plane and its task board, both kept on backlog.md: what the whole product must do, and what is being done about it right now, plus the rule for working with code. /product-init stands it up.",
       "author": {
         "name": "kubik"
       },
       "category": "workflow",
-      "source": "./plugins/mycrew-product"
+      "source": "./plugins/programming-product"
     },
     {
-      "name": "mycrew-management",
-      "description": "Layer 4/4 \u2014 the leadership of the product: a chief who is the human's deputy over the whole product, and a lead who holds one feature, each spawning specialists to carry the work. Management only: it never writes code.",
+      "name": "programming-management",
+      "description": "Layer 3/3 \u2014 the leadership of the product: a chief who is the human's deputy over the whole product, and a lead who holds one feature, each spawning specialists to carry the work. Management only: it never writes code.",
       "author": {
         "name": "kubik"
       },
       "category": "workflow",
-      "source": "./plugins/mycrew-management"
+      "source": "./plugins/programming-management"
+    },
+    {
+      "name": "copywriting-tools",
+      "description": "Layer 1/2 \u2014 general-purpose writing components, usable standalone: house rules and reusable skills for prose that aren't tied to any one writing domain.",
+      "author": {
+        "name": "kubik"
+      },
+      "category": "workflow",
+      "source": "./plugins/copywriting-tools"
+    },
+    {
+      "name": "copywriting-specialists",
+      "description": "Layer 2/2 \u2014 the specialists: agents for a specific writing domain.",
+      "author": {
+        "name": "kubik"
+      },
+      "category": "workflow",
+      "source": "./plugins/copywriting-specialists"
     }
   ]
 }

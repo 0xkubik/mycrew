@@ -1,10 +1,10 @@
 ---
-name: skillsmaker
+name: make-skill
 description: "Use when writing or rewriting a SKILL.md. Asks what the skill should do, picks a template, fills it in."
 argument-hint: "<the skill to write or rewrite>"
 ---
 
-# skillsmaker — build a skill by asking
+# make-skill — build a skill by asking
 
 You are building a skill. Ask the user what it should do, pick the right template, fill it in with
 their answers. Don't write anything until you have enough to fill the template.
@@ -34,10 +34,7 @@ Ask the user which one fits if it is not obvious.
 
 ## Step 3: fill the template
 
-Read the template file, and one finished skill of the same shape beside it — the template gives the
-skeleton, the specimen gives the voice: one-liner → `mycrew-tools:stay-in-scope`, guide →
-`mycrew-specialists:designer-craft`, pipeline → `mycrew-management:what-to-do`, questionnaire →
-`mycrew-tools:agentmaker`. Fill in each `<placeholder>` with the user's answers. Write dry, factual
+Read the template file. Fill in each `<placeholder>` with the user's answers. Write dry, factual
 language — no "leverage", no "ensure", no "it is crucial to". Keep it under 40 lines.
 
 ## Step 4: write it
