@@ -1,7 +1,7 @@
 {
   "name": "copywriting-specialists",
-  "version": "0.3.1",
-  "description": "Layer 2/2 — the specialists: a copywriter who writes any text from the material it is given, in the register the caller names or the material implies, with a style skill for scientific texts.",
+  "version": "0.4.0",
+  "description": "Layer 2/2 — the specialists: a copywriter who writes any text from the material it is given, in the register the caller names or the material implies, with style skills for scientific and conversational texts.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
