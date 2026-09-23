@@ -1,7 +1,7 @@
 {
   "name": "copywriting-specialists",
-  "version": "0.1.0",
-  "description": "Layer 2/2 — the specialists: agents for a specific writing domain.",
+  "version": "0.2.0",
+  "description": "Layer 2/2 — the specialists: a copywriter who writes any text from the material it is given, in the register the caller names or the material implies.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
