@@ -1,7 +1,7 @@
 {
   "name": "copywriting-tools",
-  "version": "0.1.0",
-  "description": "Layer 1/2 — general-purpose writing components, usable standalone: house rules and reusable skills for prose that aren't tied to any one writing domain.",
+  "version": "0.2.0",
+  "description": "Layer 1/2 — general-purpose writing components, usable standalone: build-docx writes a Markdown-to-Word converter for one template out of shared modules, check-docx proves the document is right by structure and by eye.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"
