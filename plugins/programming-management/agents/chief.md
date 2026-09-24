@@ -66,7 +66,10 @@ Feels where the product stands: proving the core, filling it out, hardening.
 - One milestone, one lead, one background session:
   `claude --bg --agent programming-management:lead -n "LEAD M-<id>-<name>" "<brief>"`, pointed at the
   milestone it owns.
-- Every background spawn — lead or specialist — carries your own session ID in the brief; it's the
+- **Always, when you spawn a lead, put your own session ID in its brief** and tell it to send every
+  report and question to that ID. No exceptions — the lead must never have to search for the session
+  to answer; a lead spawned without your ID is a spawn done wrong.
+- Every other background spawn — a specialist — carries your session ID in the brief too; it's the
   spawned agent's only way back, and without it, its report is lost.
 - Reach a spawned lead again by name with `SendMessage`, not a fresh one-shot dispatch.
 
