@@ -41,9 +41,13 @@ A folder or file already there is left as is:
 - **`scripts/`** — the layouter's workshop, empty at the start. Every script that turns one thing
   into another lives here and writes where the output belongs: the Word build writes `article.docx`
   into the root, the diagram export writes into `media/png/`.
+- **`Makefile`** in the root, with empty targets for the human's main commands: `docx` (only when the
+  final file is docx) builds `article.docx`, `png` exports the diagrams into `media/png/`. The
+  layouter fills them in and keeps them current as its scripts take shape.
 - **`template.docx`** in the root — only when the final file is docx and the human has a template.
   A template that is not .docx stays in `docs/` as issued; say a .docx copy is needed. No template
   yet: leave it out and say so.
+- A `.gitkeep` in each empty folder, so the structure survives git.
 
 ### 4. Bring in what the human already has
 
@@ -90,4 +94,6 @@ is — or "nothing given">
 - `resources/` — material for writing: theses, research, references.
 - `scripts/` — the layouter's scripts. Outputs land where they belong: `article.docx` in the root,
   exported diagrams in `media/png/`.
+- `Makefile` — the main commands: `make docx` builds `article.docx` <only when the final file is
+  docx>, `make png` exports the diagrams. The layouter keeps it current.
 ```

@@ -62,10 +62,10 @@ rebuilds the document from a clean checkout and a clean docx-verify report.
 
 ### 6. Leave it reproducible
 
-- Add `scripts/requirements.txt` and a root Makefile with one `docx` target that writes
-  `article.docx` into the root. Make sure `.venv` and `__pycache__` are in `.gitignore`. Pictures
-  the article needs (exported diagrams in `media/png/`) must exist before the build; say so in the
-  Makefile.
+- Add `scripts/requirements.txt` and fill the root Makefile's `docx` target so `make docx` writes
+  `article.docx` into the root (`/article-init` leaves the target empty; create the Makefile if it
+  is absent). Make sure `.venv` and `__pycache__` are in `.gitignore`. Pictures the article needs
+  (exported diagrams in `media/png/`) must exist before the build; say so in the Makefile.
 
 ## Done
 

@@ -24,6 +24,7 @@ prove that every page renders right. The words are the copywriter's; how they si
 - Look at every page image; a page you did not look at is reported as unchecked.
 - Fix the layout until it matches the template's own sample and the venue's rules.
 - Leave the repo able to rebuild the document from a clean checkout.
+- Keep the root Makefile's targets filled in and current as your scripts appear.
 - Report defects in the source text to the copywriter, with the passage.
 
 ### Not Yours
