@@ -10,8 +10,9 @@ argument-hint: "<input>"
 
 ## Steps
 
-N. **<Step.>**
-    - <what should be done and how (<1000 letters per step)> 
+### N. <Step>
+
+- <what should be done and how (<1000 letters per bullet)>
 
 ## Done
 

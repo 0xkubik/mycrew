@@ -12,33 +12,37 @@ verdict is recorded and binds what you pitch next.
 
 ## Steps
 
-1. **Ground before you invent.**
-   - Load the product rules (`rules/working-with-backlog.md`) and the feature spec template
-     (`data/feature-spec-template.md`). Read the North Star from the root `CLAUDE.md`,
-     `backlog milestone list`, every `backlog decision`, and what the sub-projects are. An idea that
-     restates something listed, built, or pitched is not an idea — find a real gap.
+### 1. Ground before you invent
 
-2. **Pitch one idea.**
-   - What it is and why it's worth doing come first, in plain human language — the gap it closes, who
-     it helps, what it costs. Then the verdict through `AskUserQuestion`, its options already filled
-     with predicted positions (yes because this gap hurts, no because it costs more than it returns),
-     never a bare yes/no. Predict the refusals as hard as the approvals — the reason they turn it down
-     is what most needs recording. Pitch serves the North Star, never novelty.
+- Load the product rules (`rules/working-with-backlog.md`) and the feature spec template
+  (`data/feature-spec-template.md`). Read the North Star from the root `CLAUDE.md`,
+  `backlog milestone list`, every `backlog decision`, and what the sub-projects are. An idea that
+  restates something listed, built, or pitched is not an idea — find a real gap.
 
-3. **File the verdict the moment it lands.**
-   - Approved or rejected, file a `backlog decision` — title, `-s accepted|rejected`, then the body
-     straight after with three sections: **Context** (the case as put), **Decision** (verdict and the
-     human's reason, in their words), **Consequences** (what this binds for later pitches). The reason
-     is theirs, however they gave it — never your reconstruction. Append, never rewrite: an overturned
-     verdict is a new decision.
-   - **Approval is the only door into the plane.** An approved idea is filed in their intent — the
-     rule set decides whether it opens a milestone or is detail in a feature already held. Never
-     approve on the human's behalf.
+### 2. Pitch one idea
 
-4. **The next one, in the same breath.**
-   - Widen or dig — a fresh angle the moment a vein is spent. Prefer the corner nothing has been
-     pitched into yet. Pitch immediately, no pause, no closing summary. Never wrap up: you end only
-     when the human says so.
+- What it is and why it's worth doing come first, in plain human language — the gap it closes, who
+  it helps, what it costs. Then the verdict through `AskUserQuestion`, its options already filled
+  with predicted positions (yes because this gap hurts, no because it costs more than it returns),
+  never a bare yes/no. Predict the refusals as hard as the approvals — the reason they turn it down
+  is what most needs recording. Pitch serves the North Star, never novelty.
+
+### 3. File the verdict the moment it lands
+
+- Approved or rejected, file a `backlog decision` — title, `-s accepted|rejected`, then the body
+  straight after with three sections: **Context** (the case as put), **Decision** (verdict and the
+  human's reason, in their words), **Consequences** (what this binds for later pitches). The reason
+  is theirs, however they gave it — never your reconstruction. Append, never rewrite: an overturned
+  verdict is a new decision.
+- **Approval is the only door into the plane.** An approved idea is filed in their intent — the
+  rule set decides whether it opens a milestone or is detail in a feature already held. Never
+  approve on the human's behalf.
+
+### 4. The next one, in the same breath
+
+- Widen or dig — a fresh angle the moment a vein is spent. Prefer the corner nothing has been
+  pitched into yet. Pitch immediately, no pause, no closing summary. Never wrap up: you end only
+  when the human says so.
 
 ## Loop
 

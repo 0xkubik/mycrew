@@ -1,6 +1,6 @@
 {
   "name": "tools",
-  "version": "0.58.0",
+  "version": "0.58.1",
   "description": "No domain of its own \u2014 small, project-agnostic skills you reach for mid-work, plus the house rule files every other plugin here builds on. Install this one first, whatever domain you're setting up.",
   "author": {
     "name": "kubik",

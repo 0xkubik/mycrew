@@ -12,27 +12,30 @@ home. Run at the **product root**. Nothing here is filed per repo.
 
 ## Steps
 
-1. **Load what governs the plane.**
-   - Load the product rules (`rules/working-with-backlog.md`), the feature spec template
-     (`data/feature-spec-template.md`), and read what's already captured: `backlog milestone list`,
-     `backlog doc list`, and the product `CLAUDE.md`. No backlog yet → send the human to `/product-init`.
-     Context comes from the human's words, never from scanning the code.
+### 1. Load what governs the plane
 
-2. **Order the features.**
-   - Sort the recorded features from **most to least significant**: weigh how central each is to the
-     product's value and how far it is from done, against how **under-documented** it is. A significant
-     feature with an empty or thin spec ranks highest — that is where the human's words matter most.
-     Present the order and start on the top of the list.
+- Load the product rules (`rules/working-with-backlog.md`), the feature spec template
+  (`data/feature-spec-template.md`), and read what's already captured: `backlog milestone list`,
+  `backlog doc list`, and the product `CLAUDE.md`. No backlog yet → send the human to `/product-init`.
+  Context comes from the human's words, never from scanning the code.
 
-3. **Question one feature in a batch.**
-   - For the current feature, read its recorded spec, then ask **several questions at once** through
-     `AskUserQuestion` — each one closing a real gap in that feature: what it does, its limits and
-     edges, its mechanics, what it must never do. Each option is a real position this human could hold,
-     put in their language, never one obvious answer beside three made to be rejected. Every answer
-     that adds or alters the feature is filed in its doc, in their words, that turn; what changes
-     nothing is filed nowhere.
-   - Include in this same batch, every time, the routing question: move on to the next feature, or
-     continue with this one?
+### 2. Order the features
+
+- Sort the recorded features from **most to least significant**: weigh how central each is to the
+  product's value and how far it is from done, against how **under-documented** it is. A significant
+  feature with an empty or thin spec ranks highest — that is where the human's words matter most.
+  Present the order and start on the top of the list.
+
+### 3. Question one feature in a batch
+
+- For the current feature, read its recorded spec, then ask **several questions at once** through
+  `AskUserQuestion` — each one closing a real gap in that feature: what it does, its limits and
+  edges, its mechanics, what it must never do. Each option is a real position this human could hold,
+  put in their language, never one obvious answer beside three made to be rejected. Every answer
+  that adds or alters the feature is filed in its doc, in their words, that turn; what changes
+  nothing is filed nowhere.
+- Include in this same batch, every time, the routing question: move on to the next feature, or
+  continue with this one?
 
 ## Loop
 

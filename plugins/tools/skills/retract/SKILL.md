@@ -10,20 +10,29 @@ Carry out the human's ruling on a claim. How it runs depends on the ruling.
 
 ## Steps
 
-1. **Right the claim and the action.** One call handles one claim. The action is either **cut** — the
-   fact is dead, remove every trace — or **replace** — correct it with the new truth the human stated.
-   Vague input ("the docs are stale") → ask what exactly is wrong and what to do before touching
-   anything.
-2. **Find every place it is stated.** Search by meaning, not one literal string — the fact hides under
-   synonyms, translations, derived phrasing. Search the docs tree, every `CLAUDE.md` up to the product
-   root, sibling doc repos, persistent memory. Stop when new searches stop finding new places.
-3. **Cut or correct each place.** For a **cut**: remove the sentence, bullet or line that states it and
-   nothing else; a file that exists only for that fact goes whole. For a **replace**: swap the fact for
-   the human's stated truth — no invented replacement, no new ideas riding in. A matching persistent
-   memory is edited the same way, and its `MEMORY.md` index line with it.
+### 1. Right the claim and the action
 
-5. **Report every touch.** The file, what was removed or changed, and each dependent left alone. An edit
-   missing from the report did not happen.
+One call handles one claim. The action is either **cut** — the fact is dead, remove every trace — or
+**replace** — correct it with the new truth the human stated. Vague input ("the docs are stale") →
+ask what exactly is wrong and what to do before touching anything.
+
+### 2. Find every place it is stated
+
+Search by meaning, not one literal string — the fact hides under synonyms, translations, derived
+phrasing. Search the docs tree, every `CLAUDE.md` up to the product root, sibling doc repos,
+persistent memory. Stop when new searches stop finding new places.
+
+### 3. Cut or correct each place
+
+For a **cut**: remove the sentence, bullet or line that states it and nothing else; a file that
+exists only for that fact goes whole. For a **replace**: swap the fact for the human's stated truth
+— no invented replacement, no new ideas riding in. A matching persistent memory is edited the same
+way, and its `MEMORY.md` index line with it.
+
+### 4. Report every touch
+
+The file, what was removed or changed, and each dependent left alone. An edit missing from the
+report did not happen.
 
 ## Done
 

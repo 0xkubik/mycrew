@@ -1,6 +1,6 @@
 {
   "name": "programming-product",
-  "version": "0.47.3",
+  "version": "0.47.4",
   "description": "Layer 2/3 — the product plane and its task board, both kept on backlog.md: what the whole product must do, and what is being done about it right now, plus the rule for working with code. /product-init stands it up.",
   "author": {
     "name": "kubik",
