@@ -54,7 +54,7 @@
     },
     {
       "name": "copywriting-specialists",
-      "description": "Layer 2/2 \u2014 the specialists: a copywriter who writes any text from the material it is given, in the register the caller names or the material implies, a reviewer who checks facts, runs the AI-text detectors and says how the text lands, and a layouter who builds the Word document and proves every page renders. The three are peers and call each other.",
+      "description": "Layer 2/2 \u2014 the specialists: a copywriter who writes any text from the material it is given, in the register the caller names or the material implies, a reviewer who checks facts, runs the AI-text detectors and says how the text lands, and a layouter who builds the Word document and proves every page renders. The three are peers and call each other. /article-init stands up an article's repository.",
       "author": {
         "name": "kubik"
       },

@@ -15,14 +15,16 @@ rebuilds the document from a clean checkout and a clean docx-verify report.
 ### 1. Set up the tools
 
 - In the article repo make a venv (`python3 -m venv .venv`, ignored by git) and install
-  `requirements.txt` from this skill's folder. Copy this skill's `docgen/` folder into the repo
-  root: the repo keeps its own copy and stays self-contained.
+  `requirements.txt` from this skill's folder. Copy this skill's `docgen/` folder into `scripts/`
+  (the layouter's folder in a repo made by `/article-init`; create it if absent): the repo keeps
+  its own copy and stays self-contained.
 - Note what the machine has: Word.app (its `mathml2omml.xsl` gives native equations; without it
   formulas degrade to plain italic text) and `mmdc` (Mermaid diagrams). Say what is missing.
 
 ### 2. Read the template
 
-- Run `inspect_template.py <template.docx>` from this skill's folder. Ask for the detail of any
+- Run `inspect_template.py <template.docx>` (the repo's root `template.docx`; the venue's own files
+  are in `docs/`) from this skill's folder. Ask for the detail of any
   candidate style with `--style NAME ...` and pick styles by what they do, not by their names.
 - Read any formatting requirements the venue supplied. Where the template's own sample body says
   which style a piece uses, trust it, and copy what it shows: the empty spacer paragraphs between
@@ -37,11 +39,12 @@ rebuilds the document from a clean checkout and a clean docx-verify report.
   reference format, formulas, images, Mermaid blocks. The title-page phases of the script follow
   this article's real layout, so look at the source before writing them.
 
-### 4. Write `build_docx.py` in the repo
+### 4. Write `scripts/build_docx.py`
 
 - Import `docgen` for everything generic (parsing, inline runs, formulas, tables, pictures, page
   numbers, headers). Put the style names and every template-specific rule in the script itself:
-  constants on top, one function per block kind, a CLI with `--input --template --output`.
+  constants on top, one function per block kind, a CLI with `--input --template --output`. The
+  document is written to `article.docx` in the repo root.
 - `example/ispras_build.py` and `example/saec_build.py` show the shape for two different
   templates; write the new script fresh from step 2's mapping and never edit an example. A block
   kind the template has no rule for must stop the build with a clear message, never be dropped.
@@ -59,9 +62,10 @@ rebuilds the document from a clean checkout and a clean docx-verify report.
 
 ### 6. Leave it reproducible
 
-- Add `requirements.txt` and a Makefile with one `docx` target that writes into `build/`. Add
-  `.venv` and `build` to `.gitignore`. Pictures the article needs (exported diagrams) must exist
-  before the build; say so in the Makefile.
+- Add `scripts/requirements.txt` and a root Makefile with one `docx` target that writes
+  `article.docx` into the root. Make sure `.venv` and `__pycache__` are in `.gitignore`. Pictures
+  the article needs (exported diagrams in `media/png/`) must exist before the build; say so in the
+  Makefile.
 
 ## Done
 
