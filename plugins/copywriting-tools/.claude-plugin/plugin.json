@@ -1,7 +1,7 @@
 {
   "name": "copywriting-tools",
-  "version": "0.3.4",
-  "description": "Layer 1/2 — general-purpose writing components, usable standalone: two tone guides (tone-scientific, tone-conversational) for the author's registers, docx-build writes a Markdown-to-Word converter for one template out of shared modules, docx-verify proves the document is right by structure and by eye.",
+  "version": "0.4.0",
+  "description": "Layer 1/2 — general-purpose writing components, usable standalone: two tone guides (tone-scientific, tone-conversational) for the author's registers, docx-build writes a Markdown-to-Word converter for one template out of shared modules, docx-verify proves the document is right by structure and by eye. excalidraw-export turns diagrams into PNG in the venue's font and warns when their text would print too small.",
   "author": {
     "name": "kubik",
     "email": "dev@noxlabs.xyz"

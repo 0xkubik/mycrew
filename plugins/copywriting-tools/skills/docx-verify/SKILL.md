@@ -34,12 +34,19 @@ wrong and where. Works on any .docx. Comes back with a defect list; the fixing i
   template; a heading stranded at the page bottom; a table cut or wider than the text; a figure
   too big, too small or missing; a caption detached from its figure; a formula shown as plain
   italic text; header, footer and page number wrong for odd and even pages; a blank page.
-- Render the template's own sample the same way and compare the title page against it.
+- Text inside a figure printing under about 8 pt at its printed width: measure it on the page, not
+  on the PNG.
+- After a full rebuild look at every page; after a point fix, at the changed pages and their
+  neighbours. The report says which.
+- Compare the title page with the venue's filled example first, then with the template's own sample
+  rendered the same way. Written requirements outrank the sample; the sample wins on styles.
 
 ### 4. Report
 
 - One line per defect: page, what is wrong, and whether the fix belongs in the build script or in
   the source text. Group repeats. Say plainly which pages were not looked at and why.
+- Count the pages against the limit. Over it: say by how many lines and where a cut actually
+  helps; a cut before a figure that then moves to the next page does not.
 
 ## Done
 

@@ -1,4 +1,5 @@
-"""Inline Markdown -> Word runs: bold, italic, bold-italic, code, math ($..$, $$..$$), links.
+"""Inline Markdown -> Word runs: bold, italic, bold-italic, code, math ($..$, $$..$$), links,
+Unicode superscript digits.
 
 Links keep their visible label only (no hyperlink object). Set CODE_FONT from the build script to
 give `code` spans a monospace face; None leaves them in the paragraph's own font.
@@ -22,7 +23,10 @@ PATTERNS = [
     ('math_inline', re.compile(r'(?<!\$)\$(?!\d)((?:[^$\\]|\\.)+?)\$(?!\$)')),
     ('link_angle',  re.compile(r'<((?:https?://|mailto:)[^>]+)>')),
     ('link_md',     re.compile(r'\[([^\]]+)\]\(([^)]+)\)')),
+    # author and affiliation marks written as Unicode digits become real superscript runs
+    ('superscript', re.compile(r'([⁰¹²³⁴⁵⁶⁷⁸⁹]+)')),
 ]
+_SUP_DIGITS = str.maketrans('⁰¹²³⁴⁵⁶⁷⁸⁹', '0123456789')
 
 
 def _run(para, text, bold, italic, force_not_bold):
@@ -75,6 +79,8 @@ def add_inline_runs(para, text, bold=False, italic=False,
             run.font.name = CODE_FONT
     elif kind in ('math_display', 'math_inline'):
         insert_formula(para, inner, display=(kind == 'math_display'))
+    elif kind == 'superscript':
+        _run(para, inner.translate(_SUP_DIGITS), bold, italic, force_not_bold).font.superscript = True
     else:                                                    # link_angle, link_md
         _run(para, inner, bold, italic, force_not_bold)
 

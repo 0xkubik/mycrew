@@ -26,8 +26,9 @@ rebuilds the document from a clean checkout and a clean docx-verify report.
 - Run `inspect_template.py <template.docx>` (the repo's root `template.docx`; the venue's own files
   are in `docs/`) from this skill's folder. Ask for the detail of any
   candidate style with `--style NAME ...` and pick styles by what they do, not by their names.
-- Read any formatting requirements the venue supplied. Where the template's own sample body says
-  which style a piece uses, trust it, and copy what it shows: the empty spacer paragraphs between
+- Read any formatting requirements the venue supplied. Sources rank: the venue's filled example,
+  its written rules, the template's sample, a blank form; the sample wins alone on styles. Where
+  the template's own sample body says which style a piece uses, trust it, and copy what it shows: the empty spacer paragraphs between
   blocks, and a first run written bold or italic (an abstract label, a references heading).
   Write the mapping down: title, authors, abstract, keywords, headings 1-3, body, list, quote,
   code, table font and width, figure and table captions, references, header and footer text
@@ -38,11 +39,15 @@ rebuilds the document from a clean checkout and a clean docx-verify report.
 - Frontmatter keys, the title-page order (title, authors, abstract, keywords), caption prefixes,
   reference format, formulas, images, Mermaid blocks. The title-page phases of the script follow
   this article's real layout, so look at the source before writing them.
+- A form the template carries, like a registration form, is an appendix: keep its data in
+  `resources/` and fill it in the converter. Find out from the requirements whether it counts
+  toward the page limit.
 
 ### 4. Write `scripts/build_docx.py`
 
-- Import `docgen` for everything generic (parsing, inline runs, formulas, tables, pictures, page
-  numbers, headers). Put the style names and every template-specific rule in the script itself:
+- Import `docgen` for everything generic (parsing, inline runs with superscript marks, formulas,
+  tables, pictures, page numbers, headers, and `typo()` for no-break spaces after labels and
+  initials). Put the style names and every template-specific rule in the script itself:
   constants on top, one function per block kind, a CLI with `--input --template --output`. The
   document is written to `article.docx` in the repo root.
 - `example/ispras_build.py` and `example/saec_build.py` show the shape for two different
@@ -65,7 +70,8 @@ rebuilds the document from a clean checkout and a clean docx-verify report.
 - Add `scripts/requirements.txt` and fill the root Makefile's `docx` target so `make docx` writes
   `article.docx` into the root (`/article-init` leaves the target empty; create the Makefile if it
   is absent). Make sure `.venv` and `__pycache__` are in `.gitignore`. Pictures the article needs
-  (exported diagrams in `media/png/`) must exist before the build; say so in the Makefile.
+  (exported diagrams in `media/png/`, made by the excalidraw-export skill) must exist before the
+  build; say so in the Makefile.
 
 ## Done
 

@@ -11,3 +11,4 @@ from .md import parse_frontmatter, parse_md
 from .ooxml import (add_field_code, add_page_numbers, clear_body, clear_header_highlights,
                     replace_header_text, set_even_odd_headers)
 from .tables import add_table, table_rows
+from .typo import typo

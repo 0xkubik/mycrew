@@ -22,7 +22,7 @@ it: a chief who is the human's deputy over the whole product and a lead who hold
 session of its own, dispatching specialists and moving the cards. The copywriting domain, for text work,
 so far ships a universal copywriter, a reviewer and a layouter — peers that call each other — and /article-init, which stands up an article's repository. Its tools hold two tone
 guides, scientific and conversational, and turn an article's Markdown into a checked Word document, one
-converter per template. Installed into other projects, it is the thing that does the work
+converter per template, and export Excalidraw diagrams to PNG. Installed into other projects, it is the thing that does the work
 there rather than the thing being worked on.
 
 ## Sub-projects
