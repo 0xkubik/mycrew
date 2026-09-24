@@ -1,10 +1,10 @@
 ---
-name: copywriter-scientific
+name: tone-scientific
 description: "Use when writing or revising a scientific article, conference paper or thesis chapter for this author. Gives the dry, sourced, fact-first register of the author's own papers."
 argument-hint: "<the article or section to write, and its venue>"
 ---
 
-# copywriter-scientific — write a paper the way this author writes one
+# tone-scientific — write a paper the way this author writes one
 
 Standing rules for scientific texts, drawn from the author's finished papers and their revision
 sessions. Nothing here is a step: read it before the first line, check the draft against it after.

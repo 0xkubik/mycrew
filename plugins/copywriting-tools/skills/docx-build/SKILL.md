@@ -1,14 +1,14 @@
 ---
-name: build-docx
-description: "Use when an article's Markdown must become a Word document in a specific template. Writes that repo's own converter script on top of shared modules, builds it, and hands it to check-docx until the result is clean."
+name: docx-build
+description: "Use when an article's Markdown must become a Word document in a specific template. Writes that repo's own converter script on top of shared modules, builds it, and hands it to docx-verify until the result is clean."
 argument-hint: "<article.md> <template.docx> [requirements document]"
 ---
 
-# build-docx — write the converter for one template, then prove it renders
+# docx-build — write the converter for one template, then prove it renders
 
 There is no universal converter. Each article repo gets its own build script, written for its own
 template out of the reusable modules in this skill's `docgen/` folder. Comes back with a script that
-rebuilds the document from a clean checkout and a clean check-docx report.
+rebuilds the document from a clean checkout and a clean docx-verify report.
 
 ## Steps
 
@@ -42,10 +42,10 @@ rebuilds the document from a clean checkout and a clean check-docx report.
       something generic is missing from `docgen`, add it to the repo's copy in the same style and name
       it in the report so it can be brought back to the skill.
 5. **Build, check, repeat.**
-    - Run the script, then run the check-docx skill on the result (structure check, render, look at
+    - Run the script, then run the docx-verify skill on the result (structure check, render, look at
       every page). Fix the script for defects in the conversion. A defect in the source text is
       reported, never edited: the words belong to the author.
-    - Repeat until check-docx reports no ERROR and every page looks right. If a round changes nothing,
+    - Repeat until docx-verify reports no ERROR and every page looks right. If a round changes nothing,
       stop and report what is stuck instead of looping.
 6. **Leave it reproducible.**
     - Add `requirements.txt` and a Makefile with one `docx` target that writes into `build/`. Add
@@ -54,6 +54,6 @@ rebuilds the document from a clean checkout and a clean check-docx report.
 
 ## Done
 
-- **The document builds from a clean checkout** with `make docx`, and check-docx has no ERROR.
+- **The document builds from a clean checkout** with `make docx`, and docx-verify has no ERROR.
 - **The report to the caller:** the style mapping used, what is still open (template placeholders
   the human must fill, missing pictures), what was added to `docgen`, and what could not be checked.

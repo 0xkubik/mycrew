@@ -20,7 +20,9 @@ checklists as skills — a product plane holding what the product must do togeth
 what is being done about it right now, both kept in one backlog.md store, and the leadership that steers
 it: a chief who is the human's deputy over the whole product and a lead who holds one feature as a
 session of its own, dispatching specialists and moving the cards. The copywriting domain, for text work,
-so far ships a universal copywriter and a reviewer — peers that call each other — with style skills for scientific and conversational texts; its tools so far turn an article's Markdown into a checked Word document, one converter per template. Installed into other projects, it is the thing that does the work
+so far ships a universal copywriter and a reviewer — peers that call each other. Its tools hold two tone
+guides, scientific and conversational, and turn an article's Markdown into a checked Word document, one
+converter per template. Installed into other projects, it is the thing that does the work
 there rather than the thing being worked on.
 
 ## Sub-projects

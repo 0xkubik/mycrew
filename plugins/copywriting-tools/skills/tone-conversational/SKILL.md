@@ -1,14 +1,14 @@
 ---
-name: copywriter-conversational
+name: tone-conversational
 description: "Use when writing or revising a conversational text for this author — a Habr article, a blog post, a talk write-up. Gives the first-person, story-led, human register of the author's own popular pieces."
 argument-hint: "<the text to write, the author's theses, and the platform>"
 ---
 
-# copywriter-conversational — write a popular text the way this author tells one
+# tone-conversational — write a popular text the way this author tells one
 
 Standing rules for conversational texts, drawn from the author's Habr article and its teaser, and
 from where the formal-prose guidance stops. Nothing here is a step: read it before the first line,
-check the draft against it after. For journals and conference papers use copywriter-scientific.
+check the draft against it after. For journals and conference papers use tone-scientific.
 
 ## Voice
 

@@ -1,10 +1,10 @@
 ---
-name: check-docx
+name: docx-verify
 description: "Use when a built .docx must be proven correct — its structure against the Markdown source and its pages by eye. Reports every defect with its page; fixes nothing."
 argument-hint: "<out.docx> [source article.md]"
 ---
 
-# check-docx — prove a Word document is right, by structure and by eye
+# docx-verify — prove a Word document is right, by structure and by eye
 
 Runs the structural check, renders the pages to images, looks at every page, and reports what is
 wrong and where. Works on any .docx. Comes back with a defect list; the fixing is the caller's.
