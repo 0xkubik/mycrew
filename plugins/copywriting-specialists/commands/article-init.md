@@ -47,7 +47,6 @@ A folder or file already there is left as is:
 - **`template.docx`** in the root — only when the final file is docx and the human has a template.
   A template that is not .docx stays in `docs/` as issued; say a .docx copy is needed. No template
   yet: leave it out and say so.
-- A `.gitkeep` in each empty folder, so the structure survives git.
 
 ### 4. Bring in what the human already has
 
