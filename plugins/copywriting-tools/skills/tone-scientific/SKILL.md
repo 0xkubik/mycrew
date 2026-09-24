@@ -38,7 +38,8 @@ The venue's template overrides it; popular texts (Habr and the like) are out of 
 ## Evidence and terms
 
 - **Every factual claim has a numbered source,** or is reworded, or is cut.
-- **Cite [n] at the clause end,** numbered by first appearance, every listed source cited.
+- **Sources come strictly in order of first appearance:** [1], [2], [3], none skipped, none unused.
+- **Put [n] at the end of the sentence,** before its full stop, never mid-sentence.
 - **Say which work is the author's own,** with authorship and a link.
 - **Every number carries conditions, unit and source;** the author's own estimates are flagged.
 - **One wording and one number for one fact** — abstract, body and conclusion agree.
