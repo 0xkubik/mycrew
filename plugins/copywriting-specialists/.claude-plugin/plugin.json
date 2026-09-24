@@ -1,6 +1,6 @@
 {
   "name": "copywriting-specialists",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Layer 2/2 — the specialists: a copywriter who writes any text from the material it is given, in the register the caller names or the material implies, a reviewer who checks facts, runs the AI-text detectors and says how the text lands, and a layouter who builds the Word document and proves every page renders. The three are peers and call each other. /article-init stands up an article's repository.",
   "author": {
     "name": "kubik",
