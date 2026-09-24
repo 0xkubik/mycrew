@@ -13,6 +13,9 @@ One-shot. You **never commit**: the run ends with everything written and the hum
 
 ### 1. Ask the setup questions first, via `AskUserQuestion`, in one batch, before writing anything
 
+Look first at what is already in the folder — `docs/`, the article, a template — and build the
+options from it: the venue is often already there, and a generic question is asked in vain.
+
 - **Where will it be published?** — a journal, a conference, a platform (Habr, a blog), a thesis.
   The venue's name comes with the answer.
 - **Which tone?** — scientific (the `tone-scientific` guide), conversational (`tone-conversational`),
@@ -24,8 +27,8 @@ One-shot. You **never commit**: the run ends with everything written and the hum
 ### 2. Give the human the floor
 
 In plain words, invite a few short lines about the article and anything the agents must know: the
-topic, co-authors, the deadline, what must not be said, where the source material is. Also ask for
-the paths of any files they already have — the venue's requirements, a template, sources. Nothing is
+topic, co-authors, the deadline, what must not be said, where the source material is, how they want
+the text to sound and how they use sources. Also ask for the paths of any files they already have — the venue's requirements, a template, sources. Nothing is
 a valid answer; never invent context. Keep what they say in their own words.
 
 ### 3. Create the layout
@@ -82,8 +85,12 @@ writes, the reviewer checks, the layouter builds.
 - **Final file:** <docx | md | pdf | ...> — <docx: built into the root as article.docx | md: article.md is the artifact>
 
 ## For the agents
-<what the human said matters: co-authors, deadline, what must not be said, where the source material
-is — or "nothing given">
+- **Session name:** <the folder's name> — agents name their sessions "<Agent> <session name>".
+- **Sources rank:** the venue's filled example, its written rules, the template's sample, a blank form.
+- **Style and sources:** <how the author wants it to sound and how they use sources, in their words —
+  or "nothing given">
+- **Also:** <what the human said matters: co-authors, deadline, what must not be said, where the
+  source material is — or "nothing given">
 
 ## Layout
 - `article.md` — the article.
