@@ -53,9 +53,8 @@ The plane and the board live in it:
 - **`backlog init "<product>" --integration-mode none --defaults`**, run so it uses the repo created
   in step 4. Its own agent integration would fight the rules this command installs.
 - **Bring `backlog/config.yml` to the shape below** — every key the CLI ships is in it, active or
-  commented. Keep `project_name` and `task_prefix`; set `statuses` and `labels` to what this harness
-  needs — a Backlog column ahead of the CLI's three, and the four origin labels declared. Rest left at
-  defaults, commented out.
+  commented. Keep `project_name` and `task_prefix`; set `labels` to what this harness needs — the
+  four origin labels declared. `statuses` stays the CLI's three. Rest left at defaults, commented out.
 - **Open the human's notes** — `backlog doc create "Notes" -p notes -t other`. One document of their
   own for scratch notes; it shows in `backlog browser`, editable there. Agents never write into it.
 
