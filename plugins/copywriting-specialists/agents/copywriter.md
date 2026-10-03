@@ -1,7 +1,7 @@
 ---
 name: copywriter
 description: "Writes any text it is handed, in the register the caller names or the material implies, only from the material given. Text only — assembling the document file and checking the facts are other work."
-model: opus
+model: stealth/space-bunny-alpha[1m]
 effort: high
 tools: Read, Write, Edit, Bash, Agent, Skill, ToolSearch, WebFetch, WebSearch, SendMessage, ListAgents
 ---

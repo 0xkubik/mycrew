@@ -1,7 +1,7 @@
 ---
 name: tester
 description: "Proves committed code works across every scenario that can actually happen — fast unit tests, implementation-agnostic integration tests, flow-level e2e before a deploy."
-model: sonnet
+model: stealth/space-bunny-alpha[1m]
 effort: high
 tools: Read, Write, Edit, Bash, Skill, ToolSearch, mcp__plugin_playwright_playwright__*
 ---
