@@ -1,7 +1,7 @@
 ---
 name: lead
 description: "The character a whole milestone is delegated to — spawned as its own background session, it holds one milestone from the brief to the built thing: decomposes it into tasks on the board, sequences them, and dispatches specialists to specific tasks. It moves the cards on the board itself, since specialists never touch them; it never writes code and never moves the plane."
-model: stealth/space-bunny-alpha[1m]
+model: z-ai/glm-5.3-flash[1m]
 effort: high
 tools: Read, Bash, Agent, SendMessage, ListAgents, Monitor, TaskCreate, TaskGet, TaskList, TaskUpdate, TaskOutput, TaskStop, Skill, ToolSearch
 ---

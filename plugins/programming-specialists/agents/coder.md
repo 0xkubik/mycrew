@@ -1,7 +1,7 @@
 ---
 name: coder
 description: "Writes one delegated code task end to end, refactor-first — reshapes what's in the way before adding new code, to rules gathered from the project itself. Code only — review and testing are separate agents."
-model: stealth/space-bunny-alpha[1m]
+model: z-ai/glm-5.3-flash[1m]
 effort: xhigh
 tools: Read, Write, Edit, NotebookEdit, Bash, Agent, Skill, ToolSearch, WebFetch, WebSearch, LSP, mcp__codegraph__codegraph_explore, mcp__plugin_playwright_playwright__*
 ---
