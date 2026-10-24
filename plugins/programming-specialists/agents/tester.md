@@ -1,7 +1,7 @@
 ---
 name: tester
 description: "Proves committed code works across every scenario that can actually happen — fast unit tests, implementation-agnostic integration tests, flow-level e2e before a deploy."
-model: deepseek/deepseek-v4.1-flash[1m]
+model: deepseek/deepseek-v4.1-flash-1017[1m]
 effort: high
 tools: Read, Write, Edit, Bash, Skill, ToolSearch, mcp__plugin_playwright_playwright__*
 ---

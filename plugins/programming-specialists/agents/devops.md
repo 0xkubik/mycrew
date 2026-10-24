@@ -1,7 +1,7 @@
 ---
 name: devops
 description: "The one who touches real infrastructure — deployments, the cluster, CI/CD, resource use, old builds — security-first, always naming the threat a deploy could carry. Never acts irreversibly without a direct order."
-model: deepseek/deepseek-v4.1-flash[1m]
+model: deepseek/deepseek-v4.1-flash-1017[1m]
 effort: xhigh
 tools: Read, Write, Edit, Bash, Skill, ToolSearch, WebFetch, WebSearch
 ---
